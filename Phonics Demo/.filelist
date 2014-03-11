@@ -1,0 +1,68 @@
+../sync_resources/dialog/DialogSound copy.plist
+../sync_resources/dialog/DialogSound.plist
+../sync_resources/dialog/DialogSoundA.plist
+../sync_resources/dialog/Identification/bg.jpg
+../sync_resources/dialog/Identification/Big_E.png
+../sync_resources/dialog/Identification/BigEAnim.plist
+../sync_resources/dialog/Identification/BigEAnim.png
+../sync_resources/dialog/Identification/elephant.png
+../sync_resources/dialog/Identification/idE.mp3
+../sync_resources/dialog/Identification/LetterIdentification.plist
+../sync_resources/dialog/Identification/Little_e.png
+../sync_resources/dialog/Identification/LittleEAnim.plist
+../sync_resources/dialog/Identification/LittleEAnim.png
+../sync_resources/dialog/Identification/no_elephant_bg.jpg
+../sync_resources/dialog/Identification/write_bg.png
+../sync_resources/fonts/ahnbergh-hd.fnt
+../sync_resources/fonts/ahnbergh-hd.png
+../sync_resources/fonts/ahnbergh-ipadhd.fnt
+../sync_resources/fonts/ahnbergh-ipadhd.png
+../sync_resources/fonts/Bradley Hand ITC.ttf
+../sync_resources/fonts/ComicSans_back-hd.fnt
+../sync_resources/fonts/ComicSans_back-hd.png
+../sync_resources/fonts/ComicSans_back-ipadhd.fnt
+../sync_resources/fonts/ComicSans_back-ipadhd.png
+../sync_resources/fonts/ComicSans_on-hd.fnt
+../sync_resources/fonts/ComicSans_on-hd.png
+../sync_resources/fonts/ComicSans_on-ipadhd.fnt
+../sync_resources/fonts/ComicSans_on-ipadhd.png
+../sync_resources/fonts/ComicSansMS-hd.fnt
+../sync_resources/fonts/ComicSansMS-hd.png
+../sync_resources/fonts/ComicSansMS-ipadhd.fnt
+../sync_resources/fonts/ComicSansMS-ipadhd.png
+../sync_resources/images/letter identification/letter_identification_a-hd.plist
+../sync_resources/images/letter identification/letter_identification_a-hd.pvr.ccz
+../sync_resources/images/letter identification/letter_identification_a-ipadhd.plist
+../sync_resources/images/letter identification/letter_identification_a-ipadhd.pvr.ccz
+../sync_resources/images/letter identification/letter_identification_a.plist
+../sync_resources/images/letter identification/letter_identification_a.pvr.ccz
+../sync_resources/images/letter identification/letter_identification_bgimage_a-hd.plist
+../sync_resources/images/letter identification/letter_identification_bgimage_a-hd.pvr.ccz
+../sync_resources/images/letter identification/letter_identification_bgimage_a-ipadhd.plist
+../sync_resources/images/letter identification/letter_identification_bgimage_a-ipadhd.pvr.ccz
+../sync_resources/images/letter identification/letter_identification_bgimage_a.plist
+../sync_resources/images/letter identification/letter_identification_bgimage_a.pvr.ccz
+../sync_resources/images/setting/setting-hd.plist
+../sync_resources/images/setting/setting-hd.pvr.ccz
+../sync_resources/images/setting/setting-ipadhd.plist
+../sync_resources/images/setting/setting-ipadhd.pvr.ccz
+../sync_resources/images/setting/setting.plist
+../sync_resources/images/setting/setting.pvr.ccz
+../sync_resources/images/sound/sound_a-hd.plist
+../sync_resources/images/sound/sound_a-hd.pvr.ccz
+../sync_resources/images/sound/sound_a-ipadhd.plist
+../sync_resources/images/sound/sound_a-ipadhd.pvr.ccz
+../sync_resources/images/sound/sound_a.plist
+../sync_resources/images/sound/sound_a.pvr.ccz
+../sync_resources/images/sound/sound_a_bgimage-hd.plist
+../sync_resources/images/sound/sound_a_bgimage-hd.pvr.ccz
+../sync_resources/images/sound/sound_a_bgimage-ipadhd.plist
+../sync_resources/images/sound/sound_a_bgimage-ipadhd.pvr.ccz
+../sync_resources/images/sound/sound_a_bgimage.plist
+../sync_resources/images/sound/sound_a_bgimage.pvr.ccz
+../sync_resources/images/toolbar/toolbar-hd.plist
+../sync_resources/images/toolbar/toolbar-hd.pvr.ccz
+../sync_resources/images/toolbar/toolbar-ipadhd.plist
+../sync_resources/images/toolbar/toolbar-ipadhd.pvr.ccz
+../sync_resources/images/toolbar/toolbar.plist
+../sync_resources/images/toolbar/toolbar.pvr.ccz

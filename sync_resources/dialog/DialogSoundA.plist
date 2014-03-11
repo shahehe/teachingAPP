@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>littleLetterAnimStart</key>
+	<string>6.184</string>
+	<key>bigLetterAnimStart</key>
+	<string>5.643</string>
+	<key>letterSoundInWord</key>
+	<string>Ahh</string>
+	<key>letter</key>
+	<string>a</string>
+	<key>audioFileName</key>
+	<string>letter_sound_a.mp3</string>
+	<key>titlePeriod</key>
+	<string>{0,2.09}</string>
+	<key>images</key>
+	<dict>
+		<key>background</key>
+		<dict>
+			<key>frameFileName</key>
+			<string>sound_a_bgimage.plist</string>
+			<key>textureFileName</key>
+			<string>sound_a_bgimage.pvr.ccz</string>
+		</dict>
+		<key>contents</key>
+		<array>
+			<dict>
+				<key>frameFileName</key>
+				<string>sound_a.plist</string>
+				<key>textureFileName</key>
+				<string>sound_a.pvr.ccz</string>
+			</dict>
+		</array>
+	</dict>
+	<key>scenes</key>
+	<array>
+		<dict>
+			<key>dialog</key>
+			<string>Now when we see the letter A , big or small 
+we say its sound , Ahh .</string>
+			<key>audioPeriod</key>
+			<string>{2.70,10.43}</string>
+		</dict>
+		<dict>
+			<key>dialog</key>
+			<string>Can you repeat after me ?</string>
+			<key>audioPeriod</key>
+			<string>{10.50,12.84}</string>
+		</dict>
+		<dict>
+			<key>dialog</key>
+			<string>A says Ahh</string>
+			<key>audioPeriod</key>
+			<string>{13.50,16.63}</string>
+			<key>soundLabel</key>
+			<array>
+				<string>13.816727 </string>
+				<string>14.332773 </string>
+				<string>15.165106 </string>
+			</array>
+		</dict>
+		<dict>
+			<key>dialog</key>
+			<string>a says Ahh</string>
+			<key>audioPeriod</key>
+			<string>{27.14,29.95}</string>
+			<key>soundLabel</key>
+			<array>
+				<string>27.766627</string>
+				<string>28.191116</string>
+				<string>28.948539</string>
+			</array>
+		</dict>
+		<dict>
+			<key>dialog</key>
+			<string>Big A little a</string>
+			<key>audioPeriod</key>
+			<string>{29.95,33.25}</string>
+			<key>soundLabel</key>
+			<array>
+				<string>30.330212</string>
+				<string>30.962785</string>
+				<string>31.578711</string>
+				<string>32.227931</string>
+			</array>
+		</dict>
+		<dict>
+			<key>dialog</key>
+			<string>A ahh apple</string>
+			<key>audioPeriod</key>
+			<string>{38.87,42.21}</string>
+			<key>soundLabel</key>
+			<array>
+				<string>39.152941</string>
+				<string>39.735574	</string>
+				<string>40.418087</string>
+			</array>
+		</dict>
+		<dict>
+			<key>dialog</key>
+			<string>Here&apos;s the whole rhyme together</string>
+			<key>audioPeriod</key>
+			<string>{49.18,52.29}</string>
+		</dict>
+		<dict>
+			<key>dialog</key>
+			<string>A says Ahh  a says ahh 
+Big A little a 
+A ahh apple</string>
+			<key>audioPeriod</key>
+			<string>{52.32,61.89}</string>
+			<key>soundLabel</key>
+			<array>
+				<string>52.520208</string>
+				<string>52.986315</string>
+				<string>53.668828</string>
+				<string>54.767507</string>
+				<string>55.266907</string>
+				<string>55.899480</string>
+				<string>57.064746</string>
+				<string>57.680672</string>
+				<string>58.130132</string>
+				<string>58.795998</string>
+				<string>59.411925</string>
+				<string>60.077791</string>
+				<string>60.660424</string>
+			</array>
+		</dict>
+		<dict>
+			<key>dialog</key>
+			<string>Now you try it with me, Ready ?</string>
+			<key>audioPeriod</key>
+			<string>{61.92,66.12}</string>
+		</dict>
+		<dict>
+			<key>dialog</key>
+			<string>A says Ahh 
+a says ahh  Big A little a 
+A ahh apple</string>
+			<key>audioPeriod</key>
+			<string>{52.32,61.89}</string>
+			<key>soundLabel</key>
+			<array>
+				<string>52.520208</string>
+				<string>52.986315</string>
+				<string>53.668828</string>
+				<string>54.767507</string>
+				<string>55.266907</string>
+				<string>55.899480</string>
+				<string>57.064746</string>
+				<string>57.680672</string>
+				<string>58.130132</string>
+				<string>58.795998</string>
+				<string>59.411925</string>
+				<string>60.077791</string>
+				<string>60.660424</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

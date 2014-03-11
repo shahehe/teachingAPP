@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>95901885-F353-4D94-9219-219051712728</string>
+	<key>IDESourceControlProjectName</key>
+	<string>LetterC</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>090C7497-384F-4F80-81EA-278B4555544F</key>
+		<string>https://github.com/shaheheyahoo/phonics-lesson.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Phonics Demo/LetterC.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>090C7497-384F-4F80-81EA-278B4555544F</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/shaheheyahoo/phonics-lesson.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>090C7497-384F-4F80-81EA-278B4555544F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>090C7497-384F-4F80-81EA-278B4555544F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>phonics lesson</string>
+		</dict>
+	</array>
+</dict>
+</plist>
