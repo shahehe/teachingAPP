@@ -12,6 +12,8 @@
 #import "Dialog.h"
 #import "DialogVideo.h"
 
+#import "Gardenlayer.h"
+
 #import "AnimatedSprite.h"
 @implementation MainMenu
 
@@ -42,8 +44,14 @@
             [[CCDirector sharedDirector] replaceScene:
                 [Dialog dialogWithContentLayerType:DialogContentTypeLetterIdentification letter:'A']];
     }];
+    
+    // Garden
+    CCMenuItem *item2 = [CCMenuItemFont itemWithString:@"Garden" block:^(id sender) {
+        [[CCDirector sharedDirector] replaceScene:[Gardenlayer scene]];
+    }];
+    // added by yiplee
 
-    CCMenu *menu = [CCMenu menuWithItems:item1, nil];
+    CCMenu *menu = [CCMenu menuWithItems:item1,item2, nil];
     [menu alignItemsVerticallyWithPadding:20];
 
     menu.position = ccpMult(SCREEN_SIZE_AS_POINT, 0.5);
