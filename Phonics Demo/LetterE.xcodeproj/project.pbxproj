@@ -149,6 +149,9 @@
 		8498BCA717847D9F00F71234 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498BCA617847D9F00F71234 /* HelloWorldLayer.m */; };
 		8498BCAA17847D9F00F71234 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498BCA917847D9F00F71234 /* IntroLayer.m */; };
 		8499CA7917C325CE00A1A24C /* SlidePauseMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8499CA7817C325CE00A1A24C /* SlidePauseMenuLayer.m */; };
+		84B3FCC618CF772500FD27E8 /* DLDraggableSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B3FCC318CF772500FD27E8 /* DLDraggableSprite.m */; };
+		84B3FCC718CF772500FD27E8 /* DLSubtitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B3FCC518CF772500FD27E8 /* DLSubtitleLabel.m */; };
+		84B3FCCB18CF788E00FD27E8 /* Gardenlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B3FCCA18CF788E00FD27E8 /* Gardenlayer.m */; };
 		84EDDEF217BCD22D00262E2B /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EDDEF117BCD22D00262E2B /* MediaPlayer.framework */; };
 		84EDDF0817BCD41E00262E2B /* CCScrollLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EDDEF717BCD41E00262E2B /* CCScrollLayer.m */; };
 		AE2FD211183554C500DEE058 /* TraceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2FD210183554C500DEE058 /* TraceUtil.m */; };
@@ -463,6 +466,12 @@
 		8498BCA917847D9F00F71234 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
 		8499CA7717C325CE00A1A24C /* SlidePauseMenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlidePauseMenuLayer.h; sourceTree = "<group>"; };
 		8499CA7817C325CE00A1A24C /* SlidePauseMenuLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlidePauseMenuLayer.m; sourceTree = "<group>"; };
+		84B3FCC218CF772500FD27E8 /* DLDraggableSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLDraggableSprite.h; path = extensions/DLDraggableSprite.h; sourceTree = "<group>"; };
+		84B3FCC318CF772500FD27E8 /* DLDraggableSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLDraggableSprite.m; path = extensions/DLDraggableSprite.m; sourceTree = "<group>"; };
+		84B3FCC418CF772500FD27E8 /* DLSubtitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLSubtitleLabel.h; path = extensions/DLSubtitleLabel.h; sourceTree = "<group>"; };
+		84B3FCC518CF772500FD27E8 /* DLSubtitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLSubtitleLabel.m; path = extensions/DLSubtitleLabel.m; sourceTree = "<group>"; };
+		84B3FCC918CF788E00FD27E8 /* Gardenlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gardenlayer.h; sourceTree = "<group>"; };
+		84B3FCCA18CF788E00FD27E8 /* Gardenlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gardenlayer.m; sourceTree = "<group>"; };
 		84EDDEF117BCD22D00262E2B /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		84EDDEF617BCD41E00262E2B /* CCScrollLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCScrollLayer.h; sourceTree = "<group>"; };
 		84EDDEF717BCD41E00262E2B /* CCScrollLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCScrollLayer.m; sourceTree = "<group>"; };
@@ -546,6 +555,10 @@
 				8445F7FF17A0D05E001251C1 /* CLDynamicLabel.m */,
 				8499CA7717C325CE00A1A24C /* SlidePauseMenuLayer.h */,
 				8499CA7817C325CE00A1A24C /* SlidePauseMenuLayer.m */,
+				84B3FCC218CF772500FD27E8 /* DLDraggableSprite.h */,
+				84B3FCC318CF772500FD27E8 /* DLDraggableSprite.m */,
+				84B3FCC418CF772500FD27E8 /* DLSubtitleLabel.h */,
+				84B3FCC518CF772500FD27E8 /* DLSubtitleLabel.m */,
 			);
 			name = extensions;
 			sourceTree = "<group>";
@@ -608,6 +621,7 @@
 				8450DCC7179A35090003B181 /* PhonicsDefines.h */,
 				8497C13017A2636A004034BB /* MainMenu.h */,
 				8497C13117A2636A004034BB /* MainMenu.m */,
+				84B3FCC818CF788E00FD27E8 /* garden */,
 				843335A617ACF2CD009F1C56 /* Dialog */,
 				8445F7E0179FC4FD001251C1 /* extensions */,
 				8450DCC8179AD06F0003B181 /* Model */,
@@ -999,6 +1013,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		84B3FCC818CF788E00FD27E8 /* garden */ = {
+			isa = PBXGroup;
+			children = (
+				84B3FCC918CF788E00FD27E8 /* Gardenlayer.h */,
+				84B3FCCA18CF788E00FD27E8 /* Gardenlayer.m */,
+			);
+			path = garden;
+			sourceTree = "<group>";
+		};
 		84EDDEF517BCD41E00262E2B /* CCScrollLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -1177,6 +1200,7 @@
 				8498BBA517847D9E00F71234 /* CCParticleBatchNode.m in Sources */,
 				8498BBA817847D9E00F71234 /* CCParticleExamples.m in Sources */,
 				8498BBAB17847D9E00F71234 /* CCParticleSystem.m in Sources */,
+				84B3FCC718CF772500FD27E8 /* DLSubtitleLabel.m in Sources */,
 				8498BBAE17847D9E00F71234 /* CCParticleSystemQuad.m in Sources */,
 				8498BBB117847D9E00F71234 /* CCPhysicsDebugNode.m in Sources */,
 				8498BBB417847D9E00F71234 /* CCPhysicsSprite.mm in Sources */,
@@ -1257,12 +1281,14 @@
 				843335B417ACF4F7009F1C56 /* LetterIdentification.m in Sources */,
 				843335B717ACF50B009F1C56 /* ToolbarLayer.m in Sources */,
 				84EDDF0817BCD41E00262E2B /* CCScrollLayer.m in Sources */,
+				84B3FCCB18CF788E00FD27E8 /* Gardenlayer.m in Sources */,
 				8499CA7917C325CE00A1A24C /* SlidePauseMenuLayer.m in Sources */,
 				AEB72C0117FF88D800F71600 /* CCVideoPlayer.m in Sources */,
 				AEB72C0217FF88D800F71600 /* CCVideoPlayerImpliOS.m in Sources */,
 				AEB72C0317FF88D800F71600 /* videoOverlayView.m in Sources */,
 				AEB72C0917FF88F400F71600 /* DialogVideo.m in Sources */,
 				AE60B7F518038A6300741275 /* TraceClass.m in Sources */,
+				84B3FCC618CF772500FD27E8 /* DLDraggableSprite.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
