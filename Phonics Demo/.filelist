@@ -30,6 +30,28 @@
 ../sync_resources/fonts/ComicSansMS-hd.png
 ../sync_resources/fonts/ComicSansMS-ipadhd.fnt
 ../sync_resources/fonts/ComicSansMS-ipadhd.png
+../sync_resources/images/garden/background-ipad.png
+../sync_resources/images/garden/background-ipadhd.png
+../sync_resources/images/garden/bean-ipad.png
+../sync_resources/images/garden/bean-ipadhd.png
+../sync_resources/images/garden/content-ipad.png
+../sync_resources/images/garden/content-ipadhd.png
+../sync_resources/images/garden/Didot-ipad.fnt
+../sync_resources/images/garden/Didot-ipadhd.fnt
+../sync_resources/images/garden/Didot_128.png
+../sync_resources/images/garden/Didot_64.png
+../sync_resources/images/garden/gate-ipad.png
+../sync_resources/images/garden/gate-ipadhd.png
+../sync_resources/images/garden/glove-ipad.png
+../sync_resources/images/garden/glove-ipadhd.png
+../sync_resources/images/garden/grape-ipad.png
+../sync_resources/images/garden/grape-ipadhd.png
+../sync_resources/images/garden/grass-ipad.png
+../sync_resources/images/garden/grass-ipadhd.png
+../sync_resources/images/garden/locust-ipad.png
+../sync_resources/images/garden/locust-ipadhd.png
+../sync_resources/images/garden/ornament-ipad.png
+../sync_resources/images/garden/ornament-ipadhd.png
 ../sync_resources/images/letter identification/letter_identification_a-hd.plist
 ../sync_resources/images/letter identification/letter_identification_a-hd.pvr.ccz
 ../sync_resources/images/letter identification/letter_identification_a-ipadhd.plist
@@ -66,3 +88,11 @@
 ../sync_resources/images/toolbar/toolbar-ipadhd.pvr.ccz
 ../sync_resources/images/toolbar/toolbar.plist
 ../sync_resources/images/toolbar/toolbar.pvr.ccz
+../sync_resources/sound/beans.mp3
+../sync_resources/sound/gate.mp3
+../sync_resources/sound/glove.mp3
+../sync_resources/sound/goodbye.mp3
+../sync_resources/sound/grapes.mp3
+../sync_resources/sound/grass.mp3
+../sync_resources/sound/grasshopper.mp3
+../sync_resources/sound/title.mp3
