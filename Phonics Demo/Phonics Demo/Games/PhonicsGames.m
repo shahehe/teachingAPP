@@ -37,7 +37,7 @@
 {
     if ( self = [super init])
     {
-        _sceneLevel = [[CCDirector sharedDirector] currentSceneStackLevel];
+        _sceneLevel = [[CCDirector sharedDirector]currentSceneStackLevel];
         _isGameRunning = NO;
     }
     return self;
@@ -46,6 +46,13 @@
 - (void) phonicsGameExit:(id)sender
 {
     NSAssert(_isGameRunning, @"there is no game running but receive a msg that a game wants to exit");
+    
+    //***********************************
+    CCFileUtils *sharedFileUtils = [CCFileUtils sharedFileUtils];
+    [sharedFileUtils setEnableFallbackSuffixes:YES];
+    [sharedFileUtils setiPadSuffix:@"-ipad"];
+    [sharedFileUtils setiPadRetinaDisplaySuffix:@"-ipadhd"];
+    //***********************************
     
     [[CCDirector sharedDirector] popToSceneStackLevel:_sceneLevel];
     _isGameRunning = NO;
@@ -63,6 +70,14 @@
     Class game = NSClassFromString(gameNameString);
     
     NSAssert([game isSubclassOfClass:[PhonicsGameLayer class]], @"invalid game, can't launch");
+    
+    //***********************************
+    CCFileUtils *sharedFileUtils = [CCFileUtils sharedFileUtils];
+    [sharedFileUtils setEnableFallbackSuffixes:YES];
+    [sharedFileUtils setiPadSuffix:@""];
+    [sharedFileUtils setiPadRetinaDisplaySuffix:@"-hd"];
+    //***********************************
+    
     CCScene *scene =
     [game performSelector:@selector(gameWithData:) withObject:gameData];
     

@@ -101,6 +101,9 @@
         
         // Sound effect
         [[SimpleAudioEngine sharedEngine] preloadEffect:@"beach.caf"];
+        
+       
+
     }
     return self;
 }

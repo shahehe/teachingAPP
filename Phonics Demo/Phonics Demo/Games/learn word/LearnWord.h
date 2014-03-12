@@ -13,7 +13,7 @@
 #import "cocos2d.h"
 #import "Color.h"
 
-#import <PhonicsGameLayer.h>
+#import "PhonicsGameLayer.h"
 
 #define FONTNAME @"Cooper Black"
 #define FONTSIZE 80
