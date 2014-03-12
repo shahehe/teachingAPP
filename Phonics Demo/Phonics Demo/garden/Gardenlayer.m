@@ -99,16 +99,16 @@
     back.anchorPoint = CGPointZero;
     [self addChild:back z:t_zOrder++];
     
-    NSDictionary *data = @{@"bean": @{@"file": @"bean.png",
+    NSDictionary *data = @{@"green beans": @{@"file": @"bean.png",
                                       @"position":@"{360.9,180.1}",
                                       @"audio":@"beans.mp3"},
-                           @"gate": @{@"file": @"gate.png",
+                           @"a gate": @{@"file": @"gate.png",
                                       @"position":@"{676.7,202.3}",
                                       @"audio":@"gate.mp3"},
-                           @"grape": @{@"file": @"grape.png",
+                           @"grapes": @{@"file": @"grape.png",
                                       @"position":@"{142.7,222}",
                                       @"audio":@"grapes.mp3"},
-                           @"glove": @{@"file": @"glove.png",
+                           @"a glove": @{@"file": @"glove.png",
                                        @"position":@"{464.5,253.5}",
                                        @"audio":@"glove.mp3"},
                            @"grass": @{@"file": @"grass.png",
@@ -132,8 +132,8 @@
     [self resetContent];
     
     targetNode = [CCNode node];
-    targetNode.contentSize = CGSizeMake(50, 50);
-    targetNode.position = ccpCompMult(s_point,ccp(0.7,0.7));
+    targetNode.contentSize = CGSizeMake(10, 10);
+    targetNode.position = ccpCompMult(s_point,ccp(0.7,0.66));
     [self addChild:targetNode z:t_zOrder++];
     
     return self;
@@ -165,7 +165,7 @@
         [gardenObjectPositions setValue:[info objectForKey:@"position"] forKey:name];
         
         //blink
-        CCFadeTo *fade_out = [CCFadeTo actionWithDuration:0.8 opacity:255/1.5];
+        CCFadeTo *fade_out = [CCFadeTo actionWithDuration:0.8 opacity:255/2.5];
         CCFadeTo *fade_in = [CCFadeTo actionWithDuration:0.8 opacity:255];
         CCSequence *s = [CCSequence actions:fade_out,fade_in, nil];
         CCRepeatForever *r = [CCRepeatForever actionWithAction:s];
@@ -176,13 +176,13 @@
 
 - (void) resetContent
 {
-    [content setString:@"My garden has a ___"];
+    [content setString:@"My garden has ___"];
 }
 
 - (void) fillContentWithString:(NSString*)string
 {
     [self resetContent];
-    [content setString:[NSString stringWithFormat:@"My garden has a %@",string]];
+    [content setString:[NSString stringWithFormat:@"My garden has %@.",string]];
 }
 
 - (void) moveObjectToOriginalPosition:(GardenObject*)object done:(void (^)())moveDoneBlock
@@ -213,6 +213,8 @@
         [object stopActionByTag:BLINK_ACTION_TAG];
         object.opacity = 255;
     }
+    
+    [self resetContent];
 }
 
 - (void) draggableSpriteEndMove:(id)sender
@@ -230,7 +232,7 @@
         
         Block_release(block);
         block = ^void(){
-            [self resetContent];
+//            [self resetContent];
         };
     }
     
