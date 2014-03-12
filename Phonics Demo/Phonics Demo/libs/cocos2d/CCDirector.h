@@ -243,6 +243,8 @@ and when to execute the Scenes.
 
 #pragma mark Director - Scene Management
 
+- (NSUInteger) currentSceneStackLevel;
+
 /** Enters the Director's main loop with the given Scene.
  * Call it to run only your FIRST scene.
  * Don't call it if there is already a running scene.

@@ -372,6 +372,11 @@ static CCDirector *_sharedDirector = nil;
 
 #pragma mark Director Scene Management
 
+- (NSUInteger) currentSceneStackLevel
+{
+    return [_scenesStack count];
+}
+
 - (void)runWithScene:(CCScene*) scene
 {
 	NSAssert( scene != nil, @"Argument must be non-nil");

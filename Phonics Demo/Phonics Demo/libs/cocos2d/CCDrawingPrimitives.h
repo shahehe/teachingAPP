@@ -119,7 +119,11 @@ void ccDrawCircle( CGPoint center, float radius, float angle, NSUInteger segment
 
 /** draws a solid circle given the center, radius and number of segments measured in points */
 void ccDrawSolidCircle( CGPoint center, float radius, NSUInteger segments);
-void ccDrawSolidCircleLine(CGPoint startPoint,CGPoint endPoint,float radius,NSUInteger segments);    
+
+void ccDrawSolidCircleLine(CGPoint startPoint,CGPoint endPoint,float radius,NSUInteger segments);
+    
+void ccDrawCircleLine(CGPoint startPoint,CGPoint endPoint,float radius,NSUInteger segments);
+    
 /** draws a arc given the center, radius, arc length and number of segments measured in points */
 void ccDrawArc(CGPoint center, CGFloat r, CGFloat a, CGFloat arcLength, NSUInteger segs, BOOL drawLineToCenter);
 

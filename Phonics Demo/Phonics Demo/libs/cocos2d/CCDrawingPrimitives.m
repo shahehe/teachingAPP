@@ -107,59 +107,7 @@ void ccDrawPoint( CGPoint point )
 	
 	CC_INCREMENT_GL_DRAWS(1);
 }
-void ccDrawCircleLine(CGPoint startPoint,CGPoint endPoint,float r,NSUInteger segs)
-{
-    lazy_init();
-    
-    segs = segs/2 * 2;
-    NSUInteger points = segs + 2;
-    
-    const float coef = 2.0f * (float)M_PI/segs;
-    
-    GLfloat *vertices = calloc(sizeof(GLfloat)*2*(points+1), 1);
-    if (! vertices)
-        return;
-    
-    CGPoint direction = ccpSub(endPoint, startPoint);
-    const float a = ccpToAngle(direction) + (float)M_PI*0.5f; //start angle;
-    
-    for(NSUInteger i = 0,m = 0;i <= points;i++)
-    {
-        float rads = m*coef;
-        if (i < points/2 || i == points)
-        {
-            GLfloat j = r * cosf(rads + a) + startPoint.x;
-            GLfloat k = r * sinf(rads + a) + startPoint.y;
-            
-            vertices[i*2] = j;
-            vertices[i*2+1] = k;
-        }
-        else
-        {
-            GLfloat j = r * cosf(rads + a) + endPoint.x;
-            GLfloat k = r * sinf(rads + a) + endPoint.y;
-            
-            vertices[i*2] = j;
-            vertices[i*2+1] = k;
-        }
-        
-        if (i != points/2 - 1 && i != points-1) m++;
-    }
-    
-    [shader_ use];
-	[shader_ setUniformForModelViewProjectionMatrix];
-	[shader_ setUniformLocation:colorLocation_ with4fv:(GLfloat*) &color_.r count:1];
-    
-	ccGLEnableVertexAttribs( kCCVertexAttribFlag_Position );
-    
-	glVertexAttribPointer(kCCVertexAttrib_Position, 2, GL_FLOAT, GL_FALSE, 0, vertices);
-	glDrawArrays(GL_LINE_STRIP, 0, (GLsizei) points);
-    
-	free( vertices );
-	
-	CC_INCREMENT_GL_DRAWS(1);
-    
-}
+
 void ccDrawPoints( const CGPoint *points, NSUInteger numberOfPoints )
 {
 	lazy_init();
@@ -372,6 +320,118 @@ void ccDrawSolidCircle( CGPoint center, float r, NSUInteger segs)
 	
 	CC_INCREMENT_GL_DRAWS(1);
 }
+
+void ccDrawCircleLine(CGPoint startPoint,CGPoint endPoint,float r,NSUInteger segs)
+{
+    lazy_init();
+    
+    segs = segs/2 * 2;
+    NSUInteger points = segs + 2;
+    
+    const float coef = 2.0f * (float)M_PI/segs;
+    
+    GLfloat *vertices = calloc(sizeof(GLfloat)*2*(points+1), 1);
+    if (! vertices)
+        return;
+    
+    CGPoint direction = CGPointMake(endPoint.x-startPoint.x,\
+                                    endPoint.y-startPoint.y);
+    const float a = atan2f(direction.y,direction.x) + (float)M_PI*0.5f;
+    
+    for(NSUInteger i = 0,m = 0;i <= points;i++)
+    {
+        float rads = m*coef;
+        if (i < points/2 || i == points)
+        {
+            GLfloat j = r * cosf(rads + a) + startPoint.x;
+            GLfloat k = r * sinf(rads + a) + startPoint.y;
+            
+            vertices[i*2] = j;
+            vertices[i*2+1] = k;
+        }
+        else
+        {
+            GLfloat j = r * cosf(rads + a) + endPoint.x;
+            GLfloat k = r * sinf(rads + a) + endPoint.y;
+            
+            vertices[i*2] = j;
+            vertices[i*2+1] = k;
+        }
+        
+        if (i != points/2 - 1 && i != points-1) m++;
+    }
+    
+    [shader_ use];
+	[shader_ setUniformsForBuiltins];
+	[shader_ setUniformLocation:colorLocation_ with4fv:(GLfloat*) &color_.r count:1];
+    
+	ccGLEnableVertexAttribs( kCCVertexAttribFlag_Position );
+    
+	glVertexAttribPointer(kCCVertexAttrib_Position, 2, GL_FLOAT, GL_FALSE, 0, vertices);
+	glDrawArrays(GL_LINE_STRIP, 0, (GLsizei) points);
+    
+	free( vertices );
+	
+	CC_INCREMENT_GL_DRAWS(1);
+    
+}
+
+
+void ccDrawSolidCircleLine( CGPoint startPoint,CGPoint endPoint,float r,NSUInteger segs)
+{
+    lazy_init();
+    
+    segs = segs/2 * 2;
+    NSUInteger points = segs + 2;
+    
+    const float coef = 2.0f * (float)M_PI/segs;
+    
+    GLfloat *vertices = calloc(sizeof(GLfloat)*2*(points+1), 1);
+    if (! vertices)
+        return;
+    
+    CGPoint direction = CGPointMake(endPoint.x-startPoint.x,\
+                                    endPoint.y-startPoint.y);
+    const float a = atan2f(direction.y,direction.x) + (float)M_PI*0.5f;
+    
+    for(NSUInteger i = 0,m = 0;i <= points;i++)
+    {
+        float rads = m*coef;
+        if (i < points/2 || i == points)
+        {
+            GLfloat j = r * cosf(rads + a) + startPoint.x;
+            GLfloat k = r * sinf(rads + a) + startPoint.y;
+            
+            vertices[i*2] = j;
+            vertices[i*2+1] = k;
+        }
+        else
+        {
+            GLfloat j = r * cosf(rads + a) + endPoint.x;
+            GLfloat k = r * sinf(rads + a) + endPoint.y;
+            
+            vertices[i*2] = j;
+            vertices[i*2+1] = k;
+        }
+        
+        if (i != points/2 - 1 && i != points-1) m++;
+    }
+    
+    [shader_ use];
+	[shader_ setUniformsForBuiltins];
+	[shader_ setUniformLocation:colorLocation_ with4fv:(GLfloat*) &color_.r count:1];
+    
+	ccGLEnableVertexAttribs( kCCVertexAttribFlag_Position );
+    
+	glVertexAttribPointer(kCCVertexAttrib_Position, 2, GL_FLOAT, GL_FALSE, 0, vertices);
+	glDrawArrays(GL_TRIANGLE_FAN, 0, (GLsizei) points);
+    
+	free( vertices );
+	
+	CC_INCREMENT_GL_DRAWS(1);
+    
+}
+
 
 void ccDrawArc(CGPoint center, CGFloat r, CGFloat a, CGFloat arcLength, NSUInteger segs, BOOL drawLineToCenter)
 {
