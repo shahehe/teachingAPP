@@ -15,6 +15,9 @@
 #import "Gardenlayer.h"
 
 #import "AnimatedSprite.h"
+
+#import "PhonicsGames.h"
+
 @implementation MainMenu
 
 + (CCScene*) scene
@@ -50,8 +53,29 @@
         [[CCDirector sharedDirector] replaceScene:[Gardenlayer scene]];
     }];
     // added by yiplee
+    
+    //games
+    NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"gamedata" ofType:@"plist"];
+    NSDictionary* gameData = [NSDictionary dictionaryWithContentsOfFile:dataPath];
+    NSUInteger _capacity = PhonicsGameMaxIndex;
+    NSMutableArray *menuItems = [NSMutableArray arrayWithCapacity:_capacity];
+    [menuItems addObject:item1];
+    [menuItems addObject:item2];
+    
+    for (int i = 0;i < _capacity;i++)
+    {
+        NSString *itemName = [NSString stringWithUTF8String:gameNames[i]];
+        CCMenuItemFont *_item = [CCMenuItemFont itemWithString:itemName block:^(id sender) {
+            [[PhonicsGames sharedGames] startGame:i data:gameData];
+            CCLOG(@"launch game:%@",itemName);
+        }];
+        _item.color = ccWHITE;
+        [menuItems addObject:_item];
+    }
+    
 
-    CCMenu *menu = [CCMenu menuWithItems:item1,item2, nil];
+//    CCMenu *menu = [CCMenu menuWithItems:item1,item2, nil];
+    CCMenu *menu = [CCMenu menuWithArray:menuItems];
     [menu alignItemsVerticallyWithPadding:20];
 
     menu.position = ccpMult(SCREEN_SIZE_AS_POINT, 0.5);
