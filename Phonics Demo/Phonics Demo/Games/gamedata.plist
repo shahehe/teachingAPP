@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bat</key>
+	<dict>
+		<key>audioFile</key>
+		<string>bat.caf</string>
+		<key>imgFile</key>
+		<string>bat.png</string>
+	</dict>
+    <key>cat</key>
+	<dict>
+		<key>audioFile</key>
+		<string>cat.caf</string>
+		<key>imgFile</key>
+		<string>cat.png</string>
+	</dict>
+    <key>fat</key>
+	<dict>
+		<key>audioFile</key>
+		<string>fat.caf</string>
+		<key>imgFile</key>
+		<string>fat.png</string>
+	</dict>
+    <key>mat</key>
+	<dict>
+		<key>audioFile</key>
+		<string>mat.caf</string>
+		<key>imgFile</key>
+		<string>mat.png</string>
+	</dict>
+    <key>rat</key>
+	<dict>
+		<key>audioFile</key>
+		<string>rat.caf</string>
+		<key>imgFile</key>
+		<string>rat.png</string>
+	</dict>
+    <key>wat</key>
+	<dict>
+		<key>audioFile</key>
+		<string>wat.caf</string>
+		<key>imgFile</key>
+		<string>wat.png</string>
+	</dict>
+</dict>
+</plist>
