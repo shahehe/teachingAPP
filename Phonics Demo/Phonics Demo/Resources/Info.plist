@@ -35,6 +35,7 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>CooperBlack.ttf</string>
 		<string>DENNE-SKETCHY.ttf</string>
 		<string>Bradley Hand ITC.ttf</string>
 	</array>
