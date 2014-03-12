@@ -22,7 +22,8 @@
 
 #define SCREEN_SIZE_AS_POINT    ccp(SCREEN_WIDTH,SCREEN_HEIGHT)
 
-#define CCMP(x,y)                ccpCompMult(SCREEN_SIZE_AS_POINT,ccp((x),(y)))
+#define CCMP(x,y)               ccpCompMult(SCREEN_SIZE_AS_POINT,ccp((x),(y)))
+#define CMP(x)                  CCMP(x,x)
 
 #define IS_IPHONE               (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 #define IS_4_INCH               (SCREEN_HEIGHT > 480.0)

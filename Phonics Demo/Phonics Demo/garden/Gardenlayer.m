@@ -95,7 +95,7 @@
     
     t_zOrder = NSIntegerMin;
     
-    CCSprite *back = [CCSprite spriteWithFile:@"background.png"];
+    CCSprite *back = [CCSprite spriteWithFile:@"garden_background.png"];
     back.anchorPoint = CGPointZero;
     [self addChild:back z:t_zOrder++];
     

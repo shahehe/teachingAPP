@@ -323,6 +323,7 @@
 		84B4F20518D040BF0071E85B /* cpSpatialIndex.c in Sources */ = {isa = PBXBuildFile; fileRef = 84B4F1E618D040BF0071E85B /* cpSpatialIndex.c */; };
 		84B4F20618D040BF0071E85B /* cpSweep1D.c in Sources */ = {isa = PBXBuildFile; fileRef = 84B4F1E718D040BF0071E85B /* cpSweep1D.c */; };
 		84B4F20718D040BF0071E85B /* cpVect.c in Sources */ = {isa = PBXBuildFile; fileRef = 84B4F1E818D040BF0071E85B /* cpVect.c */; };
+		84B4F20B18D0727B0071E85B /* RedRoomLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B4F20A18D0727B0071E85B /* RedRoomLayer.m */; };
 		84EDDEF217BCD22D00262E2B /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EDDEF117BCD22D00262E2B /* MediaPlayer.framework */; };
 		84EDDF0817BCD41E00262E2B /* CCScrollLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EDDEF717BCD41E00262E2B /* CCScrollLayer.m */; };
 		AE2FD211183554C500DEE058 /* TraceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2FD210183554C500DEE058 /* TraceUtil.m */; };
@@ -870,6 +871,8 @@
 		84B4F1E718D040BF0071E85B /* cpSweep1D.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpSweep1D.c; sourceTree = "<group>"; };
 		84B4F1E818D040BF0071E85B /* cpVect.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpVect.c; sourceTree = "<group>"; };
 		84B4F1E918D040BF0071E85B /* prime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prime.h; sourceTree = "<group>"; };
+		84B4F20918D0727B0071E85B /* RedRoomLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedRoomLayer.h; sourceTree = "<group>"; };
+		84B4F20A18D0727B0071E85B /* RedRoomLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedRoomLayer.m; sourceTree = "<group>"; };
 		84EDDEF117BCD22D00262E2B /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		84EDDEF617BCD41E00262E2B /* CCScrollLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCScrollLayer.h; sourceTree = "<group>"; };
 		84EDDEF717BCD41E00262E2B /* CCScrollLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCScrollLayer.m; sourceTree = "<group>"; };
@@ -1039,6 +1042,7 @@
 				8450DCC7179A35090003B181 /* PhonicsDefines.h */,
 				8497C13017A2636A004034BB /* MainMenu.h */,
 				8497C13117A2636A004034BB /* MainMenu.m */,
+				84B4F20818D05FF70071E85B /* Red */,
 				84B4F08618D03BF60071E85B /* Games */,
 				84B3FCC818CF788E00FD27E8 /* garden */,
 				843335A617ACF2CD009F1C56 /* Dialog */,
@@ -1792,6 +1796,15 @@
 			path = constraints;
 			sourceTree = "<group>";
 		};
+		84B4F20818D05FF70071E85B /* Red */ = {
+			isa = PBXGroup;
+			children = (
+				84B4F20918D0727B0071E85B /* RedRoomLayer.h */,
+				84B4F20A18D0727B0071E85B /* RedRoomLayer.m */,
+			);
+			path = Red;
+			sourceTree = "<group>";
+		};
 		84EDDEF517BCD41E00262E2B /* CCScrollLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -2187,6 +2200,7 @@
 				84B4F1F018D040BF0071E85B /* cpGrooveJoint.c in Sources */,
 				8498BC8E17847D9F00F71234 /* neon_matrix_impl.c in Sources */,
 				84B4F1F318D040BF0071E85B /* cpRatchetJoint.c in Sources */,
+				84B4F20B18D0727B0071E85B /* RedRoomLayer.m in Sources */,
 				8498BC9017847D9F00F71234 /* plane.c in Sources */,
 				84B4F16A18D03BF60071E85B /* CardMatchingGamePrepareLayer.m in Sources */,
 				84B4F20318D040BF0071E85B /* cpSpaceQuery.c in Sources */,

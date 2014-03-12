@@ -30,8 +30,6 @@
 ../sync_resources/fonts/ComicSansMS-hd.png
 ../sync_resources/fonts/ComicSansMS-ipadhd.fnt
 ../sync_resources/fonts/ComicSansMS-ipadhd.png
-../sync_resources/images/garden/background-ipad.png
-../sync_resources/images/garden/background-ipadhd.png
 ../sync_resources/images/garden/bean-ipad.png
 ../sync_resources/images/garden/bean-ipadhd.png
 ../sync_resources/images/garden/content-ipad.png
@@ -40,6 +38,8 @@
 ../sync_resources/images/garden/Didot-ipadhd.fnt
 ../sync_resources/images/garden/Didot_128.png
 ../sync_resources/images/garden/Didot_64.png
+../sync_resources/images/garden/garden_background-ipad.png
+../sync_resources/images/garden/garden_background-ipadhd.png
 ../sync_resources/images/garden/gate-ipad.png
 ../sync_resources/images/garden/gate-ipadhd.png
 ../sync_resources/images/garden/glove-ipad.png
@@ -64,6 +64,32 @@
 ../sync_resources/images/letter identification/letter_identification_bgimage_a-ipadhd.pvr.ccz
 ../sync_resources/images/letter identification/letter_identification_bgimage_a.plist
 ../sync_resources/images/letter identification/letter_identification_bgimage_a.pvr.ccz
+../sync_resources/images/red/red_background-ipad.png
+../sync_resources/images/red/red_background-ipadhd.png
+../sync_resources/images/red/red_ring-ipad.png
+../sync_resources/images/red/red_ring-ipadhd.png
+../sync_resources/images/red/red_road-ipad.png
+../sync_resources/images/red/red_road-ipadhd.png
+../sync_resources/images/red/red_rocket-ipad.png
+../sync_resources/images/red/red_rocket-ipadhd.png
+../sync_resources/images/red/red_rooster-ipad.png
+../sync_resources/images/red/red_rooster-ipadhd.png
+../sync_resources/images/red/red_rose-ipad.png
+../sync_resources/images/red/red_rose-ipadhd.png
+../sync_resources/images/red/red_rug-ipad.png
+../sync_resources/images/red/red_rug-ipadhd.png
+../sync_resources/images/red/ring-ipad.png
+../sync_resources/images/red/ring-ipadhd.png
+../sync_resources/images/red/road-ipad.png
+../sync_resources/images/red/road-ipadhd.png
+../sync_resources/images/red/rocket-ipad.png
+../sync_resources/images/red/rocket-ipadhd.png
+../sync_resources/images/red/rooster-ipad.png
+../sync_resources/images/red/rooster-ipadhd.png
+../sync_resources/images/red/rose-ipad.png
+../sync_resources/images/red/rose-ipadhd.png
+../sync_resources/images/red/rug-ipad.png
+../sync_resources/images/red/rug-ipadhd.png
 ../sync_resources/images/setting/setting-hd.plist
 ../sync_resources/images/setting/setting-hd.pvr.ccz
 ../sync_resources/images/setting/setting-ipadhd.plist
@@ -88,11 +114,15 @@
 ../sync_resources/images/toolbar/toolbar-ipadhd.pvr.ccz
 ../sync_resources/images/toolbar/toolbar.plist
 ../sync_resources/images/toolbar/toolbar.pvr.ccz
-../sync_resources/sound/beans.mp3
-../sync_resources/sound/gate.mp3
-../sync_resources/sound/glove.mp3
-../sync_resources/sound/goodbye.mp3
-../sync_resources/sound/grapes.mp3
-../sync_resources/sound/grass.mp3
-../sync_resources/sound/grasshopper.mp3
-../sync_resources/sound/title.mp3
+../sync_resources/sound/garden/beans.mp3
+../sync_resources/sound/garden/gate.mp3
+../sync_resources/sound/garden/glove.mp3
+../sync_resources/sound/garden/grapes.mp3
+../sync_resources/sound/garden/grass.mp3
+../sync_resources/sound/garden/grasshopper.mp3
+../sync_resources/sound/red/ring.mp3
+../sync_resources/sound/red/road.mp3
+../sync_resources/sound/red/rocket.mp3
+../sync_resources/sound/red/rooster.mp3
+../sync_resources/sound/red/rose.mp3
+../sync_resources/sound/red/rug.mp3

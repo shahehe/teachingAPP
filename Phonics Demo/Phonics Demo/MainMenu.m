@@ -13,6 +13,7 @@
 #import "DialogVideo.h"
 
 #import "Gardenlayer.h"
+#import "RedRoomLayer.h"
 
 #import "AnimatedSprite.h"
 
@@ -54,6 +55,11 @@
     }];
     // added by yiplee
     
+    // red
+    CCMenuItem *item3 = [CCMenuItemFont itemWithString:@"Red" block:^(id sender) {
+        [[CCDirector sharedDirector] replaceScene:[RedRoomLayer scene]];
+    }];
+    
     //games
     NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"gamedata" ofType:@"plist"];
     NSDictionary* gameData = [NSDictionary dictionaryWithContentsOfFile:dataPath];
@@ -61,6 +67,7 @@
     NSMutableArray *menuItems = [NSMutableArray arrayWithCapacity:_capacity];
     [menuItems addObject:item1];
     [menuItems addObject:item2];
+    [menuItems addObject:item3];
     
     for (int i = 0;i < _capacity;i++)
     {
