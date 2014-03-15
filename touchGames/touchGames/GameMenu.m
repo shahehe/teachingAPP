@@ -28,9 +28,9 @@
     NSAssert(self, @"menu failed init");
     
     NSDictionary*
-    menuData = @{@"I love": @"ILove.plist",
-                 @"Can U":@"CanU.plist",
-                 @"Happy":@"Happy.plist",
+    menuData = @{@"I love": @"I_love.plist",
+                 @"Can U":@"can_u.plist",
+                 @"Happy":@"happy_me.plist",
                  @"Red":@"Red.plist",
                  @"Garden":@"Garden.plist"};
     

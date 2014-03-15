@@ -3,83 +3,83 @@
 <plist version="1.0">
 <dict>
 	<key>title</key>
-	<string>Happy Me</string>
+	<string>I Love</string>
 	<key>background</key>
-	<string>happy_background.png</string>
+	<string>I_love_background.png</string>
 	<key>label</key>
 	<dict>
 		<key>fntFile</key>
 		<string>Didot.fnt</string>
 		<key>position</key>
-		<string>{0.24,0.09}</string>
+		<string>{0.241,0.066}</string>
 	</dict>
 	<key>objects</key>
 	<dict>
-		<key>hair</key>
+		<key>mug</key>
 		<dict>
 			<key>file</key>
-			<string>hair.png</string>
+			<string>mug.png</string>
 			<key>audio</key>
-			<string>hair.mp3</string>
+			<string>mug.mp3</string>
 			<key>content</key>
-			<string>I have happy hair.</string>
+			<string>I love my mug.</string>
 			<key>position</key>
-			<string>{0.393,0.811}</string>
+			<string>{0.619,0.521}</string>
 		</dict>
-		<key>hands</key>
+		<key>mat</key>
 		<dict>
 			<key>file</key>
-			<string>hand.png</string>
+			<string>mat.png</string>
 			<key>audio</key>
-			<string>hands.mp3</string>
+			<string>mat.mp3</string>
 			<key>content</key>
-			<string>I have happy hands.</string>
+			<string>I love my mat.</string>
 			<key>position</key>
-			<string>{0.64,0.805}</string>
+			<string>{0.121,0.235}</string>
 		</dict>
-		<key>heart</key>
+		<key>mask</key>
 		<dict>
 			<key>file</key>
-			<string>heart.png</string>
+			<string>mask.png</string>
 			<key>audio</key>
-			<string>heart.mp3</string>
+			<string>mask.mp3</string>
 			<key>content</key>
-			<string>I have a happy heart.</string>
+			<string>I love my mask.</string>
 			<key>position</key>
-			<string>{0.484,0.502}</string>
+			<string>{0.784,0.873}</string>
 		</dict>
-		<key>head</key>
+		<key>mittens</key>
 		<dict>
 			<key>file</key>
-			<string>head.png</string>
+			<string>mittens.png</string>
 			<key>audio</key>
-			<string>head.mp3</string>
+			<string>mittens.mp3</string>
 			<key>content</key>
-			<string>I have a happy head.</string>
+			<string>I hove my mittens</string>
 			<key>position</key>
-			<string>{0.737,0.494}</string>
+			<string>{0.184,0.872}</string>
 		</dict>
-		<key>heels</key>
+		<key>medal</key>
 		<dict>
 			<key>file</key>
-			<string>heel.png</string>
+			<string>medal.png</string>
 			<key>audio</key>
-			<string>heels.mp3</string>
+			<string>medal.mp3</string>
 			<key>content</key>
-			<string>I have happy heels.</string>
+			<string>I love my medal.</string>
 			<key>position</key>
-			<string>{0.377,0.277}</string>
+			<string>{0.579,0.825}</string>
 		</dict>
-		<key>hips</key>
+		<key>mom</key>
 		<dict>
 			<key>file</key>
-			<string>hips.png</string>
+			<string>mom.png</string>
 			<key>audio</key>
-			<string>hips.mp3</string>
+			<string>mom.mp3</string>
 			<key>content</key>
-			<string>I have happy hips.</string>
+			<string>I love my mom.</string>
 			<key>position</key>
-			<string>{0.20,0.551}</string>
+			<string>{0.43,0.521}</string>
 		</dict>
 	</dict>
 </dict>

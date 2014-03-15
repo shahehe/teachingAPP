@@ -1,5 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict/>
+<dict>
+	<key>title</key>
+	<string>title</string>
+	<key>background</key>
+	<string>red_background.png</string>
+	<key>label</key>
+	<dict>
+		<key>fntFile</key>
+		<string>Didot.fnt</string>
+		<key>position</key>
+		<string>{0.3, 0.06}</string>
+	</dict>
+	<key>objects</key>
+	<dict>
+		<key>ring</key>
+		<dict>
+			<key>file</key>
+			<string>ring.png</string>
+			<key>audio</key>
+			<string>ring.mp3</string>
+			<key>content</key>
+			<string>Here is a red ring.</string>
+			<key>position</key>
+			<string>{0.754,0.468}</string>
+		</dict>
+		<key>road</key>
+		<dict>
+			<key>file</key>
+			<string>road.png</string>
+			<key>audio</key>
+			<string>road.mp3</string>
+			<key>content</key>
+			<string>Here is a red road.</string>
+			<key>position</key>
+			<string>{0.130,0.772}</string>
+		</dict>
+		<key>rocket</key>
+		<dict>
+			<key>file</key>
+			<string>rocket.png</string>
+			<key>audio</key>
+			<string>rocket.mp3</string>
+			<key>content</key>
+			<string>Here is a red rocket.</string>
+			<key>position</key>
+			<string>{0.868,0.822}</string>
+		</dict>
+		<key>rooster</key>
+		<dict>
+			<key>file</key>
+			<string>rooster.png</string>
+			<key>audio</key>
+			<string>rooster.mp3</string>
+			<key>content</key>
+			<string>Here is a red rooster.</string>
+			<key>position</key>
+			<string>{0.395,0.661}</string>
+		</dict>
+		<key>rose</key>
+		<dict>
+			<key>file</key>
+			<string>rose.png</string>
+			<key>audio</key>
+			<string>rose.mp3</string>
+			<key>content</key>
+			<string>Here is a red rose.</string>
+			<key>position</key>
+			<string>{0.142,0.199}</string>
+		</dict>
+		<key>rug</key>
+		<dict>
+			<key>file</key>
+			<string>rug.png</string>
+			<key>audio</key>
+			<string>rug.mp3</string>
+			<key>content</key>
+			<string>Here is a red rug.</string>
+			<key>position</key>
+			<string>{0.675,0.196}</string>
+		</dict>
+	</dict>
+</dict>
 </plist>

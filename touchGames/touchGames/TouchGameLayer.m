@@ -145,8 +145,6 @@ CGPoint screenSizeAsPoint()
     CDLongAudioSource *audioPlayer; //strong
     
     DLSubtitleLabel *contentLabel; // weak
-    
-    NSString *labelContent;
 }
 
 + (TouchGameLayer *) gameLayerWithGameData:(NSDictionary *)dic
@@ -204,16 +202,15 @@ CGPoint screenSizeAsPoint()
     [super dealloc];
     
     [audioPlayer release];
-    [labelContent release];
 }
 
 - (void) addContentLabelWithData:(NSDictionary *)data
 {
     NSString *fontFile = [data objectForKey:@"fntFile"];
     CGPoint pos = CGPointFromString([data objectForKey:@"position"]);
-    NSString *content = [data objectForKey:@"content"];
+//    NSString *content = [data objectForKey:@"content"];
     
-    contentLabel = [DLSubtitleLabel labelWithString:content fntFile:fontFile];
+    contentLabel = [DLSubtitleLabel labelWithString:@"" fntFile:fontFile];
     contentLabel.position = ccpCompMult(screenSizeAsPoint(), pos);
     contentLabel.anchorPoint = ccp(0,0.5);
     contentLabel.delegate = self;
@@ -221,8 +218,6 @@ CGPoint screenSizeAsPoint()
     [self addChild:contentLabel z:2];
     
     contentLabel.touchEnable = YES;
-    
-    labelContent = [content copy];
 }
 
 - (void) loadObjectsWithData:(NSDictionary *)data
@@ -271,7 +266,7 @@ CGPoint screenSizeAsPoint()
         object.opacity = 255;
     }
     
-    contentLabel.string = [labelContent stringByAppendingString:object.content];
+    contentLabel.string = object.content;
     
     [audioPlayer stop];
     [audioPlayer load:object.audioFileName];
