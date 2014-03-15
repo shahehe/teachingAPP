@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-#import "SimpleAudioEngine.h"
+
 
 @interface AudioDict : NSObject
 {
@@ -27,11 +27,9 @@
 - (NSString *) dumpCacheInfo;
 
 - (void) refresh;
-
 - (void) saveToFile;
 
 - (void) readWord:(NSString *)word;
-
 - (void) addWord:(NSString *)word audioFilePath:(NSString *)path;
 - (void) removeWordFromAvaliableList:(NSString *)word;
 - (void) removeWordsFromAvaliableList:(NSArray *)words;
@@ -42,7 +40,6 @@
 - (void) preloadWord:(NSString *)word;
 - (void) preloadWords:(NSArray *)words;
 - (void) unloadWord:(NSString *)word;
-
 - (void) unloadAll;
 
 @end

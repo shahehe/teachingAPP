@@ -7,9 +7,12 @@
 //
 
 #import "AudioDict.h"
-#import "config.h"
-#import "AppConfig.h"
-#import "PhonicsDefines.h"
+#import "SimpleAudioEngine.h"
+
+static char *const audioDicFileName   = "audioDic.plist";
+static char *const audioDicPath       = "data/audioDic";
+
+#define APP_DOCUMENT_PATH       [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) objectAtIndex:0]
 
 @implementation AudioDict
 
@@ -31,11 +34,11 @@
         NSString *fileName = [NSString stringWithUTF8String:audioDicFileName];
         NSString *filePath = [APP_DOCUMENT_PATH stringByAppendingPathComponent:fileName];
         BOOL isExist       = [[NSFileManager defaultManager] fileExistsAtPath:filePath];
-        BOOL needRefresh   = refreshAudioDicOnLaunch();
+        
         _avaliableWords    = [[NSMutableDictionary alloc] init];
         _avalibleQueue     = dispatch_queue_create("com.yiplee.avalibleSoundEffect",NULL);
         
-        if (needRefresh || !isExist)
+        if (!isExist)
         {
             [self refresh];
         }
@@ -118,7 +121,7 @@
     NSString *fileName = [NSString stringWithUTF8String:audioDicFileName];
     NSString *filePath = [APP_DOCUMENT_PATH stringByAppendingPathComponent:fileName];
     
-    dispatch_sync(_avalibleQueue, ^{
+    dispatch_async(_avalibleQueue, ^{
         [_avaliableWords writeToFile:filePath atomically:YES];
     });
 }
