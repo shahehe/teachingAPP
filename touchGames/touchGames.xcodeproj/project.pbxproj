@@ -169,6 +169,8 @@
 		84AF8D4F18D2F58C00EF7CD0 /* grapes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84AF8D4918D2F58C00EF7CD0 /* grapes.mp3 */; };
 		84AF8D5018D2F58C00EF7CD0 /* grass.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84AF8D4A18D2F58C00EF7CD0 /* grass.mp3 */; };
 		84AF8D5118D2F58C00EF7CD0 /* grasshopper.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84AF8D4B18D2F58C00EF7CD0 /* grasshopper.mp3 */; };
+		84F7727718D4341C005B4774 /* AudioDict.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F7727618D4341C005B4774 /* AudioDict.m */; };
+		84F7727A18D43672005B4774 /* data in Resources */ = {isa = PBXBuildFile; fileRef = 84F7727918D43672005B4774 /* data */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -482,6 +484,9 @@
 		84AF8D4918D2F58C00EF7CD0 /* grapes.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = grapes.mp3; sourceTree = "<group>"; };
 		84AF8D4A18D2F58C00EF7CD0 /* grass.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = grass.mp3; sourceTree = "<group>"; };
 		84AF8D4B18D2F58C00EF7CD0 /* grasshopper.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = grasshopper.mp3; sourceTree = "<group>"; };
+		84F7727518D4341C005B4774 /* AudioDict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioDict.h; path = ../../audioDict/AudioDict.h; sourceTree = "<group>"; };
+		84F7727618D4341C005B4774 /* AudioDict.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioDict.m; path = ../../audioDict/AudioDict.m; sourceTree = "<group>"; };
+		84F7727918D43672005B4774 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data; path = ../../data; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -550,6 +555,7 @@
 				846CE27118D2121D00B36A06 /* TouchGameLayer.m */,
 				846CE27318D2133800B36A06 /* DLSubtitleLabel.h */,
 				846CE27418D2133800B36A06 /* DLSubtitleLabel.m */,
+				84F7727818D43423005B4774 /* Model */,
 				84AF8D3B18D2F1A100EF7CD0 /* font */,
 				84AF8D0E18D2F14C00EF7CD0 /* garden */,
 				846CE0D218D211D500B36A06 /* Resources */,
@@ -562,6 +568,7 @@
 		846CE0D218D211D500B36A06 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				84F7727918D43672005B4774 /* data */,
 				846CE0D318D211D500B36A06 /* Default.png */,
 				846CE0D518D211D500B36A06 /* Default@2x.png */,
 				846CE0D718D211D500B36A06 /* Default-568h@2x.png */,
@@ -981,6 +988,15 @@
 			path = font;
 			sourceTree = "<group>";
 		};
+		84F7727818D43423005B4774 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84F7727518D4341C005B4774 /* AudioDict.h */,
+				84F7727618D4341C005B4774 /* AudioDict.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1046,6 +1062,7 @@
 				84AF8D3218D2F14C00EF7CD0 /* glove-ipadhd.png in Resources */,
 				84AF8D4F18D2F58C00EF7CD0 /* grapes.mp3 in Resources */,
 				84AF8D4E18D2F58C00EF7CD0 /* glove.mp3 in Resources */,
+				84F7727A18D43672005B4774 /* data in Resources */,
 				84AF8D3318D2F14C00EF7CD0 /* grape-ipad.png in Resources */,
 				84AF8D3718D2F14C00EF7CD0 /* locust-ipad.png in Resources */,
 				84AF8D4518D2F1CD00EF7CD0 /* Garden.plist in Resources */,
@@ -1141,6 +1158,7 @@
 				846CE24E18D211D600B36A06 /* neon_matrix_impl.c in Sources */,
 				846CE17E18D211D600B36A06 /* CCScene.m in Sources */,
 				846CE0FD18D211D500B36A06 /* CCActionGrid3D.m in Sources */,
+				84F7727718D4341C005B4774 /* AudioDict.m in Sources */,
 				846CE24618D211D600B36A06 /* mat4stack.c in Sources */,
 				846CE1A218D211D600B36A06 /* CCSpriteFrameCache.m in Sources */,
 				846CE12B18D211D500B36A06 /* CCDirector.m in Sources */,
