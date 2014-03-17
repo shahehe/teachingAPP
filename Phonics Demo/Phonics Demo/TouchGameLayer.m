@@ -8,6 +8,10 @@
 
 #import "TouchGameLayer.h"
 
+#import "config.h"
+
+#import "TouchingGameMenu.h"
+
 @interface GameObject : CCSprite<CCTouchOneByOneDelegate>
 {
     NSString *_content;
@@ -21,8 +25,6 @@
 
 // 音频文件名称
 @property (nonatomic,copy) NSString *audioFileName;
-
-@property (nonatomic,assign) NSInteger touchpriority;
 
 + (GameObject *) objectWithFile:(NSString*)file content:(NSString*)content audioFileName:(NSString*)audio;
 - (id) initWithFile:(NSString*)file content:(NSString*)content audioFileName:(NSString*)audio;
@@ -46,19 +48,35 @@
     self.content = content;
     self.audioFileName = audio;
     
+    _block = nil;
     
-    _touchpriority = 0;
-    [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self priority:_touchpriority swallowsTouches:YES];
-    
+
     return self;
+}
+
+- (void) onEnter
+{
+    [super onEnter];
+    [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
+    [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
+}
+
+- (void) onExitTransitionDidStart
+{
+    [super onExitTransitionDidStart];
+//    CCLOG(@"remove touch delegate");
+    [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
 }
 
 - (void) dealloc
 {
+    
     [_content release];
     [_audioFileName release];
     
     [_block release];
+    _block = nil;
+    
     [super dealloc];
 }
 
@@ -146,7 +164,8 @@ CGPoint screenSizeAsPoint()
     self = [super init];
     NSAssert(self, @"TouchGameLayer failed init");
     
-    searchPath = [dic objectForKey:@"path"];
+    searchPath = [[dic objectForKey:@"path"] copy];
+//    CCLOG(@"path:%@",searchPath);
     [self setSearchPath];
     
     // background z:0
@@ -168,7 +187,7 @@ CGPoint screenSizeAsPoint()
     
     // Menu
     CCMenuItemFont *back = [CCMenuItemFont itemWithString:@"MENU" block:^(id sender) {
-//        [[CCDirector sharedDirector] replaceScene:[GameMenu scene]];
+        [[CCDirector sharedDirector] replaceScene:[TouchingGameMenu scene]];
     }];
     back.color = ccBLACK;
     back.position = ccpCompMult(screenSizeAsPoint(), ccp(0.1,0.95));
@@ -194,11 +213,12 @@ CGPoint screenSizeAsPoint()
     [super dealloc];
     
     [audioPlayer release];
+    [searchPath release];
 }
 
-- (void) onEnter
+- (void) onEnterTransitionDidFinish
 {
-    [super onEnter];
+    [super onEnterTransitionDidFinish];
     [self setSearchPath];
 }
 
@@ -236,7 +256,9 @@ CGPoint screenSizeAsPoint()
     CGPoint pos = CGPointFromString([data objectForKey:@"position"]);
 //    NSString *content = [data objectForKey:@"content"];
     
-    contentLabel = [DLSubtitleLabel labelWithString:@"" fntFile:fontFile];
+    NSString *fntFilePath = [[NSString stringWithUTF8String:BMFontDirPath] stringByAppendingPathComponent:fontFile];
+    
+    contentLabel = [DLSubtitleLabel labelWithString:@"" fntFile:fntFilePath];
     contentLabel.position = ccpCompMult(screenSizeAsPoint(), pos);
     contentLabel.anchorPoint = ccp(0,0.5);
     contentLabel.delegate = self;
@@ -266,7 +288,6 @@ CGPoint screenSizeAsPoint()
     object.position = ccpCompMult(screenSizeAsPoint(), pos);
     [self addChild:object];
     object.zOrder = 1;
-    object.touchpriority = 1;
     
     __block id self_copy = self;
     [object setBlock:^(id sender) {

@@ -7,8 +7,75 @@
 //
 
 #import "TouchingGameMenu.h"
+#import "TouchGameLayer.h"
 
+#import "MainMenu.h"
+
+#include "config.h"
 
 @implementation TouchingGameMenu
+
++ (CCScene *) scene
+{
+    CCScene *scene = [CCScene node];
+    CCLayer *layer = [TouchingGameMenu node];
+    [scene addChild:layer];
+    return scene;
+}
+
+- (id) init
+{
+    if (self = [super init])
+    {
+        NSDictionary*
+        menuData = @{@"I love": @"I_love.plist",
+                     @"Can U":@"can_u.plist",
+                     @"Happy":@"happy_me.plist",
+                     @"Red":@"Red.plist",
+                     @"Garden":@"Garden.plist"};
+        
+        NSString *rootPath = [NSString stringWithUTF8String:touchingGameRootPath];
+        
+        NSMutableArray *menuItems = [NSMutableArray array];
+        for (NSString *name in menuData.allKeys)
+        {
+            NSString *fileName = [menuData objectForKey:name];
+            NSString *filePath = [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:rootPath] stringByAppendingPathComponent:fileName];
+            
+//            CCLOG(@"fileName:%@",filePath);
+            NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:filePath];
+            
+            CCMenuItemFont *item = [CCMenuItemFont itemWithString:name block:^(id sender) {
+                TouchGameLayer *game = [TouchGameLayer gameLayerWithGameData:dic];
+                CCScene *scene = [CCScene node];
+                [scene addChild:game];
+                [[CCDirector sharedDirector] replaceScene:scene];
+            }];
+            
+            if (!dic)
+            {
+                [item setIsEnabled:NO];
+            }
+            
+            item.color = ccWHITE;
+            [menuItems addObject:item];
+        }
+        
+        CCMenuItem *back = [CCMenuItemFont itemWithString:@"BACK" block:^(id sender) {
+            [[CCDirector sharedDirector] replaceScene:[MainMenu scene]];
+        }];
+        back.color = ccYELLOW;
+        [menuItems addObject:back];
+        
+        CCMenu *menu = [CCMenu menuWithArray:menuItems];
+        [menu alignItemsVerticallyWithPadding:30];
+        [self addChild:menu];
+        
+        CGSize size = [[CCDirector sharedDirector] winSize];
+        menu.position = ccpMult(ccpFromSize(size), 0.5);
+    }
+    
+    return self;
+}
 
 @end

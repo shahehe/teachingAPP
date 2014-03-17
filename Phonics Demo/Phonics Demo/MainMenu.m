@@ -16,6 +16,8 @@
 
 #import "PhonicsGames.h"
 
+#import "TouchingGameMenu.h"
+
 @implementation MainMenu
 
 + (CCScene*) scene
@@ -64,6 +66,12 @@
         [menuItems addObject:_item];
     }
     
+    //touching games
+    CCMenuItem *touchingGame = [CCMenuItemFont itemWithString:@"Touching Games" block:^(id sender) {
+        [[CCDirector sharedDirector] replaceScene:[TouchingGameMenu scene]];
+    }];
+    touchingGame.color = ccYELLOW;
+    [menuItems addObject:touchingGame];
 
 //    CCMenu *menu = [CCMenu menuWithItems:item1,item2, nil];
     CCMenu *menu = [CCMenu menuWithArray:menuItems];
@@ -72,7 +80,7 @@
     menu.position = ccpMult(SCREEN_SIZE_AS_POINT, 0.5);
     [self addChild:menu];
 
-        return self;
+    return self;
 
 }
 - (void) loadSpritesheet:(NSString *)spritesheetName {

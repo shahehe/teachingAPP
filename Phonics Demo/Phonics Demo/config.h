@@ -9,6 +9,7 @@
 #ifndef LetterE_config_h
 #define LetterE_config_h
 
-
+static char *const touchingGameRootPath = "Assets/touchingGames";
+static char *const BMFontDirPath = "Assets/BMFont";
 
 #endif

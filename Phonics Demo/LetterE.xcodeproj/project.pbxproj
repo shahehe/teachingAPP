@@ -16,6 +16,7 @@
 		8450DCCB179C016C0003B181 /* AppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8450DCCA179C016C0003B181 /* AppManager.m */; };
 		847403BE18D71A980093C83E /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 847403BD18D71A980093C83E /* Assets */; };
 		847403C118D71ABA0093C83E /* TouchGameLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 847403C018D71ABA0093C83E /* TouchGameLayer.m */; };
+		847403C418D738090093C83E /* TouchingGameMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 847403C318D738090093C83E /* TouchingGameMenu.m */; };
 		8497C13217A2636A004034BB /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8497C13117A2636A004034BB /* MainMenu.m */; };
 		8498BAFE17847D9D00F71234 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8498BAFD17847D9D00F71234 /* QuartzCore.framework */; };
 		8498BB0017847D9D00F71234 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8498BAFF17847D9D00F71234 /* OpenGLES.framework */; };
@@ -356,6 +357,9 @@
 		847403BD18D71A980093C83E /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Assets; path = ../../Assets; sourceTree = "<group>"; };
 		847403BF18D71ABA0093C83E /* TouchGameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchGameLayer.h; sourceTree = "<group>"; };
 		847403C018D71ABA0093C83E /* TouchGameLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchGameLayer.m; sourceTree = "<group>"; };
+		847403C218D738090093C83E /* TouchingGameMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchingGameMenu.h; sourceTree = "<group>"; };
+		847403C318D738090093C83E /* TouchingGameMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchingGameMenu.m; sourceTree = "<group>"; };
+		847403C518D738990093C83E /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		8497C13017A2636A004034BB /* MainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenu.h; sourceTree = "<group>"; };
 		8497C13117A2636A004034BB /* MainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenu.m; sourceTree = "<group>"; };
 		8498BAFA17847D9D00F71234 /* LetterE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetterE.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1032,8 +1036,11 @@
 		8498BB1117847D9D00F71234 /* Phonics Demo */ = {
 			isa = PBXGroup;
 			children = (
+				847403C518D738990093C83E /* config.h */,
 				847403BF18D71ABA0093C83E /* TouchGameLayer.h */,
 				847403C018D71ABA0093C83E /* TouchGameLayer.m */,
+				847403C218D738090093C83E /* TouchingGameMenu.h */,
+				847403C318D738090093C83E /* TouchingGameMenu.m */,
 				8498BCA217847D9F00F71234 /* AppDelegate.h */,
 				8498BCA317847D9F00F71234 /* AppDelegate.m */,
 				8498BCA517847D9F00F71234 /* HelloWorldLayer.h */,
@@ -2160,6 +2167,7 @@
 				8498BC3E17847D9E00F71234 /* ccUtils.c in Sources */,
 				8498BC4217847D9E00F71234 /* CCVertex.m in Sources */,
 				84B4F20018D040BF0071E85B /* cpSpace.c in Sources */,
+				847403C418D738090093C83E /* TouchingGameMenu.m in Sources */,
 				84B4F12C18D03BF60071E85B /* letterBubble.m in Sources */,
 				847403C118D71ABA0093C83E /* TouchGameLayer.m in Sources */,
 				84B4F12818D03BF60071E85B /* bubble.m in Sources */,
