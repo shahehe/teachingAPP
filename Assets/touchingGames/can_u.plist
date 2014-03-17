@@ -2,8 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>path</key>
+	<string>Assets/touchingGames/CanU</string>
 	<key>title</key>
 	<string>Can U</string>
+    <key>path</key>
+	<string>Assets/touchingGames/CanU</string>
 	<key>background</key>
 	<string>can_you_background.png</string>
 	<key>label</key>

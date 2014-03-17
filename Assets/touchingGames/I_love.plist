@@ -4,6 +4,8 @@
 <dict>
 	<key>title</key>
 	<string>I Love</string>
+    <key>path</key>
+	<string>Assets/touchingGames/I_love</string>
 	<key>background</key>
 	<string>I_love_background.png</string>
 	<key>label</key>

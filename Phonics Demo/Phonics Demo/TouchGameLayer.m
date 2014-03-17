@@ -8,8 +8,6 @@
 
 #import "TouchGameLayer.h"
 
-
-
 @interface GameObject : CCSprite<CCTouchOneByOneDelegate>
 {
     NSString *_content;
@@ -133,6 +131,9 @@ CGPoint screenSizeAsPoint()
     CDLongAudioSource *audioPlayer; //strong
     
     DLSubtitleLabel *contentLabel; // weak
+    
+    // search path for images & audio
+    NSString *searchPath;
 }
 
 + (TouchGameLayer *) gameLayerWithGameData:(NSDictionary *)dic
@@ -144,6 +145,9 @@ CGPoint screenSizeAsPoint()
 {
     self = [super init];
     NSAssert(self, @"TouchGameLayer failed init");
+    
+    searchPath = [dic objectForKey:@"path"];
+    [self setSearchPath];
     
     // background z:0
     NSString *background = [dic objectForKey:@"background"];
@@ -190,6 +194,40 @@ CGPoint screenSizeAsPoint()
     [super dealloc];
     
     [audioPlayer release];
+}
+
+- (void) onEnter
+{
+    [super onEnter];
+    [self setSearchPath];
+}
+
+- (void) onExit
+{
+    [super onExit];
+    [self resetSearchPath];
+}
+
+- (void) setSearchPath
+{
+    CCFileUtils *util = [CCFileUtils sharedFileUtils];
+    
+    NSMutableArray *paths = [util.searchPath mutableCopy];
+    [paths insertObject:searchPath atIndex:0];
+    
+    util.searchPath = paths;
+    [paths release];
+}
+
+- (void) resetSearchPath
+{
+    CCFileUtils *util = [CCFileUtils sharedFileUtils];
+    
+    NSMutableArray *paths = [util.searchPath mutableCopy];
+    [paths removeObject:searchPath];
+    
+    util.searchPath = paths;
+    [paths release];
 }
 
 - (void) addContentLabelWithData:(NSDictionary *)data
