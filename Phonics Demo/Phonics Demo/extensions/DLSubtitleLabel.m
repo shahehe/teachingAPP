@@ -6,7 +6,18 @@
 //  Copyright 2014年 yiplee. All rights reserved.
 //
 
+// to enable audio dic ,set the value bigger than Zero
+#define __AUDIO_DICT_INTEGRATE_ 0
+
+#if __AUDIO_DICT_INTEGRATE_ > 0
+#define __AUDIO_DICT_
+#endif
+
 #import "DLSubtitleLabel.h"
+
+#ifdef __AUDIO_DICT_
+#import "AudioDict.h"
+#endif
 
 static char *const punctuations = " ,.:""''!?-(){}[];<>/_";
 
@@ -51,6 +62,8 @@ static char *const punctuations = " ,.:""''!?-(){}[];<>/_";
     
     NSString *content = [self.string stringByReplacingOccurrencesOfString:@"\n" withString:@" "];
     NSArray *words = [content wordsSeparatedByCharactersInSet:_set];
+    
+    [self loadAudioFileOfWords:words];
     
     _numberOfWords = [words count];
     
@@ -130,10 +143,13 @@ static char *const punctuations = " ,.:""''!?-(){}[];<>/_";
     
     _touchEnable = touchEnable;
     
-    [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
     if (_touchEnable)
     {
         [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
+    }
+    else
+    {
+        [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
     }
 }
 
@@ -226,6 +242,15 @@ static char *const punctuations = " ,.:""''!?-(){}[];<>/_";
     _indexOfHighlightedWord = index;
 }
 
+#pragma mark --audio dict
+
+- (void) loadAudioFileOfWords:(NSArray*)words
+{
+#ifdef __AUDIO_DICT_
+    [[AudioDict defaultAudioDict] preloadWords:words];
+#endif
+}
+
 #pragma mark --CCTouchOneByOneDelegate
 
 - (BOOL) ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
@@ -258,7 +283,12 @@ static char *const punctuations = " ,.:""''!?-(){}[];<>/_";
         
         if ([_delegate respondsToSelector:@selector(subtitleLabelClickOnWord:sender:)])
         {
-            [_delegate subtitleLabelClickOnWord:[self stringWithRange:_wordRanges[_indexOfHighlightedWord]] sender:self];
+            NSString *word = [self stringWithRange:_wordRanges[_indexOfHighlightedWord]];
+            [_delegate subtitleLabelClickOnWord:word sender:self];
+            
+#ifdef __AUDIO_DICT_
+            [[AudioDict defaultAudioDict] readWord:word];
+#endif
         }
         _indexOfHighlightedWord = NSNotFound;
     }
