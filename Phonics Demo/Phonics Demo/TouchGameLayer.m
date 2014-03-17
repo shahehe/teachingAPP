@@ -8,7 +8,7 @@
 
 #import "TouchGameLayer.h"
 
-#import "GameMenu.h"
+
 
 @interface GameObject : CCSprite<CCTouchOneByOneDelegate>
 {
@@ -164,7 +164,7 @@ CGPoint screenSizeAsPoint()
     
     // Menu
     CCMenuItemFont *back = [CCMenuItemFont itemWithString:@"MENU" block:^(id sender) {
-        [[CCDirector sharedDirector] replaceScene:[GameMenu scene]];
+//        [[CCDirector sharedDirector] replaceScene:[GameMenu scene]];
     }];
     back.color = ccBLACK;
     back.position = ccpCompMult(screenSizeAsPoint(), ccp(0.1,0.95));
