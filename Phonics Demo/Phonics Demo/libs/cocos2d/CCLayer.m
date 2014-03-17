@@ -868,7 +868,7 @@
 {
 	NSAssert( n < [_layers count], @"Invalid index in MultiplexLayer switchTo message" );
 
-	[self removeChild: [_layers objectAtIndex:_enabledLayer] cleanup:YES];
+	[self removeChild: [_layers objectAtIndex:_enabledLayer] cleanup:NO];
 
 	_enabledLayer = n;
 
