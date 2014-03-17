@@ -14,6 +14,8 @@
 		8445F7E3179FC56E001251C1 /* Cocos2d+CustomOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8445F7E2179FC56E001251C1 /* Cocos2d+CustomOptions.m */; };
 		8445F80017A0D05E001251C1 /* CLDynamicLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8445F7FF17A0D05E001251C1 /* CLDynamicLabel.m */; };
 		8450DCCB179C016C0003B181 /* AppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8450DCCA179C016C0003B181 /* AppManager.m */; };
+		847403BE18D71A980093C83E /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 847403BD18D71A980093C83E /* Assets */; };
+		847403C118D71ABA0093C83E /* TouchGameLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 847403C018D71ABA0093C83E /* TouchGameLayer.m */; };
 		8497C13217A2636A004034BB /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8497C13117A2636A004034BB /* MainMenu.m */; };
 		8498BAFE17847D9D00F71234 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8498BAFD17847D9D00F71234 /* QuartzCore.framework */; };
 		8498BB0017847D9D00F71234 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8498BAFF17847D9D00F71234 /* OpenGLES.framework */; };
@@ -151,7 +153,6 @@
 		8499CA7917C325CE00A1A24C /* SlidePauseMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8499CA7817C325CE00A1A24C /* SlidePauseMenuLayer.m */; };
 		84B3FCC618CF772500FD27E8 /* DLDraggableSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B3FCC318CF772500FD27E8 /* DLDraggableSprite.m */; };
 		84B3FCC718CF772500FD27E8 /* DLSubtitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B3FCC518CF772500FD27E8 /* DLSubtitleLabel.m */; };
-		84B3FCCB18CF788E00FD27E8 /* Gardenlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B3FCCA18CF788E00FD27E8 /* Gardenlayer.m */; };
 		84B4F07818D03BCA0071E85B /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B4F06518D03BCA0071E85B /* Card.m */; };
 		84B4F07918D03BCA0071E85B /* CCLabelBMFontOnBacthNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B4F06718D03BCA0071E85B /* CCLabelBMFontOnBacthNode.m */; };
 		84B4F07A18D03BCA0071E85B /* CCLinePro.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B4F06918D03BCA0071E85B /* CCLinePro.m */; };
@@ -323,7 +324,6 @@
 		84B4F20518D040BF0071E85B /* cpSpatialIndex.c in Sources */ = {isa = PBXBuildFile; fileRef = 84B4F1E618D040BF0071E85B /* cpSpatialIndex.c */; };
 		84B4F20618D040BF0071E85B /* cpSweep1D.c in Sources */ = {isa = PBXBuildFile; fileRef = 84B4F1E718D040BF0071E85B /* cpSweep1D.c */; };
 		84B4F20718D040BF0071E85B /* cpVect.c in Sources */ = {isa = PBXBuildFile; fileRef = 84B4F1E818D040BF0071E85B /* cpVect.c */; };
-		84B4F20B18D0727B0071E85B /* RedRoomLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B4F20A18D0727B0071E85B /* RedRoomLayer.m */; };
 		84EDDEF217BCD22D00262E2B /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EDDEF117BCD22D00262E2B /* MediaPlayer.framework */; };
 		84EDDF0817BCD41E00262E2B /* CCScrollLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EDDEF717BCD41E00262E2B /* CCScrollLayer.m */; };
 		AE2FD211183554C500DEE058 /* TraceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2FD210183554C500DEE058 /* TraceUtil.m */; };
@@ -353,6 +353,9 @@
 		8450DCC7179A35090003B181 /* PhonicsDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhonicsDefines.h; sourceTree = "<group>"; };
 		8450DCC9179C016C0003B181 /* AppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppManager.h; path = Model/AppManager.h; sourceTree = "<group>"; };
 		8450DCCA179C016C0003B181 /* AppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppManager.m; path = Model/AppManager.m; sourceTree = "<group>"; };
+		847403BD18D71A980093C83E /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Assets; path = ../../Assets; sourceTree = "<group>"; };
+		847403BF18D71ABA0093C83E /* TouchGameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchGameLayer.h; sourceTree = "<group>"; };
+		847403C018D71ABA0093C83E /* TouchGameLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchGameLayer.m; sourceTree = "<group>"; };
 		8497C13017A2636A004034BB /* MainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenu.h; sourceTree = "<group>"; };
 		8497C13117A2636A004034BB /* MainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenu.m; sourceTree = "<group>"; };
 		8498BAFA17847D9D00F71234 /* LetterE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetterE.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -642,8 +645,6 @@
 		84B3FCC318CF772500FD27E8 /* DLDraggableSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLDraggableSprite.m; path = extensions/DLDraggableSprite.m; sourceTree = "<group>"; };
 		84B3FCC418CF772500FD27E8 /* DLSubtitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLSubtitleLabel.h; path = extensions/DLSubtitleLabel.h; sourceTree = "<group>"; };
 		84B3FCC518CF772500FD27E8 /* DLSubtitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLSubtitleLabel.m; path = extensions/DLSubtitleLabel.m; sourceTree = "<group>"; };
-		84B3FCC918CF788E00FD27E8 /* Gardenlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gardenlayer.h; sourceTree = "<group>"; };
-		84B3FCCA18CF788E00FD27E8 /* Gardenlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gardenlayer.m; sourceTree = "<group>"; };
 		84B4F06418D03BCA0071E85B /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = extensions/Card.h; sourceTree = "<group>"; };
 		84B4F06518D03BCA0071E85B /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = extensions/Card.m; sourceTree = "<group>"; };
 		84B4F06618D03BCA0071E85B /* CCLabelBMFontOnBacthNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCLabelBMFontOnBacthNode.h; path = extensions/CCLabelBMFontOnBacthNode.h; sourceTree = "<group>"; };
@@ -871,8 +872,6 @@
 		84B4F1E718D040BF0071E85B /* cpSweep1D.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpSweep1D.c; sourceTree = "<group>"; };
 		84B4F1E818D040BF0071E85B /* cpVect.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpVect.c; sourceTree = "<group>"; };
 		84B4F1E918D040BF0071E85B /* prime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prime.h; sourceTree = "<group>"; };
-		84B4F20918D0727B0071E85B /* RedRoomLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedRoomLayer.h; sourceTree = "<group>"; };
-		84B4F20A18D0727B0071E85B /* RedRoomLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedRoomLayer.m; sourceTree = "<group>"; };
 		84EDDEF117BCD22D00262E2B /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		84EDDEF617BCD41E00262E2B /* CCScrollLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCScrollLayer.h; sourceTree = "<group>"; };
 		84EDDEF717BCD41E00262E2B /* CCScrollLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCScrollLayer.m; sourceTree = "<group>"; };
@@ -1033,6 +1032,8 @@
 		8498BB1117847D9D00F71234 /* Phonics Demo */ = {
 			isa = PBXGroup;
 			children = (
+				847403BF18D71ABA0093C83E /* TouchGameLayer.h */,
+				847403C018D71ABA0093C83E /* TouchGameLayer.m */,
 				8498BCA217847D9F00F71234 /* AppDelegate.h */,
 				8498BCA317847D9F00F71234 /* AppDelegate.m */,
 				8498BCA517847D9F00F71234 /* HelloWorldLayer.h */,
@@ -1042,9 +1043,8 @@
 				8450DCC7179A35090003B181 /* PhonicsDefines.h */,
 				8497C13017A2636A004034BB /* MainMenu.h */,
 				8497C13117A2636A004034BB /* MainMenu.m */,
-				84B4F20818D05FF70071E85B /* Red */,
+				847403BD18D71A980093C83E /* Assets */,
 				84B4F08618D03BF60071E85B /* Games */,
-				84B3FCC818CF788E00FD27E8 /* garden */,
 				843335A617ACF2CD009F1C56 /* Dialog */,
 				8445F7E0179FC4FD001251C1 /* extensions */,
 				8450DCC8179AD06F0003B181 /* Model */,
@@ -1437,15 +1437,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		84B3FCC818CF788E00FD27E8 /* garden */ = {
-			isa = PBXGroup;
-			children = (
-				84B3FCC918CF788E00FD27E8 /* Gardenlayer.h */,
-				84B3FCCA18CF788E00FD27E8 /* Gardenlayer.m */,
-			);
-			path = garden;
-			sourceTree = "<group>";
-		};
 		84B4F08618D03BF60071E85B /* Games */ = {
 			isa = PBXGroup;
 			children = (
@@ -1796,15 +1787,6 @@
 			path = constraints;
 			sourceTree = "<group>";
 		};
-		84B4F20818D05FF70071E85B /* Red */ = {
-			isa = PBXGroup;
-			children = (
-				84B4F20918D0727B0071E85B /* RedRoomLayer.h */,
-				84B4F20A18D0727B0071E85B /* RedRoomLayer.m */,
-			);
-			path = Red;
-			sourceTree = "<group>";
-		};
 		84EDDEF517BCD41E00262E2B /* CCScrollLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -1955,6 +1937,7 @@
 				84B4F14318D03BF60071E85B /* bubble_texture-hd.plist in Resources */,
 				84B4F14118D03BF60071E85B /* bubble_object.plist in Resources */,
 				84B4F14D18D03BF60071E85B /* game_bg_right-hd.png in Resources */,
+				847403BE18D71A980093C83E /* Assets in Resources */,
 				8498BB1C17847D9D00F71234 /* Icon-72.png in Resources */,
 				84B4F14518D03BF60071E85B /* bubble_texture.plist in Resources */,
 				84B4F13C18D03BF60071E85B /* Lithos_pro_yellow.fnt in Resources */,
@@ -2178,6 +2161,7 @@
 				8498BC4217847D9E00F71234 /* CCVertex.m in Sources */,
 				84B4F20018D040BF0071E85B /* cpSpace.c in Sources */,
 				84B4F12C18D03BF60071E85B /* letterBubble.m in Sources */,
+				847403C118D71ABA0093C83E /* TouchGameLayer.m in Sources */,
 				84B4F12818D03BF60071E85B /* bubble.m in Sources */,
 				8498BC4517847D9E00F71234 /* CGPointExtension.m in Sources */,
 				8498BC4817847D9E00F71234 /* NSThread+performBlock.m in Sources */,
@@ -2200,7 +2184,6 @@
 				84B4F1F018D040BF0071E85B /* cpGrooveJoint.c in Sources */,
 				8498BC8E17847D9F00F71234 /* neon_matrix_impl.c in Sources */,
 				84B4F1F318D040BF0071E85B /* cpRatchetJoint.c in Sources */,
-				84B4F20B18D0727B0071E85B /* RedRoomLayer.m in Sources */,
 				8498BC9017847D9F00F71234 /* plane.c in Sources */,
 				84B4F16A18D03BF60071E85B /* CardMatchingGamePrepareLayer.m in Sources */,
 				84B4F20318D040BF0071E85B /* cpSpaceQuery.c in Sources */,
@@ -2232,7 +2215,6 @@
 				843335B417ACF4F7009F1C56 /* LetterIdentification.m in Sources */,
 				843335B717ACF50B009F1C56 /* ToolbarLayer.m in Sources */,
 				84EDDF0817BCD41E00262E2B /* CCScrollLayer.m in Sources */,
-				84B3FCCB18CF788E00FD27E8 /* Gardenlayer.m in Sources */,
 				8499CA7917C325CE00A1A24C /* SlidePauseMenuLayer.m in Sources */,
 				AEB72C0117FF88D800F71600 /* CCVideoPlayer.m in Sources */,
 				AEB72C0217FF88D800F71600 /* CCVideoPlayerImpliOS.m in Sources */,
