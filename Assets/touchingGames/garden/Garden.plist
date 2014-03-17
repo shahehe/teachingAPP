@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>title</string>
+	<key>background</key>
+	<string>garden_background.png</string>
+	<key>label</key>
+	<dict>
+		<key>fntFile</key>
+		<string>Didot.fnt</string>
+		<key>position</key>
+		<string>{0.13,0.7}</string>
+	</dict>
+	<key>objects</key>
+	<dict>
+		<key>bean</key>
+		<dict>
+			<key>file</key>
+			<string>bean.png</string>
+			<key>audio</key>
+			<string>beans.mp3</string>
+			<key>content</key>
+			<string>My garden has green beans.</string>
+			<key>position</key>
+			<string>{0.35244140625,0.23450520833333}</string>
+		</dict>
+		<key>gate</key>
+		<dict>
+			<key>file</key>
+			<string>gate.png</string>
+			<key>audio</key>
+			<string>gate.mp3</string>
+			<key>content</key>
+			<string>My garden has a gate.</string>
+			<key>position</key>
+			<string>{0.66083984375,0.26341145833333}</string>
+		</dict>
+		<key>grape</key>
+		<dict>
+			<key>file</key>
+			<string>grape.png</string>
+			<key>audio</key>
+			<string>grapes.mp3</string>
+			<key>content</key>
+			<string>My garden has grapes.</string>
+			<key>position</key>
+			<string>{0.13935546875,0.2890625}</string>
+		</dict>
+		<key>glove</key>
+		<dict>
+			<key>file</key>
+			<string>glove.png</string>
+			<key>audio</key>
+			<string>glove.mp3</string>
+			<key>content</key>
+			<string>My garden has a glove.</string>
+			<key>position</key>
+			<string>{0.45361328125,0.330078125}</string>
+		</dict>
+		<key>grass</key>
+		<dict>
+			<key>file</key>
+			<string>grass.png</string>
+			<key>audio</key>
+			<string>grass.mp3</string>
+			<key>content</key>
+			<string>My garden has grass.</string>
+			<key>position</key>
+			<string>{0.49296875,0.16953125}</string>
+		</dict>
+		<key>grasshopper</key>
+		<dict>
+			<key>file</key>
+			<string>locust.png</string>
+			<key>audio</key>
+			<string>grasshopper.mp3</string>
+			<key>content</key>
+			<string>My garden has grasshopper.</string>
+			<key>position</key>
+			<string>{0.84130859375,0.45572916666667}</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>Can U</string>
+	<key>background</key>
+	<string>can_you_background.png</string>
+	<key>label</key>
+	<dict>
+		<key>fntFile</key>
+		<string>Didot.fnt</string>
+		<key>position</key>
+		<string>{0.219,0.934}</string>
+	</dict>
+	<key>objects</key>
+	<dict>
+		<key>clap</key>
+		<dict>
+			<key>file</key>
+			<string>clap.png</string>
+			<key>audio</key>
+			<string>clap.mp3</string>
+			<key>content</key>
+			<string>Can you clap?</string>
+			<key>position</key>
+			<string>{0.407,0.319}</string>
+		</dict>
+		<key>climb</key>
+		<dict>
+			<key>file</key>
+			<string>climb.png</string>
+			<key>audio</key>
+			<string>climb.mp3</string>
+			<key>content</key>
+			<string>Can you climb?</string>
+			<key>position</key>
+			<string>{0.164,0.476}</string>
+		</dict>
+		<key>cook</key>
+		<dict>
+			<key>file</key>
+			<string>cook.png</string>
+			<key>audio</key>
+			<string>cook.mp3</string>
+			<key>content</key>
+			<string>Can you cook?</string>
+			<key>position</key>
+			<string>{0.546,0.582}</string>
+		</dict>
+		<key>count</key>
+		<dict>
+			<key>file</key>
+			<string>count.png</string>
+			<key>audio</key>
+			<string>count.mp3</string>
+			<key>content</key>
+			<string>Can you count?</string>
+			<key>position</key>
+			<string>{0.697,0.223}</string>
+		</dict>
+		<key>crawl</key>
+		<dict>
+			<key>file</key>
+			<string>crawl.png</string>
+			<key>audio</key>
+			<string>crawl.mp3</string>
+			<key>content</key>
+			<string>Can you crawl?</string>
+			<key>position</key>
+			<string>{0.161,0.149}</string>
+		</dict>
+		<key>cut</key>
+		<dict>
+			<key>file</key>
+			<string>cut.png</string>
+			<key>audio</key>
+			<string>cut.mp3</string>
+			<key>content</key>
+			<string>Can you cut?</string>
+			<key>position</key>
+			<string>{0.803,0.502}</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
