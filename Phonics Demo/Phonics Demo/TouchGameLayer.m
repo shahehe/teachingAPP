@@ -213,7 +213,10 @@ CGPoint screenSizeAsPoint()
     [super dealloc];
     
     [audioPlayer release];
+    audioPlayer= nil;
+    
     [searchPath release];
+    searchPath = nil;
 }
 
 - (void) onEnterTransitionDidFinish
@@ -237,6 +240,8 @@ CGPoint screenSizeAsPoint()
     
     util.searchPath = paths;
     [paths release];
+    
+//    CCLOG(@"set path:%@",util.searchPath.description);
 }
 
 - (void) resetSearchPath
@@ -244,10 +249,16 @@ CGPoint screenSizeAsPoint()
     CCFileUtils *util = [CCFileUtils sharedFileUtils];
     
     NSMutableArray *paths = [util.searchPath mutableCopy];
-    [paths removeObject:searchPath];
+    
+    for (;[paths containsObject:searchPath];)
+    {
+        [paths removeObject:searchPath];
+    }
     
     util.searchPath = paths;
     [paths release];
+    
+//    CCLOG(@"reset path:%@",util.searchPath.description);
 }
 
 - (void) addContentLabelWithData:(NSDictionary *)data
