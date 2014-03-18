@@ -10,29 +10,6 @@
 
 #import "config.h"
 
-#import "TouchingGameMenu.h"
-
-@interface GameObject : CCSprite<CCTouchOneByOneDelegate>
-{
-    NSString *_content;
-    NSString *_audioFileName;
-    
-    void (^_block)(id sender);
-}
-
-// 携带的内容
-@property (nonatomic,copy) NSString *content;
-
-// 音频文件名称
-@property (nonatomic,copy) NSString *audioFileName;
-
-+ (GameObject *) objectWithFile:(NSString*)file content:(NSString*)content audioFileName:(NSString*)audio;
-- (id) initWithFile:(NSString*)file content:(NSString*)content audioFileName:(NSString*)audio;
-
-- (void) setBlock:(void (^)(id sender))block;
-
-@end
-
 @implementation GameObject
 
 + (GameObject*) objectWithFile:(NSString *)file content:(NSString *)content audioFileName:(NSString *)audio
@@ -45,9 +22,12 @@
     self = [super initWithFile:file];
     NSAssert(self, @"Game object failed init");
     
+    self.name = nil;
     self.content = content;
     self.audioFileName = audio;
     
+    _touchRect.origin = CGPointZero;
+    _touchRect.size = self.boundingBox.size;
     _block = nil;
     
 
@@ -70,7 +50,7 @@
 
 - (void) dealloc
 {
-    
+    [_name release];
     [_content release];
     [_audioFileName release];
     
@@ -91,10 +71,10 @@
 - (BOOL) ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
     CGPoint pos = [self convertTouchToNodeSpace:touch];
-    CGRect rect = CGRectZero;
-    rect.size = self.boundingBox.size;
+//    CGRect rect = CGRectZero;
+//    rect.size = self.boundingBox.size;
     
-    if (CGRectContainsPoint(rect, pos))
+    if (CGRectContainsPoint(_touchRect, pos))
     {
         return YES;
     }
@@ -107,10 +87,10 @@
 - (void) ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event
 {
     CGPoint pos = [self convertTouchToNodeSpace:touch];
-    CGRect rect = CGRectZero;
-    rect.size = self.boundingBox.size;
+//    CGRect rect = CGRectZero;
+//    rect.size = self.boundingBox.size;
     
-    if (CGRectContainsPoint(rect, pos) && _block)
+    if (CGRectContainsPoint(_touchRect, pos) && _block)
     {
         _block(self);
     }
@@ -286,17 +266,18 @@ CGPoint screenSizeAsPoint()
     for (NSString *name in data.allKeys)
     {
         NSDictionary *objectData = [data objectForKey:name];
-        [self addObjectWithData:objectData];
+        [self addObjectWithData:objectData name:name];
     }
 }
 
-- (void) addObjectWithData:(NSDictionary*)data
+- (void) addObjectWithData:(NSDictionary*)data name:(NSString*)name
 {
     NSString *file = [data objectForKey:@"file"];
     NSString *audio = [data objectForKey:@"audio"];
     NSString *content = [data objectForKey:@"content"];
     GameObject *object = [GameObject objectWithFile:file content:content audioFileName:audio];
     
+    object.name = name;
     CGPoint pos = CGPointFromString([data objectForKey:@"position"]);
     object.position = ccpCompMult(screenSizeAsPoint(), pos);
     [self addChild:object];
@@ -307,7 +288,6 @@ CGPoint screenSizeAsPoint()
         [self_copy objectHasBeenClicked:sender];
     }];
     
-    // blink
     //blink
     CCFadeTo *fade_out = [CCFadeTo actionWithDuration:0.8 opacity:255/2.5];
     CCFadeTo *fade_in = [CCFadeTo actionWithDuration:0.8 opacity:255];

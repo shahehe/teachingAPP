@@ -10,4 +10,6 @@
 
 @interface TouchGameISee : TouchGameLayer
 
++ (TouchGameISee *) gameLayer;
+
 @end

@@ -13,6 +13,8 @@
 
 #include "config.h"
 
+#import "TouchGameISee.h"
+
 @implementation TouchingGameMenu
 
 + (CCScene *) scene
@@ -60,6 +62,14 @@
             item.color = ccWHITE;
             [menuItems addObject:item];
         }
+        
+        CCMenuItem *isee = [CCMenuItemFont itemWithString:@"I See" block:^(id sender) {
+            TouchGameLayer *game = [TouchGameISee gameLayer];
+            CCScene *scene = [CCScene node];
+            [scene addChild:game];
+            [[CCDirector sharedDirector] replaceScene:scene];
+        }];
+        [menuItems addObject:isee];
         
         CCMenuItem *back = [CCMenuItemFont itemWithString:@"BACK" block:^(id sender) {
             [[CCDirector sharedDirector] replaceScene:[MainMenu scene]];
