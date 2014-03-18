@@ -236,7 +236,9 @@ CGPoint screenSizeAsPoint()
     CCFileUtils *util = [CCFileUtils sharedFileUtils];
     
     NSMutableArray *paths = [util.searchPath mutableCopy];
-    [paths insertObject:searchPath atIndex:0];
+    
+    if (![[paths firstObject] isEqualToString:searchPath])
+        [paths insertObject:searchPath atIndex:0];
     
     util.searchPath = paths;
     [paths release];
@@ -250,10 +252,10 @@ CGPoint screenSizeAsPoint()
     
     NSMutableArray *paths = [util.searchPath mutableCopy];
     
-    for (;[paths containsObject:searchPath];)
-    {
+//    for (;[paths containsObject:searchPath];)
+//    {
         [paths removeObject:searchPath];
-    }
+//    }
     
     util.searchPath = paths;
     [paths release];
