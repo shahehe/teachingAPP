@@ -326,6 +326,7 @@
 		84B4F20518D040BF0071E85B /* cpSpatialIndex.c in Sources */ = {isa = PBXBuildFile; fileRef = 84B4F1E618D040BF0071E85B /* cpSpatialIndex.c */; };
 		84B4F20618D040BF0071E85B /* cpSweep1D.c in Sources */ = {isa = PBXBuildFile; fileRef = 84B4F1E718D040BF0071E85B /* cpSweep1D.c */; };
 		84B4F20718D040BF0071E85B /* cpVect.c in Sources */ = {isa = PBXBuildFile; fileRef = 84B4F1E818D040BF0071E85B /* cpVect.c */; };
+		84E9D00C18D891CA00936E46 /* TouchGameISee.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E9D00B18D891CA00936E46 /* TouchGameISee.m */; };
 		84EDDEF217BCD22D00262E2B /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EDDEF117BCD22D00262E2B /* MediaPlayer.framework */; };
 		84EDDF0817BCD41E00262E2B /* CCScrollLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EDDEF717BCD41E00262E2B /* CCScrollLayer.m */; };
 		AE2FD211183554C500DEE058 /* TraceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2FD210183554C500DEE058 /* TraceUtil.m */; };
@@ -879,6 +880,8 @@
 		84B4F1E718D040BF0071E85B /* cpSweep1D.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpSweep1D.c; sourceTree = "<group>"; };
 		84B4F1E818D040BF0071E85B /* cpVect.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpVect.c; sourceTree = "<group>"; };
 		84B4F1E918D040BF0071E85B /* prime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prime.h; sourceTree = "<group>"; };
+		84E9D00A18D891CA00936E46 /* TouchGameISee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchGameISee.h; sourceTree = "<group>"; };
+		84E9D00B18D891CA00936E46 /* TouchGameISee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchGameISee.m; sourceTree = "<group>"; };
 		84EDDEF117BCD22D00262E2B /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		84EDDEF617BCD41E00262E2B /* CCScrollLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCScrollLayer.h; sourceTree = "<group>"; };
 		84EDDEF717BCD41E00262E2B /* CCScrollLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCScrollLayer.m; sourceTree = "<group>"; };
@@ -1050,10 +1053,6 @@
 			isa = PBXGroup;
 			children = (
 				847403C518D738990093C83E /* config.h */,
-				847403BF18D71ABA0093C83E /* TouchGameLayer.h */,
-				847403C018D71ABA0093C83E /* TouchGameLayer.m */,
-				847403C218D738090093C83E /* TouchingGameMenu.h */,
-				847403C318D738090093C83E /* TouchingGameMenu.m */,
 				8498BCA217847D9F00F71234 /* AppDelegate.h */,
 				8498BCA317847D9F00F71234 /* AppDelegate.m */,
 				8498BCA517847D9F00F71234 /* HelloWorldLayer.h */,
@@ -1063,6 +1062,7 @@
 				8450DCC7179A35090003B181 /* PhonicsDefines.h */,
 				8497C13017A2636A004034BB /* MainMenu.h */,
 				8497C13117A2636A004034BB /* MainMenu.m */,
+				84E9D00918D88DB400936E46 /* TouchingGame */,
 				847403C618D749B20093C83E /* audioDict */,
 				847403BD18D71A980093C83E /* Assets */,
 				84B4F08618D03BF60071E85B /* Games */,
@@ -1808,6 +1808,19 @@
 			path = constraints;
 			sourceTree = "<group>";
 		};
+		84E9D00918D88DB400936E46 /* TouchingGame */ = {
+			isa = PBXGroup;
+			children = (
+				847403BF18D71ABA0093C83E /* TouchGameLayer.h */,
+				847403C018D71ABA0093C83E /* TouchGameLayer.m */,
+				847403C218D738090093C83E /* TouchingGameMenu.h */,
+				847403C318D738090093C83E /* TouchingGameMenu.m */,
+				84E9D00A18D891CA00936E46 /* TouchGameISee.h */,
+				84E9D00B18D891CA00936E46 /* TouchGameISee.m */,
+			);
+			name = TouchingGame;
+			sourceTree = "<group>";
+		};
 		84EDDEF517BCD41E00262E2B /* CCScrollLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -2139,6 +2152,7 @@
 				8498BBD917847D9E00F71234 /* CCSprite.m in Sources */,
 				8498BBDC17847D9E00F71234 /* CCSpriteBatchNode.m in Sources */,
 				8498BBDF17847D9E00F71234 /* CCSpriteFrame.m in Sources */,
+				84E9D00C18D891CA00936E46 /* TouchGameISee.m in Sources */,
 				8498BBE217847D9E00F71234 /* CCSpriteFrameCache.m in Sources */,
 				8498BBE517847D9E00F71234 /* CCTexture2D.m in Sources */,
 				8498BBE817847D9E00F71234 /* CCTextureAtlas.m in Sources */,

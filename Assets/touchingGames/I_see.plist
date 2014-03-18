@@ -3,87 +3,85 @@
 <plist version="1.0">
 <dict>
 	<key>path</key>
-	<string>Assets/touchingGames/CanU</string>
+	<string>Assets/touchingGames/I_see</string>
 	<key>title</key>
-	<string>Can U</string>
-    <key>path</key>
-	<string>Assets/touchingGames/CanU</string>
+	<string>I See</string>
 	<key>background</key>
-	<string>can_you_background.png</string>
+	<string>I_see_background.png</string>
 	<key>label</key>
 	<dict>
 		<key>fntFile</key>
 		<string>Didot.fnt</string>
 		<key>position</key>
-		<string>{0.219,0.934}</string>
+		<string>{0.303,0.146}</string>
 	</dict>
 	<key>objects</key>
 	<dict>
-		<key>clap</key>
+		<key>snail</key>
 		<dict>
 			<key>file</key>
-			<string>clap.png</string>
+			<string>snail_small.png</string>
 			<key>audio</key>
-			<string>clap.mp3</string>
+			<string>snail.mp3</string>
 			<key>content</key>
-			<string>Can you clap?</string>
+			<string>I see a snail.</string>
 			<key>position</key>
-			<string>{0.407,0.319}</string>
+			<string>{0.911,0.404}</string>
 		</dict>
-		<key>climb</key>
+		<key>shark</key>
 		<dict>
 			<key>file</key>
-			<string>climb.png</string>
+			<string>shark_small.png</string>
 			<key>audio</key>
-			<string>climb.mp3</string>
+			<string>shark.mp3</string>
 			<key>content</key>
-			<string>Can you climb?</string>
+			<string>I see a shark.</string>
 			<key>position</key>
-			<string>{0.164,0.476}</string>
+			<string>{0.837,0.624}</string>
 		</dict>
-		<key>cook</key>
+		<key>shrimp</key>
 		<dict>
 			<key>file</key>
-			<string>cook.png</string>
+			<string>shrimp_small.png</string>
 			<key>audio</key>
-			<string>cook.mp3</string>
+			<string>shrimp.mp3</string>
 			<key>content</key>
-			<string>Can you cook?</string>
+			<string>I see a shrimp.</string>
 			<key>position</key>
-			<string>{0.546,0.582}</string>
+			<string>{0.934,0.799}</string>
 		</dict>
-		<key>count</key>
+		<key>spider</key>
 		<dict>
 			<key>file</key>
-			<string>count.png</string>
+			<string>spider_small.png</string>
 			<key>audio</key>
-			<string>count.mp3</string>
+			<string>spider.mp3</string>
 			<key>content</key>
-			<string>Can you count?</string>
+			<string>I see a spider.</string>
 			<key>position</key>
-			<string>{0.697,0.223}</string>
+			<string>{0.161,0.587}</string>
 		</dict>
-		<key>crawl</key>
+		<key>sheep</key>
 		<dict>
 			<key>file</key>
-			<string>crawl.png</string>
+			<string>sheep_small.png</string>
 			<key>audio</key>
-			<string>crawl.mp3</string>
+			<string>sheep.mp3</string>
 			<key>content</key>
-			<string>Can you crawl?</string>
+			<string>I see a sheep.</string>
 			<key>position</key>
-			<string>{0.161,0.149}</string>
+			<string>{0.107,0.401}</string>
 		</dict>
-		<key>cut</key>
+		<key>snake</key>
 		<dict>
 			<key>file</key>
-			<string>cut.png</string>
+			<string>snake_small.png</string>
 			<key>audio</key>
-			<string>cut.mp3</string>
+			<string>snake.mp3</string>
 			<key>content</key>
-			<string>Can you cut?</string>
+			<string>I see a snake.</string>
 			<key>position</key>
-			<string>{0.803,0.502}</string>
+			<string>{0.082,0.793}</string>
 		</dict>
 	</dict>
 </dict>
