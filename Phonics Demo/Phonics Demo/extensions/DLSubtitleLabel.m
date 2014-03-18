@@ -143,13 +143,10 @@ static char *const punctuations = " ,.:""''!?-(){}[];<>/_";
     
     _touchEnable = touchEnable;
     
+    [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
     if (_touchEnable)
     {
         [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
-    }
-    else
-    {
-        [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
     }
 }
 
