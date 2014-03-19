@@ -70,9 +70,10 @@ static char *const file = "I_see.plist";
     }
 }
 
-- (void) objectHasBeenClicked:(GameObject *)object
+- (BOOL) objectHasBeenClicked:(GameObject *)object
 {
-    [super objectHasBeenClicked:object];
+    if(![super objectHasBeenClicked:object])
+        return NO;
     
     NSString *name = object.name;
     NSString *frameName = [displayImages objectForKey:name];
@@ -84,7 +85,7 @@ static char *const file = "I_see.plist";
     }
     else
     {
-        CCLOG(@"init displaySprite");
+//        CCLOG(@"init displaySprite");
         displaySprite = [CCSprite spriteWithSpriteFrame:frame];
         displaySprite.position = displayPosition;
         displaySprite.zOrder = 4;
@@ -98,18 +99,22 @@ static char *const file = "I_see.plist";
     CCMoveTo *moveToObject = [CCMoveTo actionWithDuration:0.5 position:pos];
     CCCallBlock *call = [CCCallBlock actionWithBlock:^{
         displaySprite.visible = YES;
-        CCLOG(@"call");
+//        CCLOG(@"call");
     }];
     CCDelayTime *delay = [CCDelayTime actionWithDuration:0.5];
     CCMoveTo *moveBack = [CCMoveTo actionWithDuration:0.5 position:CCMP(glassPosition.x, glassPosition.y)];
     CCSequence *seq = [CCSequence actions:moveToObject,call,delay,moveBack, nil];
     [glass runAction:seq];
+    
+    return YES;
 }
 
 - (void) dealloc
 {
-    [super dealloc];
     [displayImages release];
+    displayImages = nil;
+    
+    [super dealloc];
 }
 
 @end
