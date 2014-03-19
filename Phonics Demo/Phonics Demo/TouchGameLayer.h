@@ -19,36 +19,41 @@
     NSString *_name;
     NSString *_content;
     NSString *_audioFileName;
-    
-    void (^_block)(id sender);
+    CGRect _touchRect;
 }
 
 @property (nonatomic,copy) NSString *name;
 // 携带的内容
 @property (nonatomic,copy) NSString *content;
-
 // 音频文件名称
 @property (nonatomic,copy) NSString *audioFileName;
-
 @property (nonatomic,assign) CGRect touchRect;
 
 + (GameObject *) objectWithFile:(NSString*)file content:(NSString*)content audioFileName:(NSString*)audio;
 - (id) initWithFile:(NSString*)file content:(NSString*)content audioFileName:(NSString*)audio;
 
-- (void) setBlock:(void (^)(id sender))block;
-
 @end
 
+typedef enum : NSUInteger {
+    GameModeOneByOne = 0,
+    GameModeAllAtOnce = 1,
+    GameModeDefault = GameModeOneByOne
+} TouchGameMode;
 
 @interface TouchGameLayer : CCLayer <DLSubtitleLabelDelegate,CDLongAudioSourceDelegate>
 {
-    
+    void (^_objectLoaded)(GameObject *object);
+    void (^_objectClicked)(GameObject *object);
 }
 
+@property (nonatomic,assign) TouchGameMode gameMode;
+
 + (TouchGameLayer *) gameLayerWithGameData:(NSDictionary*)dic;
-
 - (id) initWithGameData:(NSDictionary*)dic;
+- (BOOL) objectHasBeenClicked:(GameObject *)object;
 
-- (void) objectHasBeenClicked:(GameObject *)object;
+// action
+- (void) setObjectLoadedBlock:(void (^)(GameObject *object))block;
+- (void) setObjectCLickedBlock:(void (^)(GameObject *object))block;
 
 @end

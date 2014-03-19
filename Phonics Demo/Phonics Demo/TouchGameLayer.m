@@ -10,6 +10,15 @@
 
 #import "config.h"
 
+@interface GameObject ()
+{
+    void (^_block)(id sender);
+}
+
+- (void) setBlock:(void (^)(id sender))block;
+
+@end
+
 @implementation GameObject
 
 + (GameObject*) objectWithFile:(NSString *)file content:(NSString *)content audioFileName:(NSString *)audio
@@ -122,7 +131,31 @@ CGPoint screenSizeAsPoint()
     return ccpFromSize(s);
 }
 
-#define BLINK_ACTION_TAG 42
+#define BLINK_ACTION_TAG -102
+
+void unblindSprite(CCSprite *t);
+
+void blinkSprite(CCSprite *t)
+{
+    unblindSprite(t);
+    
+    CCFadeTo *fade_out = [CCFadeTo actionWithDuration:0.8 opacity:255/2.5];
+    CCFadeTo *fade_in = [CCFadeTo actionWithDuration:0.8 opacity:255];
+    CCSequence *s = [CCSequence actions:fade_out,fade_in, nil];
+    CCRepeatForever *r = [CCRepeatForever actionWithAction:s];
+    r.tag = BLINK_ACTION_TAG;
+    [t runAction:r];
+}
+
+void unblindSprite(CCSprite *t)
+{
+    CCAction *action = [t getActionByTag:BLINK_ACTION_TAG];
+    if (action)
+    {
+        [t stopAction:action];
+        t.opacity = 255;
+    }
+}
 
 @implementation TouchGameLayer
 {
@@ -132,6 +165,8 @@ CGPoint screenSizeAsPoint()
     
     // search path for images & audio
     NSString *searchPath;
+    
+    NSMutableArray *objects;
 }
 
 + (TouchGameLayer *) gameLayerWithGameData:(NSDictionary *)dic
@@ -155,6 +190,8 @@ CGPoint screenSizeAsPoint()
     bg.position = ccpMult(screenSizeAsPoint(), 0.5);
 
     NSDictionary *objectsData = [dic objectForKey:@"objects"];
+    
+    objects = [[NSMutableArray alloc] initWithCapacity:objectsData.count];
     [self loadObjectsWithData:objectsData];
     
     //audio
@@ -173,7 +210,7 @@ CGPoint screenSizeAsPoint()
     back.position = ccpCompMult(screenSizeAsPoint(), ccp(0.1,0.95));
     
     CCMenuItemFont *restart = [CCMenuItemFont itemWithString:@"RESTART" block:^(id sender) {
-        TouchGameLayer *game = [TouchGameLayer gameLayerWithGameData:dic];
+        TouchGameLayer *game = [[self class] gameLayerWithGameData:dic];
         CCScene *scene = [CCScene node];
         [scene addChild:game];
         [[CCDirector sharedDirector] replaceScene:scene];
@@ -185,18 +222,36 @@ CGPoint screenSizeAsPoint()
     menu.position = CGPointZero;
     [self addChild:menu];
     
+    //block
+    [self setObjectCLickedBlock:^(GameObject *object) {
+        unblindSprite(object);
+    }];
+    [self setObjectLoadedBlock:^(GameObject *object) {
+        blinkSprite(object);
+    }];
+    
+    // gameMode
+    _gameMode = GameModeDefault;
+    [self activeNextObjects];
+    
     return self;
 }
 
 - (void) dealloc
 {
-    [super dealloc];
+    [objects release];
+    objects = nil;
     
     [audioPlayer release];
     audioPlayer= nil;
     
     [searchPath release];
     searchPath = nil;
+    
+    [_objectClicked release];
+    [_objectLoaded release];
+    
+    [super dealloc];
 }
 
 - (void) onEnterTransitionDidFinish
@@ -209,6 +264,48 @@ CGPoint screenSizeAsPoint()
 {
     [super onExit];
     [self resetSearchPath];
+}
+
+
+
+- (void) setObjectLoadedBlock:(void (^)(GameObject *))block
+{
+    [_objectLoaded release];
+    _objectLoaded = [block copy];
+}
+
+- (void) setObjectCLickedBlock:(void (^)(GameObject *))block
+{
+    [_objectClicked release];
+    _objectClicked = [block copy];
+}
+
+- (NSArray *) nextObjects
+{
+    NSMutableArray *array = [NSMutableArray array];
+    for (GameObject *object in objects)
+    {
+        if (object.tag == 0)
+        {
+            [array addObject:object];
+            if (_gameMode == GameModeOneByOne)
+                break;
+        }
+    }
+    return array;
+}
+
+- (void) activeNextObjects
+{
+    for (GameObject *object in [self nextObjects])
+    {
+        if (_objectLoaded)
+        {
+            _objectLoaded(object);
+            CCLOG(@"loaded %@",object.name);
+        }
+        object.tag = 1;
+    }
 }
 
 - (void) setSearchPath
@@ -288,30 +385,33 @@ CGPoint screenSizeAsPoint()
         [self_copy objectHasBeenClicked:sender];
     }];
     
-    //blink
-    CCFadeTo *fade_out = [CCFadeTo actionWithDuration:0.8 opacity:255/2.5];
-    CCFadeTo *fade_in = [CCFadeTo actionWithDuration:0.8 opacity:255];
-    CCSequence *s = [CCSequence actions:fade_out,fade_in, nil];
-    CCRepeatForever *r = [CCRepeatForever actionWithAction:s];
-    r.tag = BLINK_ACTION_TAG;
-    [object runAction:r];
+    object.tag = 0;
+    [objects addObject:object];
 }
 
-- (void) objectHasBeenClicked:(GameObject *)object
+- (BOOL) objectHasBeenClicked:(GameObject *)object
 {
-    CCAction *action = [object getActionByTag:BLINK_ACTION_TAG];
-    if (action)
+    if (object.tag == 0) return NO;
+    
+    if (_objectClicked)
     {
-        [object stopAction:action];
-        object.opacity = 255;
+        _objectClicked(object);
     }
     
     contentLabel.string = object.content;
-    
     [audioPlayer stop];
     [audioPlayer load:object.audioFileName];
     [audioPlayer rewind];
     [audioPlayer play];
+    
+    if (object.tag == 1)
+    {
+        [self activeNextObjects];
+    }
+    
+    object.tag = 2;
+    
+    return YES;
 }
 
 #pragma mark --CDLongAudioSourceDelegate
