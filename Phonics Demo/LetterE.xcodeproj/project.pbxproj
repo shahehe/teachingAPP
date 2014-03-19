@@ -153,6 +153,7 @@
 		8498BCA717847D9F00F71234 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498BCA617847D9F00F71234 /* HelloWorldLayer.m */; };
 		8498BCAA17847D9F00F71234 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498BCA917847D9F00F71234 /* IntroLayer.m */; };
 		8499CA7917C325CE00A1A24C /* SlidePauseMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8499CA7817C325CE00A1A24C /* SlidePauseMenuLayer.m */; };
+		84AFD19818D9C1FD005F55F5 /* data in Resources */ = {isa = PBXBuildFile; fileRef = 84AFD19718D9C1FD005F55F5 /* data */; };
 		84B3FCC618CF772500FD27E8 /* DLDraggableSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B3FCC318CF772500FD27E8 /* DLDraggableSprite.m */; };
 		84B3FCC718CF772500FD27E8 /* DLSubtitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B3FCC518CF772500FD27E8 /* DLSubtitleLabel.m */; };
 		84B4F07818D03BCA0071E85B /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B4F06518D03BCA0071E85B /* Card.m */; };
@@ -649,6 +650,7 @@
 		8498BCA917847D9F00F71234 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
 		8499CA7717C325CE00A1A24C /* SlidePauseMenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlidePauseMenuLayer.h; sourceTree = "<group>"; };
 		8499CA7817C325CE00A1A24C /* SlidePauseMenuLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlidePauseMenuLayer.m; sourceTree = "<group>"; };
+		84AFD19718D9C1FD005F55F5 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data; path = ../../data; sourceTree = "<group>"; };
 		84B3FCC218CF772500FD27E8 /* DLDraggableSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLDraggableSprite.h; path = extensions/DLDraggableSprite.h; sourceTree = "<group>"; };
 		84B3FCC318CF772500FD27E8 /* DLDraggableSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLDraggableSprite.m; path = extensions/DLDraggableSprite.m; sourceTree = "<group>"; };
 		84B3FCC418CF772500FD27E8 /* DLSubtitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLSubtitleLabel.h; path = extensions/DLSubtitleLabel.h; sourceTree = "<group>"; };
@@ -1062,6 +1064,7 @@
 				8450DCC7179A35090003B181 /* PhonicsDefines.h */,
 				8497C13017A2636A004034BB /* MainMenu.h */,
 				8497C13117A2636A004034BB /* MainMenu.m */,
+				84AFD19718D9C1FD005F55F5 /* data */,
 				84E9D00918D88DB400936E46 /* TouchingGame */,
 				847403C618D749B20093C83E /* audioDict */,
 				847403BD18D71A980093C83E /* Assets */,
@@ -1998,6 +2001,7 @@
 				84B4F18618D03BF60071E85B /* backButtonPressed-hd.png in Resources */,
 				84B4F17218D03BF60071E85B /* DenneSketchy30-hd.fnt in Resources */,
 				84B4F16218D03BF60071E85B /* cardMatching-hd.plist in Resources */,
+				84AFD19818D9C1FD005F55F5 /* data in Resources */,
 				84B4F18518D03BF60071E85B /* backButton.png in Resources */,
 				8498BB2417847D9D00F71234 /* Icon.png in Resources */,
 				84B4F16318D03BF60071E85B /* cardMatching-hd.png in Resources */,
