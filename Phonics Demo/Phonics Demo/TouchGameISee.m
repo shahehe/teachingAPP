@@ -35,10 +35,11 @@ static char *const file = "I_see.plist";
     self = [super initWithGameData:dic];
     NSAssert(self, @"game:I see failed init");
     
-    glassPosition = ccp(0.915,0.096);
+    glassPosition = ccp(0.86,0.15);
     glass = [CCSprite spriteWithFile:@"glass.png"];
     glass.position = CCMP(glassPosition.x, glassPosition.y);
     glass.zOrder = 4;
+    glass.anchorPoint = ccp(0.25, 0.75);
     [self addChild:glass];
     
     displaySprite = nil;
