@@ -31,7 +31,7 @@ static char *const audioDicPath       = "data/audioDic";
 {
     if (self = [super init])
     {
-        NSString *fileName = [NSString stringWithUTF8String:audioDicFileName];
+        NSString *fileName = [NSString stringWithUTF8String: audioDicFileName];
         NSString *filePath = [APP_DOCUMENT_PATH stringByAppendingPathComponent:fileName];
         BOOL isExist       = [[NSFileManager defaultManager] fileExistsAtPath:filePath];
         
