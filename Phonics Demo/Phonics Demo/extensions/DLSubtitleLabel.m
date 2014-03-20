@@ -30,6 +30,8 @@ static char *const punctuations = " ,.:""''!?-(){}[];<>/_";
     NSUInteger _indexOfHighlightedWord;
 }
 
+@synthesize touchEnable = _touchEnable;
+
 -(id) initWithString:(NSString*)theString fntFile:(NSString*)fntFile width:(float)width alignment:(CCTextAlignment)alignment imageOffset:(CGPoint)offset
 {
     if (self = [super initWithString:theString fntFile:fntFile width:width alignment:alignment imageOffset:offset])
@@ -45,14 +47,26 @@ static char *const punctuations = " ,.:""''!?-(){}[];<>/_";
     return self;
 }
 
+- (void) onEnter
+{
+    [super onEnter];
+    
+}
+
+- (void) onExit
+{
+    [super onExit];
+//    [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
+}
+
 - (void) dealloc
 {
     free(_wordRanges);
     free(_wordRects);
     
-    [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
     
     [super dealloc];
+    CCLOG(@"label dealloc");
 }
 
 - (void) creatWordRangesAndRects
@@ -138,15 +152,19 @@ static char *const punctuations = " ,.:""''!?-(){}[];<>/_";
 
 - (void) setTouchEnable:(BOOL)touchEnable
 {
+    CCLOG(@"set touch enable");
     if (_touchEnable == touchEnable)
         return;
     
     _touchEnable = touchEnable;
     
-    [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
     if (_touchEnable)
     {
         [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
+    }
+    else
+    {
+        [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
     }
 }
 
