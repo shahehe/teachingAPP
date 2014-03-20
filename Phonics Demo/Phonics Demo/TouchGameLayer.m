@@ -232,7 +232,6 @@ void unblindSprite(CCSprite *t)
     
     // gameMode
     _gameMode = GameModeDefault;
-    [self activeNextObjects];
     
     return self;
 }
@@ -258,6 +257,21 @@ void unblindSprite(CCSprite *t)
 {
     [super onEnterTransitionDidFinish];
     [self setSearchPath];
+    
+    BOOL isActive = NO;
+    for (GameObject *object in objects)
+    {
+        if (object.tag == 1)
+        {
+            isActive = YES;
+            break;
+        }
+    }
+    
+    if (!isActive)
+    {
+        [self activeNextObjects];
+    }
 }
 
 - (void) onExit
@@ -345,12 +359,12 @@ void unblindSprite(CCSprite *t)
     NSString *fontFile = [data objectForKey:@"fntFile"];
     CGPoint pos = CGPointFromString([data objectForKey:@"position"]);
 //    NSString *content = [data objectForKey:@"content"];
-    
+    CGPoint anchor = CGPointFromString([data objectForKey:@"anchorPoint"]);
     NSString *fntFilePath = [[NSString stringWithUTF8String:BMFontDirPath] stringByAppendingPathComponent:fontFile];
     
     contentLabel = [DLSubtitleLabel labelWithString:@"" fntFile:fntFilePath];
     contentLabel.position = ccpCompMult(screenSizeAsPoint(), pos);
-    contentLabel.anchorPoint = ccp(0,0.5);
+    contentLabel.anchorPoint = anchor;
     contentLabel.delegate = self;
     
     [self addChild:contentLabel z:2];
