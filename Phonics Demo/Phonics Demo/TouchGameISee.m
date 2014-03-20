@@ -93,6 +93,8 @@ static char *const file = "I_see.plist";
         [self addChild:displaySprite];
     }
     displaySprite.visible = NO;
+    displaySprite.scale = 0.3;
+    [displaySprite stopAllActions];
     
     CGPoint pos = object.position;
     
@@ -100,6 +102,7 @@ static char *const file = "I_see.plist";
     CCMoveTo *moveToObject = [CCMoveTo actionWithDuration:0.5 position:pos];
     CCCallBlock *call = [CCCallBlock actionWithBlock:^{
         displaySprite.visible = YES;
+        [displaySprite runAction:[CCScaleTo actionWithDuration:0.5 scale:1]];
 //        CCLOG(@"call");
     }];
     CCDelayTime *delay = [CCDelayTime actionWithDuration:0.5];
