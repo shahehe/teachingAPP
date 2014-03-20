@@ -47,7 +47,7 @@
 {
     [super onEnter];
     [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
-    [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
+    [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self priority:1 swallowsTouches:YES];
 }
 
 - (void) onExitTransitionDidStart
@@ -133,11 +133,9 @@ CGPoint screenSizeAsPoint()
 
 #define BLINK_ACTION_TAG -102
 
-void unblindSprite(CCSprite *t);
-
 void blinkSprite(CCSprite *t)
 {
-    unblindSprite(t);
+    unblinkSprite(t);
     
     CCFadeTo *fade_out = [CCFadeTo actionWithDuration:0.8 opacity:255/2.5];
     CCFadeTo *fade_in = [CCFadeTo actionWithDuration:0.8 opacity:255];
@@ -147,7 +145,7 @@ void blinkSprite(CCSprite *t)
     [t runAction:r];
 }
 
-void unblindSprite(CCSprite *t)
+void unblinkSprite(CCSprite *t)
 {
     CCAction *action = [t getActionByTag:BLINK_ACTION_TAG];
     if (action)
@@ -167,7 +165,12 @@ void unblindSprite(CCSprite *t)
     NSString *searchPath;
     
     NSMutableArray *objects;
+    
+    GameObject *_runningObject;
 }
+
+@synthesize runningObject = _runningObject;
+@synthesize autoActiveNext = _autoActiveNext;
 
 + (TouchGameLayer *) gameLayerWithGameData:(NSDictionary *)dic
 {
@@ -219,12 +222,13 @@ void unblindSprite(CCSprite *t)
     restart.position = ccpCompMult(screenSizeAsPoint(), ccp(0.9,0.95));
     
     CCMenu *menu = [CCMenu menuWithItems:back,restart, nil];
+    menu.zOrder = 10;
     menu.position = CGPointZero;
     [self addChild:menu];
     
     //block
     [self setObjectCLickedBlock:^(GameObject *object) {
-        unblindSprite(object);
+        unblinkSprite(object);
     }];
     [self setObjectLoadedBlock:^(GameObject *object) {
         blinkSprite(object);
@@ -232,6 +236,10 @@ void unblindSprite(CCSprite *t)
     
     // gameMode
     _gameMode = GameModeDefault;
+    
+    _runningObject = nil;
+    
+    _autoActiveNext = YES;
     
     return self;
 }
@@ -280,7 +288,10 @@ void unblindSprite(CCSprite *t)
     [self resetSearchPath];
 }
 
-
+- (NSUInteger) objectCount
+{
+    return [objects count];
+}
 
 - (void) setObjectLoadedBlock:(void (^)(GameObject *))block
 {
@@ -407,6 +418,7 @@ void unblindSprite(CCSprite *t)
 {
     if (object.tag == 0) return NO;
     
+    _runningObject = object;
     if (_objectClicked)
     {
         _objectClicked(object);
@@ -418,7 +430,7 @@ void unblindSprite(CCSprite *t)
     [audioPlayer rewind];
     [audioPlayer play];
     
-    if (object.tag == 1)
+    if (object.tag == 1 && _autoActiveNext)
     {
         [self activeNextObjects];
     }
@@ -428,11 +440,17 @@ void unblindSprite(CCSprite *t)
     return YES;
 }
 
+- (void) contentDidFinishReading:(GameObject *)object
+{
+    // override me
+}
+
 #pragma mark --CDLongAudioSourceDelegate
 
 - (void) cdAudioSourceDidFinishPlaying:(CDLongAudioSource *)audioSource
 {
     [audioPlayer stop];
+    [self contentDidFinishReading:_runningObject];
 }
 
 #pragma mark --DLSubtitleLabelDelegate

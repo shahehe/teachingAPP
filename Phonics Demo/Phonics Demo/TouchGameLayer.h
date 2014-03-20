@@ -40,20 +40,35 @@ typedef enum : NSUInteger {
     GameModeDefault = GameModeOneByOne
 } TouchGameMode;
 
+////////////////////////////////////////
+void unblinkSprite(CCSprite *t);
+void blinkSprite(CCSprite *t);
+////////////////////////////////////////
+
 @interface TouchGameLayer : CCLayer <DLSubtitleLabelDelegate,CDLongAudioSourceDelegate>
 {
     void (^_objectLoaded)(GameObject *object);
     void (^_objectClicked)(GameObject *object);
+    
+    BOOL _autoActiveNext;
 }
 
 @property (nonatomic,assign) TouchGameMode gameMode;
+@property (nonatomic,readonly) GameObject *runningObject;
+@property (nonatomic,assign) BOOL autoActiveNext;
 
 + (TouchGameLayer *) gameLayerWithGameData:(NSDictionary*)dic;
 - (id) initWithGameData:(NSDictionary*)dic;
 - (BOOL) objectHasBeenClicked:(GameObject *)object;
 
+- (NSUInteger) objectCount;
+
+- (void) activeNextObjects;
+
 // action
 - (void) setObjectLoadedBlock:(void (^)(GameObject *object))block;
 - (void) setObjectCLickedBlock:(void (^)(GameObject *object))block;
+
+- (void) contentDidFinishReading:(GameObject*)object;
 
 @end
