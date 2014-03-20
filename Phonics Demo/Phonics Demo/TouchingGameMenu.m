@@ -15,6 +15,7 @@
 
 #import "TouchGameISee.h"
 #import "TouchGameJar.h"
+#import "TouchGamePlease.h"
 
 @implementation TouchingGameMenu
 
@@ -79,6 +80,14 @@
             [[CCDirector sharedDirector] replaceScene:scene];
         }];
         [menuItems addObject:jar];
+        
+        CCMenuItem *please = [CCMenuItemFont itemWithString:@"Please" block:^(id sender) {
+            TouchGameLayer *game = [TouchGamePlease gameLayer];
+            CCScene *scene = [CCScene node];
+            [scene addChild:game];
+            [[CCDirector sharedDirector] replaceScene:scene];
+        }];
+        [menuItems addObject:please];
         
         CCMenuItem *back = [CCMenuItemFont itemWithString:@"BACK" block:^(id sender) {
             [[CCDirector sharedDirector] replaceScene:[MainMenu scene]];
