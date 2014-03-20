@@ -10,4 +10,6 @@
 
 @interface TouchGamePlease : TouchGameLayer
 
++ (TouchGamePlease *) gameLayer;
+
 @end
