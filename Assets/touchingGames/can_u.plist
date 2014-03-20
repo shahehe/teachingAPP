@@ -16,6 +16,8 @@
 		<string>Didot.fnt</string>
 		<key>position</key>
 		<string>{0.219,0.934}</string>
+        <key>anchorPoint</key>
+        <string>{0,0.5}</string>
 	</dict>
 	<key>objects</key>
 	<dict>

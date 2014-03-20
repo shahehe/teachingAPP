@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>jar</string>
+	<key>path</key>
+	<string>Assets/touchingGames/jar</string>
+	<key>background</key>
+	<string>jar.png</string>
+	<key>label</key>
+	<dict>
+		<key>fntFile</key>
+		<string>Didot.fnt</string>
+		<key>position</key>
+		<string>{0.2,0.8}</string>
+        <key>anchorPoint</key>
+        <string>{0.5,0.5}</string>
+	</dict>
+	<key>objects</key>
+	<dict>
+		<key>jellybean</key>
+		<dict>
+			<key>file</key>
+			<string>jellybean_empty.png</string>
+			<key>audio</key>
+			<string>jellybean.mp3</string>
+			<key>content</key>
+			<string>A jellybean is in my jar.</string>
+			<key>position</key>
+			<string>{0.15,0.65}</string>
+		</dict>
+		<key>jelly</key>
+		<dict>
+			<key>file</key>
+			<string>jelly_empty.png</string>
+			<key>audio</key>
+			<string>jelly.mp3</string>
+			<key>content</key>
+			<string>A jelly is in my jar.</string>
+			<key>position</key>
+			<string>{0.5,0.58}</string>
+		</dict>
+		<key>juice</key>
+		<dict>
+			<key>file</key>
+			<string>juice_empty.png</string>
+			<key>audio</key>
+			<string>juice.mp3</string>
+			<key>content</key>
+			<string>Juice is in my jar.</string>
+			<key>position</key>
+			<string>{0.85,0.7}</string>
+		</dict>
+		<key>jam</key>
+		<dict>
+			<key>file</key>
+			<string>jam_empty.png</string>
+			<key>audio</key>
+			<string>jam.mp3</string>
+			<key>content</key>
+			<string>Jam is in my jar.</string>
+			<key>position</key>
+			<string>{0.325,0.2}</string>
+		</dict>
+		<key>jewellery</key>
+		<dict>
+			<key>file</key>
+			<string>jewellery_empty.png</string>
+			<key>audio</key>
+			<string>jewellery.mp3</string>
+			<key>content</key>
+			<string>A jewellery is in my jar.</string>
+			<key>position</key>
+			<string>{0.675,0.2}</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
