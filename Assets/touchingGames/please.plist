@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>Please</string>
+	<key>path</key>
+	<string>Assets/touchingGames/please</string>
+	<key>background</key>
+	<string>please.png</string>
+	<key>label</key>
+	<dict>
+		<key>fntFile</key>
+		<string>Didot.fnt</string>
+		<key>position</key>
+		<string>{0.3, 0.06}</string>
+		<key>anchorPoint</key>
+		<string>{0,0.5}</string>
+	</dict>
+	<key>objects</key>
+	<dict>
+		<key>apple</key>
+		<dict>
+			<key>file</key>
+			<string>apple.png</string>
+			<key>audio</key>
+			<string>apple.mp3</string>
+			<key>content</key>
+			<string>May I have a apple,please?</string>
+			<key>position</key>
+			<string>{0.5,1.5}</string>
+		</dict>
+		<key>bean</key>
+		<dict>
+			<key>file</key>
+			<string>bean.png</string>
+			<key>audio</key>
+			<string>bean.mp3</string>
+			<key>content</key>
+			<string>May I have a bean,please?</string>
+			<key>position</key>
+			<string>{0.5,1.5}</string>
+		</dict>
+		<key>peach</key>
+		<dict>
+			<key>file</key>
+			<string>peach.png</string>
+			<key>audio</key>
+			<string>peach.mp3</string>
+			<key>content</key>
+			<string>May I have a peach,please?</string>
+			<key>position</key>
+			<string>{0.5,1.5}</string>
+		</dict>
+		<key>peanut</key>
+		<dict>
+			<key>file</key>
+			<string>peanut.png</string>
+			<key>audio</key>
+			<string>peanut.mp3</string>
+			<key>content</key>
+			<string>May I have a peanut,please?</string>
+			<key>position</key>
+			<string>{0.5,1.5}</string>
+		</dict>
+		<key>pear</key>
+		<dict>
+			<key>file</key>
+			<string>pear.png</string>
+			<key>audio</key>
+			<string>pear.mp3</string>
+			<key>content</key>
+			<string>May I have a pear,please?</string>
+			<key>position</key>
+			<string>{0.5,1.5}</string>
+		</dict>
+		<key>pumpkin</key>
+		<dict>
+			<key>file</key>
+			<string>pumpkin.png</string>
+			<key>audio</key>
+			<string>pumpkin.mp3</string>
+			<key>content</key>
+			<string>May I have a pumpkin,please?</string>
+			<key>position</key>
+			<string>{0.5,1.5}</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
