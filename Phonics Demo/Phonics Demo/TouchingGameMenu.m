@@ -16,6 +16,7 @@
 #import "TouchGameISee.h"
 #import "TouchGameJar.h"
 #import "TouchGamePlease.h"
+#import "TouchGameTime.h"
 
 @implementation TouchingGameMenu
 
@@ -88,6 +89,14 @@
             [[CCDirector sharedDirector] replaceScene:scene];
         }];
         [menuItems addObject:please];
+        
+        CCMenuItem *time = [CCMenuItemFont itemWithString:@"Time" block:^(id sender) {
+            TouchGameLayer *game = [TouchGameTime gameLayer];
+            CCScene *scene = [CCScene node];
+            [scene addChild:game];
+            [[CCDirector sharedDirector] replaceScene:scene];
+        }];
+        [menuItems addObject:time];
         
         CCMenuItem *back = [CCMenuItemFont itemWithString:@"BACK" block:^(id sender) {
             [[CCDirector sharedDirector] replaceScene:[MainMenu scene]];
