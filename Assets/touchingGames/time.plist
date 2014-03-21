@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>Time</string>
+	<key>path</key>
+	<string>Assets/touchingGames/time</string>
+	<key>background</key>
+	<string>time.png</string>
+	<key>label</key>
+	<dict>
+		<key>fntFile</key>
+		<string>Didot.fnt</string>
+		<key>position</key>
+		<string>{0.305,0.826}</string>
+		<key>anchorPoint</key>
+		<string>{0,0.5}</string>
+	</dict>
+	<key>objects</key>
+	<dict>
+		<key>1</key>
+		<dict>
+			<key>file</key>
+			<string>time_panel1.png</string>
+			<key>audio</key>
+			<string>1.mp3</string>
+			<key>content</key>
+			<string>It&apos;s time to (todo).</string>
+			<key>position</key>
+			<string>{0.153,0.870}</string>
+		</dict>
+		<key>2</key>
+		<dict>
+			<key>file</key>
+			<string>time_panel2.png</string>
+			<key>audio</key>
+			<string>2.mp3</string>
+			<key>content</key>
+			<string>It&apos;s time to (todo).</string>
+			<key>position</key>
+			<string>{0.148,0.701}</string>
+		</dict>
+		<key>3</key>
+		<dict>
+			<key>file</key>
+			<string>time_panel2.png</string>
+			<key>audio</key>
+			<string>3.mp3</string>
+			<key>content</key>
+			<string>It&apos;s time to (todo).</string>
+			<key>position</key>
+			<string>{0.148,0.570}</string>
+		</dict>
+		<key>4</key>
+		<dict>
+			<key>file</key>
+			<string>time_panel2.png</string>
+			<key>audio</key>
+			<string>4.mp3</string>
+			<key>content</key>
+			<string>It&apos;s time to (todo).</string>
+			<key>position</key>
+			<string>{0.148,0.440}</string>
+		</dict>
+		<key>5</key>
+		<dict>
+			<key>file</key>
+			<string>time_panel2.png</string>
+			<key>audio</key>
+			<string>5.mp3</string>
+			<key>content</key>
+			<string>It&apos;s time to (todo).</string>
+			<key>position</key>
+			<string>{0.148,0.311}</string>
+		</dict>
+		<key>6</key>
+		<dict>
+			<key>file</key>
+			<string>time_panel3.png</string>
+			<key>audio</key>
+			<string>6.mp3</string>
+			<key>content</key>
+			<string>It&apos;s time to (todo).</string>
+			<key>position</key>
+			<string>{0.148,0.159}</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
