@@ -10,4 +10,6 @@
 
 @interface TouchGameTime : TouchGameLayer
 
++ (TouchGameTime *) gameLayer;
+
 @end
