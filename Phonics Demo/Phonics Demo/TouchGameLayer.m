@@ -385,7 +385,7 @@ void unblinkSprite(CCSprite *t)
 
 - (void) loadObjectsWithData:(NSDictionary *)data
 {
-    for (NSString *name in data.allKeys)
+    for (NSString *name in [data.allKeys sortedArrayUsingSelector:@selector(localizedStandardCompare:)])
     {
         NSDictionary *objectData = [data objectForKey:name];
         [self addObjectWithData:objectData name:name];
