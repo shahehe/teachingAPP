@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84283B7818DC245900CFFD21 /* TouchGameTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 84283B7718DC245900CFFD21 /* TouchGameTime.m */; };
 		843335A917ACF474009F1C56 /* DialogContentLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 843335A817ACF474009F1C56 /* DialogContentLayer.m */; };
 		843335AC17ACF4EA009F1C56 /* Dialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 843335AB17ACF4EA009F1C56 /* Dialog.m */; };
 		843335B417ACF4F7009F1C56 /* LetterIdentification.m in Sources */ = {isa = PBXBuildFile; fileRef = 843335B117ACF4F7009F1C56 /* LetterIdentification.m */; };
@@ -344,6 +345,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84283B7618DC245900CFFD21 /* TouchGameTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchGameTime.h; sourceTree = "<group>"; };
+		84283B7718DC245900CFFD21 /* TouchGameTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchGameTime.m; sourceTree = "<group>"; };
 		843335A717ACF474009F1C56 /* DialogContentLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DialogContentLayer.h; path = Dialog/DialogContentLayer.h; sourceTree = "<group>"; };
 		843335A817ACF474009F1C56 /* DialogContentLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DialogContentLayer.m; path = Dialog/DialogContentLayer.m; sourceTree = "<group>"; };
 		843335AA17ACF4EA009F1C56 /* Dialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Dialog.h; path = Dialog/Dialog.h; sourceTree = "<group>"; };
@@ -1830,6 +1833,8 @@
 				848852CA18DAEC03009D44F3 /* TouchGameJar.m */,
 				848852CC18DB0A62009D44F3 /* TouchGamePlease.h */,
 				848852CD18DB0A62009D44F3 /* TouchGamePlease.m */,
+				84283B7618DC245900CFFD21 /* TouchGameTime.h */,
+				84283B7718DC245900CFFD21 /* TouchGameTime.m */,
 			);
 			name = TouchingGame;
 			sourceTree = "<group>";
@@ -2139,6 +2144,7 @@
 				84B4F19518D03BF60071E85B /* LetterSound.m in Sources */,
 				8498BB9317847D9E00F71234 /* CCMenu.m in Sources */,
 				8498BB9617847D9E00F71234 /* CCMenuItem.m in Sources */,
+				84283B7818DC245900CFFD21 /* TouchGameTime.m in Sources */,
 				84B4F07D18D03BCA0071E85B /* ExtraAction.m in Sources */,
 				84B4F12918D03BF60071E85B /* BubbleGameLayer.m in Sources */,
 				8498BB9917847D9E00F71234 /* CCMotionStreak.m in Sources */,
