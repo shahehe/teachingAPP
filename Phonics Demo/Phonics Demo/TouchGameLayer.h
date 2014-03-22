@@ -48,6 +48,7 @@ void blinkSprite(CCSprite *t);
 @interface TouchGameLayer : CCLayer <DLSubtitleLabelDelegate,CDLongAudioSourceDelegate>
 {
     void (^_objectLoaded)(GameObject *object);
+    void (^_objectActived)(GameObject *object);
     void (^_objectClicked)(GameObject *object);
     
     BOOL _autoActiveNext;
@@ -67,6 +68,7 @@ void blinkSprite(CCSprite *t);
 
 // action
 - (void) setObjectLoadedBlock:(void (^)(GameObject *object))block;
+- (void) setObjectActivedBlock:(void (^)(GameObject *object))block;
 - (void) setObjectCLickedBlock:(void (^)(GameObject *object))block;
 
 - (void) contentDidFinishReading:(GameObject*)object;

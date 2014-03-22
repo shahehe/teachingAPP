@@ -193,10 +193,8 @@ void unblinkSprite(CCSprite *t)
     bg.position = ccpMult(screenSizeAsPoint(), 0.5);
 
     NSDictionary *objectsData = [dic objectForKey:@"objects"];
-    
     objects = [[NSMutableArray alloc] initWithCapacity:objectsData.count];
     [self loadObjectsWithData:objectsData];
-    
     //audio
     audioPlayer = [[CDLongAudioSource alloc] init];
     audioPlayer.delegate = self;
@@ -230,9 +228,11 @@ void unblinkSprite(CCSprite *t)
     [self setObjectCLickedBlock:^(GameObject *object) {
         unblinkSprite(object);
     }];
-    [self setObjectLoadedBlock:^(GameObject *object) {
+    [self setObjectActivedBlock:^(GameObject *object) {
         blinkSprite(object);
     }];
+    
+    _objectLoaded = nil;
     
     // gameMode
     _gameMode = GameModeDefault;
@@ -257,8 +257,14 @@ void unblinkSprite(CCSprite *t)
     
     [_objectClicked release];
     [_objectLoaded release];
+    [_objectActived release];
     
     [super dealloc];
+}
+
+- (void) onEnter
+{
+    [super onEnter];
 }
 
 - (void) onEnterTransitionDidFinish
@@ -278,6 +284,11 @@ void unblinkSprite(CCSprite *t)
     
     if (!isActive)
     {
+        for (GameObject *object in objects)
+        {
+            if (_objectLoaded)
+                _objectLoaded(object);
+        }
         [self activeNextObjects];
     }
 }
@@ -297,6 +308,12 @@ void unblinkSprite(CCSprite *t)
 {
     [_objectLoaded release];
     _objectLoaded = [block copy];
+}
+
+- (void) setObjectActivedBlock:(void (^)(GameObject *))block
+{
+    [_objectActived release];
+    _objectActived = [block copy];
 }
 
 - (void) setObjectCLickedBlock:(void (^)(GameObject *))block
@@ -324,9 +341,9 @@ void unblinkSprite(CCSprite *t)
 {
     for (GameObject *object in [self nextObjects])
     {
-        if (_objectLoaded)
+        if (_objectActived)
         {
-            _objectLoaded(object);
+            _objectActived(object);
             CCLOG(@"loaded %@",object.name);
         }
         object.tag = 1;
