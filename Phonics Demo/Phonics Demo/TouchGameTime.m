@@ -50,7 +50,7 @@ char *const times[] = {"8:10","8:30","10:00","15:30","16:00","16:40"};
     [self preloadImages];
     
     __count = 0;
-    [self setObjectLoadedBlock:^(GameObject *object) {
+    [self setObjectActivedBlock:^(GameObject *object) {
         blinkSprite(object);
         NSString *time = [NSString stringWithUTF8String:times[__count]];
         CCLabelTTF *timeLabel = [CCLabelTTF labelWithString:time fontName:@"Helvetica" fontSize:36];

@@ -68,7 +68,7 @@ static char *const file = "please.plist";
     }];
     
     __block id self_copy = self;
-    [self setObjectLoadedBlock:^(GameObject *object) {
+    [self setObjectActivedBlock:^(GameObject *object) {
         blinkSprite(object);
         
         CCMoveTo *move = [CCMoveTo actionWithDuration:1 position:__startPosition];
