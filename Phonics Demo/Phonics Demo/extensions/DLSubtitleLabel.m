@@ -127,8 +127,10 @@ static char *const punctuations = " ,.:""''!?-(){}[];<>/_";
 
 - (void) setString:(NSString *)label
 {
-    [super setString:label];
+    if ([label isEqualToString:self.string])
+        return;
     
+    [super setString:label];
     [self creatWordRangesAndRects];
 }
 

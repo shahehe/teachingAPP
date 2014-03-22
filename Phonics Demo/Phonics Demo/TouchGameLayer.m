@@ -83,7 +83,7 @@
 //    CGRect rect = CGRectZero;
 //    rect.size = self.boundingBox.size;
     
-    if (CGRectContainsPoint(_touchRect, pos))
+    if (CGRectContainsPoint(_touchRect, pos) && self.visible)
     {
         return YES;
     }
@@ -191,6 +191,8 @@ void unblinkSprite(CCSprite *t)
     CCSprite *bg = addFileToNodeAsSprite(background, self);
     bg.zOrder = 0;
     bg.position = ccpMult(screenSizeAsPoint(), 0.5);
+    bg.scaleX = SCREEN_WIDTH/bg.contentSize.width;
+    bg.scaleY = SCREEN_HEIGHT/bg.contentSize.height;
 
     NSDictionary *objectsData = [dic objectForKey:@"objects"];
     objects = [[NSMutableArray alloc] initWithCapacity:objectsData.count];
@@ -304,6 +306,11 @@ void unblinkSprite(CCSprite *t)
     return [objects count];
 }
 
+- (DLSubtitleLabel*) contentLabel
+{
+    return contentLabel;
+}
+
 - (void) setObjectLoadedBlock:(void (^)(GameObject *))block
 {
     [_objectLoaded release];
@@ -344,9 +351,11 @@ void unblinkSprite(CCSprite *t)
         if (_objectActived)
         {
             _objectActived(object);
-            CCLOG(@"loaded %@",object.name);
+            
         }
         object.tag = 1;
+        _runningObject = object;
+        [audioPlayer load:object.audioFileName];
     }
 }
 
@@ -475,6 +484,8 @@ void unblinkSprite(CCSprite *t)
 - (void) subtitleLabelClickOnWord:(NSString *)word sender:(id)sender
 {
     CCLOG(@"touch at word:%@",word);
+    [audioPlayer rewind];
+    [audioPlayer play];
 }
 
 @end

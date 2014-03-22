@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>Kiss</string>
+	<key>path</key>
+	<string>Assets/touchingGames/kiss</string>
+	<key>background</key>
+	<string>kiss_bg.png</string>
+	<key>label</key>
+	<dict>
+		<key>fntFile</key>
+		<string>Didot.fnt</string>
+		<key>position</key>
+		<string>{0.50,0.88}</string>
+		<key>anchorPoint</key>
+		<string>{0.5,0.5}</string>
+	</dict>
+	<key>objects</key>
+	<dict>
+		<key>bird</key>
+		<dict>
+			<key>file</key>
+			<string>lips.png</string>
+			<key>audio</key>
+			<string>bird.mp3</string>
+			<key>content</key>
+			<string>There is a kiss for the bird.</string>
+			<key>position</key>
+			<string>{0.205,0.622}</string>
+		</dict>
+		<key>cat</key>
+		<dict>
+			<key>file</key>
+			<string>lips.png</string>
+			<key>audio</key>
+			<string>cat.mp3</string>
+			<key>content</key>
+			<string>There is a kiss for the cat.</string>
+			<key>position</key>
+			<string>{0.205,0.622}</string>
+		</dict>
+		<key>goldfish</key>
+		<dict>
+			<key>file</key>
+			<string>lips.png</string>
+			<key>audio</key>
+			<string>goldfish.mp3</string>
+			<key>content</key>
+			<string>There is a kiss for the goldfish.</string>
+			<key>position</key>
+			<string>{0.205,0.622}</string>
+		</dict>
+		<key>kangaroo</key>
+		<dict>
+			<key>file</key>
+			<string>lips.png</string>
+			<key>audio</key>
+			<string>kangaroo.mp3</string>
+			<key>content</key>
+			<string>There is a kiss for the kangaroo.</string>
+			<key>position</key>
+			<string>{0.205,0.622}</string>
+		</dict>
+		<key>koala</key>
+		<dict>
+			<key>file</key>
+			<string>lips.png</string>
+			<key>audio</key>
+			<string>koala.mp3</string>
+			<key>content</key>
+			<string>There is a kiss for the koala.</string>
+			<key>position</key>
+			<string>{0.205,0.622}</string>
+		</dict>
+		<key>whale</key>
+		<dict>
+			<key>file</key>
+			<string>lips.png</string>
+			<key>audio</key>
+			<string>whale.mp3</string>
+			<key>content</key>
+			<string>There is a kiss for the whale.</string>
+			<key>position</key>
+			<string>{0.205,0.622}</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

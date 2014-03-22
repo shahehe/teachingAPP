@@ -66,6 +66,8 @@ void blinkSprite(CCSprite *t);
 
 - (void) activeNextObjects;
 
+- (DLSubtitleLabel*) contentLabel;
+
 // action
 - (void) setObjectLoadedBlock:(void (^)(GameObject *object))block;
 - (void) setObjectActivedBlock:(void (^)(GameObject *object))block;
