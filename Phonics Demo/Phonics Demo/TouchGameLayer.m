@@ -461,7 +461,7 @@ void unblinkSprite(CCSprite *t)
         [self activeNextObjects];
     }
     
-    object.tag = 2;
+    object.tag = MAX(object.tag, 2);
     
     return YES;
 }

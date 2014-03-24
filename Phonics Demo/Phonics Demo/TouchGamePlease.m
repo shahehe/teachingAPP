@@ -97,7 +97,7 @@ static char *const file = "please.plist";
 
 - (void) setGameMode:(TouchGameMode)gameMode
 {
-    self.gameMode = GameModeDefault;
+    // do nothing
 }
 
 - (void) setGirl

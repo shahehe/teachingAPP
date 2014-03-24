@@ -147,6 +147,7 @@ CGPoint node_p(CCNode *node)
 - (void) dealloc
 {
     [bodyTex release];
+    [[CCTextureCache sharedTextureCache] removeTexture:bodyTex];
     [super dealloc];
 }
 
@@ -179,6 +180,7 @@ CGPoint node_p(CCNode *node)
 {
     [super dealloc];
     [_tex release];
+    [[CCTextureCache sharedTextureCache] removeTexture:_tex];
 }
 
 - (void) kiss
@@ -228,6 +230,7 @@ CGPoint node_p(CCNode *node)
 {
     [super dealloc];
     [_tex release];
+    [[CCTextureCache sharedTextureCache] removeTexture:_tex];
 }
 
 - (void) kiss
@@ -277,6 +280,7 @@ CGPoint node_p(CCNode *node)
 {
     [super dealloc];
     [_tex release];
+    [[CCTextureCache sharedTextureCache] removeTexture:_tex];
     [kangaroo release];
 }
 
@@ -328,6 +332,7 @@ CGPoint node_p(CCNode *node)
 {
     [super dealloc];
     [_tex release];
+    [[CCTextureCache sharedTextureCache] removeTexture:_tex];
 }
 
 - (void) kiss
@@ -372,6 +377,7 @@ CGPoint node_p(CCNode *node)
 {
     [super dealloc];
     [_tex release];
+    [[CCTextureCache sharedTextureCache] removeTexture:_tex];
 }
 
 - (void) kiss
@@ -482,7 +488,7 @@ CGPoint node_p(CCNode *node)
 
 - (void) setGameMode:(TouchGameMode)gameMode
 {
-    self.gameMode = GameModeDefault;
+    // do nothing
 }
 
 - (BOOL) objectHasBeenClicked:(GameObject *)object
@@ -490,16 +496,19 @@ CGPoint node_p(CCNode *node)
     if (![super objectHasBeenClicked:object])
         return NO;
     
-    CCMoveTo *move = [CCMoveTo actionWithDuration:0.5 position:displaySprite.kissPosition];
-    CCCallBlock *done = [CCCallBlock actionWithBlock:^{
-        object.visible = NO;
-        [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:object];
+    if (object.tag < 3)
+    {
+        CCMoveTo *move = [CCMoveTo actionWithDuration:0.5 position:displaySprite.kissPosition];
+        CCCallBlock *done = [CCCallBlock actionWithBlock:^{
+            object.visible = NO;
+            [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:object];
         
-        [displaySprite kiss];
-    }];
-    CCSequence *seq = [CCSequence actions:move,done, nil];
-    [object runAction:seq];
-    
+            [displaySprite kiss];
+        }];
+        CCSequence *seq = [CCSequence actions:move,done, nil];
+        [object runAction:seq];
+        object.tag = 3;
+    }
     return YES;
 }
 
@@ -517,7 +526,7 @@ CGPoint node_p(CCNode *node)
 
 - (void) ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    if (self.runningObject.tag > 1)
+    if (self.runningObject.tag > 2)
         [self activeNextObjects];
 }
 

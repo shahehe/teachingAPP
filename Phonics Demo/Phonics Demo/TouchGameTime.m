@@ -73,7 +73,7 @@ char *const times[] = {"8:10","8:30","10:00","15:30","16:00","16:40"};
 
 - (void) setGameMode:(TouchGameMode)gameMode
 {
-    self.gameMode = GameModeDefault;
+    // donothing
 }
 
 - (void) preloadImages

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>Baby&apos;s Toy</string>
+	<key>path</key>
+	<string>Assets/touchingGames/BabyToy</string>
+	<key>background</key>
+	<string>toy_bg.png</string>
+	<key>label</key>
+	<dict>
+		<key>fntFile</key>
+		<string>Didot.fnt</string>
+		<key>position</key>
+		<string>{0.5,0.06}</string>
+		<key>anchorPoint</key>
+		<string>{0.5,0.5}</string>
+	</dict>
+	<key>objects</key>
+	<dict>
+		<key>1-bubbles</key>
+		<dict>
+			<key>file</key>
+			<string>boy.png</string>
+			<key>audio</key>
+			<string>bubbles.mp3</string>
+			<key>content</key>
+			<string>The baby likes the bubbles.</string>
+			<key>position</key>
+			<string>{0.15,0.453}</string>
+		</dict>
+		<key>2-ball</key>
+		<dict>
+			<key>file</key>
+			<string>boy_crawl01.png</string>
+			<key>audio</key>
+			<string>ball.mp3</string>
+			<key>content</key>
+			<string>The baby likes the ball.</string>
+			<key>position</key>
+			<string>{0.163,0.352}</string>
+		</dict>
+		<key>3-bell</key>
+		<dict>
+			<key>file</key>
+			<string>boy_crawl01.png</string>
+			<key>audio</key>
+			<string>bell.mp3</string>
+			<key>content</key>
+			<string>The baby likes the bell.</string>
+			<key>position</key>
+			<string>{0.163,0.352}</string>
+		</dict>
+		<key>4-blanket</key>
+		<dict>
+			<key>file</key>
+			<string>boy_crawl01.png</string>
+			<key>audio</key>
+			<string>blanket.mp3</string>
+			<key>content</key>
+			<string>The boy likes the blanket.</string>
+			<key>position</key>
+			<string>{0.163,0.352}</string>
+		</dict>
+		<key>5-blocks</key>
+		<dict>
+			<key>file</key>
+			<string>boy_crawl01.png</string>
+			<key>audio</key>
+			<string>blocks.mp3</string>
+			<key>content</key>
+			<string>The baby likes the blocks.</string>
+			<key>position</key>
+			<string>{0.163,0.352}</string>
+		</dict>
+		<key>6-box</key>
+		<dict>
+			<key>file</key>
+			<string>boy_crawl01.png</string>
+			<key>audio</key>
+			<string>box.mp3</string>
+			<key>content</key>
+			<string>The baby likes the box.</string>
+			<key>position</key>
+			<string>{0.163,0.352}</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
