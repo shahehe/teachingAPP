@@ -110,9 +110,30 @@ static char *const file = "toy.plist";
 
 - (void) dealloc
 {
-    [super dealloc];
     [images release];
     [crawlFrames release];
+    
+    [super dealloc];
+}
+
+- (void) onExit
+{
+    [super onExit];
+    
+    [images enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        NSString *name = key;
+        NSString *image = obj;
+        
+        [[CCSpriteFrameCache sharedSpriteFrameCache] removeSpriteFrameByName:name];
+        [[CCTextureCache sharedTextureCache] removeTextureForKey:image];
+    }];
+    
+    NSUInteger count = crawlFrames.count;
+    for (int i = count-1;i>=0;i--)
+    {
+        CCSpriteFrame *f = [crawlFrames objectAtIndex:i];
+        [[CCTextureCache sharedTextureCache] removeTexture:f.texture];
+    }
 }
 
 - (void) setGameMode:(TouchGameMode)gameMode
@@ -131,7 +152,6 @@ static char *const file = "toy.plist";
             rect.size = tex.contentSize;
             CCSpriteFrame *frame = [CCSpriteFrame frameWithTexture:tex rect:rect];
             [frameCache addSpriteFrame:frame name:name];
-            CCLOG(@"load %@ frame:%@",name,frame.description);
         }];
     }];
 }
