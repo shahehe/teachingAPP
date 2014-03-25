@@ -184,6 +184,13 @@ NSString *const searchPath = @"Assets/Goose";
         [items addObject:item];
     };
     
+    for (int i=blocks.count-1;i>=0;i--)
+    {
+        void (^block)(id sender) = [blocks objectAtIndex:i];
+        Block_release(block);
+        [blocks removeObjectAtIndex:i];
+    }
+    
     CCMenu *menu = [CCMenu menuWithArray:items];
     menu.zOrder = 20;
     menu.position = CGPointZero;

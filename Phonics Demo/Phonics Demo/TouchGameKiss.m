@@ -454,11 +454,11 @@ CGPoint node_p(CCNode *node)
         
         object.visible = YES;
         
-        [displaySprite removeFromParentAndCleanup:YES];
+        [self_copy removeChild:displaySprite cleanup:YES];
         displaySprite = [displaySprites objectForKey:object.name];
         [self_copy addChild:displaySprite];
         
-        CCLabelBMFont *label = [self contentLabel];
+        CCLabelBMFont *label = [self_copy contentLabel];
         label.string = object.content;
     }];
     
@@ -477,8 +477,18 @@ CGPoint node_p(CCNode *node)
 
 - (void) dealloc
 {
-    [super dealloc];
+    [self unscheduleUpdate];
+    [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
     [displaySprites release];
+    displaySprites = nil;
+    
+    [displaySprite release];
+    displaySprite = nil;
+    
+    [shine release];
+    shine = nil;
+    
+    [super dealloc];
 }
 
 - (void) update:(ccTime)delta
@@ -499,10 +509,9 @@ CGPoint node_p(CCNode *node)
     
     if (object.tag < 3)
     {
-        __block GameObject *obj_copy = object;
         CCMoveTo *move = [CCMoveTo actionWithDuration:0.5 position:displaySprite.kissPosition];
         CCCallBlock *done = [CCCallBlock actionWithBlock:^{
-            obj_copy.visible = NO;
+            object.visible = NO;
             [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:object];
         
             [displaySprite kiss];

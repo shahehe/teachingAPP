@@ -258,6 +258,9 @@ void unblinkSprite(CCSprite *t)
     [objects release];
     objects = nil;
     
+    [contentLabel release];
+    contentLabel = nil;
+    
     [audioPlayer release];
     audioPlayer= nil;
     
@@ -362,7 +365,7 @@ void unblinkSprite(CCSprite *t)
         }
         object.tag = 1;
         _runningObject = object;
-        [audioPlayer load:object.audioFileName];
+//        [audioPlayer load:object.audioFileName];
     }
 }
 

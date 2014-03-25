@@ -96,6 +96,8 @@ static char *const file = "toy.plist";
     
     [self setObjectCLickedBlock:^(GameObject *object) {
         unblinkSprite(object);
+        object.opacity = 255;
+        object.visible = YES;
     }];
     
     self.autoActiveNext = NO;
@@ -110,6 +112,7 @@ static char *const file = "toy.plist";
 
 - (void) dealloc
 {
+    [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
     [images release];
     [crawlFrames release];
     
@@ -161,6 +164,7 @@ static char *const file = "toy.plist";
     if (![super objectHasBeenClicked:object])
         return NO;
     
+    CCLOG(@"click on %@",object.name);
     if ([object.name hasSuffix:@"bubbles"])
     {
         displaySprite.anchorPoint = ccp(0.159, 0.236);
@@ -181,10 +185,9 @@ static char *const file = "toy.plist";
 
     else if (object.tag < 3)
     {
-        __block GameObject *obj_copy = object;
-        CCMoveBy *move = [CCMoveBy actionWithDuration:3 position:ccp(600, 0)];
+        CCMoveBy *move = [CCMoveBy actionWithDuration:4 position:ccp(600, 0)];
         CCCallBlock *done = [CCCallBlock actionWithBlock:^{
-            [obj_copy stopAllActions];
+            [object stopAllActions];
         }];
         CCSequence *seq = [CCSequence actions:move,done, nil];
         CCRepeatForever *r = [CCRepeatForever actionWithAction:[self crawlAnimation]];

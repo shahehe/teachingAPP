@@ -7,7 +7,7 @@
 //
 char *const file = "time.plist";
 
-char *const times[] = {"8:10","8:30","10:00","15:30","16:00","16:40"};
+//char *const times[] = {"8:10","8:30","10:00","15:30","16:00","16:40"};
 
 #import "config.h"
 #import "TouchGameTime.h"
@@ -17,9 +17,6 @@ char *const times[] = {"8:10","8:30","10:00","15:30","16:00","16:40"};
     NSDictionary *displayImages;
     
     CCSprite *displaySprite;
-    
-//    __block
-    NSUInteger __count;
 }
 
 @end
@@ -40,26 +37,26 @@ char *const times[] = {"8:10","8:30","10:00","15:30","16:00","16:40"};
     self = [super initWithGameData:dic];
     NSAssert(self, @"game:I see failed init");
     
-    displayImages = @{@"1":@"activity_1.png",
-                      @"2":@"activity_2.png",
-                      @"3":@"activity_3.png",
-                      @"4":@"activity_4.png",
-                      @"5":@"activity_5.png",
-                      @"6":@"activity_6.png"};
+    displayImages = @{@"8:10":@"activity_1.png",
+                      @"8:30":@"activity_2.png",
+                      @"10:00":@"activity_3.png",
+                      @"15:30":@"activity_4.png",
+                      @"16:00":@"activity_5.png",
+                      @"16:40":@"activity_6.png"};
     [displayImages retain];
     
     [self preloadImages];
-    
-    __count = 0;
+
     [self setObjectActivedBlock:^(GameObject *object) {
         blinkSprite(object);
-        NSString *time = [NSString stringWithUTF8String:times[__count]];
+        
+        NSString *time = object.name;
         CCLabelTTF *timeLabel = [CCLabelTTF labelWithString:time fontName:@"Helvetica" fontSize:36];
         timeLabel.color = ccBLACK;
         CGSize size = object.boundingBox.size;
         timeLabel.position = ccpMult(ccpFromSize(size), 0.5);
         [object addChild:timeLabel];
-        __count += 1;
+//        _count_ += 1;
     }];
     
     return self;

@@ -36,13 +36,13 @@ static char *const punctuations = " ,.:""''!?-(){}[];<>/_";
 {
     if (self = [super initWithString:theString fntFile:fntFile width:width alignment:alignment imageOffset:offset])
     {
-        [self creatWordRangesAndRects];
-        
         _touchEnable = NO;
         _highlightedColor = ccRED;
         
         _indexOfHighlightedWord = NSNotFound;
         _delegate = nil;
+        
+        [self creatWordRangesAndRects];
     }
     return self;
 }
@@ -50,21 +50,20 @@ static char *const punctuations = " ,.:""''!?-(){}[];<>/_";
 - (void) onEnter
 {
     [super onEnter];
-    
 }
 
 - (void) onExit
 {
+    
+    
     [super onExit];
-//    [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
 }
 
 - (void) dealloc
 {
+    [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
     free(_wordRanges);
     free(_wordRects);
-    
-    
     [super dealloc];
     CCLOG(@"label dealloc");
 }
@@ -154,7 +153,6 @@ static char *const punctuations = " ,.:""''!?-(){}[];<>/_";
 
 - (void) setTouchEnable:(BOOL)touchEnable
 {
-    CCLOG(@"set touch enable");
     if (_touchEnable == touchEnable)
         return;
     
