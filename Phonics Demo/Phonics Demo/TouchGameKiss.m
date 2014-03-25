@@ -443,6 +443,7 @@ CGPoint node_p(CCNode *node)
     shine.zOrder = 0;
     [self addChild:shine];
     
+    __block id self_copy = self;
     [self setObjectLoadedBlock:^(GameObject *object) {
         object.visible = NO;
     }];
@@ -455,7 +456,7 @@ CGPoint node_p(CCNode *node)
         
         [displaySprite removeFromParentAndCleanup:YES];
         displaySprite = [displaySprites objectForKey:object.name];
-        [self addChild:displaySprite];
+        [self_copy addChild:displaySprite];
         
         CCLabelBMFont *label = [self contentLabel];
         label.string = object.content;
@@ -498,9 +499,10 @@ CGPoint node_p(CCNode *node)
     
     if (object.tag < 3)
     {
+        __block GameObject *obj_copy = object;
         CCMoveTo *move = [CCMoveTo actionWithDuration:0.5 position:displaySprite.kissPosition];
         CCCallBlock *done = [CCCallBlock actionWithBlock:^{
-            object.visible = NO;
+            obj_copy.visible = NO;
             [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:object];
         
             [displaySprite kiss];

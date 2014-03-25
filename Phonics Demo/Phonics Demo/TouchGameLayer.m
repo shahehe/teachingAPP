@@ -59,6 +59,7 @@
 
 - (void) dealloc
 {
+    CCLOG(@"game object:%@ dealloc",self.name);
     [_name release];
     [_content release];
     [_audioFileName release];
@@ -186,6 +187,8 @@ void unblinkSprite(CCSprite *t)
 //    CCLOG(@"path:%@",searchPath);
     [self setSearchPath];
     
+    // title
+    _gameTitle = [[dic objectForKey:@"title"] copy];
     // background z:0
     NSString *background = [dic objectForKey:@"background"];
     CCSprite *bg = addFileToNodeAsSprite(background, self);
@@ -248,6 +251,10 @@ void unblinkSprite(CCSprite *t)
 
 - (void) dealloc
 {
+    CCLOG(@"touch game:%@ dealloc",self.gameTitle);
+    
+    [_gameTitle release];
+    
     [objects release];
     objects = nil;
     

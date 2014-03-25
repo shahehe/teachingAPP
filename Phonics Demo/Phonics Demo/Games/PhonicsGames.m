@@ -37,7 +37,7 @@
 {
     if ( self = [super init])
     {
-        _sceneLevel = [[CCDirector sharedDirector]currentSceneStackLevel];
+        _sceneLevel = [[CCDirector sharedDirector] currentSceneStackLevel];
         _isGameRunning = NO;
     }
     return self;

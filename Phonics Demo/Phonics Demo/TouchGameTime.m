@@ -5,7 +5,7 @@
 //  Created by yiplee on 14-3-21.
 //  Copyright (c) 2014年 USTB. All rights reserved.
 //
-static char *const file = "time.plist";
+char *const file = "time.plist";
 
 char *const times[] = {"8:10","8:30","10:00","15:30","16:00","16:40"};
 
@@ -18,7 +18,8 @@ char *const times[] = {"8:10","8:30","10:00","15:30","16:00","16:40"};
     
     CCSprite *displaySprite;
     
-    __block NSUInteger __count;
+//    __block
+    NSUInteger __count;
 }
 
 @end
@@ -58,7 +59,7 @@ char *const times[] = {"8:10","8:30","10:00","15:30","16:00","16:40"};
         CGSize size = object.boundingBox.size;
         timeLabel.position = ccpMult(ccpFromSize(size), 0.5);
         [object addChild:timeLabel];
-        __count++;
+        __count += 1;
     }];
     
     return self;
@@ -66,9 +67,8 @@ char *const times[] = {"8:10","8:30","10:00","15:30","16:00","16:40"};
 
 - (void) dealloc
 {
-    [super dealloc];
-    
     [displayImages release];
+    [super dealloc];
 }
 
 - (void) setGameMode:(TouchGameMode)gameMode

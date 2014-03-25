@@ -54,6 +54,7 @@ void blinkSprite(CCSprite *t);
     BOOL _autoActiveNext;
 }
 
+@property (nonatomic,copy,readonly) NSString *gameTitle;
 @property (nonatomic,assign) TouchGameMode gameMode;
 @property (nonatomic,readonly) GameObject *runningObject;
 @property (nonatomic,assign) BOOL autoActiveNext;

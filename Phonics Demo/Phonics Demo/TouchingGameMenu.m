@@ -123,7 +123,7 @@
         [menuItems addObject:back];
         
         CCMenu *menu = [CCMenu menuWithArray:menuItems];
-        [menu alignItemsVerticallyWithPadding:30];
+        [menu alignItemsVerticallyWithPadding:10];
         [self addChild:menu];
         
         CGSize size = [[CCDirector sharedDirector] winSize];

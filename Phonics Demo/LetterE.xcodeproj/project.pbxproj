@@ -15,6 +15,7 @@
 		8445F7E3179FC56E001251C1 /* Cocos2d+CustomOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8445F7E2179FC56E001251C1 /* Cocos2d+CustomOptions.m */; };
 		8445F80017A0D05E001251C1 /* CLDynamicLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8445F7FF17A0D05E001251C1 /* CLDynamicLabel.m */; };
 		8450DCCB179C016C0003B181 /* AppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8450DCCA179C016C0003B181 /* AppManager.m */; };
+		8453198118E19C4200EB3005 /* GooseGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8453198018E19C4200EB3005 /* GooseGame.m */; };
 		847403BE18D71A980093C83E /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 847403BD18D71A980093C83E /* Assets */; };
 		847403C118D71ABA0093C83E /* TouchGameLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 847403C018D71ABA0093C83E /* TouchGameLayer.m */; };
 		847403C418D738090093C83E /* TouchingGameMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 847403C318D738090093C83E /* TouchingGameMenu.m */; };
@@ -364,6 +365,8 @@
 		8450DCC7179A35090003B181 /* PhonicsDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhonicsDefines.h; sourceTree = "<group>"; };
 		8450DCC9179C016C0003B181 /* AppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppManager.h; path = Model/AppManager.h; sourceTree = "<group>"; };
 		8450DCCA179C016C0003B181 /* AppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppManager.m; path = Model/AppManager.m; sourceTree = "<group>"; };
+		8453197F18E19C4200EB3005 /* GooseGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GooseGame.h; sourceTree = "<group>"; };
+		8453198018E19C4200EB3005 /* GooseGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooseGame.m; sourceTree = "<group>"; };
 		847403BD18D71A980093C83E /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Assets; path = ../../Assets; sourceTree = "<group>"; };
 		847403BF18D71ABA0093C83E /* TouchGameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchGameLayer.h; sourceTree = "<group>"; };
 		847403C018D71ABA0093C83E /* TouchGameLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchGameLayer.m; sourceTree = "<group>"; };
@@ -1021,6 +1024,15 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		8453197E18E19C2900EB3005 /* goose */ = {
+			isa = PBXGroup;
+			children = (
+				8453197F18E19C4200EB3005 /* GooseGame.h */,
+				8453198018E19C4200EB3005 /* GooseGame.m */,
+			);
+			path = goose;
+			sourceTree = "<group>";
+		};
 		847403C618D749B20093C83E /* audioDict */ = {
 			isa = PBXGroup;
 			children = (
@@ -1484,6 +1496,7 @@
 				84B4F11218D03BF60071E85B /* PhonicsGameLayer.m */,
 				84B4F11318D03BF60071E85B /* PhonicsGames.h */,
 				84B4F11418D03BF60071E85B /* PhonicsGames.m */,
+				8453197E18E19C2900EB3005 /* goose */,
 				84B4F08718D03BF60071E85B /* bubble */,
 				84B4F0CB18D03BF60071E85B /* cardMatching */,
 				84B4F0F818D03BF60071E85B /* learn word */,
@@ -2263,6 +2276,7 @@
 				8498BC9617847D9F00F71234 /* utility.c in Sources */,
 				8498BC9817847D9F00F71234 /* vec2.c in Sources */,
 				8498BC9A17847D9F00F71234 /* vec3.c in Sources */,
+				8453198118E19C4200EB3005 /* GooseGame.m in Sources */,
 				84B4F07918D03BCA0071E85B /* CCLabelBMFontOnBacthNode.m in Sources */,
 				84B4F1F718D040BF0071E85B /* cpArbiter.c in Sources */,
 				8498BC9C17847D9F00F71234 /* vec4.c in Sources */,

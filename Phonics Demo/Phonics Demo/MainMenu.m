@@ -18,6 +18,8 @@
 
 #import "TouchingGameMenu.h"
 
+#import "GooseGame.h"
+
 @implementation MainMenu
 
 + (CCScene*) scene
@@ -52,7 +54,8 @@
     NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"gamedata" ofType:@"plist"];
     NSDictionary* gameData = [NSDictionary dictionaryWithContentsOfFile:dataPath];
     NSUInteger _capacity = PhonicsGameMaxIndex;
-    NSMutableArray *menuItems = [NSMutableArray arrayWithCapacity:_capacity];
+    
+    NSMutableArray *menuItems = [NSMutableArray arrayWithCapacity:_capacity+1];
     [menuItems addObject:item1];
     
     for (int i = 0;i < _capacity;i++)
@@ -72,10 +75,16 @@
     }];
     touchingGame.color = ccYELLOW;
     [menuItems addObject:touchingGame];
+    
+    CCMenuItem *goose = [CCMenuItemFont itemWithString:@"Goose" block:^(id sender) {
+        [[CCDirector sharedDirector] replaceScene:[GooseGame gameScene]];
+    }];
+    goose.color = ccYELLOW;
+    [menuItems addObject:goose];
 
 //    CCMenu *menu = [CCMenu menuWithItems:item1,item2, nil];
     CCMenu *menu = [CCMenu menuWithArray:menuItems];
-    [menu alignItemsVerticallyWithPadding:20];
+    [menu alignItemsVerticallyWithPadding:10];
 
     menu.position = ccpMult(SCREEN_SIZE_AS_POINT, 0.5);
     [self addChild:menu];

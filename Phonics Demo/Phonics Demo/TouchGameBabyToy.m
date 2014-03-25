@@ -91,7 +91,7 @@ static char *const file = "toy.plist";
         
         blinkSprite(object);
         
-        [[self contentLabel] setString:object.content];
+        [[self_copy contentLabel] setString:object.content];
     }];
     
     [self setObjectCLickedBlock:^(GameObject *object) {
@@ -181,15 +181,16 @@ static char *const file = "toy.plist";
 
     else if (object.tag < 3)
     {
-            CCMoveBy *move = [CCMoveBy actionWithDuration:3 position:ccp(600, 0)];
-            CCCallBlock *done = [CCCallBlock actionWithBlock:^{
-                [object stopAllActions];
-            }];
-            CCSequence *seq = [CCSequence actions:move,done, nil];
-            CCRepeatForever *r = [CCRepeatForever actionWithAction:[self crawlAnimation]];
+        __block GameObject *obj_copy = object;
+        CCMoveBy *move = [CCMoveBy actionWithDuration:3 position:ccp(600, 0)];
+        CCCallBlock *done = [CCCallBlock actionWithBlock:^{
+            [obj_copy stopAllActions];
+        }];
+        CCSequence *seq = [CCSequence actions:move,done, nil];
+        CCRepeatForever *r = [CCRepeatForever actionWithAction:[self crawlAnimation]];
             
-            [object runAction:seq];
-            [object runAction:r];
+        [object runAction:seq];
+        [object runAction:r];
     }
     
     object.tag = 3;
