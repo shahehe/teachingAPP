@@ -5,7 +5,7 @@
 //  Created by yiplee on 14-3-21.
 //  Copyright (c) 2014年 USTB. All rights reserved.
 //
-char *const file = "time.plist";
+static char *const file = "time.plist";
 
 //char *const times[] = {"8:10","8:30","10:00","15:30","16:00","16:40"};
 

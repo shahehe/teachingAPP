@@ -19,6 +19,7 @@
 #import "TouchGameTime.h"
 #import "TouchGameKiss.h"
 #import "TouchGameBabyToy.h"
+#import "TouchGameRed.h"
 
 @implementation TouchingGameMenu
 
@@ -38,7 +39,6 @@
         menuData = @{@"I love": @"I_love.plist",
                      @"Can U":@"can_u.plist",
                      @"Happy":@"happy_me.plist",
-                     @"Red":@"Red.plist",
                      @"Garden":@"Garden.plist"};
         
         NSString *rootPath = [NSString stringWithUTF8String:touchingGameRootPath];
@@ -67,6 +67,14 @@
             item.color = ccWHITE;
             [menuItems addObject:item];
         }
+        
+        CCMenuItem *red = [CCMenuItemFont itemWithString:@"Red" block:^(id sender) {
+            TouchGameLayer *game = [TouchGameRed gameLayer];
+            CCScene *scene = [CCScene node];
+            [scene addChild:game];
+            [[CCDirector sharedDirector] replaceScene:scene];
+        }];
+        [menuItems addObject:red];
         
         CCMenuItem *isee = [CCMenuItemFont itemWithString:@"I See" block:^(id sender) {
             TouchGameLayer *game = [TouchGameISee gameLayer];
