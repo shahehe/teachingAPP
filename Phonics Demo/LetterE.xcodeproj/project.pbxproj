@@ -162,6 +162,7 @@
 		84B263C018E05037002AD301 /* TouchGameBabyToy.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B263BF18E05037002AD301 /* TouchGameBabyToy.m */; };
 		84B3FCC618CF772500FD27E8 /* DLDraggableSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B3FCC318CF772500FD27E8 /* DLDraggableSprite.m */; };
 		84B3FCC718CF772500FD27E8 /* DLSubtitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B3FCC518CF772500FD27E8 /* DLSubtitleLabel.m */; };
+		84B4296818E2A6810029C7C7 /* TouchGameRed.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B4296718E2A6810029C7C7 /* TouchGameRed.m */; };
 		84B4F07818D03BCA0071E85B /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B4F06518D03BCA0071E85B /* Card.m */; };
 		84B4F07918D03BCA0071E85B /* CCLabelBMFontOnBacthNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B4F06718D03BCA0071E85B /* CCLabelBMFontOnBacthNode.m */; };
 		84B4F07A18D03BCA0071E85B /* CCLinePro.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B4F06918D03BCA0071E85B /* CCLinePro.m */; };
@@ -673,6 +674,8 @@
 		84B3FCC318CF772500FD27E8 /* DLDraggableSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLDraggableSprite.m; path = extensions/DLDraggableSprite.m; sourceTree = "<group>"; };
 		84B3FCC418CF772500FD27E8 /* DLSubtitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLSubtitleLabel.h; path = extensions/DLSubtitleLabel.h; sourceTree = "<group>"; };
 		84B3FCC518CF772500FD27E8 /* DLSubtitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLSubtitleLabel.m; path = extensions/DLSubtitleLabel.m; sourceTree = "<group>"; };
+		84B4296618E2A6810029C7C7 /* TouchGameRed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchGameRed.h; sourceTree = "<group>"; };
+		84B4296718E2A6810029C7C7 /* TouchGameRed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchGameRed.m; sourceTree = "<group>"; };
 		84B4F06418D03BCA0071E85B /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = extensions/Card.h; sourceTree = "<group>"; };
 		84B4F06518D03BCA0071E85B /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = extensions/Card.m; sourceTree = "<group>"; };
 		84B4F06618D03BCA0071E85B /* CCLabelBMFontOnBacthNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCLabelBMFontOnBacthNode.h; path = extensions/CCLabelBMFontOnBacthNode.h; sourceTree = "<group>"; };
@@ -1858,6 +1861,8 @@
 				84AE12BA18DDB72F002501CC /* TouchGameKiss.m */,
 				84B263BE18E05037002AD301 /* TouchGameBabyToy.h */,
 				84B263BF18E05037002AD301 /* TouchGameBabyToy.m */,
+				84B4296618E2A6810029C7C7 /* TouchGameRed.h */,
+				84B4296718E2A6810029C7C7 /* TouchGameRed.m */,
 			);
 			name = TouchingGame;
 			sourceTree = "<group>";
@@ -2241,6 +2246,7 @@
 				8498BC3E17847D9E00F71234 /* ccUtils.c in Sources */,
 				8498BC4217847D9E00F71234 /* CCVertex.m in Sources */,
 				84B4F20018D040BF0071E85B /* cpSpace.c in Sources */,
+				84B4296818E2A6810029C7C7 /* TouchGameRed.m in Sources */,
 				847403C418D738090093C83E /* TouchingGameMenu.m in Sources */,
 				84B4F12C18D03BF60071E85B /* letterBubble.m in Sources */,
 				847403C118D71ABA0093C83E /* TouchGameLayer.m in Sources */,
