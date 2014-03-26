@@ -274,6 +274,8 @@ NSString *const searchPath = @"Assets/Goose";
 
     [gooses release];
     [letters release];
+    [nests release];
+    
     [super dealloc];
 }
 
