@@ -443,28 +443,27 @@ CGPoint node_p(CCNode *node)
     shine.zOrder = 0;
     [self addChild:shine];
     
-    __block id self_copy = self;
+    __block TouchGameKiss* self_copy = self;
     [self setObjectLoadedBlock:^(GameObject *object) {
         object.visible = NO;
     }];
     
     [self setObjectActivedBlock:^(GameObject *object) {
         blinkSprite(object);
-        shine.visible = YES;
+        ((CCSprite*)self_copy->shine).visible = YES;
         
         object.visible = YES;
         
-        [self_copy removeChild:displaySprite cleanup:YES];
-        displaySprite = [displaySprites objectForKey:object.name];
-        [self_copy addChild:displaySprite];
+        [self_copy removeChild:self_copy->displaySprite cleanup:YES];
+        self_copy->displaySprite = [self_copy->displaySprites objectForKey:object.name];
+        [self_copy addChild:self_copy->displaySprite];
         
-        CCLabelBMFont *label = [self_copy contentLabel];
-        label.string = object.content;
+        ([self_copy contentLabel]).string = object.content;
     }];
     
     [self setObjectCLickedBlock:^(GameObject *object) {
         unblinkSprite(object);
-        shine.visible = NO;
+        ((CCSprite*)self_copy->shine).visible = NO;
     }];
     
     [self scheduleUpdate];
@@ -481,12 +480,6 @@ CGPoint node_p(CCNode *node)
     [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
     [displaySprites release];
     displaySprites = nil;
-    
-    [displaySprite release];
-    displaySprite = nil;
-    
-    [shine release];
-    shine = nil;
     
     [super dealloc];
 }
@@ -509,15 +502,16 @@ CGPoint node_p(CCNode *node)
     
     if (object.tag < 3)
     {
+        __block GameObject *objc = object;
         CCMoveTo *move = [CCMoveTo actionWithDuration:0.5 position:displaySprite.kissPosition];
         CCCallBlock *done = [CCCallBlock actionWithBlock:^{
-            object.visible = NO;
+            objc.visible = NO;
             [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:object];
         
             [displaySprite kiss];
         }];
         CCSequence *seq = [CCSequence actions:move,done, nil];
-        [object runAction:seq];
+        [objc runAction:seq];
         object.tag = 3;
     }
     return YES;
