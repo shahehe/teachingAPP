@@ -39,7 +39,8 @@
         menuData = @{@"I love": @"I_love.plist",
                      @"Can U":@"can_u.plist",
                      @"Happy":@"happy_me.plist",
-                     @"Garden":@"Garden.plist"};
+                     @"Garden":@"Garden.plist",
+                     @"In my den":@"den.plist"};
         
         NSString *rootPath = [NSString stringWithUTF8String:touchingGameRootPath];
         

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>In my den</string>
+	<key>path</key>
+	<string>Assets/touchingGames/InMyDen</string>
+	<key>background</key>
+	<string>bg.png</string>
+	<key>label</key>
+	<dict>
+		<key>fntFile</key>
+		<string>Didot.fnt</string>
+		<key>position</key>
+		<string>{0.5,0.1}</string>
+		<key>anchorPoint</key>
+		<string>{0.5,0.5}</string>
+	</dict>
+	<key>objects</key>
+	<dict>
+		<key>dart</key>
+		<dict>
+			<key>file</key>
+			<string>dart.png</string>
+			<key>audio</key>
+			<string>dart.mp3</string>
+			<key>content</key>
+			<string>In my den is a dart.</string>
+			<key>position</key>
+			<string>{0.239,0.758}</string>
+		</dict>
+		<key>desk</key>
+		<dict>
+			<key>file</key>
+			<string>desk.png</string>
+			<key>audio</key>
+			<string>desk.mp3</string>
+			<key>content</key>
+			<string>In my den is a desk.</string>
+			<key>position</key>
+			<string>{0.461,0.449}</string>
+		</dict>
+		<key>disc</key>
+		<dict>
+			<key>file</key>
+			<string>disc.png</string>
+			<key>audio</key>
+			<string>disc.mp3</string>
+			<key>content</key>
+			<string>In my den is a disc.</string>
+			<key>position</key>
+			<string>{0.513,0.676}</string>
+		</dict>
+		<key>doll</key>
+		<dict>
+			<key>file</key>
+			<string>doll.png</string>
+			<key>audio</key>
+			<string>doll.mp3</string>
+			<key>content</key>
+			<string>In my den is a doll.</string>
+			<key>position</key>
+			<string>{0.115,0.488}</string>
+		</dict>
+		<key>dice</key>
+		<dict>
+			<key>file</key>
+			<string>dice.png</string>
+			<key>audio</key>
+			<string>dice.mp3</string>
+			<key>content</key>
+			<string>In my den is a dice.</string>
+			<key>position</key>
+			<string>{0.907,0.278}</string>
+		</dict>
+        <key>door</key>
+		<dict>
+			<key>file</key>
+			<string>door.png</string>
+			<key>audio</key>
+			<string>door.mp3</string>
+			<key>content</key>
+			<string>In my den is a door.</string>
+			<key>position</key>
+			<string>{0.793,0.675}</string>
+		</dict>
+	</dict>
+    <key>staticObjects</key>
+    <dict>
+        <key>vase.png</key>
+        <string>{0.36,0.694}</string>
+    </dict>
+</dict>
+</plist>

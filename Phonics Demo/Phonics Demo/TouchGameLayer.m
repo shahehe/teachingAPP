@@ -200,6 +200,12 @@ void unblinkSprite(CCSprite *t)
     NSDictionary *objectsData = [dic objectForKey:@"objects"];
     objects = [[NSMutableArray alloc] initWithCapacity:objectsData.count];
     [self loadObjectsWithData:objectsData];
+    
+    NSDictionary *staticObjectsData = [dic objectForKey:@"staticObjects"];
+    if (staticObjectsData)
+    {
+        [self loadStaticObjectsWithData:staticObjectsData];
+    }
     //audio
     audioPlayer = [[CDLongAudioSource alloc] init];
     audioPlayer.delegate = self;
@@ -417,6 +423,19 @@ void unblinkSprite(CCSprite *t)
     [self addChild:contentLabel z:2];
     
     contentLabel.touchEnable = YES;
+}
+
+- (void) loadStaticObjectsWithData:(NSDictionary *)data
+{
+    for (NSString *name in data.allKeys)
+    {
+        CGPoint pos = CGPointFromString([data objectForKey:name]);
+        CCSprite *s = [CCSprite spriteWithFile:name];
+        s.position = ccpCompMult(SCREEN_SIZE_AS_POINT, pos);
+        s.zOrder = 1;
+        [self addChild:s];
+    }
+
 }
 
 - (void) loadObjectsWithData:(NSDictionary *)data
