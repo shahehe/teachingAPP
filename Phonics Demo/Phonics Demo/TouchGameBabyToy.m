@@ -44,54 +44,54 @@ static char *const file = "toy.plist";
                @"5-blocks":@"blocks.png",
                @"6-box":@"box.png"};
     [images retain];
-    [self preloadImages];
+    
     
     displaySprite = nil;
     [self setObjectLoadedBlock:^(GameObject *object) {
         object.visible = NO;
     }];
     
-    __block id self_copy = self;
+    __block TouchGameBabyToy* self_copy = self;
     [self setObjectActivedBlock:^(GameObject *object) {
         object.visible = YES;
         
         CCSpriteFrame *f = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:object.name];
         if (!f)
         {
-            NSString *image = [images objectForKey:object.name];
+            NSString *image = [self_copy->images objectForKey:object.name];
             CCSprite *temp = [CCSprite spriteWithFile:image];
             
             f = temp.displayFrame;
         }
         
-        if (displaySprite)
+        if (self_copy->displaySprite)
         {
-            displaySprite.displayFrame = f;
+            self_copy->displaySprite.displayFrame = f;
         }
         else
         {
-            displaySprite = [CCSprite spriteWithSpriteFrame:f];
-            [self_copy addChild:displaySprite];
+            self_copy->displaySprite = [CCSprite spriteWithSpriteFrame:f];
+            [self_copy addChild:self_copy->displaySprite];
         }
         
         if ([object.name hasSuffix:@"bubbles"])
         {
-            displaySprite.anchorPoint = ccp(0.159, 0.236);
-            displaySprite.position = ccpCompMult(SCREEN_SIZE_AS_POINT, ccp(0.295, 0.426));
-            displaySprite.scale = 0.01;
+            self_copy->displaySprite.anchorPoint = ccp(0.159, 0.236);
+            self_copy->displaySprite.position = ccpCompMult(SCREEN_SIZE_AS_POINT, ccp(0.295, 0.426));
+            self_copy->displaySprite.scale = 0.01;
         }
         else
         {
-            [displaySprite stopAllActions];
-            displaySprite.opacity = 255;
-            displaySprite.anchorPoint = ccp(0.5, 0.5);
-            displaySprite.position = ccpCompMult(SCREEN_SIZE_AS_POINT, ccp(0.818, 0.326));
-            displaySprite.scale = 1;
+            [self_copy->displaySprite stopAllActions];
+            self_copy->displaySprite.opacity = 255;
+            self_copy->displaySprite.anchorPoint = ccp(0.5, 0.5);
+            self_copy->displaySprite.position = ccpCompMult(SCREEN_SIZE_AS_POINT, ccp(0.818, 0.326));
+            self_copy->displaySprite.scale = 1;
         }
         
         blinkSprite(object);
         
-        [[self_copy contentLabel] setString:object.content];
+        ([self_copy contentLabel]).string = object.content;
     }];
     
     [self setObjectCLickedBlock:^(GameObject *object) {
@@ -103,7 +103,6 @@ static char *const file = "toy.plist";
     self.autoActiveNext = NO;
     
     crawlFrames = nil;
-    [self preloadCrawlAnimation];
     
     [self setTouchEnabled:YES];
     return self;
@@ -119,9 +118,16 @@ static char *const file = "toy.plist";
     [super dealloc];
 }
 
-- (void) onExit
+- (void) onEnter
 {
-    [super onExit];
+    [self preloadImages];
+    [self preloadCrawlAnimation];
+    [super onEnter];
+}
+
+- (void) onExitTransitionDidStart
+{
+    [super onExitTransitionDidStart];
     
     [images enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         NSString *name = key;
@@ -155,6 +161,7 @@ static char *const file = "toy.plist";
             rect.size = tex.contentSize;
             CCSpriteFrame *frame = [CCSpriteFrame frameWithTexture:tex rect:rect];
             [frameCache addSpriteFrame:frame name:name];
+            CCLOG(@"add %@ as %@",frame,name);
         }];
     }];
 }
