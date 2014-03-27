@@ -20,6 +20,7 @@
 #import "TouchGameKiss.h"
 #import "TouchGameBabyToy.h"
 #import "TouchGameRed.h"
+#import "TouchGameFound.h"
 
 @implementation TouchingGameMenu
 
@@ -124,6 +125,14 @@
             [[CCDirector sharedDirector] replaceScene:scene];
         }];
         [menuItems addObject:toy];
+        
+        CCMenuItem *found = [CCMenuItemFont itemWithString:@"He found" block:^(id sender) {
+            TouchGameLayer *game = [TouchGameFound gameLayer];
+            CCScene *scene = [CCScene node];
+            [scene addChild:game];
+            [[CCDirector sharedDirector] replaceScene:scene];
+        }];
+        [menuItems addObject:found];
         
         CCMenuItem *back = [CCMenuItemFont itemWithString:@"BACK" block:^(id sender) {
             [[CCDirector sharedDirector] replaceScene:[MainMenu scene]];

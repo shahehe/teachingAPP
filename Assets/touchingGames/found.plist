@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>He Found</string>
+	<key>path</key>
+	<string>Assets/touchingGames/found</string>
+	<key>background</key>
+	<string>bg.png</string>
+	<key>label</key>
+	<dict>
+		<key>fntFile</key>
+		<string>Didot.fnt</string>
+		<key>position</key>
+		<string>{0.5, 0.9}</string>
+		<key>anchorPoint</key>
+		<string>{0.5,0.5}</string>
+	</dict>
+	<key>objects</key>
+	<dict>
+		<key>face</key>
+		<dict>
+			<key>file</key>
+			<string>key.png</string>
+			<key>audio</key>
+			<string>face.mp3</string>
+			<key>content</key>
+			<string>He found one face.</string>
+			<key>position</key>
+			<string>{0.832,0.681}</string>
+		</dict>
+		<key>foot</key>
+		<dict>
+			<key>file</key>
+			<string>key.png</string>
+			<key>audio</key>
+			<string>foot.mp3</string>
+			<key>content</key>
+			<string>He found one foot.</string>
+			<key>position</key>
+			<string>{0.832,0.681}</string>
+		</dict>
+		<key>forehead</key>
+		<dict>
+			<key>file</key>
+			<string>key.png</string>
+			<key>audio</key>
+			<string>forehead.mp3</string>
+			<key>content</key>
+			<string>He found one forehead.</string>
+			<key>position</key>
+			<string>{0.832,0.681}</string>
+		</dict>
+		<key>one_finger</key>
+		<dict>
+			<key>file</key>
+			<string>key.png</string>
+			<key>audio</key>
+			<string>one_finger.mp3</string>
+			<key>content</key>
+			<string>He found one finger.</string>
+			<key>position</key>
+			<string>{0.832,0.681}</string>
+		</dict>
+		<key>ten_finger</key>
+		<dict>
+			<key>file</key>
+			<string>key.png</string>
+			<key>audio</key>
+			<string>ten_finger.mp3</string>
+			<key>content</key>
+			<string>He found ten fingers.</string>
+			<key>position</key>
+			<string>{0.832,0.681}</string>
+		</dict>
+		<key>two_feet</key>
+		<dict>
+			<key>file</key>
+			<string>key.png</string>
+			<key>audio</key>
+			<string>two_feet.mp3</string>
+			<key>content</key>
+			<string>He found two feet.</string>
+			<key>position</key>
+			<string>{0.832,0.681}</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
