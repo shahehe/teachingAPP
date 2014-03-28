@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>Very Good</string>
+	<key>path</key>
+	<string>Assets/touchingGames/very_good</string>
+	<key>background</key>
+	<string>bg.png</string>
+	<key>label</key>
+	<dict>
+		<key>fntFile</key>
+		<string>Didot.fnt</string>
+		<key>position</key>
+		<string>{0.5,0.916}</string>
+		<key>anchorPoint</key>
+		<string>{0.5,0.5}</string>
+	</dict>
+	<key>objects</key>
+	<dict>
+		<key>4-van</key>
+		<dict>
+			<key>file</key>
+			<string>van.png</string>
+			<key>audio</key>
+			<string>van.mp3</string>
+			<key>content</key>
+			<string>This is a very good van.</string>
+			<key>position</key>
+			<string>{1.099,0.535}</string>
+		</dict>
+		<key>2-vegetable</key>
+		<dict>
+			<key>file</key>
+			<string>vegetable.png</string>
+			<key>audio</key>
+			<string>vegetable.mp3</string>
+			<key>content</key>
+			<string>This is a very good vegetable.</string>
+			<key>position</key>
+			<string>{0.376,0.201}</string>
+		</dict>
+		<key>1-vest</key>
+		<dict>
+			<key>file</key>
+			<string>vest.png</string>
+			<key>audio</key>
+			<string>vest.mp3</string>
+			<key>content</key>
+			<string>This is a very good vest.</string>
+			<key>position</key>
+			<string>{0.098,0.530}</string>
+		</dict>
+		<key>5-violin</key>
+		<dict>
+			<key>file</key>
+			<string>violin.png</string>
+			<key>audio</key>
+			<string>violin.mp3</string>
+			<key>content</key>
+			<string>This is a very good violin.</string>
+			<key>position</key>
+			<string>{0.792,0.278}</string>
+		</dict>
+		<key>3-vacuum</key>
+		<dict>
+			<key>file</key>
+			<string>vacuum.png</string>
+			<key>audio</key>
+			<string>vacuum.mp3</string>
+			<key>content</key>
+			<string>This is a very good vacuum.</string>
+			<key>position</key>
+			<string>{0.332,0.544}</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
