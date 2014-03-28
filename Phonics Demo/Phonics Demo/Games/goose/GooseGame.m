@@ -142,6 +142,8 @@ NSString *const searchPath = @"Assets/Goose";
     NSMutableArray *blocks = [NSMutableArray array];
     void (^_menu)(id sender) = ^(id sender){
         [[CCDirector sharedDirector] replaceScene:[MainMenu scene]];
+        [[CCSpriteFrameCache sharedSpriteFrameCache] removeSpriteFramesFromFile:@"goose.plist"];
+        [[CCSpriteFrameCache sharedSpriteFrameCache] removeSpriteFramesFromFile:@"G.plist"];
     };
     [blocks addObject:Block_copy(_menu)];
     Block_release(_menu);
@@ -269,8 +271,7 @@ NSString *const searchPath = @"Assets/Goose";
 
 - (void) dealloc
 {
-    [[CCSpriteFrameCache sharedSpriteFrameCache] removeSpriteFramesFromFile:@"goose.plist"];
-    [[CCSpriteFrameCache sharedSpriteFrameCache] removeSpriteFramesFromFile:@"G.plist"];
+    CCLOG(@"goose dealloc");
 
     [gooses release];
     [letters release];
@@ -413,7 +414,8 @@ NSString *const searchPath = @"Assets/Goose";
         if (!letter.parent)
             continue;
         CGPoint pos = [letter.parent convertTouchToNodeSpace:touch];
-        if (CGRectContainsPoint(letter.boundingBox, pos))
+        CGRect touchRect = CGRectInset(letter.boundingBox, -30, -30);
+        if (CGRectContainsPoint(touchRect, pos))
         {
             if (letter.tag == 1)
             {
