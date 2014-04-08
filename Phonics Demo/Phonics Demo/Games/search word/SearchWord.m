@@ -139,7 +139,7 @@
                                             fontSize:wordBoardLabelSize
                                           dimensions:wordBoardSize
                                           hAlignment:kCCTextAlignmentLeft
-                                          vAlignment:kCCTextAlignmentLeft
+                                          vAlignment:kCCVerticalTextAlignmentCenter
                                        lineBreakMode:kCCLineBreakModeWordWrap];
         wordBoardLabel.position = wordBoardCenter;
         wordBoardLabel.color = originColor;
