@@ -8,12 +8,16 @@
 
 #import "ImageMatch.h"
 #import "config.h"
+#import "PhonicsDefines.h"
 
 #import "Cocos2d+CustomOptions.h"
+#import "ImageCard.h"
+
+#import "CardProLayer.h"
 
 @interface ImageMatch ()
 {
-    
+    NSMutableArray *cards;
 }
 
 @property(nonatomic,retain) NSArray *words;
@@ -50,11 +54,12 @@
     NSArray *searchPath = @[rootPath,@""];
     [[CCFileUtils sharedFileUtils] setSearchPath:searchPath];
     
+    RGB565
     CCSprite *bg = [CCSprite spriteWithFile:@"image_match_bg.pvr.ccz"];
     bg.position = CMP(0.5);
     [bg fitSize:SCREEN_SIZE scaleIn:YES];
     [self addChild:bg z:0];
-    
+    PIXEL_FORMAT_DEFAULT    
     
     // preload sprite frames
     [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"letters.plist"];
@@ -74,9 +79,9 @@
     {
         NSString *frameName = [@"plate" stringByAppendingFormat:@"%d.png",idx%10];
         CCSprite *plate = [CCSprite spriteWithSpriteFrameName:frameName];
-        plate.anchorPoint = ccp(0.5, 1);
+        plate.anchorPoint = ccp(0.5, 1.5);
         plate.position = ccpCompMult(SCREEN_SIZE_AS_POINT,platePos[i]);
-        plate.zOrder = 1;
+        plate.zOrder = 0;
         [self addChild:plate];
     }
     
@@ -87,7 +92,44 @@
         ccp(0.25*(2+0.5), 0.2),
         ccp(0.25*(3+0.5), 0.2),
     };
-    //Todo
+    NSUInteger count = MIN(self.words.count,4);
+    cards = [[NSMutableArray alloc] initWithCapacity:count];
+    for (int i=0;i<count;i++)
+    {
+        NSString *word = [self.words objectAtIndex:i];
+        ImageCard *card = [ImageCard imageCardWithWord:word];
+        card.position = ccpCompMult(SCREEN_SIZE_AS_POINT, cardsPos[i]);
+        [self addChild:card z:1];
+        [card addImageToNode:self position:ccpCompMult(SCREEN_SIZE_AS_POINT,platePos[i])];
+        [cards addObject:card];
+        
+        [card setCardClickBlock:^(id sender) {
+            CardProLayer *layer = [CardProLayer layerWithWord:((ImageCard*)sender).word];
+            layer.sourceScene = (CCScene*)self;
+            CCScene *scene = [CCScene node];
+            [scene addChild:layer];
+            [[CCDirector sharedDirector] pushScene:scene];
+        }];
+    }
+    
+    for (int i=0;i<count;i++)
+    {
+        ImageCard *card1 = [cards objectAtIndex:i];
+        ImageCard *card2 = [cards objectAtIndex:(i+1+arc4random_uniform(count-1))%count];
+        CGPoint temp = card1.position;
+        card1.position = card2.position;
+        card2.position = temp;
+    }
+    
+    for (int i=0;i<count;i++)
+    {
+        ImageCard *card1 = [cards objectAtIndex:i];
+        ImageCard *card2 = [cards objectAtIndex:(i+1+arc4random_uniform(count-1))%count];
+        CGPoint temp = card1.imagePosition;
+        card1.imagePosition = card2.imagePosition;
+        card2.imagePosition = temp;
+    }
+
     
     __block ImageMatch *self_copy = self;
     // menu
@@ -137,14 +179,22 @@
     [bigLetterButton setBlock:^(id sender) {
         [littleLetterButton unselected];
         [bigLetterButton selected];
-        // todo
+        
+        for (ImageCard *card in self_copy->cards)
+        {
+            [card setWord:[card.word uppercaseString]];
+        }
     }];
     
-    littleLetterButton.position = CCMP(0.12, 0.90);
+    littleLetterButton.position = CCMP(0.15, 0.90);
     [littleLetterButton setBlock:^(id sender) {
         [bigLetterButton unselected];
         [littleLetterButton selected];
-        // todo
+        
+        for (ImageCard *card in self_copy->cards)
+        {
+            [card setWord:[card.word lowercaseString]];
+        }
     }];
     
     [littleLetterButton selected];
@@ -159,8 +209,9 @@
 
 - (void) dealloc
 {
+    CCLOG(@"image match:dealloc");
     [_words release];
-    
+    [cards release];
     [super dealloc];
 }
 

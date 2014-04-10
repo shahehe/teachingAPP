@@ -12,6 +12,8 @@
 		843335AC17ACF4EA009F1C56 /* Dialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 843335AB17ACF4EA009F1C56 /* Dialog.m */; };
 		843335B417ACF4F7009F1C56 /* LetterIdentification.m in Sources */ = {isa = PBXBuildFile; fileRef = 843335B117ACF4F7009F1C56 /* LetterIdentification.m */; };
 		843335B717ACF50B009F1C56 /* ToolbarLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 843335B617ACF50B009F1C56 /* ToolbarLayer.m */; };
+		84399F8E18F6D2C000D71EF3 /* ImageCardPro.m in Sources */ = {isa = PBXBuildFile; fileRef = 84399F8D18F6D2C000D71EF3 /* ImageCardPro.m */; };
+		84399F9118F6D82000D71EF3 /* CardProLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84399F9018F6D82000D71EF3 /* CardProLayer.m */; };
 		8445F7E3179FC56E001251C1 /* Cocos2d+CustomOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8445F7E2179FC56E001251C1 /* Cocos2d+CustomOptions.m */; };
 		8445F80017A0D05E001251C1 /* CLDynamicLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8445F7FF17A0D05E001251C1 /* CLDynamicLabel.m */; };
 		8450DCCB179C016C0003B181 /* AppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8450DCCA179C016C0003B181 /* AppManager.m */; };
@@ -157,6 +159,7 @@
 		8498BCA717847D9F00F71234 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498BCA617847D9F00F71234 /* HelloWorldLayer.m */; };
 		8498BCAA17847D9F00F71234 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498BCA917847D9F00F71234 /* IntroLayer.m */; };
 		8499CA7917C325CE00A1A24C /* SlidePauseMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8499CA7817C325CE00A1A24C /* SlidePauseMenuLayer.m */; };
+		84AC34E518F6A86000AC655B /* ImageCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AC34E418F6A86000AC655B /* ImageCard.m */; };
 		84AE12BB18DDB72F002501CC /* TouchGameKiss.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE12BA18DDB72F002501CC /* TouchGameKiss.m */; };
 		84AFD01618E56D67007EBBCC /* TouchGameVeryGood.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AFD01518E56D67007EBBCC /* TouchGameVeryGood.m */; };
 		84AFD19818D9C1FD005F55F5 /* data in Resources */ = {isa = PBXBuildFile; fileRef = 84AFD19718D9C1FD005F55F5 /* data */; };
@@ -362,6 +365,10 @@
 		843335B117ACF4F7009F1C56 /* LetterIdentification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LetterIdentification.m; sourceTree = "<group>"; };
 		843335B517ACF50B009F1C56 /* ToolbarLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToolbarLayer.h; path = extensions/ToolbarLayer.h; sourceTree = "<group>"; };
 		843335B617ACF50B009F1C56 /* ToolbarLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToolbarLayer.m; path = extensions/ToolbarLayer.m; sourceTree = "<group>"; };
+		84399F8C18F6D2C000D71EF3 /* ImageCardPro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCardPro.h; sourceTree = "<group>"; };
+		84399F8D18F6D2C000D71EF3 /* ImageCardPro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCardPro.m; sourceTree = "<group>"; };
+		84399F8F18F6D82000D71EF3 /* CardProLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardProLayer.h; sourceTree = "<group>"; };
+		84399F9018F6D82000D71EF3 /* CardProLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardProLayer.m; sourceTree = "<group>"; };
 		8445F7E1179FC56E001251C1 /* Cocos2d+CustomOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Cocos2d+CustomOptions.h"; path = "extensions/Cocos2d+CustomOptions.h"; sourceTree = "<group>"; };
 		8445F7E2179FC56E001251C1 /* Cocos2d+CustomOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Cocos2d+CustomOptions.m"; path = "extensions/Cocos2d+CustomOptions.m"; sourceTree = "<group>"; };
 		8445F7FE17A0D05E001251C1 /* CLDynamicLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLDynamicLabel.h; path = extensions/CLDynamicLabel.h; sourceTree = "<group>"; };
@@ -668,6 +675,8 @@
 		8498BCA917847D9F00F71234 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
 		8499CA7717C325CE00A1A24C /* SlidePauseMenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlidePauseMenuLayer.h; sourceTree = "<group>"; };
 		8499CA7817C325CE00A1A24C /* SlidePauseMenuLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlidePauseMenuLayer.m; sourceTree = "<group>"; };
+		84AC34E318F6A86000AC655B /* ImageCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCard.h; sourceTree = "<group>"; };
+		84AC34E418F6A86000AC655B /* ImageCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCard.m; sourceTree = "<group>"; };
 		84AE12B918DDB72F002501CC /* TouchGameKiss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchGameKiss.h; sourceTree = "<group>"; };
 		84AE12BA18DDB72F002501CC /* TouchGameKiss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchGameKiss.m; sourceTree = "<group>"; };
 		84AFD01418E56D67007EBBCC /* TouchGameVeryGood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchGameVeryGood.h; sourceTree = "<group>"; };
@@ -1857,6 +1866,12 @@
 			children = (
 				84E3AB8D18F5B3DE006D95C5 /* ImageMatch.h */,
 				84E3AB8E18F5B3DE006D95C5 /* ImageMatch.m */,
+				84AC34E318F6A86000AC655B /* ImageCard.h */,
+				84AC34E418F6A86000AC655B /* ImageCard.m */,
+				84399F8C18F6D2C000D71EF3 /* ImageCardPro.h */,
+				84399F8D18F6D2C000D71EF3 /* ImageCardPro.m */,
+				84399F8F18F6D82000D71EF3 /* CardProLayer.h */,
+				84399F9018F6D82000D71EF3 /* CardProLayer.m */,
 			);
 			name = imageMatch;
 			sourceTree = "<group>";
@@ -2248,11 +2263,13 @@
 				84B4F16818D03BF60071E85B /* CardMatchingGameLayer.m in Sources */,
 				8498BC0617847D9E00F71234 /* CCTransitionProgress.m in Sources */,
 				8498BC0A17847D9E00F71234 /* cocos2d.m in Sources */,
+				84399F8E18F6D2C000D71EF3 /* ImageCardPro.m in Sources */,
 				8498BC1117847D9E00F71234 /* CCDirectorIOS.m in Sources */,
 				8498BC1417847D9E00F71234 /* CCES2Renderer.m in Sources */,
 				8498BC1817847D9E00F71234 /* CCGLView.m in Sources */,
 				8498BC1C17847D9E00F71234 /* CCTouchDispatcher.m in Sources */,
 				8498BC1F17847D9E00F71234 /* CCTouchHandler.m in Sources */,
+				84AC34E518F6A86000AC655B /* ImageCard.m in Sources */,
 				8498BC2317847D9E00F71234 /* CCDirectorMac.m in Sources */,
 				AEEA3A3E18CE75DC003F2F98 /* AnimatedSprite.m in Sources */,
 				8498BC2617847D9E00F71234 /* CCEventDispatcher.m in Sources */,
@@ -2261,6 +2278,7 @@
 				84B4F08018D03BCA0071E85B /* Tiger.m in Sources */,
 				84B4F1EC18D040BF0071E85B /* cpConstraint.c in Sources */,
 				84B4F19218D03BF60071E85B /* LearnWord.m in Sources */,
+				84399F9118F6D82000D71EF3 /* CardProLayer.m in Sources */,
 				8498BC2F17847D9E00F71234 /* base64.c in Sources */,
 				8498BC3317847D9E00F71234 /* CCArray.m in Sources */,
 				84B4F19818D03BF60071E85B /* PhonicsGames.m in Sources */,

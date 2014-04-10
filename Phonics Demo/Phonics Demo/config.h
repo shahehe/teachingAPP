@@ -19,5 +19,6 @@
 static char *const touchingGameRootPath = "Assets/touchingGames";
 static char *const BMFontDirPath = "Assets/BMFont";
 static char *const imageMatchGameRootPath = "Assets/imageMatch";
+static char *const audioDicPath = "data/audioDic";
 
 #endif
