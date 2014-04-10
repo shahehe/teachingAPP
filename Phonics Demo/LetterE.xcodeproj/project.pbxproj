@@ -336,6 +336,7 @@
 		84B4F20518D040BF0071E85B /* cpSpatialIndex.c in Sources */ = {isa = PBXBuildFile; fileRef = 84B4F1E618D040BF0071E85B /* cpSpatialIndex.c */; };
 		84B4F20618D040BF0071E85B /* cpSweep1D.c in Sources */ = {isa = PBXBuildFile; fileRef = 84B4F1E718D040BF0071E85B /* cpSweep1D.c */; };
 		84B4F20718D040BF0071E85B /* cpVect.c in Sources */ = {isa = PBXBuildFile; fileRef = 84B4F1E818D040BF0071E85B /* cpVect.c */; };
+		84E3AB8F18F5B3DE006D95C5 /* ImageMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3AB8E18F5B3DE006D95C5 /* ImageMatch.m */; };
 		84E9D00C18D891CA00936E46 /* TouchGameISee.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E9D00B18D891CA00936E46 /* TouchGameISee.m */; };
 		84EDDEF217BCD22D00262E2B /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EDDEF117BCD22D00262E2B /* MediaPlayer.framework */; };
 		84EDDF0817BCD41E00262E2B /* CCScrollLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EDDEF717BCD41E00262E2B /* CCScrollLayer.m */; };
@@ -909,6 +910,8 @@
 		84B4F1E718D040BF0071E85B /* cpSweep1D.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpSweep1D.c; sourceTree = "<group>"; };
 		84B4F1E818D040BF0071E85B /* cpVect.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpVect.c; sourceTree = "<group>"; };
 		84B4F1E918D040BF0071E85B /* prime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prime.h; sourceTree = "<group>"; };
+		84E3AB8D18F5B3DE006D95C5 /* ImageMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageMatch.h; sourceTree = "<group>"; };
+		84E3AB8E18F5B3DE006D95C5 /* ImageMatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageMatch.m; sourceTree = "<group>"; };
 		84E9D00A18D891CA00936E46 /* TouchGameISee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchGameISee.h; sourceTree = "<group>"; };
 		84E9D00B18D891CA00936E46 /* TouchGameISee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchGameISee.m; sourceTree = "<group>"; };
 		84EDDEF117BCD22D00262E2B /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -1100,6 +1103,7 @@
 				8450DCC7179A35090003B181 /* PhonicsDefines.h */,
 				8497C13017A2636A004034BB /* MainMenu.h */,
 				8497C13117A2636A004034BB /* MainMenu.m */,
+				84E3AB8C18F5B37A006D95C5 /* imageMatch */,
 				84AFD19718D9C1FD005F55F5 /* data */,
 				84E9D00918D88DB400936E46 /* TouchingGame */,
 				847403C618D749B20093C83E /* audioDict */,
@@ -1848,6 +1852,15 @@
 			path = constraints;
 			sourceTree = "<group>";
 		};
+		84E3AB8C18F5B37A006D95C5 /* imageMatch */ = {
+			isa = PBXGroup;
+			children = (
+				84E3AB8D18F5B3DE006D95C5 /* ImageMatch.h */,
+				84E3AB8E18F5B3DE006D95C5 /* ImageMatch.m */,
+			);
+			name = imageMatch;
+			sourceTree = "<group>";
+		};
 		84E9D00918D88DB400936E46 /* TouchingGame */ = {
 			isa = PBXGroup;
 			children = (
@@ -2197,6 +2210,7 @@
 				84B3FCC718CF772500FD27E8 /* DLSubtitleLabel.m in Sources */,
 				84B4F19718D03BF60071E85B /* PhonicsGameLayer.m in Sources */,
 				8498BBAE17847D9E00F71234 /* CCParticleSystemQuad.m in Sources */,
+				84E3AB8F18F5B3DE006D95C5 /* ImageMatch.m in Sources */,
 				84B4F1F518D040BF0071E85B /* cpSimpleMotor.c in Sources */,
 				8498BBB117847D9E00F71234 /* CCPhysicsDebugNode.m in Sources */,
 				8498BBB417847D9E00F71234 /* CCPhysicsSprite.mm in Sources */,

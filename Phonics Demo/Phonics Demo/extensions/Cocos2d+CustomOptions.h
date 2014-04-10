@@ -5,12 +5,14 @@
 //  Created by yiplee on 13-7-24.
 //  Copyright (c) 2013年 USTB. All rights reserved.
 //
-
+#import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
 @interface CCSprite (CustomOptions)
 
 - (void) setFrame:(CGRect) frame;
+
+- (void) fitSize:(CGSize)size scaleIn:(BOOL)scaleIn;
 
 - (void) setWidth:(CGFloat) width;
 - (void) setHeight:(CGFloat) height;

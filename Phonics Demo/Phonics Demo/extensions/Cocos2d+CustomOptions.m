@@ -18,6 +18,17 @@
     [self setBoundingBoxCenterOfRect:frame];
 }
 
+- (void) fitSize:(CGSize)size scaleIn:(BOOL)scaleIn
+{
+    CGSize origin = self.boundingBox.size;
+    CGFloat ratio = MIN(size.width/origin.width, size.height/origin.height);
+    
+    if (ratio > 1 && !scaleIn)
+        return;
+    
+    self.scale = ratio;
+}
+
 - (void) setWidth:(CGFloat)width
 {
     self.scaleX = width / self.contentSize.width;

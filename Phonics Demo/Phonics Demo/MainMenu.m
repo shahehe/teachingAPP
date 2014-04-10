@@ -11,14 +11,12 @@
 #import "HelloWorldLayer.h"
 #import "Dialog.h"
 #import "DialogVideo.h"
-
 #import "AnimatedSprite.h"
-
 #import "PhonicsGames.h"
-
 #import "TouchingGameMenu.h"
-
 #import "GooseGame.h"
+
+#import "ImageMatch.h"
 
 @implementation MainMenu
 
@@ -81,6 +79,13 @@
     }];
     goose.color = ccYELLOW;
     [menuItems addObject:goose];
+    
+    CCMenuItem *imageMatch = [CCMenuItemFont itemWithString:@"Image Match" block:^(id sender) {
+        NSArray *words = @[@"horse",@"hen",@"house",@"hog"];
+        [[CCDirector sharedDirector] pushScene:[ImageMatch gameSceneWithWords:words]];
+    }];
+    imageMatch.color = ccRED;
+    [menuItems addObject:imageMatch];
 
 //    CCMenu *menu = [CCMenu menuWithItems:item1,item2, nil];
     CCMenu *menu = [CCMenu menuWithArray:menuItems];
