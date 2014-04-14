@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>Look</string>
+	<key>path</key>
+	<string>Assets/touchingGames/look</string>
+	<key>background</key>
+	<string>bg.png</string>
+	<key>label</key>
+	<dict>
+		<key>fntFile</key>
+		<string>Didot.fnt</string>
+		<key>position</key>
+		<string>{0.5, 0.9}</string>
+		<key>anchorPoint</key>
+		<string>{0.5,0.5}</string>
+	</dict>
+	<key>objects</key>
+	<dict>
+		<key>ladybug</key>
+		<dict>
+			<key>file</key>
+			<string>book.png</string>
+			<key>audio</key>
+			<string>ladybug.mp3</string>
+			<key>content</key>
+			<string>Look at the ladybug!</string>
+			<key>position</key>
+			<string>{0.503,0.673}</string>
+		</dict>
+		<key>lamp</key>
+		<dict>
+			<key>file</key>
+			<string>book.png</string>
+			<key>audio</key>
+			<string>lamp.mp3</string>
+			<key>content</key>
+			<string>Look at the lamp!</string>
+			<key>position</key>
+			<string>{0.503,0.673}</string>
+		</dict>
+		<key>lobster</key>
+		<dict>
+			<key>file</key>
+			<string>book.png</string>
+			<key>audio</key>
+			<string>lobster.mp3</string>
+			<key>content</key>
+			<string>Look at the lobster!</string>
+			<key>position</key>
+			<string>{0.503,0.673}</string>
+		</dict>
+		<key>lamb</key>
+		<dict>
+			<key>file</key>
+			<string>book.png</string>
+			<key>audio</key>
+			<string>lamb.mp3</string>
+			<key>content</key>
+			<string>Look at the lamb!</string>
+			<key>position</key>
+			<string>{0.503,0.673}</string>
+		</dict>
+		<key>lantern</key>
+		<dict>
+			<key>file</key>
+			<string>book.png</string>
+			<key>audio</key>
+			<string>lantern.mp3</string>
+			<key>content</key>
+			<string>Look at the lantern!</string>
+			<key>position</key>
+			<string>{0.503,0.673}</string>
+        </dict>
+    </dict>
+</dict>
+</plist>

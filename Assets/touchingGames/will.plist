@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>Will</string>
+	<key>path</key>
+	<string>Assets/touchingGames/will</string>
+	<key>background</key>
+	<string>bg.png</string>
+	<key>label</key>
+	<dict>
+		<key>fntFile</key>
+		<string>Didot.fnt</string>
+		<key>position</key>
+		<string>{0.5, 0.9}</string>
+		<key>anchorPoint</key>
+		<string>{0.5,0.5}</string>
+	</dict>
+	<key>objects</key>
+	<dict>
+		<key>quack</key>
+		<dict>
+			<key>file</key>
+			<string>wordPanel.png</string>
+			<key>audio</key>
+			<string>quack.mp3</string>
+			<key>content</key>
+			<string>will you quack?</string>
+			<key>position</key>
+			<string>{0.208,0.676}</string>
+		</dict>
+		<key>quiet</key>
+		<dict>
+			<key>file</key>
+			<string>wordPanel.png</string>
+			<key>audio</key>
+			<string>quiet.mp3</string>
+			<key>content</key>
+			<string>will you be quiet?</string>
+			<key>position</key>
+			<string>{0.208,0.529}</string>
+		</dict>
+		<key>quiz</key>
+		<dict>
+			<key>file</key>
+			<string>wordPanel.png</string>
+			<key>audio</key>
+			<string>quiz.mp3</string>
+			<key>content</key>
+			<string>will you take a quiz?</string>
+			<key>position</key>
+			<string>{0.208,0.379}</string>
+		</dict>
+		<key>quickly</key>
+		<dict>
+			<key>file</key>
+			<string>wordPanel.png</string>
+			<key>audio</key>
+			<string>quickly.mp3</string>
+			<key>content</key>
+			<string>Will you run quickly?</string>
+			<key>position</key>
+			<string>{0.208,0.232}</string>
+		</dict>
+    </dict>
+</dict>
+</plist>

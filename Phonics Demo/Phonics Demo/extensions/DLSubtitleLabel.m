@@ -274,7 +274,7 @@ static char *const punctuations = " ,.:""''!?-(){}[];<>/_";
     CGRect rect = self.boundingBox;
     rect.origin = CGPointZero;
     
-    if (!CGRectContainsPoint(rect, location))
+    if (!CGRectContainsPoint(rect, location) || !self.visible)
     {
         return NO;
     }
