@@ -11,6 +11,8 @@
 #import "IntroLayer.h"
 #import "MainMenu.h"
 
+#import "AudioDict.h"
+
 
 #pragma mark - IntroLayer
 
@@ -61,6 +63,8 @@
 -(void) onEnter
 {
 	[super onEnter];
+    
+    [AudioDict defaultAudioDict];
 	[[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[MainMenu scene] ]];
 }
 

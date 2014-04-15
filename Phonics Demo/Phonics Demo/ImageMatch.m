@@ -15,6 +15,7 @@
 
 #import "CardProLayer.h"
 
+#import "AudioDict.h"
 @interface ImageMatch ()
 {
     NSMutableArray *cards;
@@ -46,6 +47,7 @@
     
     self.words = words;
     
+    [[AudioDict defaultAudioDict] preloadWords:self.words];
     // get the first letter of first word;
     NSString *letter = [[[self.words firstObject] substringWithRange:NSMakeRange(0, 1)] lowercaseString];
     
@@ -137,6 +139,7 @@
     CCSprite *menu_button_P = [CCSprite spriteWithSpriteFrameName:@"menu_button_P.png"];
     CCMenuItemSprite *menu_button = [CCMenuItemSprite itemWithNormalSprite:menu_button_N selectedSprite:menu_button_P block:^(id sender) {
         [self_copy backToMenu];
+        [[AudioDict defaultAudioDict] unloadAll];
     }];
     menu_button.position = CMP(0.90);
     
@@ -157,8 +160,6 @@
         
         bigLetterButton = [CCMenuItemSprite itemWithNormalSprite:N selectedSprite:H];
     }
-    
-    
     {
         NSString *l1 = [letter stringByAppendingString:@"1-small.png"];
         NSString *l2 = [letter stringByAppendingString:@"2-small.png"];

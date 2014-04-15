@@ -10,6 +10,8 @@
 #import "ImageCard.h"
 #import "SimpleAudioEngine.h"
 
+#import "AudioDict.h"
+
 @interface ImageCard ()
 {
     CCSprite *displayImage;
@@ -146,7 +148,7 @@
             lastPosition = pos;
             
             //play sound effect
-            //todo
+            [[AudioDict defaultAudioDict] readWord:self.word];
             
             return YES;
         }
@@ -205,7 +207,7 @@
     else if(CGRectContainsPoint(self.boundingBox, pos))
     {
         // play sound effect
-        // todo
+        [[AudioDict defaultAudioDict] readWord:self.word];
         
         if (self.isImageShow && cardClick)
         {
