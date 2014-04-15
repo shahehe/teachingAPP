@@ -4,135 +4,148 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>duck</key>
+            <key>duck.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1603,0},{336,483}}</string>
+                <string>{{338,633},{336,483}}</string>
                 <key>offset</key>
-                <string>{-12,-48}</string>
+                <string>{-6,1}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{158,257},{336,483}}</string>
+                <string>{{24,23},{336,483}}</string>
                 <key>sourceSize</key>
-                <string>{676,901}</string>
+                <string>{396,531}</string>
             </dict>
-            <key>duck_node_1</key>
+            <key>duck_node_1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1261,0},{340,487}}</string>
+                <string>{{1237,0},{340,487}}</string>
                 <key>offset</key>
-                <string>{-24,-46}</string>
+                <string>{-18,3}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{144,253},{340,487}}</string>
+                <string>{{10,19},{340,487}}</string>
                 <key>sourceSize</key>
-                <string>{676,901}</string>
+                <string>{396,531}</string>
             </dict>
-            <key>duck_node_2</key>
+            <key>duck_node_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{929,0},{330,493}}</string>
+                <string>{{1282,489},{330,493}}</string>
                 <key>offset</key>
-                <string>{-19,-43}</string>
+                <string>{-13,6}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{154,247},{330,493}}</string>
+                <string>{{20,13},{330,493}}</string>
                 <key>sourceSize</key>
-                <string>{676,901}</string>
+                <string>{396,531}</string>
             </dict>
-            <key>duck_run1</key>
+            <key>duck_run0.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1196,495},{337,492}}</string>
+                <string>{{1579,0},{336,487}}</string>
                 <key>offset</key>
-                <string>{-45,5}</string>
+                <string>{-6,-2}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{49,35},{337,492}}</string>
+                <string>{{24,24},{336,487}}</string>
                 <key>sourceSize</key>
-                <string>{525,572}</string>
+                <string>{396,531}</string>
             </dict>
-            <key>duck_run2</key>
+            <key>duck_run1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1535,489},{337,486}}</string>
+                <string>{{899,0},{336,493}}</string>
                 <key>offset</key>
-                <string>{-45,9}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{49,34},{337,486}}</string>
-                <key>sourceSize</key>
-                <string>{525,572}</string>
-            </dict>
-            <key>duck_run3</key>
-            <dict>
-                <key>frame</key>
-                <string>{{590,0},{337,498}}</string>
-                <key>offset</key>
-                <string>{-45,3}</string>
+                <string>{-6,-4}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{49,34},{337,498}}</string>
+                <string>{{24,23},{336,493}}</string>
                 <key>sourceSize</key>
-                <string>{525,572}</string>
+                <string>{396,531}</string>
             </dict>
-            <key>duck_shake1</key>
+            <key>duck_run2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{895,500},{299,498}}</string>
+                <string>{{1614,489},{336,485}}</string>
                 <key>offset</key>
-                <string>{1,3}</string>
+                <string>{-6,-1}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{119,55},{299,498}}</string>
+                <string>{{24,24},{336,485}}</string>
                 <key>sourceSize</key>
-                <string>{535,614}</string>
+                <string>{396,531}</string>
             </dict>
-            <key>duck_shake2</key>
+            <key>duck_run3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{590,500},{303,498}}</string>
+                <string>{{561,0},{336,497}}</string>
                 <key>offset</key>
-                <string>{1,3}</string>
+                <string>{-6,-7}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{117,55},{303,498}}</string>
+                <string>{{24,24},{336,497}}</string>
                 <key>sourceSize</key>
-                <string>{535,614}</string>
+                <string>{396,531}</string>
             </dict>
-            <key>duck_speak</key>
+            <key>duck_shake1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1535,828},{336,483}}</string>
+                <string>{{676,499},{298,497}}</string>
                 <key>offset</key>
-                <string>{-21,-4}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{54,48},{336,483}}</string>
-                <key>sourceSize</key>
-                <string>{486,571}</string>
-            </dict>
-            <key>duck_think</key>
-            <dict>
-                <key>frame</key>
-                <string>{{0,0},{588,994}}</string>
-                <key>offset</key>
-                <string>{54,36}</string>
+                <string>{13,8}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{192,26},{588,994}}</string>
+                <string>{{62,9},{298,497}}</string>
                 <key>sourceSize</key>
-                <string>{864,1118}</string>
+                <string>{396,531}</string>
+            </dict>
+            <key>duck_shake2.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{976,495},{304,497}}</string>
+                <key>offset</key>
+                <string>{12,8}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{58,9},{304,497}}</string>
+                <key>sourceSize</key>
+                <string>{396,531}</string>
+            </dict>
+            <key>duck_speak1.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{0,633},{336,483}}</string>
+                <key>offset</key>
+                <string>{-6,1}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{24,23},{336,483}}</string>
+                <key>sourceSize</key>
+                <string>{396,531}</string>
+            </dict>
+            <key>duck_think.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{0,0},{559,631}}</string>
+                <key>offset</key>
+                <string>{4,8}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{16,0},{559,631}}</string>
+                <key>sourceSize</key>
+                <string>{583,647}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -142,9 +155,9 @@
             <key>realTextureFileName</key>
             <string>duck-ipadhd.pvr.ccz</string>
             <key>size</key>
-            <string>{2028,1164}</string>
+            <string>{1950,1116}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:6e05599a6bce84c5af58764771d0453f:f0ff0356e7728eb19f7dbc30a15560cc:c9c3e349d2b8f45dc463aef73a484b2b$</string>
+            <string>$TexturePacker:SmartUpdate:441fb0b3546bb97d1ebe26610b8f355f:7bf1cb10d23b4d29d17cded0a1ce5a04:c9c3e349d2b8f45dc463aef73a484b2b$</string>
             <key>textureFileName</key>
             <string>duck-ipadhd.pvr.ccz</string>
         </dict>

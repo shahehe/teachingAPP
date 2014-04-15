@@ -19,7 +19,7 @@
 	</dict>
 	<key>objects</key>
 	<dict>
-		<key>quack</key>
+		<key>1-quack</key>
 		<dict>
 			<key>file</key>
 			<string>wordPanel.png</string>
@@ -28,9 +28,9 @@
 			<key>content</key>
 			<string>will you quack?</string>
 			<key>position</key>
-			<string>{0.208,0.676}</string>
+			<string>{0.15,0.676}</string>
 		</dict>
-		<key>quiet</key>
+		<key>2-quiet</key>
 		<dict>
 			<key>file</key>
 			<string>wordPanel.png</string>
@@ -39,9 +39,9 @@
 			<key>content</key>
 			<string>will you be quiet?</string>
 			<key>position</key>
-			<string>{0.208,0.529}</string>
+			<string>{0.15,0.529}</string>
 		</dict>
-		<key>quiz</key>
+		<key>3-quiz</key>
 		<dict>
 			<key>file</key>
 			<string>wordPanel.png</string>
@@ -50,9 +50,9 @@
 			<key>content</key>
 			<string>will you take a quiz?</string>
 			<key>position</key>
-			<string>{0.208,0.379}</string>
+			<string>{0.15,0.379}</string>
 		</dict>
-		<key>quickly</key>
+		<key>4-quickly</key>
 		<dict>
 			<key>file</key>
 			<string>wordPanel.png</string>
@@ -61,8 +61,8 @@
 			<key>content</key>
 			<string>Will you run quickly?</string>
 			<key>position</key>
-			<string>{0.208,0.232}</string>
+			<string>{0.15,0.232}</string>
 		</dict>
-    </dict>
+	</dict>
 </dict>
 </plist>

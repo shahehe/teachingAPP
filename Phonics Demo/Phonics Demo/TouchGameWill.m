@@ -10,11 +10,22 @@ static char *const file = "will.plist";
 #import "config.h"
 #import "TouchGameWill.h"
 
-@implementation TouchGameWill
+@interface TouchGameWill ()
 {
     CCSprite *boy;
     CCSprite *duck;
+    CCSprite *think;
+    
+    CGPoint _speed;
 }
+
+@property(nonatomic,assign) CGPoint speed;
+
+@end
+
+@implementation TouchGameWill
+
+@synthesize speed = _speed;
 
 + (instancetype) gameLayer
 {
@@ -46,12 +57,12 @@ static char *const file = "will.plist";
     [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"duck.plist"];
     
     boy = [CCSprite spriteWithSpriteFrameName:@"boy0.png"];
-    boy.position = CCMP(0.443,0.451);
+    boy.position = CCMP(0.38,0.451);
     boy.zOrder = 2;
     [self addChild:boy];
     
-    duck = [CCSprite spriteWithSpriteFrameName:@"duck"];
-    duck.position = CCMP(0.822, 0.401);
+    duck = [CCSprite spriteWithSpriteFrameName:@"duck.png"];
+    duck.position = CCMP(0.7, 0.401);
     duck.zOrder = 2;
     [self addChild:duck];
     
@@ -82,7 +93,8 @@ static char *const file = "will.plist";
     
     [self setObjectActivedBlock:^(GameObject *object) {
         blinkSprite(object);
-        CCLabelTTF *label = [CCLabelTTF labelWithString:object.name fontName:@"GillSans" fontSize:24];
+        NSString *name = [[object.name componentsSeparatedByString:@"-"] lastObject];
+        CCLabelTTF *label = [CCLabelTTF labelWithString:name fontName:@"GillSans" fontSize:32];
         label.color = ccBLACK;
         label.position = ccpMult(ccpFromSize(object.boundingBox.size), 0.5);
         [object addChild:label];
@@ -98,17 +110,74 @@ static char *const file = "will.plist";
     return self;
 }
 
+- (void) update:(ccTime)delta
+{
+    if (duck.position.x < SCREEN_WIDTH * 0.6)
+    {
+        duck.flipX = YES;
+    }
+    else if (duck.position.x > SCREEN_WIDTH * 0.9)
+    {
+        duck.flipX = NO;
+    }
+    
+    CGPoint s = ccpMult(_speed, duck.flipX ? 1:-1);
+    CGPoint offset = ccpMult(s, delta);
+    duck.position = ccpAdd(duck.position, offset);
+}
+
+- (void) onExit
+{
+    [super onExit];
+    [self unscheduleUpdate];
+}
+
 - (void) dealloc
 {
     [super dealloc];
+}
+
+- (void) cleanCache
+{
+    [[CCSpriteFrameCache sharedSpriteFrameCache] removeSpriteFramesFromFile:@"boy.plist"];
+    [[CCSpriteFrameCache sharedSpriteFrameCache] removeSpriteFramesFromFile:@"duck.plist"];
 }
 
 - (BOOL) objectHasBeenClicked:(GameObject *)object
 {
     if(![super objectHasBeenClicked:object])
         return NO;
+    
+    [self boyTalk];
+    duck.flipX = NO;
+    [self resetDuck];
 
     return YES;
+}
+
+- (void) contentDidFinishReading:(GameObject *)object
+{
+    [self activeNextObjects];
+    
+    [self boyStopTalk];
+    
+    if ([object.name hasSuffix:@"quack"])
+    {
+        [self duckActionForQuack];
+    }
+    else if ([object.name hasSuffix:@"quiet"])
+    {
+        [self duckActionForQuiet];
+    }
+    else if ([object.name hasSuffix:@"quiz"])
+    {
+        [self duckActionForQuiz];
+    }
+    else
+    {
+        [self duckActionForQuickly];
+    }
+    
 }
 
 - (void) boyTalk
@@ -135,39 +204,145 @@ static char *const file = "will.plist";
 
 - (void) resetDuck
 {
+    [self unscheduleUpdate];
     [duck stopAllActions];
     CCSpriteFrameCache *cache = [CCSpriteFrameCache sharedSpriteFrameCache];
-    CCSpriteFrame *f0 = [cache spriteFrameByName:@"duck"];
+    CCSpriteFrame *f0 = [cache spriteFrameByName:@"duck.png"];
     
     duck.displayFrame = f0;
-//    duck.position = CCMP(0.822, 0.401);
-    duck.anchorPoint = ccp(0.5, 0.5);
+    
+    [think removeFromParentAndCleanup:YES];
+    think = nil;
 }
 
 - (void) duckActionForQuack
 {
+    duck.flipX = NO;
+    [self resetDuck];
+    
     CCSpriteFrameCache *cache = [CCSpriteFrameCache sharedSpriteFrameCache];
-    CCSpriteFrame *f0 = [cache spriteFrameByName:@"duck"];
-    CCSpriteFrame *f1 = [cache spriteFrameByName:@"duck_node_1"];
-    CCSpriteFrame *f2 = [cache spriteFrameByName:@"duck_node_2"];
+    CCAnimate *animate1 = nil;
+    {
+        CCSpriteFrame *f0 = [cache spriteFrameByName:@"duck.png"];
+        CCSpriteFrame *f1 = [cache spriteFrameByName:@"duck_node_1.png"];
+        CCSpriteFrame *f2 = [cache spriteFrameByName:@"duck_node_2.png"];
+        
+        NSArray *frames = @[f0,f1,f2,f1,f0];
+        CCAnimation *animation = [CCAnimation animationWithSpriteFrames:frames delay:0.2];
+        animate1 = [CCAnimate actionWithAnimation:animation];
+    }
     
-    NSArray *frames = @[f0,f1,f2,f1,f0];
-    CCAnimation *animation = [CCAnimation animationWithSpriteFrames:frames delay:0.2];
-    CCAnimate *animate = [CCAnimate actionWithAnimation:animation];
+    CCAnimate *animate2 = nil;
+    {
+        CCSpriteFrame *f0 = [cache spriteFrameByName:@"duck.png"];
+        CCSpriteFrame *f1 = [cache spriteFrameByName:@"duck_speak1.png"];
+        
+        NSArray *frames = @[f0,f1,f0];
+        CCAnimation *animation = [CCAnimation animationWithSpriteFrames:frames delay:0.2];
+        animate2 = [CCAnimate actionWithAnimation:animation];
+    }
     
+    __block id duck_copy = duck;
+    CCCallBlock *nodDone = [CCCallBlock actionWithBlock:^{
+        [duck_copy runAction:[CCRepeatForever actionWithAction:animate2]];
+    }];
     
+    CCSequence *seq = [CCSequence actions:animate1,nodDone, nil];
+    
+    [duck runAction:seq];
 }
 
-- (void) duckShake
+- (void) duckActionForQuiet
 {
-    duck.anchorPoint = ccp(0.486, 0.568);
+    duck.flipX = NO;
+    [self resetDuck];
     
     CCSpriteFrameCache *cache = [CCSpriteFrameCache sharedSpriteFrameCache];
-    CCSpriteFrame *f0 = [cache spriteFrameByName:@"duck_shake1"];
-    CCSpriteFrame *f1 = [cache spriteFrameByName:@"duck_shake2"];
+    CCAnimate *animate1 = nil;
+    {
+        CCSpriteFrame *f0 = [cache spriteFrameByName:@"duck.png"];
+        CCSpriteFrame *f1 = [cache spriteFrameByName:@"duck_node_1.png"];
+        CCSpriteFrame *f2 = [cache spriteFrameByName:@"duck_node_2.png"];
+        
+        NSArray *frames = @[f0,f1,f2,f1,f0];
+        CCAnimation *animation = [CCAnimation animationWithSpriteFrames:frames delay:0.2];
+        animate1 = [CCAnimate actionWithAnimation:animation];
+    }
+
+    [duck runAction:animate1];
+}
+
+- (void) duckActionForQuiz
+{
+    duck.flipX = NO;
+    [self resetDuck];
     
-    NSArray *frames = @[f0,f1,f0];
+    think = [CCSprite spriteWithSpriteFrameName:@"duck_think.png"];
+    think.anchorPoint = ccp(0.3,0.3);
+    think.position = ccp(CGRectGetMaxX(duck.boundingBox), CGRectGetMaxY(duck.boundingBox));
+    [self addChild:think];
     
+    CCSequence *seq1 = [CCSequence actions:[CCFadeIn actionWithDuration:0.5],[CCDelayTime actionWithDuration:1],[CCFadeOut actionWithDuration:0.5], nil];
+    [think runAction:seq1];
+    
+    CCSpriteFrameCache *cache = [CCSpriteFrameCache sharedSpriteFrameCache];
+    CCAnimate *shakeHead = nil;
+    {
+        CCSpriteFrame *f0 = [cache spriteFrameByName:@"duck.png"];
+        CCSpriteFrame *f1 = [cache spriteFrameByName:@"duck_shake1.png"];
+        CCSpriteFrame *f2 = [cache spriteFrameByName:@"duck_shake2.png"];
+        NSArray *frames = @[f0,f1,f2,f1,f0];
+        CCAnimation *animation = [CCAnimation animationWithSpriteFrames:frames delay:0.2];
+        shakeHead = [CCAnimate actionWithAnimation:animation];
+    }
+    
+    CCAnimate *run = nil;
+    {
+        CCSpriteFrame *f0 = [cache spriteFrameByName:@"duck_run0.png"];
+        CCSpriteFrame *f1 = [cache spriteFrameByName:@"duck_run1.png"];
+        CCSpriteFrame *f2 = [cache spriteFrameByName:@"duck_run2.png"];
+        CCSpriteFrame *f3 = [cache spriteFrameByName:@"duck_run3.png"];
+        NSArray *frames = @[f0,f1,f2,f3,f2,f1,f0];
+        CCAnimation *animation = [CCAnimation animationWithSpriteFrames:frames delay:0.35];
+        run = [CCAnimate actionWithAnimation:animation];
+    }
+    
+    __block TouchGameWill *self_copy = self;
+    
+    CCDelayTime *wait = [CCDelayTime actionWithDuration:2];
+    CCCallBlock *shakeDone = [CCCallBlock actionWithBlock:^{
+        [self_copy->duck runAction:[CCRepeatForever actionWithAction:run]];
+        [self_copy->duck setFlipX:YES];
+        [self_copy setSpeed:ccp(80, 0)];
+        [self_copy scheduleUpdate];
+    }];
+    
+    CCSequence *seq2 = [CCSequence actions:wait,shakeHead,shakeDone, nil];
+    [duck runAction:seq2];
+}
+
+- (void) duckActionForQuickly
+{
+    duck.flipX = NO;
+    [self resetDuck];
+    
+    CCSpriteFrameCache *cache = [CCSpriteFrameCache sharedSpriteFrameCache];
+    CCAnimate *run = nil;
+    {
+        CCSpriteFrame *f0 = [cache spriteFrameByName:@"duck_run0.png"];
+        CCSpriteFrame *f1 = [cache spriteFrameByName:@"duck_run1.png"];
+        CCSpriteFrame *f2 = [cache spriteFrameByName:@"duck_run2.png"];
+        CCSpriteFrame *f3 = [cache spriteFrameByName:@"duck_run3.png"];
+        NSArray *frames = @[f0,f1,f2,f3,f2,f1,f0];
+        CCAnimation *animation = [CCAnimation animationWithSpriteFrames:frames delay:0.2];
+        run = [CCAnimate actionWithAnimation:animation];
+    }
+    
+    [duck runAction:[CCRepeatForever actionWithAction:run]];
+    duck.flipX = YES;
+    
+    _speed = ccp(160, 0);
+    [self scheduleUpdate];
 }
 
 @end

@@ -23,6 +23,7 @@
 #import "TouchGameFound.h"
 #import "TouchGameVeryGood.h"
 #import "TouchGameLook.h"
+#import "TouchGameWill.h"
 
 @implementation TouchingGameMenu
 
@@ -152,6 +153,14 @@
         }];
         [menuItems addObject:look];
         
+        CCMenuItem *will = [CCMenuItemFont itemWithString:@"Will" block:^(id sender) {
+            TouchGameLayer *game = [TouchGameWill gameLayer];
+            CCScene *scene = [CCScene node];
+            [scene addChild:game];
+            [[CCDirector sharedDirector] replaceScene:scene];
+        }];
+        [menuItems addObject:will];
+        
         CCMenuItem *back = [CCMenuItemFont itemWithString:@"BACK" block:^(id sender) {
             [[CCDirector sharedDirector] replaceScene:[MainMenu scene]];
         }];
@@ -159,7 +168,7 @@
         [menuItems addObject:back];
         
         CCMenu *menu = [CCMenu menuWithArray:menuItems];
-        [menu alignItemsVerticallyWithPadding:10];
+        [menu alignItemsVertically];
         [self addChild:menu];
         
         CGSize size = [[CCDirector sharedDirector] winSize];
