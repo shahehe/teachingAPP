@@ -37,12 +37,12 @@ static char *const file = "toy.plist";
     self = [super initWithGameData:dic];
     NSAssert(self, @"game:I see failed init");
     
-    images = @{@"1-bubbles":@"bubbles.png",
-               @"2-ball":@"ball.png",
-               @"3-bell":@"bell.png",
-               @"4-blanket":@"blanket.png",
-               @"5-blocks":@"blocks.png",
-               @"6-box":@"box.png"};
+    images = @{@"bubbles":@"bubbles.png",
+               @"ball":@"ball.png",
+               @"bell":@"bell.png",
+               @"blanket":@"blanket.png",
+               @"blocks":@"blocks.png",
+               @"box":@"box.png"};
     [images retain];
     
     
@@ -100,6 +100,9 @@ static char *const file = "toy.plist";
         object.visible = YES;
     }];
     
+    [self preloadImages];
+    [self preloadCrawlAnimation];
+    
     self.autoActiveNext = NO;
     
     crawlFrames = nil;
@@ -120,15 +123,16 @@ static char *const file = "toy.plist";
 
 - (void) onEnter
 {
-    [self preloadImages];
-    [self preloadCrawlAnimation];
     [super onEnter];
 }
 
 - (void) onExitTransitionDidStart
 {
     [super onExitTransitionDidStart];
-    
+}
+
+- (void) cleanCache
+{
     [images enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         NSString *name = key;
         NSString *image = obj;
@@ -137,12 +141,14 @@ static char *const file = "toy.plist";
         [[CCTextureCache sharedTextureCache] removeTextureForKey:image];
     }];
     
-    NSUInteger count = crawlFrames.count;
-    for (int i = count-1;i>=0;i--)
+    for (int i=1;i<=30;i++)
     {
-        CCSpriteFrame *f = [crawlFrames objectAtIndex:i];
-        [[CCTextureCache sharedTextureCache] removeTexture:f.texture];
+        NSString *key = [NSString stringWithFormat:@"boy_crawl%02d.png",i];
+        CCLOG(@"release tex:%@",key);
+        [[CCTextureCache sharedTextureCache] removeTextureForKey:key];
     }
+
+    [super cleanCache];
 }
 
 - (void) setGameMode:(TouchGameMode)gameMode

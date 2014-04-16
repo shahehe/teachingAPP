@@ -40,11 +40,11 @@ inline CGPoint node_p(CCNode *node)
     self = [super initWithGameData:dic];
     NSAssert1(self, @"game:%@ failed init",self);
     
-    touchPositions = @{@"4-van": @"{0.826,0.592}",
-                       @"2-vegetable": @"{0.612,0.304}",
-                       @"1-vest":@"{0.666,0.499}",
-                       @"5-violin":@"{0.703,0.463}",
-                       @"3-vacuum":@"{0.870,0.159}"};
+    touchPositions = @{@"van": @"{0.826,0.592}",
+                       @"vegetable": @"{0.612,0.304}",
+                       @"vest":@"{0.666,0.499}",
+                       @"violin":@"{0.703,0.463}",
+                       @"vacuum":@"{0.870,0.159}"};
     [touchPositions retain];
     
     hand = [CCSprite spriteWithFile:@"hand.png"];

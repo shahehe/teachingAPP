@@ -87,6 +87,8 @@ static char *const file = "look.plist";
         [[CCSpriteFrameCache sharedSpriteFrameCache] removeSpriteFrameByName:image];
         [[CCTextureCache sharedTextureCache] removeTextureForKey:image];
     }
+    
+    [super cleanCache];
 }
 
 - (void) dealloc

@@ -93,8 +93,8 @@ static char *const file = "will.plist";
     
     [self setObjectActivedBlock:^(GameObject *object) {
         blinkSprite(object);
-        NSString *name = [[object.name componentsSeparatedByString:@"-"] lastObject];
-        CCLabelTTF *label = [CCLabelTTF labelWithString:name fontName:@"GillSans" fontSize:32];
+//        NSString *name = [[object.name componentsSeparatedByString:@"-"] lastObject];
+        CCLabelTTF *label = [CCLabelTTF labelWithString:object.name fontName:@"GillSans" fontSize:32];
         label.color = ccBLACK;
         label.position = ccpMult(ccpFromSize(object.boundingBox.size), 0.5);
         [object addChild:label];
@@ -141,6 +141,8 @@ static char *const file = "will.plist";
 {
     [[CCSpriteFrameCache sharedSpriteFrameCache] removeSpriteFramesFromFile:@"boy.plist"];
     [[CCSpriteFrameCache sharedSpriteFrameCache] removeSpriteFramesFromFile:@"duck.plist"];
+    
+    [super cleanCache];
 }
 
 - (BOOL) objectHasBeenClicked:(GameObject *)object

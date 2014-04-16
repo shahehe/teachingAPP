@@ -63,6 +63,8 @@ void blinkSprite(CCSprite *t);
 - (id) initWithGameData:(NSDictionary*)dic;
 - (BOOL) objectHasBeenClicked:(GameObject *)object;
 
+- (void) cleanCache;
+
 - (NSUInteger) objectCount;
 
 - (void) activeNextObjects;

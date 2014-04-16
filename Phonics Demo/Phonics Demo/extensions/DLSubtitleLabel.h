@@ -27,8 +27,10 @@
 
 - (NSArray *) lettersWithWordIndex:(NSUInteger)index;
 
-- (void) highlightedWordWithIndex:(NSUInteger)index;
-- (void) unhighlightedWordWithIndex:(NSUInteger)index;
+- (void) highlightWordWithIndex:(NSUInteger)index;
+- (void) unhighlightWordWithIndex:(NSUInteger)index;
+
+- (void) highlightFirstLetterOfWord:(NSString*)word color:(ccColor3B)color;
 
 @end
 

@@ -178,4 +178,10 @@
     return self;
 }
 
+- (void) onEnterTransitionDidFinish
+{
+    [super onEnterTransitionDidFinish];
+    
+}
+
 @end

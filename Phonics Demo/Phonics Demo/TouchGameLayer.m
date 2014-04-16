@@ -215,7 +215,9 @@ void unblinkSprite(CCSprite *t)
     [self addContentLabelWithData:labelData];
     
     // Menu
+    __block id self_copy = self;
     CCMenuItemFont *back = [CCMenuItemFont itemWithString:@"MENU" block:^(id sender) {
+        [self_copy cleanCache];
         [[CCDirector sharedDirector] replaceScene:[TouchingGameMenu scene]];
     }];
     back.color = ccBLACK;
@@ -315,6 +317,21 @@ void unblinkSprite(CCSprite *t)
 {
     [super onExit];
     [self resetSearchPath];
+}
+
+- (void) cleanCache
+{
+    for (CCNode *child in self.children)
+    {
+        if ([child isKindOfClass:[CCSprite class]])
+        {
+            CCTexture2D *tex = ((CCSprite*)child).displayFrame.texture;
+            CCLOG(@"releae tex:%@",tex.description);
+            [[CCTextureCache sharedTextureCache] removeTexture:tex];
+        }
+    }
+    
+    [[CCFileUtils sharedFileUtils] purgeCachedEntries];
 }
 
 - (NSUInteger) objectCount
@@ -420,6 +437,9 @@ void unblinkSprite(CCSprite *t)
     contentLabel.anchorPoint = anchor;
     contentLabel.delegate = self;
     
+    contentLabel.color = ccBLACK;
+    contentLabel.highlightedColor = ccGREEN;
+    
     [self addChild:contentLabel z:2];
     
     contentLabel.touchEnable = YES;
@@ -442,8 +462,9 @@ void unblinkSprite(CCSprite *t)
 {
     for (NSString *name in [data.allKeys sortedArrayUsingSelector:@selector(localizedStandardCompare:)])
     {
+        NSString *realName = [[name componentsSeparatedByString:@"-"] lastObject];
         NSDictionary *objectData = [data objectForKey:name];
-        [self addObjectWithData:objectData name:name];
+        [self addObjectWithData:objectData name:realName];
     }
 }
 
@@ -480,6 +501,7 @@ void unblinkSprite(CCSprite *t)
     }
     
     contentLabel.string = object.content;
+    [contentLabel highlightFirstLetterOfWord:object.name color:contentLabel.highlightedColor];
     [audioPlayer stop];
     [audioPlayer load:object.audioFileName];
     [audioPlayer rewind];

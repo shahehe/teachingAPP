@@ -3,8 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>title</key>
-	<string>title</string>
-    <key>path</key>
+	<string>Garden</string>
+        <key>path</key>
 	<string>Assets/touchingGames/garden</string>
 	<key>background</key>
 	<string>garden_background.png</string>
@@ -19,7 +19,7 @@
 	</dict>
 	<key>objects</key>
 	<dict>
-		<key>bean</key>
+		<key>beans</key>
 		<dict>
 			<key>file</key>
 			<string>bean.png</string>
@@ -41,7 +41,7 @@
 			<key>position</key>
 			<string>{0.66083984375,0.26341145833333}</string>
 		</dict>
-		<key>grape</key>
+		<key>grapes</key>
 		<dict>
 			<key>file</key>
 			<string>grape.png</string>

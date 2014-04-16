@@ -131,6 +131,9 @@ static char *const punctuations = " ,.:""''!?-(){}[];<>/_";
     
     [super setString:label];
     [self creatWordRangesAndRects];
+    
+    for (CCSprite *letter in self.children)
+        letter.color = self.color;
 }
 
 - (void) setScale:(float)scale
@@ -222,7 +225,7 @@ static char *const punctuations = " ,.:""''!?-(){}[];<>/_";
     return [self.string substringWithRange:range];
 }
 
-- (void) highlightedWordWithIndex:(NSUInteger)index
+- (void) highlightWordWithIndex:(NSUInteger)index
 {
     NSArray *letters = [self lettersWithWordIndex:index];
     for (CCSprite* letter in letters)
@@ -231,12 +234,24 @@ static char *const punctuations = " ,.:""''!?-(){}[];<>/_";
     }
 }
 
-- (void) unhighlightedWordWithIndex:(NSUInteger)index
+- (void) unhighlightWordWithIndex:(NSUInteger)index
 {
     NSArray *letters = [self lettersWithWordIndex:index];
     for (CCSprite* letter in letters)
     {
         letter.color = self.color;
+    }
+}
+
+- (void) highlightFirstLetterOfWord:(NSString *)word color:(ccColor3B)color
+{
+    NSString *content = [self.string stringByReplacingOccurrencesOfString:@"\n" withString:@" "];
+    NSRange range = [content rangeOfString:word options:NSCaseInsensitiveSearch];
+    
+    if (range.length > 0)
+    {
+        CCSprite *letter = [self.children objectAtIndex:range.location];
+        letter.color = color;
     }
 }
 
@@ -246,12 +261,12 @@ static char *const punctuations = " ,.:""''!?-(){}[];<>/_";
     
     if (index != _indexOfHighlightedWord && _indexOfHighlightedWord != NSNotFound)
     {
-        [self unhighlightedWordWithIndex:_indexOfHighlightedWord];
+        [self unhighlightWordWithIndex:_indexOfHighlightedWord];
     }
     
     if (index != NSNotFound)
     {
-        [self highlightedWordWithIndex:index];
+        [self highlightWordWithIndex:index];
     }
     
     _indexOfHighlightedWord = index;
@@ -294,7 +309,7 @@ static char *const punctuations = " ,.:""''!?-(){}[];<>/_";
 {
     if (_indexOfHighlightedWord != NSNotFound)
     {
-        [self unhighlightedWordWithIndex:_indexOfHighlightedWord];
+        [self unhighlightWordWithIndex:_indexOfHighlightedWord];
         
         if ([_delegate respondsToSelector:@selector(subtitleLabelClickOnWord:sender:)])
         {
@@ -314,7 +329,7 @@ static char *const punctuations = " ,.:""''!?-(){}[];<>/_";
 {
     if (_indexOfHighlightedWord != NSNotFound)
     {
-        [self unhighlightedWordWithIndex:_indexOfHighlightedWord];
+        [self unhighlightWordWithIndex:_indexOfHighlightedWord];
         _indexOfHighlightedWord = NSNotFound;
     }
 }

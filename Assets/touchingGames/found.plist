@@ -52,7 +52,7 @@
 			<key>position</key>
 			<string>{0.832,0.681}</string>
 		</dict>
-		<key>one_finger</key>
+		<key>finger</key>
 		<dict>
 			<key>file</key>
 			<string>key.png</string>
@@ -63,7 +63,7 @@
 			<key>position</key>
 			<string>{0.832,0.681}</string>
 		</dict>
-		<key>ten_finger</key>
+		<key>fingers</key>
 		<dict>
 			<key>file</key>
 			<string>key.png</string>
@@ -74,7 +74,7 @@
 			<key>position</key>
 			<string>{0.832,0.681}</string>
 		</dict>
-		<key>two_feet</key>
+		<key>feet</key>
 		<dict>
 			<key>file</key>
 			<string>key.png</string>
