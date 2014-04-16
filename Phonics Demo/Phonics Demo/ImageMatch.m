@@ -55,6 +55,7 @@
     NSString *rootPath = [NSString stringWithUTF8String:imageMatchGameRootPath];
     NSArray *searchPath = @[rootPath,@""];
     [[CCFileUtils sharedFileUtils] setSearchPath:searchPath];
+    [[CCFileUtils sharedFileUtils] purgeCachedEntries];
     
     RGB565
     CCSprite *bg = [CCSprite spriteWithFile:@"image_match_bg.pvr.ccz"];
@@ -230,7 +231,7 @@
 {
     // reset search path
     [[CCFileUtils sharedFileUtils] setSearchPath:@[@""]];
-    
+    [[CCFileUtils sharedFileUtils] purgeCachedEntries];
     // back to previous scene
     [[CCDirector sharedDirector] popScene];
 }
