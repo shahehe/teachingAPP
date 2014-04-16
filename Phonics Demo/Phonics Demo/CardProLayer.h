@@ -17,4 +17,11 @@
 
 - (id) initWithWord:(NSString*)word;
 
+/*!
+ *  the number of stars
+ *
+ *  @param s <= 5;
+ */
+- (void) setStars:(NSUInteger)s;
+
 @end
