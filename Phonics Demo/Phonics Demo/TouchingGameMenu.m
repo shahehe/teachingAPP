@@ -24,6 +24,7 @@
 #import "TouchGameVeryGood.h"
 #import "TouchGameLook.h"
 #import "TouchGameWill.h"
+#import "TouchGameYellow.h"
 
 @implementation TouchingGameMenu
 
@@ -160,6 +161,14 @@
             [[CCDirector sharedDirector] replaceScene:scene];
         }];
         [menuItems addObject:will];
+        
+        CCMenuItem *yellow = [CCMenuItemFont itemWithString:@"Yellow" block:^(id sender) {
+            TouchGameLayer *game = [TouchGameYellow gameLayer];
+            CCScene *scene = [CCScene node];
+            [scene addChild:game];
+            [[CCDirector sharedDirector] replaceScene:scene];
+        }];
+        [menuItems addObject:yellow];
         
         CCMenuItem *back = [CCMenuItemFont itemWithString:@"BACK" block:^(id sender) {
             [[CCDirector sharedDirector] replaceScene:[MainMenu scene]];

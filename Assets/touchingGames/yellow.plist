@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>Yellow</string>
+	<key>path</key>
+	<string>Assets/touchingGames/yellow</string>
+	<key>background</key>
+	<string>bg.png</string>
+	<key>label</key>
+	<dict>
+		<key>fntFile</key>
+		<string>Didot.fnt</string>
+		<key>position</key>
+		<string>{0.4, 0.1}</string>
+		<key>anchorPoint</key>
+		<string>{0.5,0.5}</string>
+	</dict>
+	<key>objects</key>
+	<dict>
+		<key>yam</key>
+		<dict>
+			<key>file</key>
+			<string>mouse.png</string>
+			<key>audio</key>
+			<string>yam.mp3</string>
+			<key>content</key>
+			<string>That is your yellow yam.</string>
+			<key>position</key>
+			<string>{0.536,0.616}</string>
+		</dict>
+		<key>yardstick</key>
+		<dict>
+			<key>file</key>
+			<string>mouse.png</string>
+			<key>audio</key>
+			<string>yardstick.mp3</string>
+			<key>content</key>
+			<string>That is your yellow yardstick.</string>
+			<key>position</key>
+			<string>{0.801,0.534}</string>
+		</dict>
+		<key>yarn</key>
+		<dict>
+			<key>file</key>
+			<string>mouse.png</string>
+			<key>audio</key>
+			<string>yarn.mp3</string>
+			<key>content</key>
+			<string>That is your yellow yarn.</string>
+			<key>position</key>
+			<string>{0.133,0.48}</string>
+		</dict>
+		<key>yoyo</key>
+		<dict>
+			<key>file</key>
+			<string>mouse.png</string>
+			<key>audio</key>
+			<string>yoyo.mp3</string>
+			<key>content</key>
+			<string>That is your yellow yoyo.</string>
+			<key>position</key>
+			<string>{0.349,0.308}</string>
+		</dict>
+		<key>yogurt</key>
+		<dict>
+			<key>file</key>
+			<string>mouse.png</string>
+			<key>audio</key>
+			<string>yogurt.mp3</string>
+			<key>content</key>
+			<string>That is your yellow yogurt.</string>
+			<key>position</key>
+			<string>{0.819,0.288}</string>
+		</dict>
+		<key>yolk</key>
+		<dict>
+			<key>file</key>
+			<string>mouse.png</string>
+			<key>audio</key>
+			<string>yolk.mp3</string>
+			<key>content</key>
+			<string>That is your yellow yolk.</string>
+			<key>position</key>
+			<string>{0.595,0.417}</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
