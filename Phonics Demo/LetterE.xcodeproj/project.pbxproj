@@ -355,6 +355,7 @@
 		AEB72C0917FF88F400F71600 /* DialogVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB72C0817FF88F400F71600 /* DialogVideo.m */; };
 		AEEA3A3E18CE75DC003F2F98 /* AnimatedSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEA3A3B18CE75DC003F2F98 /* AnimatedSprite.m */; };
 		AEEA3A3F18CE75DC003F2F98 /* CCAnimation+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEA3A3D18CE75DC003F2F98 /* CCAnimation+Helper.m */; };
+		AEEE5B33190245C100A4FC7D /* YRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEE5B32190245C100A4FC7D /* YRecorder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -951,6 +952,8 @@
 		AEEA3A3B18CE75DC003F2F98 /* AnimatedSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedSprite.m; sourceTree = "<group>"; };
 		AEEA3A3C18CE75DC003F2F98 /* CCAnimation+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCAnimation+Helper.h"; sourceTree = "<group>"; };
 		AEEA3A3D18CE75DC003F2F98 /* CCAnimation+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCAnimation+Helper.m"; sourceTree = "<group>"; };
+		AEEE5B31190245C100A4FC7D /* YRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YRecorder.h; path = extensions/YRecorder/YRecorder.h; sourceTree = "<group>"; };
+		AEEE5B32190245C100A4FC7D /* YRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YRecorder.m; path = extensions/YRecorder/YRecorder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1004,6 +1007,7 @@
 		8445F7E0179FC4FD001251C1 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
+				AEEE5B30190245AF00A4FC7D /* YRecorder */,
 				AEEA3A3918CE75DC003F2F98 /* AnimatedSprite */,
 				AEB72BF317FF88D800F71600 /* CCVideoPlayer */,
 				84EDDEF517BCD41E00262E2B /* CCScrollLayer */,
@@ -1963,6 +1967,15 @@
 			path = extensions/AnimatedSprite;
 			sourceTree = "<group>";
 		};
+		AEEE5B30190245AF00A4FC7D /* YRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				AEEE5B31190245C100A4FC7D /* YRecorder.h */,
+				AEEE5B32190245C100A4FC7D /* YRecorder.m */,
+			);
+			name = YRecorder;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2235,6 +2248,7 @@
 				8498BB9C17847D9E00F71234 /* CCNode+Debug.m in Sources */,
 				8498BB9F17847D9E00F71234 /* CCNode.m in Sources */,
 				8498BBA217847D9E00F71234 /* CCParallaxNode.m in Sources */,
+				AEEE5B33190245C100A4FC7D /* YRecorder.m in Sources */,
 				8498BBA517847D9E00F71234 /* CCParticleBatchNode.m in Sources */,
 				8498BBA817847D9E00F71234 /* CCParticleExamples.m in Sources */,
 				8498BBAB17847D9E00F71234 /* CCParticleSystem.m in Sources */,
