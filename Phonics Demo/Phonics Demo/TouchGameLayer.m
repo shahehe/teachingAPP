@@ -339,6 +339,14 @@ void unblinkSprite(CCSprite *t)
     return [objects count];
 }
 
+- (GameObject *) gameObjectAtIndex:(NSInteger)idx
+{
+    if (idx < 0 || idx >= objects.count)
+        return nil;
+    
+    return [objects objectAtIndex:idx];
+}
+
 - (DLSubtitleLabel*) contentLabel
 {
     return contentLabel;
@@ -503,9 +511,13 @@ void unblinkSprite(CCSprite *t)
     contentLabel.string = object.content;
     [contentLabel highlightFirstLetterOfWord:object.name color:contentLabel.highlightedColor];
     [audioPlayer stop];
-    [audioPlayer load:object.audioFileName];
-    [audioPlayer rewind];
-    [audioPlayer play];
+    
+    if (object.audioFileName)
+    {
+        [audioPlayer load:object.audioFileName];
+        [audioPlayer rewind];
+        [audioPlayer play];
+    }
     
     if (object.tag == 1 && _autoActiveNext)
     {

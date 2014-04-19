@@ -66,6 +66,7 @@ void blinkSprite(CCSprite *t);
 - (void) cleanCache;
 
 - (NSUInteger) objectCount;
+- (GameObject *) gameObjectAtIndex:(NSInteger)idx;
 
 - (void) activeNextObjects;
 

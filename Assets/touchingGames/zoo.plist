@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>Zoo</string>
+	<key>path</key>
+	<string>Assets/touchingGames/zoo</string>
+	<key>background</key>
+	<string>bg.pvr.ccz</string>
+	<key>label</key>
+	<dict>
+		<key>fntFile</key>
+		<string>Didot.fnt</string>
+		<key>position</key>
+		<string>{0.5, 0.9}</string>
+		<key>anchorPoint</key>
+		<string>{0.5,0.5}</string>
+	</dict>
+	<key>objects</key>
+	<dict>
+		<key>1-butterflies</key>
+		<dict>
+			<key>file</key>
+			<string>next_page.png</string>
+			<key>audio</key>
+			<string>butterfly.mp3</string>
+			<key>content</key>
+			<string>Four zebra butterflies are at the zoo.</string>
+			<key>position</key>
+			<string>{0.891,0.067}</string>
+		</dict>
+		<key>2-zebras</key>
+		<dict>
+			<key>file</key>
+			<string>next_page.png</string>
+			<key>audio</key>
+			<string>zebras.mp3</string>
+			<key>content</key>
+			<string>Three zebras are at the zoo.</string>
+			<key>position</key>
+			<string>{0.891,0.067}</string>
+		</dict>
+		<key>3-zookeeper</key>
+		<dict>
+			<key>file</key>
+			<string>next_page.png</string>
+			<key>audio</key>
+			<string>zookeeper.mp3</string>
+			<key>content</key>
+			<string>Two zookeepers are at the zoo.</string>
+			<key>position</key>
+			<string>{0.891,0.067}</string>
+		</dict>
+		<key>4-zoologist</key>
+		<dict>
+			<key>file</key>
+			<string>next_page.png</string>
+			<key>audio</key>
+			<string>zoologist.mp3</string>
+			<key>content</key>
+			<string>One zoologist is at the zoo.</string>
+			<key>position</key>
+			<string>{0.891,0.067}</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
