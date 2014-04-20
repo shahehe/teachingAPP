@@ -11,9 +11,14 @@
 
 #import "PhonicsDefines.h"
 
+#import "YRecorder.h"
+
 @implementation CardProLayer
 {
     CCLabelAtlas *star;
+    
+    CCMenuItemToggle *audio_control;
+    CCMenuItemToggle *audio_record;
 }
 
 + (instancetype) layerWithWord:(NSString *)word
@@ -40,12 +45,13 @@
     CGPoint p_size_panel = ccpFromSize(panel.boundingBox.size);
     
     CCMenuItemImage *audio_play = [CCMenuItemImage itemWithNormalImage:@"audio_pause.png" selectedImage:nil block:^(id sender) {
-        CCLOG(@"audio play");
+//        CCLOG(@"audio play");
+        [[YRecorder sharedEngine] play];
     }];
     CCMenuItemImage *audio_pause = [CCMenuItemImage itemWithNormalImage:@"audio_play.png" selectedImage:nil block:^(id sender) {
         CCLOG(@"audio pause");
     }];
-    CCMenuItemToggle *audio_control = [CCMenuItemToggle itemWithItems:@[audio_play,audio_pause] block:^(id sender) {
+    audio_control = [CCMenuItemToggle itemWithItems:@[audio_play,audio_pause] block:^(id sender) {
         CCMenuItemToggle *t = (CCMenuItemToggle*)sender;
         [t.selectedItem activate];
     }];
@@ -54,11 +60,13 @@
     
     CCMenuItemImage *audio_record_start = [CCMenuItemImage itemWithNormalImage:@"audio_record_stop.png" selectedImage:nil block:^(id sender) {
         CCLOG(@"record start");
+        [[YRecorder sharedEngine] record];
     }];
     CCMenuItemImage *audio_record_stop  = [CCMenuItemImage itemWithNormalImage:@"audio_record_start.png" selectedImage:nil block:^(id sender) {
         CCLOG(@"record stop");
+        [[YRecorder sharedEngine] stop];
     }];
-    CCMenuItemToggle *audio_record = [CCMenuItemToggle itemWithItems:@[audio_record_start,audio_record_stop] block:^(id sender) {
+    audio_record = [CCMenuItemToggle itemWithItems:@[audio_record_start,audio_record_stop] block:^(id sender) {
         CCMenuItemToggle *t = (CCMenuItemToggle*)sender;
         [t.selectedItem activate];
     }];
@@ -91,7 +99,7 @@
     s = MIN(s, 5);
     NSRange r = NSMakeRange(0, s);
     NSString *str = [@"00000" substringWithRange:r];
-    star.string = [star.string stringByReplacingCharactersInRange:r withString:str];
+    star.string = [@"11111" stringByReplacingCharactersInRange:r withString:str];
 }
 
 - (void) draw
@@ -101,9 +109,31 @@
     [_sourceScene visit];
 }
 
+- (void) onEnter
+{
+    [super onEnter];
+    [[YRecorder sharedEngine] setDelegate:self];
+}
+
+- (void) onExit
+{
+    [super onExit];
+    [[YRecorder sharedEngine] setDelegate:nil];
+}
+
 - (void) dealloc
 {
     [super dealloc];
+}
+
+#pragma mark --AVAudioPlayerDelegate
+
+- (void) audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
+{
+    audio_control.selectedIndex = 1;
+    
+    [self setStars:arc4random_uniform(6)];
+    
 }
 
 @end

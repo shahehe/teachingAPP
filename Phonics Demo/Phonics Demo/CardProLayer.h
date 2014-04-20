@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-@interface CardProLayer : CCLayer
+#import <AVFoundation/AVFoundation.h>
+
+@interface CardProLayer : CCLayer <AVAudioPlayerDelegate>
 
 @property(nonatomic,unsafe_unretained) CCScene *sourceScene;
 
