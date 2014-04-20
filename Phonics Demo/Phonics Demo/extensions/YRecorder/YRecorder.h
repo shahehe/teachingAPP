@@ -14,10 +14,12 @@
 -(void) play;
 -(void) stop;
 -(NSString *) getWaveFileName;
--(void) setDelegate:(id)delegate;
+//-(void) setDelegate:(id)delegate;
 @property (nonatomic, strong) NSString * currWav;
 @property (nonatomic,strong)  AVAudioRecorder *recorder;
 @property (nonatomic, strong) AVAudioPlayer *player;
 @property (nonatomic, strong) AVAudioSession * session;
+
+@property(nonatomic,assign) id<AVAudioPlayerDelegate> delegate;
 
 @end

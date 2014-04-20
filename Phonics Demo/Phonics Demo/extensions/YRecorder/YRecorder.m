@@ -14,10 +14,10 @@
 @synthesize player;
 @synthesize session;
 static YRecorder * engine = nil;
--(void) setDelegate:(id)delegate
-{
-    [player setDelegate:delegate];
-}
+//-(void) setDelegate:(id)delegate
+//{
+//    [player setDelegate:delegate];
+//}
 NSMutableDictionary *recordSetting;
 - (id)init
 {
@@ -91,6 +91,7 @@ NSMutableDictionary *recordSetting;
     [player release];
     player = [[AVAudioPlayer alloc] initWithContentsOfURL:recorder.url error:nil];
     //[player setDelegate:self];
+    [player setDelegate:_delegate];
 
     [player play];
 }
