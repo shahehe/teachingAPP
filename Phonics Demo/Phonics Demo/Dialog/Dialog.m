@@ -11,7 +11,7 @@
 
 #import "DialogContentLayer.h"
 
-#import "MainMenu.h"
+//#import "MainMenu.h"
 
 #import "SlidePauseMenuLayer.h"
 
@@ -239,7 +239,7 @@ static NSString *dialogContentNameFormat = @"%@_%c";
 - (void) backToMainMenu
 {
     [_contentlayer dialogStop];
-    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:0.5 scene:[MainMenu scene]]];
+//    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:0.5 scene:[MainMenu scene]]];
 }
 
 - (void) restart

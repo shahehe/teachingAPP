@@ -7,7 +7,7 @@
 //
 
 #import "PGSearchWord.h"
-#import "UtilsMacro.h"
+#import "../../PhonicsDefines.h"
 
 #import "LetterGrid.h"
 #import "CCLabelBMFontOnBacthNode.h"
@@ -15,9 +15,7 @@
 
 #import "PGTimer.h"
 #import "GradientLabel.h"
-#import "PGColor.h"
-
-#import "PGManager.h"
+#import "Color.h"
 
 @interface PGSearchWord ()
 {
@@ -458,7 +456,6 @@
 {
     firstIndex = lastIndex = -1;
     
-    SLLogString(choosedString);
     if ([self.currentWord isEqualToString:choosedString])
     {
         [self setTouchEnabled:NO];
@@ -574,7 +571,7 @@
     NSString *_word = [self.words objectAtIndex:idx];
     
     [timer startTimer];
-    highlightedColor = [PGColor randomBrightColor];
+    highlightedColor = [Color randomBrightColor];
     
     if (wordLabel)
     {
@@ -631,7 +628,6 @@
 - (void) finishGame
 {
     SLLog(@"finish game with result:%@",wordResults.description);
-    [[PGManager sharedManager] finishGame:self.gameName];
 }
 
 - (NSString *) audioFileOfWord:(NSString*)word

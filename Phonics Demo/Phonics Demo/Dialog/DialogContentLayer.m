@@ -8,7 +8,7 @@
 
 #import "DialogContentLayer.h"
 #import "Dialog.h"
-#import "MainMenu.h"
+//#import "MainMenu.h"
 #import "CCAnimation+Helper.h"
 #import "AnimatedSprite.h"
 @implementation DialogContentLayer
@@ -146,10 +146,10 @@
                 for( int i = 0; i < [animArray count]; ++i)
                 {
                     NSDictionary * anim         = (NSDictionary *)[animArray objectAtIndex:i];
-                    BOOL isNativeAnimation      = [anim valueForKey:@"isNativeAnimation"];
+                    BOOL isNativeAnimation      = [[anim valueForKey:@"isNativeAnimation"] boolValue];
                     NSNumber * startTime        = [anim valueForKey:@"startTime"];
                     [animStartTime addObject:startTime];
-                    BOOL isRepeatAnim           = [anim valueForKey:@"isRepeatAnim"];
+                    BOOL isRepeatAnim           = [[anim valueForKey:@"isRepeatAnim"] boolValue];
                     
                     if ( isNativeAnimation) {
                         [animSprites addObject:[NSNull null]];

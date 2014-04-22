@@ -192,7 +192,7 @@
                 [self.image removeFromParentAndCleanup:YES];
                 displayImage.displayFrame = self.image.displayFrame;
                 
-                cardClick(self);
+//                cardClick(self);
             }];
             CCSequence *seq = [CCSequence actions:move,moveDone, nil];
             [self.image runAction:seq];

@@ -12,8 +12,6 @@
 #import "DLSubtitleLabel.h"
 #import "SimpleAudioEngine.h"
 
-#import "TouchingGameMenu.h"
-
 @interface GameObject : CCSprite<CCTouchOneByOneDelegate>
 {
     NSString *_name;

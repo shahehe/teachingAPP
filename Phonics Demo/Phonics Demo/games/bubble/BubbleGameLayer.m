@@ -17,8 +17,6 @@
 
 #import "SimpleAudioEngine.h"
 
-#import "PGManager.h"
-
 @implementation BubbleGameLayer
 {
     // chipmunk space
@@ -705,8 +703,6 @@ static const int TICKS_PER_SECOND = 120;
 - (void) gameDone
 {
     CCLOG(@"game done");
-    
-    [[PGManager sharedManager] finishGame:self.gameName];
     
     BubbleGameDoneLayer *layer = [[[BubbleGameDoneLayer alloc] initWithBackScene:(CCScene*)self] autorelease];
     layer.score = _score;

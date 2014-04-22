@@ -28,13 +28,11 @@ static const cpLayers PhysicsBlockLayers = CP_ALL_LAYERS;
 
 #import "PGLearnWord.h"
 
-#import "UtilsMacro.h"
+#import "../../PhonicsDefines.h"
 #import "LetterBlock.h"
 
-#import "PGColor.h"
+#import "Color.h"
 #import "PGTimer.h"
-
-#import "PGManager.h"
 
 @interface PGLearnWord ()
 {
@@ -269,7 +267,7 @@ static const cpLayers PhysicsBlockLayers = CP_ALL_LAYERS;
     
     [blocks removeAllObjects];
     
-    ccColor3B color = [PGColor randomBrightColor];
+    ccColor3B color = [Color randomBrightColor];
     for (NSString *word in self.words)
     {
         char letter = [[word uppercaseString] characterAtIndex:0];
@@ -318,7 +316,7 @@ static const cpLayers PhysicsBlockLayers = CP_ALL_LAYERS;
     [texRender end];
     [[texRender sprite] setBlendFunc:(ccBlendFunc){GL_ONE,GL_ONE_MINUS_SRC_ALPHA}];
     
-    ccColor3B color = [PGColor randomBrightColor];
+    ccColor3B color = [Color randomBrightColor];
     wordLabel.color = color;
     
     for (CCSprite *letter in wordLabel.children)
@@ -338,7 +336,7 @@ static const cpLayers PhysicsBlockLayers = CP_ALL_LAYERS;
     gradientProgress.barChangeRate = ccp(1, 0);
     gradientProgress.midpoint = ccp(0, 0.5);
     gradientProgress.position = wordLabel.position;
-    gradientProgress.sprite.color = [PGColor randomBrightColor];
+    gradientProgress.sprite.color = [Color randomBrightColor];
     gradientProgress.zOrder = wordLabel.zOrder + 1;
     gradientProgress.percentage = 0;
     [self addChild:gradientProgress];
@@ -391,7 +389,6 @@ static const cpLayers PhysicsBlockLayers = CP_ALL_LAYERS;
 - (void) finishGame
 {
     SLLog(@"finish game");
-    [[PGManager sharedManager] finishGame:self.gameName];
 }
 
 - (NSString *) audioFileForWord:(NSString*)word
@@ -424,7 +421,7 @@ static const cpLayers PhysicsBlockLayers = CP_ALL_LAYERS;
     blockInTouch = [self touchAtPosition:pos];
     [blockInTouch removeFromSpace:_space];
     blockInTouch.rotation = 0;
-    blockInTouch.color = [PGColor reverseColor:blockInTouch.color];
+    blockInTouch.color = [Color reverseColor:blockInTouch.color];
     blockInTouch.zOrder++;
     return blockInTouch ? YES:NO;
 }
@@ -470,7 +467,7 @@ static const cpLayers PhysicsBlockLayers = CP_ALL_LAYERS;
     {
         [blockInTouch addToSpace:_space];
         cpBodyApplyForce(blockInTouch.CPBody, cpv(0, -100), cpv(1, 1));
-        blockInTouch.color = [PGColor reverseColor:blockInTouch.color];
+        blockInTouch.color = [Color reverseColor:blockInTouch.color];
         blockInTouch.zOrder--;
     }
     blockInTouch = nil;
@@ -479,7 +476,7 @@ static const cpLayers PhysicsBlockLayers = CP_ALL_LAYERS;
 - (void) ccTouchCancelled:(UITouch *)touch withEvent:(UIEvent *)event
 {
     [blockInTouch addToSpace:_space];
-    blockInTouch.color = [PGColor reverseColor:blockInTouch.color];
+    blockInTouch.color = [Color reverseColor:blockInTouch.color];
     blockInTouch.zOrder--;
     blockInTouch = nil;
 }

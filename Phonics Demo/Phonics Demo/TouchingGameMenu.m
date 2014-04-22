@@ -9,8 +9,6 @@
 #import "TouchingGameMenu.h"
 #import "TouchGameLayer.h"
 
-#import "MainMenu.h"
-
 #include "config.h"
 
 #import "TouchGameISee.h"
@@ -180,7 +178,7 @@
         [menuItems addObject:zoo];
         
         CCMenuItem *back = [CCMenuItemFont itemWithString:@"BACK" block:^(id sender) {
-            [[CCDirector sharedDirector] replaceScene:[MainMenu scene]];
+//            [[CCDirector sharedDirector] replaceScene:[MainMenu scene]];
         }];
         back.color = ccYELLOW;
         [menuItems addObject:back];

@@ -8,8 +8,6 @@
 
 #import "CardMatching.h"
 
-#import "PGManager.h"
-
 @implementation CardMatching
 
 + (CCScene*) gameWithWords:(NSArray *)words
@@ -142,8 +140,6 @@
     [gameDoneLayer prepareWithScore:gameLayer.score andTime:gameLayer.time];
     [mpLayer switchTo:GameDoneLayer];
     [gameDoneLayer showWithDuration:0.4f];
-    
-    [[PGManager sharedManager] finishGame:self.gameName];
 }
 
 - (void) backToMainMenu

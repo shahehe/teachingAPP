@@ -10,8 +10,8 @@ static char* fontFile = "GungSeo.fnt";
 
 #import "LetterBlock.h"
 #import "CCNodeHelper.h"
-#import "PGColor.h"
-#import "UtilsMacro.h"
+#import "Color.h"
+#import "../../PhonicsDefines.h"
 
 @interface LetterBlock ()
 {
@@ -66,7 +66,7 @@ static char* fontFile = "GungSeo.fnt";
 {
     [super setColor:color];
     
-    letterLabel.color = [PGColor reverseColor:self.color];
+    letterLabel.color = [Color reverseColor:self.color];
 }
 
 - (void) dealloc

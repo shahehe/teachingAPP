@@ -9,7 +9,7 @@
 
 // Import the interfaces
 #import "IntroLayer.h"
-#import "MainMenu.h"
+#import "PGStageMenu.h"
 
 #import "AudioDict.h"
 
@@ -65,7 +65,7 @@
 	[super onEnter];
     
     [AudioDict defaultAudioDict];
-	[[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[MainMenu scene] ]];
+	[[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[PGStageMenu stageMenu]]];
 }
 
 - (void) dealloc

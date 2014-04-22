@@ -218,7 +218,7 @@ void unblinkSprite(CCSprite *t)
     __block id self_copy = self;
     CCMenuItemFont *back = [CCMenuItemFont itemWithString:@"MENU" block:^(id sender) {
         [self_copy cleanCache];
-        [[CCDirector sharedDirector] replaceScene:[TouchingGameMenu scene]];
+        [[CCDirector sharedDirector] popScene];
     }];
     back.color = ccBLACK;
     back.position = ccpCompMult(screenSizeAsPoint(), ccp(0.1,0.95));

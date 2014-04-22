@@ -132,8 +132,11 @@
 {
     audio_control.selectedIndex = 1;
     
-    [self setStars:arc4random_uniform(6)];
+//    [self setStars:arc4random_uniform(6)];
+    static NSUInteger count = 0;
     
+    count++;
+    [self setStars:count];
 }
 
 @end
