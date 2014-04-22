@@ -23,7 +23,6 @@
 		847403C918D749B20093C83E /* AudioDict.m in Sources */ = {isa = PBXBuildFile; fileRef = 847403C818D749B20093C83E /* AudioDict.m */; };
 		848852CB18DAEC03009D44F3 /* TouchGameJar.m in Sources */ = {isa = PBXBuildFile; fileRef = 848852CA18DAEC03009D44F3 /* TouchGameJar.m */; };
 		848852CE18DB0A62009D44F3 /* TouchGamePlease.m in Sources */ = {isa = PBXBuildFile; fileRef = 848852CD18DB0A62009D44F3 /* TouchGamePlease.m */; };
-		8497C13217A2636A004034BB /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8497C13117A2636A004034BB /* MainMenu.m */; };
 		8498BAFE17847D9D00F71234 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8498BAFD17847D9D00F71234 /* QuartzCore.framework */; };
 		8498BB0017847D9D00F71234 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8498BAFF17847D9D00F71234 /* OpenGLES.framework */; };
 		8498BB0217847D9D00F71234 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8498BB0117847D9D00F71234 /* OpenAL.framework */; };
@@ -390,8 +389,6 @@
 		848852CA18DAEC03009D44F3 /* TouchGameJar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchGameJar.m; sourceTree = "<group>"; };
 		848852CC18DB0A62009D44F3 /* TouchGamePlease.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchGamePlease.h; sourceTree = "<group>"; };
 		848852CD18DB0A62009D44F3 /* TouchGamePlease.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchGamePlease.m; sourceTree = "<group>"; };
-		8497C13017A2636A004034BB /* MainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenu.h; sourceTree = "<group>"; };
-		8497C13117A2636A004034BB /* MainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenu.m; sourceTree = "<group>"; };
 		8498BAFA17847D9D00F71234 /* LetterE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetterE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8498BAFD17847D9D00F71234 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8498BAFF17847D9D00F71234 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -1111,8 +1108,6 @@
 				8498BCA817847D9F00F71234 /* IntroLayer.h */,
 				8498BCA917847D9F00F71234 /* IntroLayer.m */,
 				8450DCC7179A35090003B181 /* PhonicsDefines.h */,
-				8497C13017A2636A004034BB /* MainMenu.h */,
-				8497C13117A2636A004034BB /* MainMenu.m */,
 				84BA693E1906A9D000B6BE7C /* games */,
 				84E3AB8C18F5B37A006D95C5 /* imageMatch */,
 				84AFD19718D9C1FD005F55F5 /* data */,
@@ -2358,7 +2353,6 @@
 				84BA6A2E1906A9D000B6BE7C /* CardMatchingGamePrepareLayer.m in Sources */,
 				8445F7E3179FC56E001251C1 /* Cocos2d+CustomOptions.m in Sources */,
 				8445F80017A0D05E001251C1 /* CLDynamicLabel.m in Sources */,
-				8497C13217A2636A004034BB /* MainMenu.m in Sources */,
 				843335A917ACF474009F1C56 /* DialogContentLayer.m in Sources */,
 				843335AC17ACF4EA009F1C56 /* Dialog.m in Sources */,
 				84B22C0018E43AAD00DD5A0A /* TouchGameFound.m in Sources */,
