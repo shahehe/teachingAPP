@@ -497,6 +497,7 @@
 		84BA6BA31906AF8B00B6BE7C /* zoo.caf in Resources */ = {isa = PBXBuildFile; fileRef = 84BA6B111906AF8B00B6BE7C /* zoo.caf */; };
 		84BA6BA41906AF8B00B6BE7C /* zucchini.caf in Resources */ = {isa = PBXBuildFile; fileRef = 84BA6B121906AF8B00B6BE7C /* zucchini.caf */; };
 		84BA6BA71906B23500B6BE7C /* PGLetterMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BA6BA61906B23500B6BE7C /* PGLetterMenu.m */; };
+		84BA6BAB1906C3FB00B6BE7C /* GooseGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BA6BAA1906C3FB00B6BE7C /* GooseGame.m */; };
 		84E3AB8F18F5B3DE006D95C5 /* ImageMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3AB8E18F5B3DE006D95C5 /* ImageMatch.m */; };
 		84E9D00C18D891CA00936E46 /* TouchGameISee.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E9D00B18D891CA00936E46 /* TouchGameISee.m */; };
 		84EDDEF217BCD22D00262E2B /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EDDEF117BCD22D00262E2B /* MediaPlayer.framework */; };
@@ -1244,6 +1245,8 @@
 		84BA6B121906AF8B00B6BE7C /* zucchini.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = zucchini.caf; sourceTree = "<group>"; };
 		84BA6BA51906B23500B6BE7C /* PGLetterMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGLetterMenu.h; sourceTree = "<group>"; };
 		84BA6BA61906B23500B6BE7C /* PGLetterMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGLetterMenu.m; sourceTree = "<group>"; };
+		84BA6BA91906C3FB00B6BE7C /* GooseGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GooseGame.h; sourceTree = "<group>"; };
+		84BA6BAA1906C3FB00B6BE7C /* GooseGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooseGame.m; sourceTree = "<group>"; };
 		84E3AB8D18F5B3DE006D95C5 /* ImageMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageMatch.h; sourceTree = "<group>"; };
 		84E3AB8E18F5B3DE006D95C5 /* ImageMatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageMatch.m; sourceTree = "<group>"; };
 		84E9D00A18D891CA00936E46 /* TouchGameISee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchGameISee.h; sourceTree = "<group>"; };
@@ -1435,6 +1438,7 @@
 				8498BCA817847D9F00F71234 /* IntroLayer.h */,
 				8498BCA917847D9F00F71234 /* IntroLayer.m */,
 				8450DCC7179A35090003B181 /* PhonicsDefines.h */,
+				84BA6BA81906C3FB00B6BE7C /* goose */,
 				84BA6A801906AF8B00B6BE7C /* words */,
 				84BA6A611906AAE700B6BE7C /* Menus */,
 				84BA693E1906A9D000B6BE7C /* games */,
@@ -2361,6 +2365,15 @@
 			path = words;
 			sourceTree = "<group>";
 		};
+		84BA6BA81906C3FB00B6BE7C /* goose */ = {
+			isa = PBXGroup;
+			children = (
+				84BA6BA91906C3FB00B6BE7C /* GooseGame.h */,
+				84BA6BAA1906C3FB00B6BE7C /* GooseGame.m */,
+			);
+			path = goose;
+			sourceTree = "<group>";
+		};
 		84E3AB8C18F5B37A006D95C5 /* imageMatch */ = {
 			isa = PBXGroup;
 			children = (
@@ -2973,6 +2986,7 @@
 				8498BC4C17847D9E00F71234 /* TGAlib.m in Sources */,
 				8498BC4F17847D9E00F71234 /* TransformUtils.m in Sources */,
 				8498BC5417847D9E00F71234 /* ZipUtils.m in Sources */,
+				84BA6BAB1906C3FB00B6BE7C /* GooseGame.m in Sources */,
 				8498BC5917847D9E00F71234 /* CDAudioManager.m in Sources */,
 				84BA6A7F1906AD9400B6BE7C /* CCNodeHelper.m in Sources */,
 				84BA6A521906A9D000B6BE7C /* PGLearnWord.m in Sources */,

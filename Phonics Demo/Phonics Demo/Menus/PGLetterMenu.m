@@ -8,6 +8,7 @@
 
 #import "PGLetterMenu.h"
 #import "ImageMatch.h"
+#import "GooseGame.h"
 
 #import "PGGameListMenu.h"
 
@@ -105,10 +106,9 @@ static char *const storys[] =
     game.color = ccWHITE;
     
     CCMenuItemFont *review = [CCMenuItemFont itemWithString:@"review" block:^(id sender) {
-        
+        [[CCDirector sharedDirector] pushScene:[GooseGame gameScene]];
     }];
     review.color = ccWHITE;
-    review.isEnabled = NO;
     
     CCMenuItemFont *back = [CCMenuItemFont itemWithString:@"BACK" block:^(id sender) {
         [[CCDirector sharedDirector] popScene];
