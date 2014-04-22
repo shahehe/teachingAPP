@@ -1,0 +1,17 @@
+info face="LithosPro-Black" size=160 bold=0 italic=0 charset="" unicode=0 stretchH=100 smooth=1 aa=1 padding=0,0,0,0 spacing=10,10
+common lineHeight=192 base=116 scaleW=512 scaleH=512 pages=1 packed=0
+page id=0 file="Lithos_pro_red-ipadhd.png"
+chars count=13
+char id=54 x=10 y=10 width=98 height=124 xoffset=17 yoffset=-5 xadvance=131 page=0 chnl=0 letter="6"
+char id=57 x=118 y=10 width=96 height=124 xoffset=18 yoffset=-2 xadvance=131 page=0 chnl=0 letter="9"
+char id=51 x=224 y=10 width=78 height=123 xoffset=29 yoffset=-3 xadvance=131 page=0 chnl=0 letter="3"
+char id=55 x=312 y=10 width=92 height=122 xoffset=24 yoffset=-1 xadvance=131 page=0 chnl=0 letter="7"
+char id=53 x=414 y=10 width=79 height=121 xoffset=23 yoffset=-1 xadvance=131 page=0 chnl=0 letter="5"
+char id=56 x=10 y=144 width=99 height=120 xoffset=16 yoffset=-1 xadvance=131 page=0 chnl=0 letter="8"
+char id=50 x=119 y=144 width=91 height=119 xoffset=14 yoffset=-2 xadvance=131 page=0 chnl=0 letter="2"
+char id=52 x=220 y=144 width=107 height=118 xoffset=9 yoffset=-2 xadvance=131 page=0 chnl=0 letter="4"
+char id=49 x=337 y=144 width=63 height=118 xoffset=28 yoffset=-2 xadvance=131 page=0 chnl=0 letter="1"
+char id=48 x=10 y=274 width=122 height=111 xoffset=5 yoffset=3 xadvance=131 page=0 chnl=0 letter="0"
+char id=43 x=142 y=274 width=84 height=87 xoffset=6 yoffset=29 xadvance=95 page=0 chnl=0 letter="+"
+char id=45 x=236 y=274 width=55 height=27 xoffset=6 yoffset=45 xadvance=67 page=0 chnl=0 letter="-"
+char id=32 x=301 y=274 width=0 height=0 xoffset=40 yoffset=136 xadvance=40 page=0 chnl=0 letter="space"
