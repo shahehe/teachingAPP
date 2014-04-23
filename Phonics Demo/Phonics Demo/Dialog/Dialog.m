@@ -15,6 +15,8 @@
 
 #import "SlidePauseMenuLayer.h"
 
+#import "YRecorder.h"
+
 typedef void(^MenuItemBlock)(id sender);
 
 typedef NS_ENUM(NSInteger, DialogLayerType)
@@ -89,6 +91,10 @@ static NSString *dialogContentNameFormat = @"%@_%c";
         CCSpriteFrameCache *frameCache = [CCSpriteFrameCache sharedSpriteFrameCache];
         [frameCache addSpriteFramesWithFile:@"toolbar.plist"];
         
+        RGBA4444
+        [frameCache addSpriteFramesWithFile:@"toolbar-buttons-record.plist"];
+        PIXEL_FORMAT_DEFAULT
+        
         [self addChild:self.toolbarLayer z:DialogToolbarLayerTag];
         self.toolbarLayer.touchPriority = -1;
         _contentlayer = contentLayer;
@@ -116,6 +122,9 @@ static NSString *dialogContentNameFormat = @"%@_%c";
             @"button_wood_bg",
             @"button_wood_bg",
             @"button_option_bg",
+            @"button_wood_bg",
+            @"button_wood_bg",
+            @"button_wood_bg",
         };
         
         NSString *const buttonNormal[] = {
@@ -125,6 +134,9 @@ static NSString *dialogContentNameFormat = @"%@_%c";
             @"button_next",
             @"button_repeat",
             @"button_option",
+            @"button_audio_play",
+            @"button_record",
+            @"button_record_stop",
         };
         
         NSString *const buttonSelected[] = {
@@ -134,9 +146,12 @@ static NSString *dialogContentNameFormat = @"%@_%c";
             @"button_next_c",
             @"button_repeat_c",
             @"button_option_c",
+            @"button_audio_play_c",
+            @"button_record_c",
+            @"button_record_stop_c"
         };
         
-        for (int i=0;i < 6;i++)
+        for (int i=0;i < 9;i++)
         {
             CCSprite *bg1,*bg2,*normal,*selected;
             bg1 = [CCSprite spriteWithSpriteFrameName:buttonBackground[i]];
@@ -176,8 +191,6 @@ static NSString *dialogContentNameFormat = @"%@_%c";
             [_contentlayer dialogPlayPreviousScene];
         }];
         
-        _toolbarLayer.leftItems = @[control,left];
-        
         [right setBlock:^(id sender) {
             [_contentlayer dialogPlayNextScene];
         }];
@@ -188,7 +201,35 @@ static NSString *dialogContentNameFormat = @"%@_%c";
             [_contentlayer dialogReplayCurrentScene];
         }];
         
-        _toolbarLayer.rightItems = @[right,replay];
+        CCMenuItemToggle *recordControl;
+        recordControl = [CCMenuItemToggle itemWithItems:@[[buttons objectAtIndex:7],[buttons objectAtIndex:8]]];
+        [recordControl setBlock:^(id sender) {
+            NSUInteger index = ((CCMenuItemToggle*)sender).selectedIndex;
+            if (index == 1)
+            {
+                CCLOG(@"record start");
+            }
+            else
+            {
+                CCLOG(@"record stop");
+            }
+        }];
+        
+        CCMenuItemSprite *audioPlay = [buttons objectAtIndex:6];
+        CCSprite *audioPlayDisable = [CCSprite spriteWithSpriteFrameName:@"button_audio_play"];
+        audioPlayDisable.opacity = 255*0.6;
+        CCSprite *audioPlayBg = [CCSprite spriteWithSpriteFrameName:@"button_wood_bg"];
+        [audioPlayBg addChild:audioPlayDisable];
+        [audioPlayDisable setBoundingBoxCenterOfParent];
+        [audioPlay setDisabledImage:audioPlayBg];
+        
+        [audioPlay setBlock:^(id sender) {
+            [[YRecorder sharedEngine] play];
+        }];
+        [audioPlay setIsEnabled:NO];
+        
+        _toolbarLayer.leftItems = @[control,replay,left];
+        _toolbarLayer.rightItems = @[right,recordControl,audioPlay];
         
         CCMenuItem *pause = [buttons objectAtIndex:5];
         pause.anchorPoint = ccp(0.1, 0.5);
