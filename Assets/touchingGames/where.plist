@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>Where</string>
+	<key>path</key>
+	<string>Assets/touchingGames/where</string>
+	<key>background</key>
+	<string>bg.png</string>
+	<key>label</key>
+	<dict>
+		<key>fntFile</key>
+		<string>Didot.fnt</string>
+		<key>position</key>
+		<string>{0.5, 0.86}</string>
+		<key>anchorPoint</key>
+		<string>{0.5,0.5}</string>
+	</dict>
+	<key>objects</key>
+	<dict>
+		<key>wasp</key>
+		<dict>
+			<key>file</key>
+			<string>egg_1.png</string>
+			<key>audio</key>
+			<string>wasp.mp3</string>
+			<key>content</key>
+			<string>Where is the wasp?</string>
+			<key>position</key>
+			<string>{0.5,0.5}</string>
+		</dict>
+		<key>woodpecker</key>
+		<dict>
+			<key>file</key>
+			<string>egg_1.png</string>
+			<key>audio</key>
+			<string>woodpecker.mp3</string>
+			<key>content</key>
+			<string>Where is the woodpecker?</string>
+			<key>position</key>
+			<string>{0.5,0.5}</string>
+		</dict>
+		<key>walrus</key>
+		<dict>
+			<key>file</key>
+			<string>egg_1.png</string>
+			<key>audio</key>
+			<string>walrus.mp3</string>
+			<key>content</key>
+			<string>Where is the walrus?</string>
+			<key>position</key>
+			<string>{0.5,0.5}</string>
+		</dict>
+		<key>whale</key>
+		<dict>
+			<key>file</key>
+			<string>egg_1.png</string>
+			<key>audio</key>
+			<string>whale.mp3</string>
+			<key>content</key>
+			<string>Where is the whale?</string>
+			<key>position</key>
+			<string>{0.5,0.5}</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -30,6 +30,7 @@
 #import "TouchGameWill.h"
 #import "TouchGameYellow.h"
 #import "TouchGameZoo.h"
+#import "TouchGameWhere.h"
 
 static char *const storys[] =
 {
@@ -55,7 +56,7 @@ static char *const storys[] =
     "TouchGameTime",
     "U",
     "TouchGameVeryGood",
-    "W",
+    "TouchGameWhere",
     "X",
     "TouchGameYellow",
     "TouchGameZoo"

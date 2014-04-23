@@ -89,8 +89,6 @@
     star.position = ccpCompMult(p_size_panel, ccp(0.5, 0.45));
     [panel addChild:star];
     
-    [self setStars:4];
-    
     return self;
 }
 
