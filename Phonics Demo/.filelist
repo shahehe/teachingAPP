@@ -108,6 +108,10 @@
 ../sync_resources/images/sound/sound_a_bgimage-ipadhd.pvr.ccz
 ../sync_resources/images/sound/sound_a_bgimage.plist
 ../sync_resources/images/sound/sound_a_bgimage.pvr.ccz
+../sync_resources/images/toolbar/toolbar-buttons-record-ipad.plist
+../sync_resources/images/toolbar/toolbar-buttons-record-ipad.pvr.ccz
+../sync_resources/images/toolbar/toolbar-buttons-record-ipadhd.plist
+../sync_resources/images/toolbar/toolbar-buttons-record-ipadhd.pvr.ccz
 ../sync_resources/images/toolbar/toolbar-hd.plist
 ../sync_resources/images/toolbar/toolbar-hd.pvr.ccz
 ../sync_resources/images/toolbar/toolbar-ipadhd.plist

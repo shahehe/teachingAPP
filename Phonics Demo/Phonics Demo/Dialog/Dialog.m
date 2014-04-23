@@ -201,20 +201,6 @@ static NSString *dialogContentNameFormat = @"%@_%c";
             [_contentlayer dialogReplayCurrentScene];
         }];
         
-        CCMenuItemToggle *recordControl;
-        recordControl = [CCMenuItemToggle itemWithItems:@[[buttons objectAtIndex:7],[buttons objectAtIndex:8]]];
-        [recordControl setBlock:^(id sender) {
-            NSUInteger index = ((CCMenuItemToggle*)sender).selectedIndex;
-            if (index == 1)
-            {
-                CCLOG(@"record start");
-            }
-            else
-            {
-                CCLOG(@"record stop");
-            }
-        }];
-        
         CCMenuItemSprite *audioPlay = [buttons objectAtIndex:6];
         CCSprite *audioPlayDisable = [CCSprite spriteWithSpriteFrameName:@"button_audio_play"];
         audioPlayDisable.opacity = 255*0.6;
@@ -227,6 +213,22 @@ static NSString *dialogContentNameFormat = @"%@_%c";
             [[YRecorder sharedEngine] play];
         }];
         [audioPlay setIsEnabled:NO];
+        
+        CCMenuItemToggle *recordControl;
+        recordControl = [CCMenuItemToggle itemWithItems:@[[buttons objectAtIndex:7],[buttons objectAtIndex:8]]];
+        [recordControl setBlock:^(id sender) {
+            NSUInteger index = ((CCMenuItemToggle*)sender).selectedIndex;
+            if (index == 1)
+            {
+                [[YRecorder sharedEngine] record];
+                audioPlay.isEnabled = NO;
+            }
+            else
+            {
+                [[YRecorder sharedEngine] stop];
+                audioPlay.isEnabled = YES;
+            }
+        }];
         
         _toolbarLayer.leftItems = @[control,replay,left];
         _toolbarLayer.rightItems = @[right,recordControl,audioPlay];
@@ -280,6 +282,7 @@ static NSString *dialogContentNameFormat = @"%@_%c";
 - (void) backToMainMenu
 {
     [_contentlayer dialogStop];
+    [[CCDirector sharedDirector] popScene];
 //    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:0.5 scene:[MainMenu scene]]];
 }
 

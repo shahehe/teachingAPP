@@ -10,6 +10,8 @@
 #import "ImageMatch.h"
 #import "GooseGame.h"
 
+#import "Dialog.h"
+
 #import "PGGameListMenu.h"
 
 #import "config.h"
@@ -85,6 +87,11 @@ static char *const storys[] =
     
     [CCMenuItemFont setFontName:font];
     
+    CCMenuItemFont *dialog = [CCMenuItemFont itemWithString:@"dialog" block:^(id sender) {
+        CCScene *scene = [Dialog dialogWithContentLayerType:DialogContentTypeLetterIdentification letter:'A'];
+        [[CCDirector sharedDirector] pushScene:scene];
+    }];
+    
     CCMenuItemFont *vocabulary = [CCMenuItemFont itemWithString:@"vocabulary" block:^(id sender) {
         CCScene *game = [ImageMatch gameSceneWithWords:@[@"horse",@"hog",@"house",@"hen"]];
         [[CCDirector sharedDirector] pushScene:game];
@@ -115,7 +122,7 @@ static char *const storys[] =
     }];
     back.color = ccYELLOW;
     
-    CCMenu *menu = [CCMenu menuWithItems:vocabulary,story,game,review,back, nil];
+    CCMenu *menu = [CCMenu menuWithItems:dialog,vocabulary,story,game,review,back, nil];
     [menu alignItemsVerticallyWithPadding:20];
     menu.position = CMP(0.5);
     [self addChild:menu];
