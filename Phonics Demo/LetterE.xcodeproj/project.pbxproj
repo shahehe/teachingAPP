@@ -162,6 +162,7 @@
 		84AFD01618E56D67007EBBCC /* TouchGameVeryGood.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AFD01518E56D67007EBBCC /* TouchGameVeryGood.m */; };
 		84AFD19818D9C1FD005F55F5 /* data in Resources */ = {isa = PBXBuildFile; fileRef = 84AFD19718D9C1FD005F55F5 /* data */; };
 		84B14EB71908027F004490BF /* TouchGameWhere.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B14EB61908027F004490BF /* TouchGameWhere.m */; };
+		84B14EBA19092122004490BF /* TouchGameNotFood.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B14EB919092122004490BF /* TouchGameNotFood.m */; };
 		84B22C0018E43AAD00DD5A0A /* TouchGameFound.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B22BFF18E43AAD00DD5A0A /* TouchGameFound.m */; };
 		84B263C018E05037002AD301 /* TouchGameBabyToy.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B263BF18E05037002AD301 /* TouchGameBabyToy.m */; };
 		84B375F018FC12C500BB9850 /* TouchGameLook.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B375EF18FC12C500BB9850 /* TouchGameLook.m */; };
@@ -843,6 +844,8 @@
 		84AFD19718D9C1FD005F55F5 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data; path = ../../data; sourceTree = "<group>"; };
 		84B14EB51908027F004490BF /* TouchGameWhere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchGameWhere.h; sourceTree = "<group>"; };
 		84B14EB61908027F004490BF /* TouchGameWhere.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchGameWhere.m; sourceTree = "<group>"; };
+		84B14EB819092122004490BF /* TouchGameNotFood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchGameNotFood.h; sourceTree = "<group>"; };
+		84B14EB919092122004490BF /* TouchGameNotFood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchGameNotFood.m; sourceTree = "<group>"; };
 		84B22BFE18E43AAD00DD5A0A /* TouchGameFound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchGameFound.h; sourceTree = "<group>"; };
 		84B22BFF18E43AAD00DD5A0A /* TouchGameFound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchGameFound.m; sourceTree = "<group>"; };
 		84B263BE18E05037002AD301 /* TouchGameBabyToy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchGameBabyToy.h; sourceTree = "<group>"; };
@@ -2427,6 +2430,8 @@
 				84F2B93219024CE9002EF109 /* TouchGameZoo.m */,
 				84B14EB51908027F004490BF /* TouchGameWhere.h */,
 				84B14EB61908027F004490BF /* TouchGameWhere.m */,
+				84B14EB819092122004490BF /* TouchGameNotFood.h */,
+				84B14EB919092122004490BF /* TouchGameNotFood.m */,
 			);
 			name = TouchingGame;
 			sourceTree = "<group>";
@@ -3047,6 +3052,7 @@
 				847403C918D749B20093C83E /* AudioDict.m in Sources */,
 				843335B717ACF50B009F1C56 /* ToolbarLayer.m in Sources */,
 				84EDDF0817BCD41E00262E2B /* CCScrollLayer.m in Sources */,
+				84B14EBA19092122004490BF /* TouchGameNotFood.m in Sources */,
 				8499CA7917C325CE00A1A24C /* SlidePauseMenuLayer.m in Sources */,
 				AEB72C0117FF88D800F71600 /* CCVideoPlayer.m in Sources */,
 				AEB72C0217FF88D800F71600 /* CCVideoPlayerImpliOS.m in Sources */,

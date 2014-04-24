@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>Not Food</string>
+	<key>path</key>
+	<string>Assets/touchingGames/NotFood</string>
+	<key>background</key>
+	<string>bg.pvr.ccz</string>
+	<key>label</key>
+	<dict>
+		<key>fntFile</key>
+		<string>Didot.fnt</string>
+		<key>position</key>
+		<string>{0.5, 0.92}</string>
+		<key>anchorPoint</key>
+		<string>{0.5,0.5}</string>
+	</dict>
+	<key>objects</key>
+	<dict>
+		<key>net</key>
+		<dict>
+			<key>file</key>
+			<string>object.png</string>
+			<key>audio</key>
+			<string>net.mp3</string>
+			<key>content</key>
+			<string>A net is not food.</string>
+			<key>position</key>
+			<string>{0.5,0.5}</string>
+		</dict>
+		<key>nail</key>
+		<dict>
+			<key>file</key>
+			<string>object.png</string>
+			<key>audio</key>
+			<string>nail.mp3</string>
+			<key>content</key>
+			<string>A nail is not food.</string>
+			<key>position</key>
+			<string>{0.5,0.5}</string>
+		</dict>
+		<key>needle</key>
+		<dict>
+			<key>file</key>
+			<string>object.png</string>
+			<key>audio</key>
+			<string>needle.mp3</string>
+			<key>content</key>
+			<string>A needle is not food.</string>
+			<key>position</key>
+			<string>{0.5,0.5}</string>
+		</dict>
+		<key>notebook</key>
+		<dict>
+			<key>file</key>
+			<string>object.png</string>
+			<key>audio</key>
+			<string>notebook.mp3</string>
+			<key>content</key>
+			<string>A notebook is not food.</string>
+			<key>position</key>
+			<string>{0.5,0.5}</string>
+		</dict>
+		<key>necklace</key>
+		<dict>
+			<key>file</key>
+			<string>object.png</string>
+			<key>audio</key>
+			<string>necklace.mp3</string>
+			<key>content</key>
+			<string>A necklace is not food.</string>
+			<key>position</key>
+			<string>{0.5,0.5}</string>
+		</dict>
+		<key>newspaper</key>
+		<dict>
+			<key>file</key>
+			<string>object.png</string>
+			<key>audio</key>
+			<string>newspaper.mp3</string>
+			<key>content</key>
+			<string>A newspaper is not food.</string>
+			<key>position</key>
+			<string>{0.5,0.5}</string>
+		</dict>
+		<key>nut</key>
+		<dict>
+			<key>file</key>
+			<string>object.png</string>
+			<key>audio</key>
+			<string>nut.mp3</string>
+			<key>content</key>
+			<string>A nut is food!</string>
+			<key>position</key>
+			<string>{0.5,0.5}</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
