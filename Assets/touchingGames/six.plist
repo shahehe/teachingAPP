@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>Exactly Six</string>
+	<key>path</key>
+	<string>Assets/touchingGames/six</string>
+	<key>background</key>
+	<string>bg.png</string>
+	<key>label</key>
+	<dict>
+		<key>fntFile</key>
+		<string>Didot.fnt</string>
+		<key>position</key>
+		<string>{0.5,0.93}</string>
+		<key>anchorPoint</key>
+		<string>{0.5,0.5}</string>
+	</dict>
+	<key>objects</key>
+	<dict>
+		<key>1-hexagons</key>
+		<dict>
+			<key>file</key>
+			<string>object_panel_1.png</string>
+			<key>audio</key>
+			<string>hexagons.mp3</string>
+			<key>content</key>
+			<string>There are exactly six hexagons.</string>
+			<key>position</key>
+			<string>{0.163,0.739}</string>
+		</dict>
+		<key>2-exits</key>
+		<dict>
+			<key>file</key>
+			<string>object_panel_2.png</string>
+			<key>audio</key>
+			<string>exits.mp3</string>
+			<key>content</key>
+			<string>There are exactly six exits.</string>
+			<key>position</key>
+			<string>{0.163,0.613}</string>
+		</dict>
+		<key>3-exams</key>
+		<dict>
+			<key>file</key>
+			<string>object_panel_1.png</string>
+			<key>audio</key>
+			<string>exams.mp3</string>
+			<key>content</key>
+			<string>There are exactly six exams.</string>
+			<key>position</key>
+			<string>{0.163,0.482}</string>
+		</dict>
+		<key>4-taxis</key>
+		<dict>
+			<key>file</key>
+			<string>object_panel_2.png</string>
+			<key>audio</key>
+			<string>taxis.mp3</string>
+			<key>content</key>
+			<string>There are exactly six taxis</string>
+			<key>position</key>
+			<string>{0.163,0.355}</string>
+		</dict>
+		<key>5-axles</key>
+		<dict>
+			<key>file</key>
+			<string>object_panel_1.png</string>
+			<key>audio</key>
+			<string>axles.mp3</string>
+			<key>content</key>
+			<string>There are exactly six axles.</string>
+			<key>position</key>
+			<string>{0.163,0.230}</string>
+		</dict>
+	</dict>
+	<key>staticObjects</key>
+	<dict>
+		<key>number_panel.png</key>
+		<string>{0.896,0.780}</string>
+	</dict>
+</dict>
+</plist>
