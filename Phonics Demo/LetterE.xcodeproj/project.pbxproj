@@ -508,6 +508,7 @@
 		84F2B93019018A56002EF109 /* TouchGameYellow.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F2B92F19018A56002EF109 /* TouchGameYellow.m */; };
 		84F2B93319024CE9002EF109 /* TouchGameZoo.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F2B93219024CE9002EF109 /* TouchGameZoo.m */; };
 		AE2FD211183554C500DEE058 /* TraceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2FD210183554C500DEE058 /* TraceUtil.m */; };
+		AE4BF001190993FC00C6EE73 /* LetterIdentificationF.m in Sources */ = {isa = PBXBuildFile; fileRef = AE4BF000190993FC00C6EE73 /* LetterIdentificationF.m */; };
 		AE60B7F518038A6300741275 /* TraceClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AE60B7F418038A6300741275 /* TraceClass.m */; };
 		AE768DEA18CEB9BD009D40D7 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 8498BB1917847D9D00F71234 /* Default-Landscape~ipad.png */; };
 		AEB72C0117FF88D800F71600 /* CCVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB72BF517FF88D800F71600 /* CCVideoPlayer.m */; };
@@ -1269,6 +1270,8 @@
 		84F2B93219024CE9002EF109 /* TouchGameZoo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchGameZoo.m; sourceTree = "<group>"; };
 		AE2FD20F183554C500DEE058 /* TraceUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TraceUtil.h; sourceTree = "<group>"; };
 		AE2FD210183554C500DEE058 /* TraceUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TraceUtil.m; sourceTree = "<group>"; };
+		AE4BEFFF190993FC00C6EE73 /* LetterIdentificationF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LetterIdentificationF.h; sourceTree = "<group>"; };
+		AE4BF000190993FC00C6EE73 /* LetterIdentificationF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LetterIdentificationF.m; sourceTree = "<group>"; };
 		AE60B7F318038A6300741275 /* TraceClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TraceClass.h; sourceTree = "<group>"; };
 		AE60B7F418038A6300741275 /* TraceClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TraceClass.m; sourceTree = "<group>"; };
 		AEB72BF417FF88D800F71600 /* CCVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCVideoPlayer.h; sourceTree = "<group>"; };
@@ -1326,6 +1329,8 @@
 		843335AD17ACF4F7009F1C56 /* Letter identification */ = {
 			isa = PBXGroup;
 			children = (
+				AE4BEFFF190993FC00C6EE73 /* LetterIdentificationF.h */,
+				AE4BF000190993FC00C6EE73 /* LetterIdentificationF.m */,
 				843335B017ACF4F7009F1C56 /* LetterIdentification.h */,
 				843335B117ACF4F7009F1C56 /* LetterIdentification.m */,
 				AE2FD20F183554C500DEE058 /* TraceUtil.h */,
@@ -2932,6 +2937,7 @@
 				8498BBBB17847D9E00F71234 /* CCRenderTexture.m in Sources */,
 				84B4F1F618D040BF0071E85B /* cpSlideJoint.c in Sources */,
 				84B4F1F118D040BF0071E85B /* cpPinJoint.c in Sources */,
+				AE4BF001190993FC00C6EE73 /* LetterIdentificationF.m in Sources */,
 				8498BBBE17847D9E00F71234 /* CCScene.m in Sources */,
 				84AE12BB18DDB72F002501CC /* TouchGameKiss.m in Sources */,
 				84BA6A181906A9D000B6BE7C /* letterBubble.m in Sources */,

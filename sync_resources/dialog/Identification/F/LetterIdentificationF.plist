@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>letter</key>
-	<string>E</string>
+	<string>F</string>
 	<key>audioFileName</key>
-	<string>idE.mp3</string>
+	<string>iDF.mp3</string>
 	<key>titlePeriod</key>
 	<string>{0,3.76}</string>
 	<key>soundNameWord</key>
-	<string>Elephant</string>
+	<string>fish</string>
 	<key>images</key>
 	<dict>
 		<key>background</key>
@@ -17,7 +17,7 @@
 			<key>frameFileName</key>
 			<string>letter_identification_bgimage_a.plist</string>
 			<key>textureFileName</key>
-			<string>no_elephant_bg.jpg</string>
+			<string>bg.png</string>
 		</dict>
 		<key>contents</key>
 		<array>
@@ -33,57 +33,9 @@
 	<array>
 		<dict>
 			<key>dialog</key>
-			<string>Can you tell me who is our friend today?</string>
+			<string>“Can you tell me who is our friend today?”  </string>
 			<key>audioPeriod</key>
-			<string>{0.23,3}</string>
-		</dict>
-		<dict>
-			<key>dialog</key>
-			<string>Here is a clue</string>
-			<key>audioPeriod</key>
-			<string>{5.4,7.1}</string>
-		</dict>
-		<dict>
-			<key>dialog</key>
-			<string>Did you say elephant?  That’s right, our friend today is Eddie the Elephant!  </string>
-			<key>audioPeriod</key>
-			<string>{10.043,17.471}</string>
-		</dict>
-		<dict>
-			<key>dialog</key>
-			<string> Do you know what letter elephant starts with</string>
-			<key>audioPeriod</key>
-			<string>{18,22}</string>
-			<key>animations</key>
-			<array>
-				<dict>
-					<key>isNativeAnimation</key>
-					<true/>
-					<key>startTime</key>
-					<real>18.2</real>
-				</dict>
-				<dict>
-					<key>isNativeAnimation</key>
-					<true/>
-					<key>startTime</key>
-					<integer>21</integer>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>animations</key>
-			<array>
-				<dict>
-					<key>isNativeAnimation</key>
-					<true/>
-					<key>startTime</key>
-					<real>28.665</real>
-				</dict>
-			</array>
-			<key>dialog</key>
-			<string>e, elephant starts with the letter E! This is a big E.  Can you say E</string>
-			<key>audioPeriod</key>
-			<string>{23.824,33.576}</string>
+			<string>{0, 4}</string>
 		</dict>
 		<dict>
 			<key>animations</key>
@@ -92,13 +44,88 @@
 					<key>firstFrameIndex</key>
 					<integer>1</integer>
 					<key>animationName</key>
-					<string>writeBigE</string>
+					<string>swim</string>
 					<key>framePrefix</key>
-					<string>Big_E%02d.png</string>
+					<string>swimmingFish%04d.png</string>
 					<key>PlistName</key>
-					<string>BigEAnim</string>
+					<string>swimmingFish</string>
 					<key>startTime</key>
-					<integer>36</integer>
+					<real>4.1</real>
+					<key>posX</key>
+					<real>0.5</real>
+					<key>posY</key>
+					<real>0.5</real>
+					<key>delay</key>
+					<string>0.1</string>
+				</dict>
+			</array>
+			<key>dialog</key>
+			<string>Here is a clue</string>
+			<key>audioPeriod</key>
+			<string>{4, 7}</string>
+		</dict>
+		<dict>
+			<key>dialog</key>
+			<string>Did you say car?  That’s right, our friend today is Cruiser the Car!  </string>
+			<key>audioPeriod</key>
+			<string>{7.512, 14.78}</string>
+		</dict>
+		<dict>
+			<key>dialog</key>
+			<string>Do you know what letter car starts with</string>
+			<key>audioPeriod</key>
+			<string>{16.533, 20.0}</string>
+			<key>animations</key>
+			<array>
+				<dict>
+					<key>commnet</key>
+					<string>moving in whiteboard (idx==0)</string>
+					<key>isNativeAnimation</key>
+					<true/>
+					<key>startTime</key>
+					<real>13.7</real>
+				</dict>
+				<dict>
+					<key>commnet</key>
+					<string>flash first letter (idx==1)</string>
+					<key>isNativeAnimation</key>
+					<true/>
+					<key>startTime</key>
+					<real>15.7</real>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>dialog</key>
+			<string>“Yes, car starts with the letter C!   This is a big C.  Can you say C?”</string>
+			<key>audioPeriod</key>
+			<string>{21.862, 31.678}</string>
+			<key>animations</key>
+			<array>
+				<dict>
+					<key>commnet</key>
+					<string>move letter to sticker (idx==2)</string>
+					<key>isNativeAnimation</key>
+					<true/>
+					<key>startTime</key>
+					<integer>24</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>animations</key>
+			<array>
+				<dict>
+					<key>firstFrameIndex</key>
+					<integer>1</integer>
+					<key>animationName</key>
+					<string>writeBigF</string>
+					<key>framePrefix</key>
+					<string>Big_F%02d.png</string>
+					<key>PlistName</key>
+					<string>BigFAnim</string>
+					<key>startTime</key>
+					<real>38.5</real>
 					<key>posX</key>
 					<real>0.4</real>
 					<key>posY</key>
@@ -108,24 +135,26 @@
 				</dict>
 			</array>
 			<key>dialog</key>
-			<string>E!  This is how we write a big E.  Can you try to write a big E</string>
+			<string>C!  Now this is how we write a big C.  (Screen shows C being written correctly). Can you try to write a big C using your finger?”</string>
 			<key>audioPeriod</key>
-			<string>{35.431,44}</string>
+			<string>{33.768, 44.664}</string>
 		</dict>
 		<dict>
 			<key>animations</key>
 			<array>
 				<dict>
+					<key>commnet</key>
+					<string>move letter to sticker (idx==3)</string>
 					<key>isNativeAnimation</key>
 					<true/>
 					<key>startTime</key>
-					<integer>47</integer>
+					<integer>45</integer>
 				</dict>
 			</array>
 			<key>dialog</key>
 			<string>Now this is a little e.  (Show little e next to big E).  Can you say e again?”</string>
 			<key>audioPeriod</key>
-			<string>{46.811, 56.07}</string>
+			<string>{47.247, 53.795}</string>
 		</dict>
 		<dict>
 			<key>animations</key>
@@ -134,13 +163,13 @@
 					<key>firstFrameIndex</key>
 					<integer>1</integer>
 					<key>animationName</key>
-					<string>writelittleE</string>
+					<string>writelittleF</string>
 					<key>framePrefix</key>
-					<string>Little_e%02d.png</string>
+					<string>Little_f%02d.png</string>
 					<key>PlistName</key>
-					<string>LittleEAnim</string>
+					<string>LittleFAnim</string>
 					<key>startTime</key>
-					<integer>57</integer>
+					<real>60.871</real>
 					<key>posX</key>
 					<real>0.38</real>
 					<key>posY</key>
@@ -150,9 +179,9 @@
 				</dict>
 			</array>
 			<key>dialog</key>
-			<string>  Can you try to write the little E</string>
+			<string>C!  The little c is written the same way as the big C, just smaller. </string>
 			<key>audioPeriod</key>
-			<string>{56.180,59.138}</string>
+			<string>{56.186, 61.378}</string>
 		</dict>
 	</array>
 </dict>
