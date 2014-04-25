@@ -37,31 +37,31 @@
 static char *const storys[] =
 {
     "A",
-    "TouchGameBabyToy",
-    "C",
-    "D",
+    "TouchGameBabyToy",//B
+    "can_u.plist",//C
+    "den.plist",//D
     "E",
-    "TouchGameFound",
-    "G",
-    "H",
+    "TouchGameFound",//F
+    "Garden.plist",//G
+    "happy_me.plist",//H
     "I",
-    "TouchGameJar",
-    "TouchGameKiss",
-    "TouchGameLook",
-    "M",
-    "TouchGameNotFood",
+    "TouchGameJar",//J
+    "TouchGameKiss",//K
+    "TouchGameLook",//L
+    "I_love.plist",//M
+    "TouchGameNotFood",//N
     "O",
-    "TouchGamePlease",
-    "TouchGameWill",
-    "TouchGameRed",
-    "TouchGameISee",
-    "TouchGameTime",
+    "TouchGamePlease",//P
+    "TouchGameWill",//Q
+    "TouchGameRed",//R
+    "TouchGameISee",//S
+    "TouchGameTime",//T
     "U",
-    "TouchGameVeryGood",
-    "TouchGameWhere",
-    "TouchGameSix",
-    "TouchGameYellow",
-    "TouchGameZoo"
+    "TouchGameVeryGood",//V
+    "TouchGameWhere",//W
+    "TouchGameSix",//X
+    "TouchGameYellow",//Y
+    "TouchGameZoo"//Z
 };
 
 @implementation PGLetterMenu
@@ -103,8 +103,21 @@ static char *const storys[] =
     
     NSString *storyName = [NSString stringWithUTF8String:storys[letter-'A']];
     CCMenuItemFont *story = [CCMenuItemFont itemWithString:@"story" block:^(id sender) {
-        Class story = NSClassFromString(storyName);
-        CCScene *scene = [story performSelector:@selector(gameLayer)];
+        CCScene *scene = [CCScene node];
+        if ([storyName hasSuffix:@"plist"])
+        {
+            NSString *rootPath = [NSString stringWithUTF8String:touchingGameRootPath];
+            NSString *filePath = [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:rootPath] stringByAppendingPathComponent:storyName];
+            NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:filePath];
+            TouchGameLayer *game = [TouchGameLayer gameLayerWithGameData:dic];
+            [scene addChild:game];
+        }
+        else
+        {
+            Class story = NSClassFromString(storyName);
+            [scene addChild:[story performSelector:@selector(gameLayer)]];
+        }
+        
         [[CCDirector sharedDirector] pushScene:scene];
     }];
     story.color = ccWHITE;
