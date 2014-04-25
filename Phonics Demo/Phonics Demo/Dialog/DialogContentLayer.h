@@ -33,18 +33,19 @@ typedef struct CGPoint CLPeriod; //x = start time , y = end time
     CLPeriod            *scenePeriods;
     NSMutableArray      * firstAnimIdxOfScene;
     NSMutableArray      *   animStartTime; // start time for each animation
+    NSMutableArray      *   animSpritesNames;
     NSMutableArray      *   animSprites;// store all sprites with animation
     // use this index to retrieve the starting time of the animation.  Inside update function, whenever the current audio time is greater than the startingTime, the animation will start.
     NSMutableDictionary *   animName2SpriteIdx;  // some animated
     
     // used for audio sync text
-
+    
     CCLabelBMFont       * foregroundLabel;
     CCLabelBMFont       * whiteboardBackgroundLabel;
     int                   currWordOnWhiteBoardIdx;
     NSArray             * wordsAudioPos;
-  
-
+    
+    
     
 }
 

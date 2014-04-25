@@ -8,7 +8,7 @@
 
 #import "DialogContentLayer.h"
 #import "Dialog.h"
-//#import "MainMenu.h"
+
 #import "CCAnimation+Helper.h"
 #import "AnimatedSprite.h"
 @implementation DialogContentLayer
@@ -40,20 +40,54 @@
         _numberOfScenes = 0;
         _indexOfCurrentScene = 0;
         _dialogBoxRect = CGRectZero;
-      
+        
     }
+    
+    
     return self;
 }
-
+-(void) initRecordingButton
+{
+    [CCMenuItemFont setFontSize:32];
+    [CCMenuItemFont setFontName: @"Courier New"];
+    NSMutableArray *menuItems = [NSMutableArray arrayWithCapacity:5];
+    CCMenuItemFont *item1 = [CCMenuItemFont itemWithString:@"录音"
+                                                     block:^(id sender) {
+                                                         
+                                                     }];
+    
+    [menuItems addObject:item1];
+    CCMenuItemFont *item2 = [CCMenuItemFont itemWithString:@"停止"
+                                                     block:^(id sender) {
+                                                         [item1 setString:@"test"];
+                                                     }];
+    [menuItems addObject:item2];
+    CCMenuItem *item3 = [CCMenuItemFont itemWithString:@"播放" block:^(id sender) {
+        
+    }];
+    item3.color = ccYELLOW;
+    
+    [menuItems addObject:item3];
+    
+    
+    CCMenu *menu = [CCMenu menuWithArray:menuItems];
+    [menu alignItemsHorizontallyWithPadding:20];
+    
+    menu.position = ccpMult(SCREEN_SIZE_AS_POINT, 0.95);
+    [self addChild:menu z:999];
+    
+}
 - (id) initWithInitOptions:(NSDictionary *)options
 // only common property should be read here
 {
     self = [super init];
+    //[self initRecordingButton];
     animSprites = [[NSMutableArray alloc] init];
+    animSpritesNames = [[NSMutableArray alloc] init];
     animStartTime = [[NSMutableArray alloc] init];
     firstAnimIdxOfScene =[[NSMutableArray alloc] init];
     animName2SpriteIdx = [[NSMutableDictionary alloc] init];
-
+    
     do {
         if (!self) break;
         if (!options || [[options allKeys] count] == 0) break;
@@ -62,8 +96,8 @@
         self.lessonLetter = [options valueForKey:@"letter"];
         self.soundNameWord = [ options valueForKey:@"soundNameWord"];
         
- 
-
+        
+        
         NSString *audioFileName = [options valueForKey:@"audioFileName"];
         _audioSource = [[CDLongAudioSource alloc] init];
         _audioSource.delegate = self;
@@ -96,7 +130,7 @@
         _indexOfCurrentScene = 0;
         _dialogBoxRect = CGRectZero;
         
-
+        
         scenePeriods = calloc(sizeof(CLPeriod)*_numberOfScenes, 1);
         int i = 0;
         self.animStartTimeDict = [ [NSMutableDictionary alloc] init];
@@ -123,15 +157,15 @@
             {
                 [self.soundLabelDict setObject: arr forKey:[NSNumber numberWithInt:i]];
             }
-  
-
+            
+            
             /* 下面的代码是载入／解析和动画相关的内容：
              动画分为两种： 一种是通过代码生成的，我们成为native animation (isNativeAnimation == YES)
-                          另外一种是通过载入美工绘制的连续动画帧来实现的，
-                          这种动画需要plist和png两个文件
+             另外一种是通过载入美工绘制的连续动画帧来实现的，
+             这种动画需要plist和png两个文件
              所有动画都有一个字段"startTime"用来表示动画显示／激活的触发时间
              "isRepeatAnim == YES" 代表这个动画已经在前面载入了，在当前触发时间需要再次显示
-            */
+             */
             NSArray *animArray = [scene valueForKey:@"animations"];
             if ( [animArray count] > 0 )
             {
@@ -146,24 +180,29 @@
                 for( int i = 0; i < [animArray count]; ++i)
                 {
                     NSDictionary * anim         = (NSDictionary *)[animArray objectAtIndex:i];
-                    BOOL isNativeAnimation      = [[anim valueForKey:@"isNativeAnimation"] boolValue];
+                    BOOL isNativeAnimation      = [anim valueForKey:@"isNativeAnimation"];
                     NSNumber * startTime        = [anim valueForKey:@"startTime"];
                     [animStartTime addObject:startTime];
-                    BOOL isRepeatAnim           = [[anim valueForKey:@"isRepeatAnim"] boolValue];
+                    BOOL isRepeatAnim           = [anim valueForKey:@"isRepeatAnim"];
                     
                     if ( isNativeAnimation) {
                         [animSprites addObject:[NSNull null]];
+                        [animSpritesNames addObject:[NSNull null]];
+                        
+                        
                     }
                     else if ( isRepeatAnim )  // Repeat 表示这个动画本身已经在前面的场景生成
                     {
                         NSString * animationName    = [anim valueForKey:@"animationName"];
+                        
                         NSNumber * animIdx          = [animName2SpriteIdx valueForKey:animationName];
                         AnimatedSprite * sprite     = (AnimatedSprite *)[animSprites objectAtIndex:[animIdx integerValue] ];
                         NSNumber * posX             = [anim valueForKey:@"posX"];
                         NSNumber * posY             = [anim valueForKey:@"posY"];
                         sprite.position = CCMP([posX floatValue], [posY floatValue]);
-                        [sprite startAnimation:animationName];
+                        
                         [animSprites addObject:sprite];
+                        [animSpritesNames addObject:animationName];
                         
                     }
                     else {
@@ -179,7 +218,9 @@
                         NSNumber * posY             = [anim valueForKey:@"posY"];
                         sprite.position = CCMP([posX floatValue], [posY floatValue]);
                         [sprite startAnimation:animationName];
+                        
                         [animSprites addObject:sprite];
+                        [animSpritesNames addObject:animationName];
                         [animName2SpriteIdx setObject:[NSNumber numberWithInt:animationsCount] forKey:animationName];
                         
                     }
@@ -199,11 +240,11 @@
                                                        fntFile:@"ComicSans_back.fnt"];
     whiteboardBackgroundLabel.anchorPoint = ccp(0, 1);
     whiteboardBackgroundLabel.position = CCMP(0.3, 0.7);
-   
+    
     foregroundLabel = [CCLabelBMFont labelWithString:@""
                                              fntFile:@"ComicSans_on.fnt"];
     
- 
+    
     [self addChild:foregroundLabel z:2];
     [self addChild:whiteboardBackgroundLabel z:1];
     return self;
@@ -227,7 +268,7 @@
             NSRange wordRange = NSMakeRange(0,currWordOnWhiteBoardIdx+1);
             NSArray *firstNWords = [[whiteboardBackgroundLabel.string componentsSeparatedByString:@" "] subarrayWithRange:wordRange];
             foregroundLabel.string = [ firstNWords componentsJoinedByString:@" "];
-
+            
             NSLog(@"%@",firstNWords);
             NSLog(@"%@ %g %g",foregroundLabel.string, currPos, _audioSource.audioSourcePlayer.currentTime );
             currWordOnWhiteBoardIdx++;
@@ -318,9 +359,9 @@
 - (void) dialogStop
 {
     if (sceneBlocks) {
-    for (int i = 0;i<_numberOfScenes;i++)
-        Block_release(sceneBlocks[i]);
-    free(sceneBlocks);
+        for (int i = 0;i<_numberOfScenes;i++)
+            Block_release(sceneBlocks[i]);
+        free(sceneBlocks);
     }
     
     [_audioSource stop];
@@ -334,37 +375,37 @@
 - (void) resetScene
 {
     whiteboardBackgroundLabel.visible = NO;
-
+    
     foregroundLabel.string = @"";
-
+    
 }
 - (BOOL) playSceneWithIndex:(NSUInteger)index
 {
     
-
-        if (index >= _numberOfScenes)
-        {
-            index--;
-        }
-
-        _indexOfCurrentScene = index;
-
-        if (_audioSource && scenePeriods)
-        {
-            [_audioSource pause];
-            CLPeriod period = scenePeriods[_indexOfCurrentScene];
-            _audioSource.audioSourcePlayer.currentTime = period.x;
-            audioPauseTime = MIN(period.y,_audioSource.audioSourcePlayer.duration);
-            NSLog(@"curr secen %d currtime %g pauseTime %g",_indexOfCurrentScene, period.x, audioPauseTime);
-            [_audioSource play];
-            self.isPlaying = YES;
-        }
-
+    
+    if (index >= _numberOfScenes)
+    {
+        index--;
+    }
+    
+    _indexOfCurrentScene = index;
+    
+    if (_audioSource && scenePeriods)
+    {
+        [_audioSource pause];
+        CLPeriod period = scenePeriods[_indexOfCurrentScene];
+        _audioSource.audioSourcePlayer.currentTime = period.x;
+        audioPauseTime = MIN(period.y,_audioSource.audioSourcePlayer.duration);
+        NSLog(@"curr secen %d currtime %g pauseTime %g",_indexOfCurrentScene, period.x, audioPauseTime);
+        [_audioSource play];
+        self.isPlaying = YES;
+    }
+    
     [self resetScene];
     sceneBlocks[_indexOfCurrentScene]();
-
+    
     return YES;
-   
+    
 }
 
 - (void) dialogPlayNextScene
@@ -386,8 +427,8 @@
 
 - (CCAnimation*) loadPlistForAnimationWithName:(NSString*)plistFilePrefix frameName:(NSString*)fName startFrameIdx:(int)startIdx endFrameIndx:(int)endIdx
 {
-
- 
+    
+    
     
     NSMutableArray *bigAWrittingFrames = [NSMutableArray array];
     for (int i=startIdx; i<=endIdx; i++) {
@@ -395,8 +436,8 @@
         {
             [bigAWrittingFrames addObject:
              [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:
-                //[NSString stringWithFormat:@"id_a_b_write000%d.png",i]]];
-                [NSString stringWithFormat:@"%@0%d.png",fName,i]]];
+              //[NSString stringWithFormat:@"id_a_b_write000%d.png",i]]];
+              [NSString stringWithFormat:@"%@0%d.png",fName,i]]];
             
         }
         else
@@ -407,7 +448,7 @@
         }
     }
     CCAnimation *anim = [CCAnimation
-                             animationWithSpriteFrames:bigAWrittingFrames delay:0.1f];
+                         animationWithSpriteFrames:bigAWrittingFrames delay:0.1f];
     
     return anim;
 }

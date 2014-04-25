@@ -91,9 +91,16 @@ static char *const storys[] =
     [CCMenuItemFont setFontName:font];
     
     CCMenuItemFont *dialog = [CCMenuItemFont itemWithString:@"dialog" block:^(id sender) {
-        CCScene *scene = [Dialog dialogWithContentLayerType:DialogContentTypeLetterIdentification letter:'A'];
+        CCScene *scene = [Dialog dialogWithContentLayerType:DialogContentTypeLetterIdentification letter:letter];
         [[CCDirector sharedDirector] pushScene:scene];
     }];
+    NSString * className = @"LetterIdentification";
+    className = [className stringByAppendingString:[NSString stringWithFormat:@"%c", letter]];
+    Class letterId = NSClassFromString(className);
+    if ( !letterId )
+    {
+        dialog.isEnabled = NO;
+    }
     
     CCMenuItemFont *vocabulary = [CCMenuItemFont itemWithString:@"vocabulary" block:^(id sender) {
         CCScene *game = [ImageMatch gameSceneWithWords:@[@"horse",@"hog",@"house",@"hen"]];

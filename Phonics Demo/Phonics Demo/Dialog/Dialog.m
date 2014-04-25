@@ -68,11 +68,13 @@ static NSString *dialogContentNameFormat = @"%@_%c";
 
 + (CCScene *)dialogWithContentLayerType:(DialogContentType)contentType letter:(char)letter
 {
-   /* NSString *contentName = [NSString stringWithFormat:
-                             dialogContentNameFormat,
-                             dialogContentNames[contentType],
-                             letter];*/
+
     NSString *contentName = dialogContentNames[contentType];
+    if ( [contentName isEqualToString:@"LetterIdentification"])
+    {
+        contentName = [contentName stringByAppendingString:[NSString stringWithFormat:@"%c", letter]];
+    }
+    
     NSString *optionFileName = [[NSBundle mainBundle] pathForResource:contentName ofType:@"plist"];
     NSDictionary *option = [NSDictionary dictionaryWithContentsOfFile:optionFileName];
     Class content = NSClassFromString(contentName);
