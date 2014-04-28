@@ -9,7 +9,6 @@
 #import "PGGameListMenu.h"
 #import "PhonicsDefines.h"
 
-#import "PGLearnWord.h"
 #import "PGSearchWord.h"
 #import "CardMatching.h"
 #import "BubbleGameLayer.h"
@@ -42,15 +41,7 @@
     
     [CCMenuItemFont setFontName:font];
     
-    CCMenuItemFont *learnWord = [CCMenuItemFont itemWithString:@"Learn Word" block:^(id sender) {
-        PGLearnWord *game = [PGLearnWord gameWithWords:w];
-        game.gameLevel = LearnWordLevelNormal;
-        CCScene *scene = [CCScene node];
-        [scene addChild:game];
-        [[CCDirector sharedDirector] pushScene:scene];
-    }];
-    learnWord.color = ccWHITE;
-    
+        
     CCMenuItemFont *searchWord = [CCMenuItemFont itemWithString:@"Search Word" block:^(id sender) {
         [[CCDirector sharedDirector] pushScene:[PGSearchWord gameWithWords:w panelSize:CGSizeMake(640, 640) gridSize:CGSizeMake(80, 80)]];
     }];
@@ -97,7 +88,7 @@
     }];
     back.color = ccYELLOW;
     
-    CCMenu *menu = [CCMenu menuWithItems:learnWord,searchWord,cardMatch,bubble,back, nil];
+    CCMenu *menu = [CCMenu menuWithItems:searchWord,cardMatch,bubble,back, nil];
     [menu alignItemsVerticallyWithPadding:20];
     menu.position = CMP(0.5);
     [self addChild:menu];

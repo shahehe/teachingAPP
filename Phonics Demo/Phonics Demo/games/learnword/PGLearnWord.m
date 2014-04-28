@@ -274,7 +274,7 @@ static const cpLayers PhysicsBlockLayers = CP_ALL_LAYERS;
         LetterBlock *block = [LetterBlock blockWithSize:CGSizeMake(60, 60) letter:letter];
         block.color = color;
         block.zOrder = Z_BLOCKS;
-        
+        block.ignoreBodyRotation = YES;
         cpShapeSetLayers(block.shape, PhysicsBlockLayers);
         [blocks addObject:block];
     }
@@ -285,7 +285,7 @@ static const cpLayers PhysicsBlockLayers = CP_ALL_LAYERS;
         LetterBlock *block = [LetterBlock blockWithSize:CGSizeMake(60, 60) letter:l];
         block.color = color;
         block.zOrder = Z_BLOCKS;
-        
+        block.ignoreBodyRotation = YES;
         cpShapeSetLayers(block.shape, PhysicsBlockLayers);
         [blocks addObject:block];
     }

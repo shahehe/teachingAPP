@@ -8,11 +8,11 @@
 
 #import "PGLetterMenu.h"
 #import "ImageMatch.h"
-#import "GooseGame.h"
 
 #import "Dialog.h"
 
 #import "PGGameListMenu.h"
+#import "PGReviewMenu.h"
 
 #import "config.h"
 #import "TouchGameLayer.h"
@@ -136,7 +136,7 @@ static char *const storys[] =
     game.color = ccWHITE;
     
     CCMenuItemFont *review = [CCMenuItemFont itemWithString:@"review" block:^(id sender) {
-        [[CCDirector sharedDirector] pushScene:[GooseGame gameScene]];
+        [[CCDirector sharedDirector] pushScene:[PGReviewMenu menuWithLetter:letter]];
     }];
     review.color = ccWHITE;
     

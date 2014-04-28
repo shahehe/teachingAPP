@@ -19,6 +19,8 @@
     
     CCMenuItemToggle *audio_control;
     CCMenuItemToggle *audio_record;
+    
+    NSUInteger recordTimes;
 }
 
 + (instancetype) layerWithWord:(NSString *)word
@@ -29,6 +31,8 @@
 - (id) initWithWord:(NSString *)word
 {
     self = [super init];
+    
+    self.userObject = word;
     
     CCLayerColor *bgLayer = [CCLayerColor layerWithColor:ccc4(0, 0, 0, 153)];
     [self addChild:bgLayer z:0];
@@ -58,13 +62,14 @@
     audio_control.selectedIndex = 1;
     audio_control.position = [panel convertToWorldSpace:ccpCompMult(p_size_panel, ccp(0.2, 0.45))];
     
+    __block CardProLayer *self_copy = self;
     CCMenuItemImage *audio_record_start = [CCMenuItemImage itemWithNormalImage:@"audio_record_stop.png" selectedImage:nil block:^(id sender) {
         CCLOG(@"record start");
-        [[YRecorder sharedEngine] record];
+        [self_copy recordStart];
     }];
     CCMenuItemImage *audio_record_stop  = [CCMenuItemImage itemWithNormalImage:@"audio_record_start.png" selectedImage:nil block:^(id sender) {
         CCLOG(@"record stop");
-        [[YRecorder sharedEngine] stop];
+        [self_copy recordStop];
     }];
     audio_record = [CCMenuItemToggle itemWithItems:@[audio_record_start,audio_record_stop] block:^(id sender) {
         CCMenuItemToggle *t = (CCMenuItemToggle*)sender;
@@ -89,6 +94,14 @@
     star.position = ccpCompMult(p_size_panel, ccp(0.5, 0.45));
     [panel addChild:star];
     
+    //
+    // record times
+    //
+    [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"recordTimes":@{}}];
+    NSDictionary *times = [[NSUserDefaults standardUserDefaults] dictionaryForKey:@"recordTimes"];
+    recordTimes = [[times objectForKey:word] unsignedIntegerValue];
+    [self setStars:recordTimes];
+    
     return self;
 }
 
@@ -111,12 +124,19 @@
 {
     [super onEnter];
     [[YRecorder sharedEngine] setDelegate:self];
+    
+    
 }
 
 - (void) onExit
 {
     [super onExit];
     [[YRecorder sharedEngine] setDelegate:nil];
+    
+    NSMutableDictionary *times = [[[[NSUserDefaults standardUserDefaults] dictionaryForKey:@"recordTimes"] mutableCopy] autorelease];
+    [times setObject:[NSNumber numberWithUnsignedInteger:recordTimes] forKey:self.userObject];
+    
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (void) dealloc
@@ -124,17 +144,25 @@
     [super dealloc];
 }
 
+- (void) recordStart
+{
+    [[YRecorder sharedEngine] record];
+    
+    recordTimes = MIN(5, recordTimes + 1);
+}
+
+- (void) recordStop
+{
+    [[YRecorder sharedEngine] stop];
+    
+    [self setStars:recordTimes];
+}
+
 #pragma mark --AVAudioPlayerDelegate
 
 - (void) audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
 {
     audio_control.selectedIndex = 1;
-    
-//    [self setStars:arc4random_uniform(6)];
-    static NSUInteger count = 0;
-    
-    count++;
-    [self setStars:count];
 }
 
 @end
