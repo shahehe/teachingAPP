@@ -95,6 +95,12 @@
     progress.percentage = 0;
 }
 
+- (void) setScale:(float)scale
+{
+    [super setScale:scale];
+//    [progress setScale:scale];
+}
+
 - (void) dealloc
 {
     [progress stopAllActions];

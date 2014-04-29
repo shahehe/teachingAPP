@@ -107,6 +107,8 @@ static char *const file = "will.plist";
     
     [self setAutoActiveNext:NO];
     
+    [[SimpleAudioEngine sharedEngine] preloadEffect:@"duckSE.caf"];
+    
     return self;
 }
 
@@ -139,6 +141,8 @@ static char *const file = "will.plist";
 
 - (void) cleanCache
 {
+    [[SimpleAudioEngine sharedEngine] unloadEffect:@"duckSE.caf"];
+    
     [[CCSpriteFrameCache sharedSpriteFrameCache] removeSpriteFramesFromFile:@"boy.plist"];
     [[CCSpriteFrameCache sharedSpriteFrameCache] removeSpriteFramesFromFile:@"duck.plist"];
     
@@ -246,6 +250,7 @@ static char *const file = "will.plist";
     
     __block id duck_copy = duck;
     CCCallBlock *nodDone = [CCCallBlock actionWithBlock:^{
+        [[SimpleAudioEngine sharedEngine] playEffect:@"duckSE.caf"];
         [duck_copy runAction:[CCRepeatForever actionWithAction:animate2]];
     }];
     

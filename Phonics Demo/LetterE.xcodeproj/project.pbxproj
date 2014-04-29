@@ -12,6 +12,17 @@
 		843335AC17ACF4EA009F1C56 /* Dialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 843335AB17ACF4EA009F1C56 /* Dialog.m */; };
 		843335B417ACF4F7009F1C56 /* LetterIdentification.m in Sources */ = {isa = PBXBuildFile; fileRef = 843335B117ACF4F7009F1C56 /* LetterIdentification.m */; };
 		843335B717ACF50B009F1C56 /* ToolbarLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 843335B617ACF50B009F1C56 /* ToolbarLayer.m */; };
+		84378996190FDC6D008F1CA5 /* menu_letter_list-ipad.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84378992190FDC6D008F1CA5 /* menu_letter_list-ipad.plist */; };
+		84378997190FDC6D008F1CA5 /* menu_letter_list-ipad.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 84378993190FDC6D008F1CA5 /* menu_letter_list-ipad.pvr.ccz */; };
+		84378998190FDC6D008F1CA5 /* menu_letter_list-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84378994190FDC6D008F1CA5 /* menu_letter_list-ipadhd.plist */; };
+		84378999190FDC6D008F1CA5 /* menu_letter_list-ipadhd.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 84378995190FDC6D008F1CA5 /* menu_letter_list-ipadhd.pvr.ccz */; };
+		8437899B191002DD008F1CA5 /* wordList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8437899A191002DD008F1CA5 /* wordList.plist */; };
+		8437899F191005AA008F1CA5 /* aligator.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8437899C191005AA008F1CA5 /* aligator.caf */; };
+		843789A0191005AA008F1CA5 /* ant.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8437899D191005AA008F1CA5 /* ant.caf */; };
+		843789A1191005AA008F1CA5 /* astronaut.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8437899E191005AA008F1CA5 /* astronaut.caf */; };
+		843789A5191006B6008F1CA5 /* big.caf in Resources */ = {isa = PBXBuildFile; fileRef = 843789A2191006B6008F1CA5 /* big.caf */; };
+		843789A6191006B6008F1CA5 /* now.caf in Resources */ = {isa = PBXBuildFile; fileRef = 843789A3191006B6008F1CA5 /* now.caf */; };
+		843789A7191006B6008F1CA5 /* we.caf in Resources */ = {isa = PBXBuildFile; fileRef = 843789A4191006B6008F1CA5 /* we.caf */; };
 		84399F8E18F6D2C000D71EF3 /* ImageCardPro.m in Sources */ = {isa = PBXBuildFile; fileRef = 84399F8D18F6D2C000D71EF3 /* ImageCardPro.m */; };
 		84399F9118F6D82000D71EF3 /* CardProLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84399F9018F6D82000D71EF3 /* CardProLayer.m */; };
 		8445F7E3179FC56E001251C1 /* Cocos2d+CustomOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8445F7E2179FC56E001251C1 /* Cocos2d+CustomOptions.m */; };
@@ -502,6 +513,7 @@
 		84BA6BA71906B23500B6BE7C /* PGLetterMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BA6BA61906B23500B6BE7C /* PGLetterMenu.m */; };
 		84BA6BAE1906C4C200B6BE7C /* GooseGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BA6BAD1906C4C200B6BE7C /* GooseGame.m */; };
 		84BDE506190E9AC800605112 /* PGReviewMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BDE505190E9AC800605112 /* PGReviewMenu.m */; };
+		84BDE509190FD9BD00605112 /* PGMenuLetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BDE508190FD9BD00605112 /* PGMenuLetter.m */; };
 		84E3AB8F18F5B3DE006D95C5 /* ImageMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3AB8E18F5B3DE006D95C5 /* ImageMatch.m */; };
 		84E9D00C18D891CA00936E46 /* TouchGameISee.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E9D00B18D891CA00936E46 /* TouchGameISee.m */; };
 		84EDDEF217BCD22D00262E2B /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EDDEF117BCD22D00262E2B /* MediaPlayer.framework */; };
@@ -532,6 +544,17 @@
 		843335B117ACF4F7009F1C56 /* LetterIdentification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LetterIdentification.m; sourceTree = "<group>"; };
 		843335B517ACF50B009F1C56 /* ToolbarLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToolbarLayer.h; path = extensions/ToolbarLayer.h; sourceTree = "<group>"; };
 		843335B617ACF50B009F1C56 /* ToolbarLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToolbarLayer.m; path = extensions/ToolbarLayer.m; sourceTree = "<group>"; };
+		84378992190FDC6D008F1CA5 /* menu_letter_list-ipad.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "menu_letter_list-ipad.plist"; sourceTree = "<group>"; };
+		84378993190FDC6D008F1CA5 /* menu_letter_list-ipad.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = "menu_letter_list-ipad.pvr.ccz"; sourceTree = "<group>"; };
+		84378994190FDC6D008F1CA5 /* menu_letter_list-ipadhd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "menu_letter_list-ipadhd.plist"; sourceTree = "<group>"; };
+		84378995190FDC6D008F1CA5 /* menu_letter_list-ipadhd.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = "menu_letter_list-ipadhd.pvr.ccz"; sourceTree = "<group>"; };
+		8437899A191002DD008F1CA5 /* wordList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = wordList.plist; sourceTree = "<group>"; };
+		8437899C191005AA008F1CA5 /* aligator.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = aligator.caf; sourceTree = "<group>"; };
+		8437899D191005AA008F1CA5 /* ant.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ant.caf; sourceTree = "<group>"; };
+		8437899E191005AA008F1CA5 /* astronaut.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = astronaut.caf; sourceTree = "<group>"; };
+		843789A2191006B6008F1CA5 /* big.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = big.caf; sourceTree = "<group>"; };
+		843789A3191006B6008F1CA5 /* now.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = now.caf; sourceTree = "<group>"; };
+		843789A4191006B6008F1CA5 /* we.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = we.caf; sourceTree = "<group>"; };
 		84399F8C18F6D2C000D71EF3 /* ImageCardPro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCardPro.h; sourceTree = "<group>"; };
 		84399F8D18F6D2C000D71EF3 /* ImageCardPro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCardPro.m; sourceTree = "<group>"; };
 		84399F8F18F6D82000D71EF3 /* CardProLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardProLayer.h; sourceTree = "<group>"; };
@@ -1260,6 +1283,8 @@
 		84BA6BAD1906C4C200B6BE7C /* GooseGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooseGame.m; sourceTree = "<group>"; };
 		84BDE504190E9AC800605112 /* PGReviewMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGReviewMenu.h; sourceTree = "<group>"; };
 		84BDE505190E9AC800605112 /* PGReviewMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGReviewMenu.m; sourceTree = "<group>"; };
+		84BDE507190FD9BD00605112 /* PGMenuLetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGMenuLetter.h; sourceTree = "<group>"; };
+		84BDE508190FD9BD00605112 /* PGMenuLetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGMenuLetter.m; sourceTree = "<group>"; };
 		84E3AB8D18F5B3DE006D95C5 /* ImageMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageMatch.h; sourceTree = "<group>"; };
 		84E3AB8E18F5B3DE006D95C5 /* ImageMatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageMatch.m; sourceTree = "<group>"; };
 		84E9D00A18D891CA00936E46 /* TouchGameISee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchGameISee.h; sourceTree = "<group>"; };
@@ -1402,6 +1427,7 @@
 		847403C618D749B20093C83E /* audioDict */ = {
 			isa = PBXGroup;
 			children = (
+				8437899A191002DD008F1CA5 /* wordList.plist */,
 				847403C718D749B20093C83E /* AudioDict.h */,
 				847403C818D749B20093C83E /* AudioDict.m */,
 			);
@@ -2208,6 +2234,10 @@
 		84BA6A611906AAE700B6BE7C /* Menus */ = {
 			isa = PBXGroup;
 			children = (
+				84378992190FDC6D008F1CA5 /* menu_letter_list-ipad.plist */,
+				84378993190FDC6D008F1CA5 /* menu_letter_list-ipad.pvr.ccz */,
+				84378994190FDC6D008F1CA5 /* menu_letter_list-ipadhd.plist */,
+				84378995190FDC6D008F1CA5 /* menu_letter_list-ipadhd.pvr.ccz */,
 				84BA6A6B1906ABB500B6BE7C /* menu_farm_bg.pvr.ccz */,
 				84BA6A6C1906ABB500B6BE7C /* menu_letter-ipad.plist */,
 				84BA6A6D1906ABB500B6BE7C /* menu_letter-ipad.pvr.ccz */,
@@ -2227,6 +2257,8 @@
 				84BA6BA61906B23500B6BE7C /* PGLetterMenu.m */,
 				84BDE504190E9AC800605112 /* PGReviewMenu.h */,
 				84BDE505190E9AC800605112 /* PGReviewMenu.m */,
+				84BDE507190FD9BD00605112 /* PGMenuLetter.h */,
+				84BDE508190FD9BD00605112 /* PGMenuLetter.m */,
 			);
 			path = Menus;
 			sourceTree = "<group>";
@@ -2234,6 +2266,12 @@
 		84BA6A801906AF8B00B6BE7C /* words */ = {
 			isa = PBXGroup;
 			children = (
+				843789A2191006B6008F1CA5 /* big.caf */,
+				843789A3191006B6008F1CA5 /* now.caf */,
+				843789A4191006B6008F1CA5 /* we.caf */,
+				8437899C191005AA008F1CA5 /* aligator.caf */,
+				8437899D191005AA008F1CA5 /* ant.caf */,
+				8437899E191005AA008F1CA5 /* astronaut.caf */,
 				84BA6A811906AF8B00B6BE7C /* add.caf */,
 				84BA6A821906AF8B00B6BE7C /* ax.caf */,
 				84BA6A831906AF8B00B6BE7C /* bag.caf */,
@@ -2644,6 +2682,7 @@
 				84BA6B321906AF8B00B6BE7C /* flower.caf in Resources */,
 				84BA6A451906A9D000B6BE7C /* FrankfurterStd-ipadhd.fnt in Resources */,
 				84BA6A5F1906A9D000B6BE7C /* search_word_word_panel-ipad.pvr.ccz in Resources */,
+				843789A6191006B6008F1CA5 /* now.caf in Resources */,
 				84BA6A491906A9D000B6BE7C /* GungSeo-ipad.fnt in Resources */,
 				84BA6B8F1906AF8B00B6BE7C /* under.caf in Resources */,
 				84BA6B591906AF8B00B6BE7C /* lap.caf in Resources */,
@@ -2675,6 +2714,7 @@
 				84BA6B411906AF8B00B6BE7C /* happy.caf in Resources */,
 				84BA6A601906A9D000B6BE7C /* search_word_word_panel-ipadhd.pvr.ccz in Resources */,
 				84BA6B4A1906AF8B00B6BE7C /* infant.caf in Resources */,
+				843789A0191005AA008F1CA5 /* ant.caf in Resources */,
 				84BA6A081906A9D000B6BE7C /* pause_menu_bg-ipadhd.png in Resources */,
 				84BA6B151906AF8B00B6BE7C /* bag.caf in Resources */,
 				84BA6B481906AF8B00B6BE7C /* igloo.caf in Resources */,
@@ -2703,6 +2743,7 @@
 				84BA6A211906A9D000B6BE7C /* cardMatching2-ipadhd.png in Resources */,
 				84BA6B211906AF8B00B6BE7C /* cat.caf in Resources */,
 				84BA6B3B1906AF8B00B6BE7C /* girl.caf in Resources */,
+				843789A1191005AA008F1CA5 /* astronaut.caf in Resources */,
 				84BA6B961906AF8B00B6BE7C /* watch.caf in Resources */,
 				84BA6B8B1906AF8B00B6BE7C /* toy.caf in Resources */,
 				84BA6A4D1906A9D000B6BE7C /* game_goal_panel-ipad.png in Resources */,
@@ -2771,12 +2812,14 @@
 				84BA6A1C1906A9D000B6BE7C /* cardMatching-ipadhd.plist in Resources */,
 				84BA6A281906A9D000B6BE7C /* whiteCube.png in Resources */,
 				84BA6B9A1906AF8B00B6BE7C /* yacht.caf in Resources */,
+				84378997190FDC6D008F1CA5 /* menu_letter_list-ipad.pvr.ccz in Resources */,
 				84BA6B5E1906AF8B00B6BE7C /* man.caf in Resources */,
 				84BA69E11906A9D000B6BE7C /* back_button_N-ipadhd.png in Resources */,
 				84BA6A581906A9D000B6BE7C /* restart_button_P-ipad.png in Resources */,
 				84BA6B1C1906AF8B00B6BE7C /* bus.caf in Resources */,
 				84BA6B9F1906AF8B00B6BE7C /* yoyo.caf in Resources */,
 				84BA6B7F1906AF8B00B6BE7C /* river.caf in Resources */,
+				84378999190FDC6D008F1CA5 /* menu_letter_list-ipadhd.pvr.ccz in Resources */,
 				84BA6B2B1906AF8B00B6BE7C /* elevator.caf in Resources */,
 				84BA69E91906A9D000B6BE7C /* Lithos_pro_red-ipad.fnt in Resources */,
 				84BA6A391906A9D000B6BE7C /* Arial-Black-ipadhd.png in Resources */,
@@ -2787,6 +2830,7 @@
 				84BA69EB1906A9D000B6BE7C /* Lithos_pro_red-ipadhd.fnt in Resources */,
 				84BA6A341906A9D000B6BE7C /* select1.caf in Resources */,
 				84BA6B301906AF8B00B6BE7C /* fish.caf in Resources */,
+				84378998190FDC6D008F1CA5 /* menu_letter_list-ipadhd.plist in Resources */,
 				84BA6B661906AF8B00B6BE7C /* nap.caf in Resources */,
 				84BA6B7C1906AF8B00B6BE7C /* rag.caf in Resources */,
 				84BA69FA1906A9D000B6BE7C /* bubble_texture-ipad.png in Resources */,
@@ -2801,7 +2845,9 @@
 				84BA6A1F1906A9D000B6BE7C /* cardMatching2-ipad.png in Resources */,
 				8498BB2617847D9D00F71234 /* Icon@2x.png in Resources */,
 				84BA6B9D1906AF8B00B6BE7C /* yard.caf in Resources */,
+				8437899F191005AA008F1CA5 /* aligator.caf in Resources */,
 				84BA6B461906AF8B00B6BE7C /* horse.caf in Resources */,
+				84378996190FDC6D008F1CA5 /* menu_letter_list-ipad.plist in Resources */,
 				84BA6A261906A9D000B6BE7C /* CMsige-ipad.png in Resources */,
 				84BA6B9E1906AF8B00B6BE7C /* yarn.caf in Resources */,
 				84BA69EA1906A9D000B6BE7C /* Lithos_pro_red-ipad.png in Resources */,
@@ -2821,10 +2867,13 @@
 				84BA6A381906A9D000B6BE7C /* Arial-Black-ipadhd.fnt in Resources */,
 				84BA69F51906A9D000B6BE7C /* bubble_object-ipad.plist in Resources */,
 				84BA69E31906A9D000B6BE7C /* back_button_P-ipadhd.png in Resources */,
+				843789A5191006B6008F1CA5 /* big.caf in Resources */,
 				84BA69F11906A9D000B6BE7C /* Lithos_pro_yellow-ipad.fnt in Resources */,
 				84BA6B161906AF8B00B6BE7C /* bat.caf in Resources */,
+				8437899B191002DD008F1CA5 /* wordList.plist in Resources */,
 				8498BB2917847D9D00F71234 /* iTunesArtwork in Resources */,
 				84BA6A7A1906ABB500B6BE7C /* menu_stage-ipad.pvr.ccz in Resources */,
+				843789A7191006B6008F1CA5 /* we.caf in Resources */,
 				84BA6A501906A9D000B6BE7C /* learn_word_bg-ipadhd.pvr.ccz in Resources */,
 				84BA6B581906AF8B00B6BE7C /* lamp.caf in Resources */,
 				84BA6A3E1906A9D000B6BE7C /* DenneSketchy30-ipadhd.png in Resources */,
@@ -2894,6 +2943,7 @@
 				84B4F20518D040BF0071E85B /* cpSpatialIndex.c in Sources */,
 				848852CB18DAEC03009D44F3 /* TouchGameJar.m in Sources */,
 				8498BB6517847D9D00F71234 /* CCConfiguration.m in Sources */,
+				84BDE509190FD9BD00605112 /* PGMenuLetter.m in Sources */,
 				8498BB6817847D9D00F71234 /* ccDeprecated.m in Sources */,
 				8498BB6B17847D9D00F71234 /* CCDirector.m in Sources */,
 				84B4F1F818D040BF0071E85B /* cpArray.c in Sources */,

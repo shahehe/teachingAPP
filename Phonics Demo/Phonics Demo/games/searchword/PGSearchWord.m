@@ -594,6 +594,9 @@
         [wordLabelBg addChild:wordLabel z:1];
     }
     
+    NSInteger length = _word.length;
+    wordLabel.scale = 1 - MAX(length-3, 0) * 0.1;
+    
     [audioPlayer stop];
     [audioPlayer load:[self audioFileOfWord:_word]];
     [audioPlayer rewind];

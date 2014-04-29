@@ -10,6 +10,7 @@
 #import "PhonicsDefines.h"
 
 #import "PGLetterMenu.h"
+#import "PGMenuLetter.h"
 
 @interface CCSprite (stageLetter)
 
@@ -182,7 +183,7 @@
     
     CCMenuItemSprite *item = [CCMenuItemSprite itemWithNormalSprite:normal selectedSprite:pressed disabledSprite:locked block:^(id sender){
         SLLog(@"%c",letter);
-        [[CCDirector sharedDirector] pushScene:[PGLetterMenu menuWithLetter:letter]];
+        [[CCDirector sharedDirector] pushScene:[PGMenuLetter menuWithLetter:letter]];
     }];
     
     return item;
