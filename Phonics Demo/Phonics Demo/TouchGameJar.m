@@ -35,10 +35,10 @@ static char *const file = "jar.plist";
     NSAssert(self, @"game:I see failed init");
     
     jarImages = @{@"jellybean":@"jellybean.png",
-                  @"jelly":@"jelly.png",
+                  @"jello":@"jello.png",
                   @"juice":@"juice.png",
                   @"jam":@"jam.png",
-                  @"jewellery":@"jewellery.png"};
+                  @"jewel":@"jewel.png"};
     [jarImages retain];
     [self preloadImages];
     

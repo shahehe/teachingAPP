@@ -225,10 +225,21 @@ static char *const storys[] =
     @autoreleasepool //vocabulary
     {
         CCMenuItem *item = [items objectAtIndex:idx];
+        
+        NSString *imageMatchPath = [NSString stringWithUTF8String:imageMatchGameRootPath];
+        NSString *wordListPath = [[[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:imageMatchPath] stringByAppendingPathComponent:@"imageMatchWordList.plist"];
+        NSArray *wordLists = [NSArray arrayWithContentsOfFile:wordListPath];
+        NSArray *words = [wordLists objectAtIndex:self.letter - 'A'];
+        CCLOG(@"%@",words.description);
+        
         [item setBlock:^(id sender) {
-            CCScene *game = [ImageMatch gameSceneWithWords:@[@"horse",@"hog",@"house",@"hen"]];
+            CCScene *game = [ImageMatch gameSceneWithWords:words];
             [[CCDirector sharedDirector] pushScene:game];
         }];
+        
+        if (words.count == 0)
+            item.isEnabled = NO;
+        
         idx++;
     }
     

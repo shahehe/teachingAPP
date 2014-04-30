@@ -67,7 +67,6 @@
 	<array>
 		<string>hag</string>
 		<string>ham</string>
-		<string>happy</string>
 		<string>hat</string>
 		<string>helicopter</string>
 		<string>hen</string>
@@ -88,12 +87,14 @@
 		<string>jet</string>
 		<string>jump</string>
 		<string>jungle</string>
+        <string>jacket</string>
 	</array>
 	<array>
 		<string>kettle</string>
 		<string>key</string>
 		<string>king</string>
 		<string>kite</string>
+        <string>kayak</string>
 	</array>
 	<array>
 		<string>lad</string>
@@ -103,6 +104,8 @@
 		<string>leaf</string>
 		<string>lemon</string>
 		<string>log</string>
+        <string>lake</string>
+        <string>lawn</string>
 	</array>
 	<array>
 		<string>mad</string>
@@ -127,6 +130,7 @@
 		<string>ostrich</string>
 		<string>owl</string>
 		<string>ox</string>
+        <string>otter</string>
 	</array>
 	<array>
 		<string>pad</string>
@@ -152,6 +156,8 @@
 		<string>rat</string>
 		<string>river</string>
 		<string>rock</string>
+        <string>sea</string>
+        <string>star</string>
 	</array>
 	<array>
 		<string>sad</string>

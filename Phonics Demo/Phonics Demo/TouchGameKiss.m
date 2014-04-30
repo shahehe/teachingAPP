@@ -425,9 +425,9 @@ CGPoint node_p(CCNode *node)
     KissObject *koala = [KissObjectKoala newObject];
     KissObject *whale = [KissObjectWhale newObject];
     
-    displaySprites = @{@"bird":bird,
-                       @"cat":cat,
-                       @"goldfish":goldfish,
+    displaySprites = @{@"kiwi":bird,
+                       @"kitten":cat,
+                       @"koi fish":goldfish,
                        @"kangaroo":kangaroo,
                        @"koala":koala,
                        @"whale":whale};

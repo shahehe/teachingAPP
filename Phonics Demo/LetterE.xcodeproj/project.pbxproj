@@ -410,7 +410,6 @@
 		84BA6B3E1906AF8B00B6BE7C /* gorilla.caf in Resources */ = {isa = PBXBuildFile; fileRef = 84BA6AAC1906AF8B00B6BE7C /* gorilla.caf */; };
 		84BA6B3F1906AF8B00B6BE7C /* hag.caf in Resources */ = {isa = PBXBuildFile; fileRef = 84BA6AAD1906AF8B00B6BE7C /* hag.caf */; };
 		84BA6B401906AF8B00B6BE7C /* ham.caf in Resources */ = {isa = PBXBuildFile; fileRef = 84BA6AAE1906AF8B00B6BE7C /* ham.caf */; };
-		84BA6B411906AF8B00B6BE7C /* happy.caf in Resources */ = {isa = PBXBuildFile; fileRef = 84BA6AAF1906AF8B00B6BE7C /* happy.caf */; };
 		84BA6B421906AF8B00B6BE7C /* hat.caf in Resources */ = {isa = PBXBuildFile; fileRef = 84BA6AB01906AF8B00B6BE7C /* hat.caf */; };
 		84BA6B431906AF8B00B6BE7C /* helicopter.caf in Resources */ = {isa = PBXBuildFile; fileRef = 84BA6AB11906AF8B00B6BE7C /* helicopter.caf */; };
 		84BA6B441906AF8B00B6BE7C /* hen.caf in Resources */ = {isa = PBXBuildFile; fileRef = 84BA6AB21906AF8B00B6BE7C /* hen.caf */; };
@@ -1177,7 +1176,6 @@
 		84BA6AAC1906AF8B00B6BE7C /* gorilla.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gorilla.caf; sourceTree = "<group>"; };
 		84BA6AAD1906AF8B00B6BE7C /* hag.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hag.caf; sourceTree = "<group>"; };
 		84BA6AAE1906AF8B00B6BE7C /* ham.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ham.caf; sourceTree = "<group>"; };
-		84BA6AAF1906AF8B00B6BE7C /* happy.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = happy.caf; sourceTree = "<group>"; };
 		84BA6AB01906AF8B00B6BE7C /* hat.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hat.caf; sourceTree = "<group>"; };
 		84BA6AB11906AF8B00B6BE7C /* helicopter.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = helicopter.caf; sourceTree = "<group>"; };
 		84BA6AB21906AF8B00B6BE7C /* hen.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hen.caf; sourceTree = "<group>"; };
@@ -2318,7 +2316,6 @@
 				84BA6AAC1906AF8B00B6BE7C /* gorilla.caf */,
 				84BA6AAD1906AF8B00B6BE7C /* hag.caf */,
 				84BA6AAE1906AF8B00B6BE7C /* ham.caf */,
-				84BA6AAF1906AF8B00B6BE7C /* happy.caf */,
 				84BA6AB01906AF8B00B6BE7C /* hat.caf */,
 				84BA6AB11906AF8B00B6BE7C /* helicopter.caf */,
 				84BA6AB21906AF8B00B6BE7C /* hen.caf */,
@@ -2711,7 +2708,6 @@
 				84BA69FE1906A9D000B6BE7C /* failed_bg-ipadhd.png in Resources */,
 				84BA6B1B1906AF8B00B6BE7C /* box.caf in Resources */,
 				847403BE18D71A980093C83E /* Assets in Resources */,
-				84BA6B411906AF8B00B6BE7C /* happy.caf in Resources */,
 				84BA6A601906A9D000B6BE7C /* search_word_word_panel-ipadhd.pvr.ccz in Resources */,
 				84BA6B4A1906AF8B00B6BE7C /* infant.caf in Resources */,
 				843789A0191005AA008F1CA5 /* ant.caf in Resources */,

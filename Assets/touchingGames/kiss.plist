@@ -19,36 +19,36 @@
 	</dict>
 	<key>objects</key>
 	<dict>
-		<key>bird</key>
+		<key>kiwi</key>
 		<dict>
 			<key>file</key>
 			<string>lips.png</string>
 			<key>audio</key>
 			<string>bird.mp3</string>
 			<key>content</key>
-			<string>There is a kiss for the bird.</string>
+			<string>There is a kiss for the kiwi.</string>
 			<key>position</key>
 			<string>{0.205,0.622}</string>
 		</dict>
-		<key>cat</key>
+		<key>kitten</key>
 		<dict>
 			<key>file</key>
 			<string>lips.png</string>
 			<key>audio</key>
 			<string>cat.mp3</string>
 			<key>content</key>
-			<string>There is a kiss for the cat.</string>
+			<string>There is a kiss for the kitten.</string>
 			<key>position</key>
 			<string>{0.205,0.622}</string>
 		</dict>
-		<key>goldfish</key>
+		<key>koi fish</key>
 		<dict>
 			<key>file</key>
 			<string>lips.png</string>
 			<key>audio</key>
 			<string>goldfish.mp3</string>
 			<key>content</key>
-			<string>There is a kiss for the goldfish.</string>
+			<string>There is a kiss for the koi fish.</string>
 			<key>position</key>
 			<string>{0.205,0.622}</string>
 		</dict>

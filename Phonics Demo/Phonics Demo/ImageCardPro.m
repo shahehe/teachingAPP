@@ -22,7 +22,7 @@
     self.word = [[word lowercaseString] copy];
     
     NSString *frameName = [self.word stringByAppendingPathExtension:@"png"];
-    CCSprite *image = [CCSprite spriteWithSpriteFrameName:frameName];
+    CCSprite *image = [CCSprite spriteWithFile:frameName];
     
     CGPoint p_size = ccpFromSize(self.boundingBox.size);
     image.position = ccpCompMult(p_size, ccp(0.5, 0.65));

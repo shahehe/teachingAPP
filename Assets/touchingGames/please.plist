@@ -19,25 +19,25 @@
 	</dict>
 	<key>objects</key>
 	<dict>
-		<key>apple</key>
+		<key>plum</key>
 		<dict>
 			<key>file</key>
 			<string>apple.png</string>
 			<key>audio</key>
 			<string>apple.mp3</string>
 			<key>content</key>
-			<string>May I have a apple,please?</string>
+			<string>May I have a plum,please?</string>
 			<key>position</key>
 			<string>{0.645,1.5}</string>
 		</dict>
-		<key>bean</key>
+		<key>peas</key>
 		<dict>
 			<key>file</key>
 			<string>bean.png</string>
 			<key>audio</key>
 			<string>bean.mp3</string>
 			<key>content</key>
-			<string>May I have a bean,please?</string>
+			<string>May I have some peas,please?</string>
 			<key>position</key>
 			<string>{0.645,1.5}</string>
 		</dict>
@@ -59,7 +59,7 @@
 			<key>audio</key>
 			<string>peanut.mp3</string>
 			<key>content</key>
-			<string>May I have a peanut,please?</string>
+			<string>May I have some peanuts,please?</string>
 			<key>position</key>
 			<string>{0.645,1.5}</string>
 		</dict>

@@ -82,7 +82,7 @@
 			<key>sourceSize</key>
 			<string>{448,496}</string>
 		</dict>
-		<key>one_finger</key>
+		<key>finger</key>
 		<dict>
 			<key>frame</key>
 			<string>{{1179,667},{326,380}}</string>
@@ -95,7 +95,7 @@
 			<key>sourceSize</key>
 			<string>{448,496}</string>
 		</dict>
-		<key>ten_finger</key>
+		<key>fingers</key>
 		<dict>
 			<key>frame</key>
 			<string>{{839,853},{326,380}}</string>
@@ -108,7 +108,7 @@
 			<key>sourceSize</key>
 			<string>{448,496}</string>
 		</dict>
-		<key>two_feet</key>
+		<key>feet</key>
 		<dict>
 			<key>frame</key>
 			<string>{{511,853},{326,380}}</string>

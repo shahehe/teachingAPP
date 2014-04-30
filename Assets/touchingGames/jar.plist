@@ -19,7 +19,7 @@
 	</dict>
 	<key>objects</key>
 	<dict>
-		<key>jellybean</key>
+		<key>1-jellybean</key>
 		<dict>
 			<key>file</key>
 			<string>jellybean_empty.png</string>
@@ -30,18 +30,18 @@
 			<key>position</key>
 			<string>{0.15,0.6}</string>
 		</dict>
-		<key>jelly</key>
+		<key>2-jello</key>
 		<dict>
 			<key>file</key>
-			<string>jelly_empty.png</string>
+			<string>jello_empty.png</string>
 			<key>audio</key>
-			<string>jelly.mp3</string>
+			<string>jello.mp3</string>
 			<key>content</key>
-			<string>A jelly is in my jar.</string>
+			<string>A jello is in my jar.</string>
 			<key>position</key>
 			<string>{0.5,0.56}</string>
 		</dict>
-		<key>juice</key>
+		<key>3-juice</key>
 		<dict>
 			<key>file</key>
 			<string>juice_empty.png</string>
@@ -52,7 +52,7 @@
 			<key>position</key>
 			<string>{0.85,0.6}</string>
 		</dict>
-		<key>jam</key>
+		<key>4-jam</key>
 		<dict>
 			<key>file</key>
 			<string>jam_empty.png</string>
@@ -63,14 +63,14 @@
 			<key>position</key>
 			<string>{0.325,0.2}</string>
 		</dict>
-		<key>jewellery</key>
+		<key>5-jewel</key>
 		<dict>
 			<key>file</key>
-			<string>jewellery_empty.png</string>
+			<string>jewel_empty.png</string>
 			<key>audio</key>
-			<string>jewellery.mp3</string>
+			<string>jewel.mp3</string>
 			<key>content</key>
-			<string>A jewellery is in my jar.</string>
+			<string>A jewel is in my jar.</string>
 			<key>position</key>
 			<string>{0.675,0.2}</string>
 		</dict>

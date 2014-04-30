@@ -38,12 +38,12 @@
 {
     self = [super initWithSpriteFrameName:@"card.png"];
     
-    displayImage = [CCSprite spriteWithSpriteFrameName:[word stringByAppendingString:@"-outline.png"]];
+    displayImage = [CCSprite spriteWithFile:[word stringByAppendingString:@"-outline.png"]];
     [self addChild:displayImage];
     
     displayImage.position = ccpMult(ccpFromSize(self.boundingBox.size), 0.5);
     
-    _image = [[CCSprite alloc] initWithSpriteFrameName:[word stringByAppendingString:@".png"]];
+    _image = [[CCSprite alloc] initWithFile:[word stringByAppendingString:@".png"]];
 //    _image.userObject = self;
     
     NSString *panelName = [@"word_panel" stringByAppendingFormat:@"%d.png",arc4random_uniform(10)];
@@ -62,6 +62,9 @@
 
     self.isImageShow = NO;
     isImageSelected = NO;
+    
+    //preload sound effect
+    [[SimpleAudioEngine sharedEngine] preloadEffect:[word stringByAppendingString:@"SE.caf"]];
     
     return self;
 }
@@ -102,6 +105,11 @@
 
 - (void) dealloc
 {
+    CCLOG(@"card dealloc");
+    [[SimpleAudioEngine sharedEngine] unloadEffect:[self.word stringByAppendingString:@"SE.caf"]];
+    
+    [[CCTextureCache sharedTextureCache] removeTextureForKey:[self.word stringByAppendingString:@".png"]];
+    [[CCTextureCache sharedTextureCache] removeTextureForKey:[self.word stringByAppendingString:@"-outline.png"]];
 //    CCLOG(@"card dealloc");
     Block_release(cardClick);
     [_word release];
@@ -191,7 +199,7 @@
             CCCallBlock *moveDone = [CCCallBlock actionWithBlock:^{
                 [self.image removeFromParentAndCleanup:YES];
                 displayImage.displayFrame = self.image.displayFrame;
-                
+                [[SimpleAudioEngine sharedEngine] playEffect:[self.word stringByAppendingString:@"SE.caf"]];
 //                cardClick(self);
             }];
             CCSequence *seq = [CCSequence actions:move,moveDone, nil];

@@ -68,9 +68,6 @@
     [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"letters.plist"];
     [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"image_match_objects.plist"];
     
-    NSString *imagesName = [letter stringByAppendingString:@"_objects.plist"];
-    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:imagesName];
-    
     // plates
     CGPoint platePos[4] = {
         ccp(0.25*(0+0.5), 0.6),
@@ -97,6 +94,8 @@
     };
     NSUInteger count = MIN(self.words.count,4);
     cards = [[NSMutableArray alloc] initWithCapacity:count];
+    
+    __block ImageMatch *self_copy = self;
     for (int i=0;i<count;i++)
     {
         NSString *word = [self.words objectAtIndex:i];
@@ -108,7 +107,7 @@
         
         [card setCardClickBlock:^(id sender) {
             CardProLayer *layer = [CardProLayer layerWithWord:((ImageCard*)sender).word];
-            layer.sourceScene = (CCScene*)self;
+            layer.sourceScene = (CCScene*)self_copy;
             CCScene *scene = [CCScene node];
             [scene addChild:layer];
             [[CCDirector sharedDirector] pushScene:scene];
@@ -133,8 +132,6 @@
         card2.imagePosition = temp;
     }
 
-    
-    __block ImageMatch *self_copy = self;
     // menu
     CCSprite *menu_button_N = [CCSprite spriteWithSpriteFrameName:@"menu_button_N.png"];
     CCSprite *menu_button_P = [CCSprite spriteWithSpriteFrameName:@"menu_button_P.png"];

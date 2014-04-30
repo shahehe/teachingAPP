@@ -373,7 +373,7 @@ static const cpLayers PhysicsBlockLayers = CP_ALL_LAYERS;
     [audioPlayer play];
     
     __block PGLearnWord *self_copy = self;
-    CCProgressFromTo *p = [CCProgressFromTo actionWithDuration:1 from:0 to:100];
+    CCProgressFromTo *p = [CCProgressFromTo actionWithDuration:audioPlayer.audioSourcePlayer.duration from:0 to:100];
     CCCallBlock *p_done = [CCCallBlock actionWithBlock:^{
         [self_copy playNextWord];
     }];

@@ -446,7 +446,7 @@ void unblinkSprite(CCSprite *t)
     contentLabel.delegate = self;
     
     contentLabel.color = ccBLACK;
-    contentLabel.highlightedColor = ccGREEN;
+    contentLabel.highlightedColor = ccRED;
     
     [self addChild:contentLabel z:2];
     
