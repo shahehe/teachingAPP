@@ -48,7 +48,7 @@
 		<string>jungle</string>
 	</array>
 	<array>
-		<string>kattle</string>
+		<string>kettle</string>
 		<string>kayak</string>
 		<string>key</string>
 		<string>king</string>
@@ -75,7 +75,7 @@
 	</array>
 	<array>
 		<string>quarter</string>
-		<string>queen-</string>
+		<string>queen</string>
 		<string>question</string>
 		<string>quilt</string>
 	</array>
@@ -101,7 +101,7 @@
 		<string>zigzag</string>
 		<string>zipper</string>
 		<string>zoo</string>
-		<string>zucchinl</string>
+		<string>zucchini</string>
 	</array>
 </array>
 </plist>
