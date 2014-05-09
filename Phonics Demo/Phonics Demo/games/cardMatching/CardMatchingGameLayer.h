@@ -61,6 +61,8 @@
 @property(nonatomic,readonly) NSInteger time;
 @property(nonatomic,readonly) NSUInteger currentLevel;
 
+@property(nonatomic,assign) NSUInteger gameLevel;
+
 + (instancetype) layerWithWords:(NSArray*)words;
 
 - (id) initWithWords:(NSArray*)words;

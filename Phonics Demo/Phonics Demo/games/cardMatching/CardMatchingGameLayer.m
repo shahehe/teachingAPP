@@ -44,7 +44,7 @@
         _totalScore = 0;
         _score = 0;
         _currentLevel = 1;
-        _time = 0; //120 seconds
+        _time = 60; //120 seconds
         
         cardFlipDuration = 0.5;
         
@@ -243,7 +243,7 @@
 //  _score += _time * 10;
     [self updateScoreLabel];
     
-    _time = 60;
+//    _time = 60;
     
     NSString *timeString = [NSString stringWithFormat:@"TIME %@",[NSString timeFromSecond:_time]];
     [timeLabel setString:timeString];
@@ -265,6 +265,13 @@
     
     for (Card *card in cards)
         card.visible = NO;
+}
+
+- (void) setGameLevel:(NSUInteger)gameLevel
+{
+    _gameLevel = gameLevel;
+    
+    _time = 60 - (_gameLevel - 1) * 15;
 }
 
 - (void) hideWithDuration:(ccTime)_duration
