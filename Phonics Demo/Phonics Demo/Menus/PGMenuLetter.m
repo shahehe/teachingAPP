@@ -17,11 +17,14 @@
 
 #import "GooseGame.h"
 #import "PGLearnWord.h"
+#import "HamsterGameLayer.h"
 
 #import "PGSearchWord.h"
 #import "CardMatching.h"
 #import "BubbleGameLayer.h"
 #import "LoadingLayer.h"
+
+#import "PGSlotPicker.h"
 
 #import "TouchGameISee.h"
 #import "TouchGameJar.h"
@@ -147,6 +150,9 @@ static char *const storys[] =
     [self addChild:menu];
     
     activeMenu = self.letterMenu;
+    
+    //slotPicker
+    [self addSlotPickerWithData:nil at:ccp(0.5,0.1)];
     
     return self;
 }
@@ -353,7 +359,24 @@ static char *const storys[] =
         [[CCDirector sharedDirector] pushScene:[GooseGame gameScene]];
     }];
     
-    _reviewMenu = [CCMenu menuWithItems:learn_word,goose, nil];
+    NSString *imageMatchPath = [NSString stringWithUTF8String:imageMatchGameRootPath];
+    NSString *wordListPath = [[[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:imageMatchPath] stringByAppendingPathComponent:@"imageMatchWordList.plist"];
+    NSArray *wordLists = [NSArray arrayWithContentsOfFile:wordListPath];
+    NSArray *words = [wordLists objectAtIndex:self.letter - 'A'];
+    
+    CCLabelTTF *hamster_label = [CCLabelTTF labelWithString:@"Hamster" fontName:@"Avenir-BlackOblique" fontSize:20*CC_CONTENT_SCALE_FACTOR()];
+    hamster_label.color = ccWHITE;
+    CCMenuItem *hamster = [self buttonWithNode:hamster_label];
+    [hamster setBlock:^(id sender) {
+        CCScene *scene = [CCScene node];
+        [scene addChild:[HamsterGameLayer hamsterGameWithWords:words]];
+        [[CCDirector sharedDirector] pushScene:scene];
+    }];
+    
+    if (words.count == 0)
+        hamster.isEnabled = NO;
+    
+    _reviewMenu = [CCMenu menuWithItems:learn_word,goose,hamster, nil];
     _reviewMenu.position = ccpCompMult(p_size, ccp(0.5,0.45));
     [_reviewMenu alignItemsVerticallyWithPadding:18];
     

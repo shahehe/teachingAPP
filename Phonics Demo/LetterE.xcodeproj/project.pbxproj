@@ -513,6 +513,21 @@
 		84BA6BAE1906C4C200B6BE7C /* GooseGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BA6BAD1906C4C200B6BE7C /* GooseGame.m */; };
 		84BDE506190E9AC800605112 /* PGReviewMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BDE505190E9AC800605112 /* PGReviewMenu.m */; };
 		84BDE509190FD9BD00605112 /* PGMenuLetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BDE508190FD9BD00605112 /* PGMenuLetter.m */; };
+		84D8F2EF1938DDC500972AB5 /* HamsterGameLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D8F2ED1938DDC500972AB5 /* HamsterGameLayer.m */; };
+		84D8F2F61938DDE400972AB5 /* hamster_texture-ipadhd.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 84D8F2F01938DDE400972AB5 /* hamster_texture-ipadhd.pvr.ccz */; };
+		84D8F2F71938DDE400972AB5 /* hamster_texture-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84D8F2F11938DDE400972AB5 /* hamster_texture-ipadhd.plist */; };
+		84D8F2F81938DDE400972AB5 /* hamster_texture-ipad.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 84D8F2F21938DDE400972AB5 /* hamster_texture-ipad.pvr.ccz */; };
+		84D8F2F91938DDE400972AB5 /* hamster_texture-ipad.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84D8F2F31938DDE400972AB5 /* hamster_texture-ipad.plist */; };
+		84D8F2FA1938DDE400972AB5 /* hamster_bg-ipadhd.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 84D8F2F41938DDE400972AB5 /* hamster_bg-ipadhd.pvr.ccz */; };
+		84D8F2FB1938DDE400972AB5 /* hamster_bg-ipad.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 84D8F2F51938DDE400972AB5 /* hamster_bg-ipad.pvr.ccz */; };
+		84D8F3081938E39600972AB5 /* handle_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D8F2FD1938E39600972AB5 /* handle_on.png */; };
+		84D8F3091938E39600972AB5 /* handle_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D8F2FE1938E39600972AB5 /* handle_off.png */; };
+		84D8F30A1938E39600972AB5 /* slot_handle_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D8F2FF1938E39600972AB5 /* slot_handle_bg.png */; };
+		84D8F30B1938E39600972AB5 /* slot_e.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D8F3001938E39600972AB5 /* slot_e.png */; };
+		84D8F30C1938E39600972AB5 /* slot_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D8F3011938E39600972AB5 /* slot_bg.png */; };
+		84D8F30D1938E39600972AB5 /* PGSlotPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D8F3021938E39600972AB5 /* PGSlotPicker.m */; };
+		84D8F30E1938E39600972AB5 /* ScrollLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D8F3041938E39600972AB5 /* ScrollLayer.m */; };
+		84D8F30F1938E39600972AB5 /* CCPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D8F3061938E39600972AB5 /* CCPickerView.m */; };
 		84E3AB8F18F5B3DE006D95C5 /* ImageMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3AB8E18F5B3DE006D95C5 /* ImageMatch.m */; };
 		84E9D00C18D891CA00936E46 /* TouchGameISee.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E9D00B18D891CA00936E46 /* TouchGameISee.m */; };
 		84EDDEF217BCD22D00262E2B /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EDDEF117BCD22D00262E2B /* MediaPlayer.framework */; };
@@ -1283,6 +1298,25 @@
 		84BDE505190E9AC800605112 /* PGReviewMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGReviewMenu.m; sourceTree = "<group>"; };
 		84BDE507190FD9BD00605112 /* PGMenuLetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGMenuLetter.h; sourceTree = "<group>"; };
 		84BDE508190FD9BD00605112 /* PGMenuLetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGMenuLetter.m; sourceTree = "<group>"; };
+		84D8F2ED1938DDC500972AB5 /* HamsterGameLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HamsterGameLayer.m; sourceTree = "<group>"; };
+		84D8F2EE1938DDC500972AB5 /* HamsterGameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HamsterGameLayer.h; sourceTree = "<group>"; };
+		84D8F2F01938DDE400972AB5 /* hamster_texture-ipadhd.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = "hamster_texture-ipadhd.pvr.ccz"; sourceTree = "<group>"; };
+		84D8F2F11938DDE400972AB5 /* hamster_texture-ipadhd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "hamster_texture-ipadhd.plist"; sourceTree = "<group>"; };
+		84D8F2F21938DDE400972AB5 /* hamster_texture-ipad.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = "hamster_texture-ipad.pvr.ccz"; sourceTree = "<group>"; };
+		84D8F2F31938DDE400972AB5 /* hamster_texture-ipad.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "hamster_texture-ipad.plist"; sourceTree = "<group>"; };
+		84D8F2F41938DDE400972AB5 /* hamster_bg-ipadhd.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = "hamster_bg-ipadhd.pvr.ccz"; sourceTree = "<group>"; };
+		84D8F2F51938DDE400972AB5 /* hamster_bg-ipad.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = "hamster_bg-ipad.pvr.ccz"; sourceTree = "<group>"; };
+		84D8F2FD1938E39600972AB5 /* handle_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = handle_on.png; sourceTree = "<group>"; };
+		84D8F2FE1938E39600972AB5 /* handle_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = handle_off.png; sourceTree = "<group>"; };
+		84D8F2FF1938E39600972AB5 /* slot_handle_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_handle_bg.png; sourceTree = "<group>"; };
+		84D8F3001938E39600972AB5 /* slot_e.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_e.png; sourceTree = "<group>"; };
+		84D8F3011938E39600972AB5 /* slot_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_bg.png; sourceTree = "<group>"; };
+		84D8F3021938E39600972AB5 /* PGSlotPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGSlotPicker.m; sourceTree = "<group>"; };
+		84D8F3031938E39600972AB5 /* PGSlotPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSlotPicker.h; sourceTree = "<group>"; };
+		84D8F3041938E39600972AB5 /* ScrollLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollLayer.m; sourceTree = "<group>"; };
+		84D8F3051938E39600972AB5 /* ScrollLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollLayer.h; sourceTree = "<group>"; };
+		84D8F3061938E39600972AB5 /* CCPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPickerView.m; sourceTree = "<group>"; };
+		84D8F3071938E39600972AB5 /* CCPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPickerView.h; sourceTree = "<group>"; };
 		84E3AB8D18F5B3DE006D95C5 /* ImageMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageMatch.h; sourceTree = "<group>"; };
 		84E3AB8E18F5B3DE006D95C5 /* ImageMatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageMatch.m; sourceTree = "<group>"; };
 		84E9D00A18D891CA00936E46 /* TouchGameISee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchGameISee.h; sourceTree = "<group>"; };
@@ -1479,6 +1513,7 @@
 				8498BCA817847D9F00F71234 /* IntroLayer.h */,
 				8498BCA917847D9F00F71234 /* IntroLayer.m */,
 				8450DCC7179A35090003B181 /* PhonicsDefines.h */,
+				84D8F3101938E39D00972AB5 /* slotPicker */,
 				84BA6BA81906C3FB00B6BE7C /* goose */,
 				84BA6A801906AF8B00B6BE7C /* words */,
 				84BA6A611906AAE700B6BE7C /* Menus */,
@@ -1987,6 +2022,7 @@
 		84BA693E1906A9D000B6BE7C /* games */ = {
 			isa = PBXGroup;
 			children = (
+				84D8F2FC1938DDEA00972AB5 /* hamster */,
 				84BA693F1906A9D000B6BE7C /* back_button_N-ipad.png */,
 				84BA69401906A9D000B6BE7C /* back_button_N-ipadhd.png */,
 				84BA69411906A9D000B6BE7C /* back_button_P-ipad.png */,
@@ -2428,6 +2464,39 @@
 			path = goose;
 			sourceTree = "<group>";
 		};
+		84D8F2FC1938DDEA00972AB5 /* hamster */ = {
+			isa = PBXGroup;
+			children = (
+				84D8F2F01938DDE400972AB5 /* hamster_texture-ipadhd.pvr.ccz */,
+				84D8F2F11938DDE400972AB5 /* hamster_texture-ipadhd.plist */,
+				84D8F2F21938DDE400972AB5 /* hamster_texture-ipad.pvr.ccz */,
+				84D8F2F31938DDE400972AB5 /* hamster_texture-ipad.plist */,
+				84D8F2F41938DDE400972AB5 /* hamster_bg-ipadhd.pvr.ccz */,
+				84D8F2F51938DDE400972AB5 /* hamster_bg-ipad.pvr.ccz */,
+				84D8F2ED1938DDC500972AB5 /* HamsterGameLayer.m */,
+				84D8F2EE1938DDC500972AB5 /* HamsterGameLayer.h */,
+			);
+			name = hamster;
+			sourceTree = "<group>";
+		};
+		84D8F3101938E39D00972AB5 /* slotPicker */ = {
+			isa = PBXGroup;
+			children = (
+				84D8F2FD1938E39600972AB5 /* handle_on.png */,
+				84D8F2FE1938E39600972AB5 /* handle_off.png */,
+				84D8F2FF1938E39600972AB5 /* slot_handle_bg.png */,
+				84D8F3001938E39600972AB5 /* slot_e.png */,
+				84D8F3011938E39600972AB5 /* slot_bg.png */,
+				84D8F3021938E39600972AB5 /* PGSlotPicker.m */,
+				84D8F3031938E39600972AB5 /* PGSlotPicker.h */,
+				84D8F3041938E39600972AB5 /* ScrollLayer.m */,
+				84D8F3051938E39600972AB5 /* ScrollLayer.h */,
+				84D8F3061938E39600972AB5 /* CCPickerView.m */,
+				84D8F3071938E39600972AB5 /* CCPickerView.h */,
+			);
+			name = slotPicker;
+			sourceTree = "<group>";
+		};
 		84E3AB8C18F5B37A006D95C5 /* imageMatch */ = {
 			isa = PBXGroup;
 			children = (
@@ -2607,6 +2676,7 @@
 				84BA6B771906AF8B00B6BE7C /* quarter.caf in Resources */,
 				84BA6B901906AF8B00B6BE7C /* unicycle.caf in Resources */,
 				84BA6B831906AF8B00B6BE7C /* school.caf in Resources */,
+				84D8F2F91938DDE400972AB5 /* hamster_texture-ipad.plist in Resources */,
 				84BA6A0B1906A9D000B6BE7C /* tip_letter-ipadhd.plist in Resources */,
 				84BA6B8D1906AF8B00B6BE7C /* tree.caf in Resources */,
 				84BA6A3F1906A9D000B6BE7C /* DenneSketchy60-ipad.fnt in Resources */,
@@ -2633,6 +2703,7 @@
 				84BA6B691906AF8B00B6BE7C /* nurse.caf in Resources */,
 				84BA6B5B1906AF8B00B6BE7C /* lemon.caf in Resources */,
 				84BA6B431906AF8B00B6BE7C /* helicopter.caf in Resources */,
+				84D8F2F81938DDE400972AB5 /* hamster_texture-ipad.pvr.ccz in Resources */,
 				84BA6A561906A9D000B6BE7C /* restart_button_N-ipad.png in Resources */,
 				84BA6B6A1906AF8B00B6BE7C /* orange.caf in Resources */,
 				84BA69FF1906A9D000B6BE7C /* game_bg-ipad.png in Resources */,
@@ -2660,6 +2731,7 @@
 				84BA6A111906A9D000B6BE7C /* game_bubble_particle.plist in Resources */,
 				84BA6BA11906AF8B00B6BE7C /* zigzag.caf in Resources */,
 				84BA6A761906ABB500B6BE7C /* menu_letter-ipad.pvr.ccz in Resources */,
+				84D8F30A1938E39600972AB5 /* slot_handle_bg.png in Resources */,
 				84BA6A311906A9D000B6BE7C /* applause.caf in Resources */,
 				84BA6B931906AF8B00B6BE7C /* vest.caf in Resources */,
 				84BA6B741906AF8B00B6BE7C /* pen.caf in Resources */,
@@ -2687,6 +2759,7 @@
 				84BA6B5F1906AF8B00B6BE7C /* map.caf in Resources */,
 				84B4F1EB18D040BF0071E85B /* CMakeLists.txt in Resources */,
 				84BA69F71906A9D000B6BE7C /* bubble_object-ipadhd.plist in Resources */,
+				84D8F3091938E39600972AB5 /* handle_off.png in Resources */,
 				84BA6B5D1906AF8B00B6BE7C /* mad.caf in Resources */,
 				84BA6B201906AF8B00B6BE7C /* car.caf in Resources */,
 				84BA69FD1906A9D000B6BE7C /* failed_bg-ipad.png in Resources */,
@@ -2700,6 +2773,7 @@
 				84BA6B241906AF8B00B6BE7C /* deer.caf in Resources */,
 				84BA6B281906AF8B00B6BE7C /* duck.caf in Resources */,
 				84BA6A4B1906A9D000B6BE7C /* GungSeo-ipadhd.fnt in Resources */,
+				84D8F30B1938E39600972AB5 /* slot_e.png in Resources */,
 				84BA6B3E1906AF8B00B6BE7C /* gorilla.caf in Resources */,
 				84BA69F01906A9D000B6BE7C /* Lithos_pro_white-ipadhd.png in Resources */,
 				84BA69ED1906A9D000B6BE7C /* Lithos_pro_white-ipad.fnt in Resources */,
@@ -2719,6 +2793,7 @@
 				84BA6A051906A9D000B6BE7C /* pass_bg-ipad.png in Resources */,
 				84BA6B601906AF8B00B6BE7C /* mat.caf in Resources */,
 				84BA6B291906AF8B00B6BE7C /* egg.caf in Resources */,
+				84D8F2FB1938DDE400972AB5 /* hamster_bg-ipad.pvr.ccz in Resources */,
 				84BA6B851906AF8B00B6BE7C /* slide.caf in Resources */,
 				84BA6B3F1906AF8B00B6BE7C /* hag.caf in Resources */,
 				84BA6A251906A9D000B6BE7C /* cardsSheet-ipadhd.png in Resources */,
@@ -2765,6 +2840,7 @@
 				84BA6B531906AF8B00B6BE7C /* key.caf in Resources */,
 				84BA69E71906A9D000B6BE7C /* Lithos_pro_green-ipadhd.fnt in Resources */,
 				84BA6B681906AF8B00B6BE7C /* nose.caf in Resources */,
+				84D8F2F61938DDE400972AB5 /* hamster_texture-ipadhd.pvr.ccz in Resources */,
 				84BA69E41906A9D000B6BE7C /* blockTexture.png in Resources */,
 				84BA6B941906AF8B00B6BE7C /* violin.caf in Resources */,
 				8498BB1C17847D9D00F71234 /* Icon-72.png in Resources */,
@@ -2779,6 +2855,7 @@
 				84BA69F81906A9D000B6BE7C /* bubble_object-ipadhd.png in Resources */,
 				84BA6B701906AF8B00B6BE7C /* pan.caf in Resources */,
 				84BA6B4B1906AF8B00B6BE7C /* inn.caf in Resources */,
+				84D8F30C1938E39600972AB5 /* slot_bg.png in Resources */,
 				84BA6B8E1906AF8B00B6BE7C /* umpire.caf in Resources */,
 				84BA6A751906ABB500B6BE7C /* menu_letter-ipad.plist in Resources */,
 				84BA6B991906AF8B00B6BE7C /* wolf.caf in Resources */,
@@ -2798,6 +2875,7 @@
 				84BA6B9C1906AF8B00B6BE7C /* yan.caf in Resources */,
 				84BA6A331906A9D000B6BE7C /* buuu.caf in Resources */,
 				84AFD19818D9C1FD005F55F5 /* data in Resources */,
+				84D8F2F71938DDE400972AB5 /* hamster_texture-ipadhd.plist in Resources */,
 				84BA6B5C1906AF8B00B6BE7C /* log.caf in Resources */,
 				84BA6B721906AF8B00B6BE7C /* paper.caf in Resources */,
 				84BA6B911906AF8B00B6BE7C /* up.caf in Resources */,
@@ -2833,6 +2911,7 @@
 				84BA69EE1906A9D000B6BE7C /* Lithos_pro_white-ipad.png in Resources */,
 				84BA6A021906A9D000B6BE7C /* game_bg_left-ipadhd.png in Resources */,
 				84BA6B381906AF8B00B6BE7C /* garbage.caf in Resources */,
+				84D8F3081938E39600972AB5 /* handle_on.png in Resources */,
 				84BA6B271906AF8B00B6BE7C /* donkey.caf in Resources */,
 				84BA6A741906ABB500B6BE7C /* menu_farm_bg.pvr.ccz in Resources */,
 				84BA6B341906AF8B00B6BE7C /* fox.caf in Resources */,
@@ -2874,6 +2953,7 @@
 				84BA6B581906AF8B00B6BE7C /* lamp.caf in Resources */,
 				84BA6A3E1906A9D000B6BE7C /* DenneSketchy30-ipadhd.png in Resources */,
 				84BA6B971906AF8B00B6BE7C /* water.caf in Resources */,
+				84D8F2FA1938DDE400972AB5 /* hamster_bg-ipadhd.pvr.ccz in Resources */,
 				84BA6B3D1906AF8B00B6BE7C /* goat.caf in Resources */,
 				84BA6A001906A9D000B6BE7C /* game_bg-ipadhd.png in Resources */,
 				8498BC8217847D9F00F71234 /* ChangeLog in Resources */,
@@ -2999,6 +3079,7 @@
 				8498BBC117847D9E00F71234 /* CCScheduler.m in Sources */,
 				8498BBD317847D9E00F71234 /* CCShaderCache.m in Sources */,
 				8498BBD617847D9E00F71234 /* ccShaders.m in Sources */,
+				84D8F30D1938E39600972AB5 /* PGSlotPicker.m in Sources */,
 				84F2B93319024CE9002EF109 /* TouchGameZoo.m in Sources */,
 				8498BBD917847D9E00F71234 /* CCSprite.m in Sources */,
 				8498BBDC17847D9E00F71234 /* CCSpriteBatchNode.m in Sources */,
@@ -3090,6 +3171,7 @@
 				8498BC9817847D9F00F71234 /* vec2.c in Sources */,
 				8498BC9A17847D9F00F71234 /* vec3.c in Sources */,
 				84B4F07918D03BCA0071E85B /* CCLabelBMFontOnBacthNode.m in Sources */,
+				84D8F2EF1938DDC500972AB5 /* HamsterGameLayer.m in Sources */,
 				84B4F1F718D040BF0071E85B /* cpArbiter.c in Sources */,
 				8498BC9C17847D9F00F71234 /* vec4.c in Sources */,
 				84BA6A2B1906A9D000B6BE7C /* CardMatchingGameDoneLayer.m in Sources */,
@@ -3114,6 +3196,7 @@
 				84B4F1FD18D040BF0071E85B /* cpHashSet.c in Sources */,
 				843335B417ACF4F7009F1C56 /* LetterIdentification.m in Sources */,
 				847403C918D749B20093C83E /* AudioDict.m in Sources */,
+				84D8F30F1938E39600972AB5 /* CCPickerView.m in Sources */,
 				843335B717ACF50B009F1C56 /* ToolbarLayer.m in Sources */,
 				84EDDF0817BCD41E00262E2B /* CCScrollLayer.m in Sources */,
 				84B14EBA19092122004490BF /* TouchGameNotFood.m in Sources */,
@@ -3126,6 +3209,7 @@
 				AE60B7F518038A6300741275 /* TraceClass.m in Sources */,
 				84B4F1FC18D040BF0071E85B /* cpCollision.c in Sources */,
 				84B4F08118D03BCA0071E85B /* WordCar.m in Sources */,
+				84D8F30E1938E39600972AB5 /* ScrollLayer.m in Sources */,
 				84BA6BA71906B23500B6BE7C /* PGLetterMenu.m in Sources */,
 				84BA6A151906A9D000B6BE7C /* BubbleGameLayer.m in Sources */,
 				84B3FCC618CF772500FD27E8 /* DLDraggableSprite.m in Sources */,
