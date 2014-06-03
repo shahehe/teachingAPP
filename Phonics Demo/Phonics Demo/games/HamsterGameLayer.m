@@ -13,8 +13,8 @@
 static CGPoint randomePointInRect(CGRect rect)
 {
     static NSUInteger ratio = 2;
-    ratio = (ratio + 3) % 4;
-    return ccpAdd(rect.origin, ccp(ratio / 4.0 *rect.size.width, CCRANDOM_0_1() *rect.size.height));
+    ratio = (ratio + 1) % 3;
+    return ccpAdd(rect.origin, ccp((ratio + 0.5) / 3.0 *rect.size.width, CCRANDOM_0_1() *rect.size.height));
 }
 
 #pragma mark --hamster
@@ -157,7 +157,7 @@ static CGPoint randomePointInRect(CGRect rect)
         [[CCTextureCache sharedTextureCache] addImage:[self imagePathForWord:word]];
         [[SimpleAudioEngine sharedEngine] preloadEffect:[self soundPathForWord:word]];
         
-        if (_idx % 3 == 0)
+        if (_idx < 3)
         {
             Hamster *h = [Hamster hamsterWithWord:word];
             [self_copy->hamsters addObject:h];

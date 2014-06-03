@@ -234,7 +234,7 @@
 
 - (void) draw
 {
-    if(_scene) [_scene visit];
+//    if(_scene) [_scene visit];
     [super draw];
 }
 
