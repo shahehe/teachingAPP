@@ -28,6 +28,8 @@
 		8445F7E3179FC56E001251C1 /* Cocos2d+CustomOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8445F7E2179FC56E001251C1 /* Cocos2d+CustomOptions.m */; };
 		8445F80017A0D05E001251C1 /* CLDynamicLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8445F7FF17A0D05E001251C1 /* CLDynamicLabel.m */; };
 		8450DCCB179C016C0003B181 /* AppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8450DCCA179C016C0003B181 /* AppManager.m */; };
+		846C34EB1940ADBB00A3DA82 /* hamster_bg_middle-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 846C34E31940ADBB00A3DA82 /* hamster_bg_middle-ipadhd.png */; };
+		846C34EF1940ADBB00A3DA82 /* hamster_bg_middle-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 846C34E71940ADBB00A3DA82 /* hamster_bg_middle-ipad.png */; };
 		847403BE18D71A980093C83E /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 847403BD18D71A980093C83E /* Assets */; };
 		847403C118D71ABA0093C83E /* TouchGameLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 847403C018D71ABA0093C83E /* TouchGameLayer.m */; };
 		847403C418D738090093C83E /* TouchingGameMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 847403C318D738090093C83E /* TouchingGameMenu.m */; };
@@ -580,6 +582,8 @@
 		8450DCC7179A35090003B181 /* PhonicsDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhonicsDefines.h; sourceTree = "<group>"; };
 		8450DCC9179C016C0003B181 /* AppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppManager.h; path = Model/AppManager.h; sourceTree = "<group>"; };
 		8450DCCA179C016C0003B181 /* AppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppManager.m; path = Model/AppManager.m; sourceTree = "<group>"; };
+		846C34E31940ADBB00A3DA82 /* hamster_bg_middle-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hamster_bg_middle-ipadhd.png"; sourceTree = "<group>"; };
+		846C34E71940ADBB00A3DA82 /* hamster_bg_middle-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hamster_bg_middle-ipad.png"; sourceTree = "<group>"; };
 		847403BD18D71A980093C83E /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Assets; path = ../../Assets; sourceTree = "<group>"; };
 		847403BF18D71ABA0093C83E /* TouchGameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchGameLayer.h; sourceTree = "<group>"; };
 		847403C018D71ABA0093C83E /* TouchGameLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchGameLayer.m; sourceTree = "<group>"; };
@@ -2467,6 +2471,8 @@
 		84D8F2FC1938DDEA00972AB5 /* hamster */ = {
 			isa = PBXGroup;
 			children = (
+				846C34E31940ADBB00A3DA82 /* hamster_bg_middle-ipadhd.png */,
+				846C34E71940ADBB00A3DA82 /* hamster_bg_middle-ipad.png */,
 				84D8F2F01938DDE400972AB5 /* hamster_texture-ipadhd.pvr.ccz */,
 				84D8F2F11938DDE400972AB5 /* hamster_texture-ipadhd.plist */,
 				84D8F2F21938DDE400972AB5 /* hamster_texture-ipad.pvr.ccz */,
@@ -2736,6 +2742,7 @@
 				84BA6B931906AF8B00B6BE7C /* vest.caf in Resources */,
 				84BA6B741906AF8B00B6BE7C /* pen.caf in Resources */,
 				84BA6B561906AF8B00B6BE7C /* lad.caf in Resources */,
+				846C34EF1940ADBB00A3DA82 /* hamster_bg_middle-ipad.png in Resources */,
 				84BA6B2D1906AF8B00B6BE7C /* envelope.caf in Resources */,
 				84BA6A371906A9D000B6BE7C /* Arial-Black-ipad.png in Resources */,
 				84BA6B791906AF8B00B6BE7C /* question.caf in Resources */,
@@ -2852,6 +2859,7 @@
 				84BA6B921906AF8B00B6BE7C /* van.caf in Resources */,
 				84BA69EC1906A9D000B6BE7C /* Lithos_pro_red-ipadhd.png in Resources */,
 				84BA6A791906ABB500B6BE7C /* menu_stage-ipad.plist in Resources */,
+				846C34EB1940ADBB00A3DA82 /* hamster_bg_middle-ipadhd.png in Resources */,
 				84BA69F81906A9D000B6BE7C /* bubble_object-ipadhd.png in Resources */,
 				84BA6B701906AF8B00B6BE7C /* pan.caf in Resources */,
 				84BA6B4B1906AF8B00B6BE7C /* inn.caf in Resources */,

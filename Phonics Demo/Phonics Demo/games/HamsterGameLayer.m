@@ -10,13 +10,6 @@
 
 #import "SimpleAudioEngine.h"
 
-static CGPoint randomePointInRect(CGRect rect)
-{
-    static NSUInteger ratio = 2;
-    ratio = (ratio + 1) % 3;
-    return ccpAdd(rect.origin, ccp((ratio + 0.5) / 3.0 *rect.size.width, CCRANDOM_0_1() *rect.size.height));
-}
-
 #pragma mark --hamster
 
 @interface Hamster : CCSprite
@@ -29,6 +22,9 @@ static CGPoint randomePointInRect(CGRect rect)
 
 - (void) setWord:(NSString*) word;
 - (NSString*) word;
+
+- (void) reset;
+- (void) show;
 
 @end
 
@@ -68,7 +64,9 @@ static CGPoint randomePointInRect(CGRect rect)
     
     CCSprite *mud = [CCSprite spriteWithSpriteFrameName:@"mud.png"];
     mud.position = ccpCompMult(p_size, mudPos);
-    [self addChild:mud];
+//    [self addChild:mud];
+    
+    self.userObject = mud;
     
     wordLabel = [CCLabelTTF labelWithString:word fontName:@"GillSans" fontSize:18 * CC_CONTENT_SCALE_FACTOR()];
     wordLabel.color = ccBLACK;
@@ -88,14 +86,20 @@ static CGPoint randomePointInRect(CGRect rect)
     return [wordLabel string];
 }
 
-- (void) setOpacity:(GLubyte)opacity
+- (void) reset
 {
-    [super setOpacity:opacity];
+    [(CCSprite*)self.userObject setVisible:NO];
     
-    for (CCSprite *node in self.children)
-    {
-        node.opacity = opacity;
-    }
+    self.position = ccpAdd(self.position, ccp(0, -150));
+}
+
+- (void) show
+{
+    self.visible = YES;
+    
+    [(CCSprite*)self.userObject setVisible:YES];
+    
+    [self runAction:[CCMoveBy actionWithDuration:0.5 position:ccp(0, 150)]];
 }
 
 - (void) dealloc
@@ -145,6 +149,13 @@ static CGPoint randomePointInRect(CGRect rect)
     bg.zOrder = 0;
     [self addChild:bg];
     
+    CCSprite *bg_middle = [CCSprite spriteWithFile:@"hamster_bg_middle.png"];
+    bg_middle.anchorPoint = CGPointZero;
+    bg_middle.position = ccpCompMult(p_size, ccp(0, 0.37));
+    bg_middle.zOrder = 2;
+//    bg_middle.color = ccRED;
+    [self addChild:bg_middle];
+    
     wordArray = [words copy];
     wordCount = wordArray.count;
     idx = 0;
@@ -161,12 +172,16 @@ static CGPoint randomePointInRect(CGRect rect)
         {
             Hamster *h = [Hamster hamsterWithWord:word];
             [self_copy->hamsters addObject:h];
-            [self_copy addChild:h z:2];
-            h.visible = NO;
+            [self_copy addChild:h z:1];
+            h.position = ccpCompMult(p_size, ccp(0.5 + _idx * 0.25 - 0.25, 0.66));
+            
+            CCSprite *mud = h.userObject;
+            mud.position = [h convertToWorldSpace:mud.position];
+            [self_copy addChild:mud z:3];
+            
+//            [h reset];
         }
     }];
-    
-    hamsterAppearRect = CGRectMake(p_size.x * 0.1, p_size.y * 0.48, p_size.x * 0.8, p_size.y * 0.16);
     
     boyScore = hamsterScore = 0;
     boyScoreLabel = [CCLabelTTF labelWithString:@" " fontName:@"GillSans" fontSize:16 * CC_CONTENT_SCALE_FACTOR()];
@@ -255,14 +270,15 @@ static CGPoint randomePointInRect(CGRect rect)
         [self addChild:image z:1];
     }
 
+    NSUInteger random_idx = arc4random();
     for (int i = 0;i<hamsters.count;i++)
     {
-        Hamster *h = [hamsters objectAtIndex:i];
+        Hamster *h = [hamsters objectAtIndex:(i+random_idx) % hamsters.count];
+        [h reset];
+        
         h.word = [wordArray objectAtIndex:(idx + i) % wordCount];
         
-        h.position = randomePointInRect(hamsterAppearRect);
-        h.visible = YES;
-        h.opacity = 255;
+        [h show];
     }
 }
 
@@ -302,7 +318,7 @@ static CGPoint randomePointInRect(CGRect rect)
     
     for (Hamster *h in hamsters)
     {
-        if(h.opacity == 255 && CGRectContainsPoint(h.boundingBox, pos))
+        if(h.visible && CGRectContainsPoint(h.boundingBox, pos))
         {
             if ([h.word isEqualToString:currentWord])
             {
@@ -312,7 +328,7 @@ static CGPoint randomePointInRect(CGRect rect)
             else
             {
                 hamsterScore ++;
-                [h runAction:[CCFadeOut actionWithDuration:0.6]];
+                h.visible = NO;
             }
             
             [self refreshScoreLabel];
